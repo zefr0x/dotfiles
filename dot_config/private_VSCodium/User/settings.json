@@ -1,0 +1,178 @@
+{
+	// vim Settings
+	"vim.useSystemClipboard": true,
+	"vim.easymotion": true,
+	"vim.surround": true,
+	"editor.lineNumbers": "relative",
+	"vim.leader": ",",
+
+
+	// TODO tree settings
+	"todo-tree.highlights.customHighlight": {
+		"BUG": {
+			"icon": "bug",
+			"iconColour": "orange",
+			"foreground": "white",
+			"background": "red"
+		},
+		"HACK": {
+			"icon": "check-circle",
+			"iconColour": "yellow",
+			"foreground": "black",
+			"background": "yellow"
+		},
+		"FIXME": {
+			"icon": "tools",
+			"iconColour": "orange",
+			"foreground": "black",
+			"background": "orange"
+		},
+		"TODO": {
+			"icon": "checklist",
+			"iconColour": "green",
+			"foreground": "white",
+			"background": "green"
+		},
+		"XXX": {
+			"icon": "flame",
+			"iconColour": "gray",
+			"foreground": "white",
+			"background": "gray"
+		},
+		"CONT": {
+			"icon": "bookmark",
+			"iconColour": "white",
+			"foreground": "black",
+			"background": "white"
+		},
+		"VULN": {
+			"icon": "shield-x",
+			"iconColour": "red",
+			"foreground": "white",
+			"background": "red"
+		},
+		"EXP": {
+			"icon": "beaker",
+			"iconColour": "aqua",
+			"foreground": "black",
+			"background": "aqua"
+		}
+	},
+	"todo-tree.general.tags": [
+		"BUG",
+		"HACK",
+		"FIXME",
+		"TODO",
+		"XXX",
+		"CONT",
+		"VULN",
+		"EXP",
+		"[ ]",
+		"[x]"
+	],
+	"todo-tree.highlights.foregroundColourScheme": [
+		"white",
+		"black",
+		"black",
+		"white",
+		"white",
+		"black",
+		"black"
+	],
+	"todo-tree.highlights.useColourScheme": true,
+	"todo-tree.tree.showCountsInTree": true,
+	"todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+
+
+	"files.autoSave": "afterDelay",
+
+	"editor.fontSize": 17,
+	"window.zoomLevel": 2,
+	"prettier.tabWidth": 4,
+	"editor.wordWrap": "on",
+	"diffEditor.wordWrap": "on",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.renderWhitespace": "boundary",
+	"editor.minimap.renderCharacters": false,
+	"editor.minimap.enabled": false,
+	"editor.linkedEditing": true,
+	"editor.suggestSelection": "first",
+	"editor.guides.bracketPairs": true,
+
+	"extensions.autoUpdate": false,
+	"update.mode": "manual",
+
+	"npm.fetchOnlinePackageInfo": false,
+
+	// "workbench.colorCustomizations": {
+	// 	"statusBar.background": "#350025",
+	// 	"statusBar.noFolderBackground": "#350025",
+	// 	"statusBar.debuggingBackground": "#350025"
+	// },
+	"workbench.enableExperiments": false,
+	"workbench.colorTheme": "Owlet (Charcoal)",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.settings.enableNaturalLanguageSearch": false,
+
+	"sqltools.useNodeRuntime": true,
+
+	"cSpell.diagnosticLevel": "Hint",
+
+	"latex-workshop.view.pdf.viewer": "external",
+	"latex-workshop.latex.autoClean.run": "onBuilt",
+	
+	"css.lint.duplicateProperties": "warning",
+	"css.lint.float": "warning",
+	"css.lint.idSelector": "warning",
+	"css.lint.important": "warning",
+	"css.lint.universalSelector": "warning",
+	"css.lint.zeroUnits": "warning",
+
+	"jupyter.jupyterServerType": "local",
+
+	"latex-workshop.latex.autoBuild.run": "never",
+
+	"C_Cpp.autocompleteAddParentheses": true,
+
+	"java.completion.guessMethodArguments": true,
+	
+	"json.schemaDownload.enable": false,
+	
+	"typescript.disableAutomaticTypeAcquisition": true,
+
+	"python.experiments.enabled": false,
+	"python.pipenvPath": "~/.local/bin/pipenv",
+	"python.languageServer": "Jedi",
+	"python.formatting.provider": "black",
+	"python.linting.mypyEnabled": true,
+	"python.linting.flake8Enabled": true,
+	"python.linting.pydocstyleEnabled": true,
+	"python.testing.unittestEnabled": true,
+	"python.linting.flake8Args": [
+		"--max-line-length=100",
+		"--ignore=W503"
+	],
+
+	"files.exclude": {
+		"**/.classpath": true,
+		"**/.project": true,
+		"**/.settings": true,
+		"**/.factorypath": true
+	},
+
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"files.associations": {
+		"*.html": "html"
+	},
+}

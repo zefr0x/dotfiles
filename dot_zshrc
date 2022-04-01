@@ -1,0 +1,108 @@
+# Powerlevel10k theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Fish-like autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# History substring search
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+
+
+
+export EDITOR='vim'
+export VISUAL='code'
+# export MOZ_ENABLE_WAYLAND=1
+
+alias downloads='cd ~/Downloads'
+alias desktop='cd ~/Desktop'
+alias cd..='cd ..'
+alias py='python'
+alias bpy='bpython'
+alias c='code'
+alias prog='cd ~/Desktop/programming'
+alias zshrc='vim ~/.zshrc'
+alias topdf='libreoffice --headless --invisible --convert-to pdf'
+alias now="date +'%A %D %r'"
+alias cp="cp -i"                                                
+alias df="df -h"
+alias free="free -m"
+
+# Kitty's kittens aliases
+alias ssh="kitty +kitten ssh"
+alias icat="kitty +kitten icat"
+
+alias ls="ls --color=always --hyperlink=auto"
+alias ll="ls -l --color=always --hyperlink=auto"
+alias la="ls -la --color=always --hyperlink=auto"
+
+alias grep="grep --colour=always"
+alias n="nnn"
+
+## TeXlive
+export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH
+
+## android-sdk
+export ANDROID_SDK_ROOT='/opt/android-sdk'
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
+export PATH=$PATH:$ANDROID_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
+
+
+# Color man pages
+export LESS_TERMCAP_mb=$'\E[01;32m'
+export LESS_TERMCAP_md=$'\E[01;32m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;47;34m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;36m'
+export LESS=-R
+
+
+
+# bind UP and DOWN arrow keys to history substring search
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# Enable vi mode
+bindkey -v
+
+# Append history instead of overwriting it for every session
+setopt appendhistory
+# If a new command is a duplicate, remove the older one
+setopt histignorealldups
+# Don't save commands that start with space
+setopt histignorespace
+
+
+# Case insensitive tab completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+autoload -Uz compinit && compinit
+# Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# automatically find new executables in path
+zstyle ':completion:*' rehash true
+# Speed up completions
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.cache/zsh
+HISTFILE=~/.zhistory
+HISTSIZE=100000
+SAVEHIST=100000
+# Don't consider certain characters part of the word
+WORDCHARS=${WORDCHARS//\/[&.;]}
+
+
+
+# Some configuarations are from manjaro-zsh-config
+# https://github.com/Chrysostomus/manjaro-zsh-config
