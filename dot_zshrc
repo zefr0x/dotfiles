@@ -11,11 +11,11 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 
-
+export GTK_USE_PORTAL=1
+# export MOZ_ENABLE_WAYLAND=1
 
 export EDITOR='vim'
 export VISUAL='code'
-# export MOZ_ENABLE_WAYLAND=1
 
 alias downloads='cd ~/Downloads'
 alias desktop='cd ~/Desktop'
