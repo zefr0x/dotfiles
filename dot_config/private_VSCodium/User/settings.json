@@ -175,4 +175,10 @@
 	"files.associations": {
 		"*.html": "html"
 	},
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 }
