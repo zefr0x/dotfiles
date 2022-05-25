@@ -42,7 +42,8 @@ SAVEHIST=100000
 # Don't consider certain characters part of the word
 WORDCHARS=${WORDCHARS//\/[&.;]}
 
-eval $(thefuck --alias)
+eval "$(thefuck --alias)"
+eval "$(zoxide init zsh --cmd cd)"
 
 ## Key bindings
 # bindkey -e
@@ -101,9 +102,9 @@ alias n="nnn"
 alias ssh="kitty +kitten ssh"
 alias icat="kitty +kitten icat"
 # ls aliases
-alias ls="exa"
-alias ll="exa -l"
-alias la="exa -la"
+alias ls="exa --icons"
+alias ll="exa -l --icons"
+alias la="exa -la --icons"
 
 ## PATH
 # TeXlive
