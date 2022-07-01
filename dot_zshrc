@@ -42,7 +42,6 @@ SAVEHIST=100000
 # Don't consider certain characters part of the word
 WORDCHARS=${WORDCHARS//\/[&.;]}
 
-eval "$(thefuck --alias)"
 eval "$(zoxide init zsh --cmd cd)"
 
 ## Key bindings
