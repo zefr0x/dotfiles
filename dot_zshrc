@@ -80,19 +80,13 @@ export GTK_USE_PORTAL=1
 export EDITOR='vim'
 export VISUAL='code'
 
-# Files aliases
-alias downloads='cd ~/Downloads'
-alias desktop='cd ~/Desktop'
-alias prog='cd ~/Desktop/programming'
 # Tools/Programmes aliases
 alias py='python'
 alias ipy='ipython'
 alias bpy='bpython'
-alias c='code'
-alias zshrc='vim ~/.zshrc'
 alias topdf='libreoffice --headless --invisible --convert-to pdf'
-alias now="date +'%A %D %r'"
-alias cp="cp -i"                                                
+alias now="date +'%A %d/%m/%Y %H:%M:%S.%N (%Z) %nUnix time: %s'"
+alias cp="cp -i" 
 alias df="df -h"
 alias free="free -m"
 alias grep="grep --colour=always"
@@ -104,18 +98,6 @@ alias icat="kitty +kitten icat"
 alias ls="exa --icons"
 alias ll="exa -l --icons"
 alias la="exa -la --icons"
-
-## PATH
-# TeXlive
-export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
-export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH
-# android-sdk
-export ANDROID_SDK_ROOT='/opt/android-sdk'
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
-export PATH=$PATH:$ANDROID_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
 
 
 # Some configuarations are from manjaro-zsh-config
