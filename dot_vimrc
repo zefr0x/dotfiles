@@ -94,7 +94,8 @@ Plug 'vim-scripts/IndexedSearch'
 
 " A couple of nice colorschemes
 " Plug 'patstockwell/vim-monokai-tasty'
-Plug 'ayu-theme/ayu-vim'
+Plug 'cseelus/vim-colors-lucid'
+
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -239,13 +240,12 @@ set nu
 set fillchars+=vert:\ 
 
 set termguicolors
-let ayucolor="dark"
 " use 256 colors when possible
 if has('gui_running') || using_neovim || (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256')
     if !has('gui_running')
         let &t_Co = 256
     endif
-    colorscheme ayu
+    colorscheme lucid
 else
     colorscheme delek
 endif

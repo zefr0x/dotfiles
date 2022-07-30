@@ -75,8 +75,14 @@ export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-R
 
 # Variables
-export GTK_USE_PORTAL=1
-# export MOZ_ENABLE_WAYLAND=1
+# if [[ "$XDG_SESSION_DESKTOP" == "KDE"  ]]
+# then
+#     export GTK_USE_PORTAL=1
+# fi
+if [[ "$XDG_SESSION_TYPE" == "wayland" ]]
+then
+    export MOZ_ENABLE_WAYLAND=1
+fi
 export EDITOR='vim'
 export VISUAL='code'
 
@@ -91,6 +97,7 @@ alias df="df -h"
 alias free="free -m"
 alias grep="grep --colour=always"
 alias n="nnn"
+alias feh="feh --scale-down"
 # Kitty's kittens aliases
 alias ssh="kitty +kitten ssh"
 alias icat="kitty +kitten icat"

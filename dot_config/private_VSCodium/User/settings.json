@@ -154,10 +154,6 @@
 	"python.linting.flake8Enabled": true,
 	"python.linting.pydocstyleEnabled": true,
 	"python.testing.unittestEnabled": true,
-	"python.linting.flake8Args": [
-		"--max-line-length=100",
-		"--ignore=W503"
-	],
 
 	"files.exclude": {
 		"**/.classpath": true,
@@ -189,5 +185,6 @@
 	},
 	"[cpp]": {
 		"editor.defaultFormatter": "ms-vscode.cpptools"
-	}
+	},
+	"python.testing.pytestEnabled": true
 }
