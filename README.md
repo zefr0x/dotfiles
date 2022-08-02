@@ -2,13 +2,13 @@
 > Managed with [chezmoi](https://www.chezmoi.io/)
 
 ## Kitty & zsh <sup>[~/.config/kitty](https://github.com/zer0-x/dotfiles/tree/main/dot_config/kitty) | [~/.zshrc](https://github.com/zer0-x/dotfiles/blob/main/dot_zshrc)</sup>
-<img width=500px src="https://raw.githubusercontent.com/zer0-x/dotfiles/main/dot_screenshots/kitty_zsh.webp" alt="Screenshot for kitty and zsh">
+<img width=500px src="" alt="Screenshot for kitty and zsh">
 
-## vim <sup>[~/.vimrc](https://github.com/zer0-x/dotfiles/blob/main/dot_vimrc)</sup>
-<img width=500px src="https://raw.githubusercontent.com/zer0-x/dotfiles/main/dot_screenshots/vim.webp" alt="Screenshot for vim">
+## neovim <sup>[~/.config/nvim/init.vim](https://github.com/zer0-x/dotfiles/blob/main/dot_config/nvim/init.vim)</sup>
+<img width=500px src="" alt="Screenshot for neovim">
 
 ## [VSCodium](https://vscodium.com/) <sup>[~/.config/VSCodium/User](https://github.com/zer0-x/dotfiles/tree/main/dot_config/private_VSCodium/User)</sup>
-<img width=500px src="https://raw.githubusercontent.com/zer0-x/dotfiles/main/dot_screenshots/vscodium.webp" alt="Screenshot for VSCodium">
+<img width=500px src="" alt="Screenshot for VSCodium">
 
 ### plugins
 - ...
