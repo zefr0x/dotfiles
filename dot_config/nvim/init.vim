@@ -1,10 +1,8 @@
 " This config was built on top of Fisa-vim-config
 
-
 " Fix background in kitty
 let &t_ut=''
 
-set encoding=utf-8
 let using_neovim = has('nvim')
 
 " ============================================================================
@@ -36,34 +34,60 @@ call plug#begin("~/.config/nvim/plugged")
 
 " Now the actual plugins:
 
+" Collection of configurations for built-in LSP client
 Plug 'neovim/nvim-lspconfig'
+" Autocompletion plugin
+Plug 'hrsh7th/nvim-cmp'
+" LSP source for nvim-cmp
+Plug 'hrsh7th/cmp-nvim-lsp'
+" Snippets source for nvim-cmp
+Plug 'saadparwaiz1/cmp_luasnip'
+" Snippets plugin
+Plug 'L3MON4D3/LuaSnip'
+"Standalone UI for nvim-lsp progress
+Plug 'j-hui/fidget.nvim'
+" Pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
+Plug 'folke/trouble.nvim'
+" plenary: full; complete; entire; absolute; unqualified. All the lua functions I don't want to write twice.
+Plug 'nvim-lua/plenary.nvim'
+" Comments todo list
+Plug 'folke/todo-comments.nvim'
 
-" auto save fiels to disk
-Plug '907th/vim-auto-save'
-let g:auto_save = 1
-let g:auto_save_events = ["InsertLeave", "TextChanged"]
-" comment code easily
-Plug 'tpope/vim-commentary'
-" easy motion
-Plug 'easymotion/vim-easymotion'
-" Plug 'phaazon/hop.nvim'
-let mapleader = ","
-" css, html
-Plug 'mattn/emmet-vim'
-" javascript
-Plug 'pangloss/vim-javascript'
-" C
-Plug 'xavierd/clang_complete' 
-" Rust
-Plug 'rust-lang/rust.vim'
+
+" Tools for better development in (rust) using neovim's builtin LSP
 Plug 'simrat39/rust-tools.nvim'
 
-" Code commenter
-" Plug 'scrooloose/nerdcommenter'
+" Nvim Treesitter configurations and abstraction layer
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Highlight arguments' definitions and usages, using Treesitter
+Plug 'm-demare/hlargs.nvim'
+" comment code easily
+Plug 'numToStr/Comment.nvim'
+" Lualine
+Plug 'nvim-lualine/lualine.nvim'
+" vscode-like pictograms for neovim lsp completion items
+Plug 'onsails/lspkind.nvim'
+" Paint colors text in for #000000 or rgb(0,0,0) or ... with the real color
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 " Better file browser
 Plug 'kyazdani42/nvim-tree.lua'
 " Nice icons in the file explorer and file type status line.
 Plug 'kyazdani42/nvim-web-devicons'
+
+
+
+" auto save fiels to disk
+Plug 'Pocco81/auto-save.nvim'
+" easy motion
+Plug 'easymotion/vim-easymotion'
+" Plug 'phaazon/hop.nvim'
+" css, html
+Plug 'mattn/emmet-vim'
+" javascript
+Plug 'pangloss/vim-javascript'
+
 " Class/module browser
 Plug 'majutsushi/tagbar'
 " Plug 'simrat39/symbols-outline.nvim'
@@ -72,28 +96,14 @@ Plug 'vim-scripts/IndexedSearch'
 
 Plug 'cseelus/vim-colors-lucid'
 
-" Lualine
-Plug 'nvim-lualine/lualine.nvim'
-
 " Code and files fuzzy finder
 Plug 'junegunn/fzf.vim'
-" Pending tasks list
-Plug 'vim-scripts/TaskList.vim'
-let g:tlTokenList = ['BUG', 'HACK', 'FIXME', 'TODO', 'XXX', 'CONT', 'VULN', 'EXP']
-" Async autocompletion
-if using_neovim && vim_plug_just_installed
-    Plug 'Shougo/deoplete.nvim', {'do': ':autocmd VimEnter * UpdateRemotePlugins'}
-else
-    Plug 'Shougo/deoplete.nvim'
-endif
+
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
-" Python autocompletion
-Plug 'deoplete-plugins/deoplete-jedi'
 " Completion from other opened files
 Plug 'Shougo/context_filetype.vim'
 " Just to add the python go-to-definition and similar features, autocompletion
-" from this plugin is disabled
 Plug 'davidhalter/jedi-vim'
 " Automatically close parenthesis, etc
 Plug 'Townk/vim-autoclose'
@@ -105,8 +115,6 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'jeetsukumaran/vim-indentwise'
 " Better language packs
 Plug 'sheerun/vim-polyglot'
-" Paint css colors with the real color
-Plug 'lilydjwg/colorizer'
 " Highlight matching html tags
 Plug 'valloric/MatchTagAlways'
 " Git integration
@@ -122,7 +130,7 @@ Plug 'neomake/neomake'
 " on/off. When the plugin is present, will always activate the relative
 " numbering every time you go to normal mode. Author refuses to add a setting
 " to avoid that)
-Plug 'myusuf3/numbers.vim'
+" Plug 'myusuf3/numbers.vim'
 
 " Code searcher. If you enable it, you should also configure g:hound_base_url 
 " and g:hound_port, pointing to your hound instance
@@ -147,40 +155,6 @@ endif
 " ============================================================================
 " Vim settings and mappings
 
-" tabs and spaces handling
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-
-" show line numbers
-set nu
-
-" remove ugly vertical lines on window division
-set fillchars+=vert:\ 
-
-set termguicolors
-" use 256 colors when possible
-if has('gui_running') || using_neovim || (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256')
-    if !has('gui_running')
-        let &t_Co = 256
-    endif
-    colorscheme lucid
-else
-    colorscheme delek
-endif
-
-" needed so deoplete can auto select the first suggestion
-set completeopt+=noinsert
-" comment this line to enable autocompletion preview window
-" (displays documentation related to the selected completion option)
-" disabled by default because preview makes the window flicker
-set completeopt-=preview
-
-" autocompletion of files and commands behaves like shell
-" (complete only the common part, list the options that match)
-set wildmode=list:longest
-
 " tab navigation mappings
 map tt :tabnew 
 map <M-Right> :tabn<CR>
@@ -188,15 +162,8 @@ imap <M-Right> <ESC>:tabn<CR>
 map <M-Left> :tabp<CR>
 imap <M-Left> <ESC>:tabp<CR>
 
-" when scrolling, keep cursor 3 lines away from screen border
-set scrolloff=3
-
 " clear search results
 nnoremap <silent> // :noh<CR>
-
-" fix problems with uncommon shells (fish, xonsh) and plugins running commands
-" (neomake, ...)
-set shell=/bin/bash
 
 " Ability to add python breakpoints
 " (I use ipdb, but you can change it to whatever tool you use for debugging)
@@ -209,29 +176,7 @@ au FileType python map <silent> <leader>b Oimport ipdb; ipdb.set_trace()<esc>
 
 " toggle tagbar display
 map <F4> :TagbarToggle<CR>
-" autofocus on tagbar open
-let g:tagbar_autofocus = 1
 
-" NvimTree -----------------------------
-
-" toggle nvimtree display
-map <F3> :NvimTreeToggle<CR>
-
-" Tasklist ------------------------------
-
-" show pending tasks list
-map <F2> :TaskList<CR>
-
-" Neomake ------------------------------
-
-" Run linter on write
-call neomake#configure#automake('w')
-
-" Check python code
-let g:neomake_python_enabled_makers = ['pyflakes', 'pydocstyle', 'mypy']
-
-" Disable error messages inside the buffer, next to the problematic line
-let g:neomake_virtualtext_current_error = 0
 
 " Fzf ------------------------------
 
@@ -256,32 +201,11 @@ nmap ,wF :execute ":Lines " . expand('<cword>')<CR>
 " commands finder mapping
 nmap ,c :Commands<CR>
 
-" Deoplete -----------------------------
 
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option({
-\   'ignore_case': v:true,
-\   'smart_case': v:true,
-\})
 " complete with words from any opened file
 let g:context_filetype#same_filetypes = {}
 let g:context_filetype#same_filetypes._ = '_'
 
-" Jedi-vim ------------------------------
-
-" Disable autocompletion (using deoplete instead)
-let g:jedi#completions_enabled = 0
-
-" All these mappings work only for python code:
-" Go to definition
-let g:jedi#goto_command = ',d'
-" Find ocurrences
-let g:jedi#usages_command = ',o'
-" Find assignments
-let g:jedi#goto_assignments_command = ',a'
-" Go to definition in new tab
-nmap ,D :tab split<CR>:call jedi#goto()<CR>
 
 " Signify ------------------------------
 
@@ -299,26 +223,137 @@ highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 
-" Autoclose ------------------------------
 
-" Hop.nvim
-" nmap <leader>w :HopWord<CR>
-
-" Yankring -------------------------------
-
-let g:yankring_history_dir = '~/.config/nvim/'
-" Fix for yankring and neovim problem when system has non-text things
-" copied in clipboard
-let g:yankring_clipboard_monitor = 0
 
 " emmit -------------------------------
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" rust --------------------------------
-let g:syntastic_rust_checkers = ['cargo']
+lua << EOF
 
-lua << END
+--------------- Base configs ----------------
+
+
+-- Set encoding
+vim.opt.encoding = "utf-8"
+
+-- Set listchars
+vim.opt.list = true
+vim.opt.listchars:append "trail:⋅"
+
+-- Tabs and spaces handling
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+
+-- Line numbering
+vim.opt.nu = true
+
+-- When scrolling, keep cursor 3 lines away from screen border
+vim.opt.scrolloff = 3
+
+
+-- Config colors
+vim.opt.termguicolors = true
+vim.cmd [[ colorscheme lucid ]]
+
+--  Disable autocompletion preview window
+vim.opt.completeopt:remove("preview")
+-- autocompletion of files and commands behaves like shell
+-- (complete only the common part, list the options that match)
+vim.opt.wildmode = "list:longest"
+
+-- Set a shell
+vim.opt.shell = "/bin/bash"
+
+-- Set leader key
+-- Used for easymotion plugin
+vim.g.mapleader = ","
+
+
+--------- Plugins setup and config ----------
+
+
+-- vim.opt.listchars:append "eol:↴"
+-- nvim-lspconfig ---------------------------
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+local lspconfig = require('lspconfig')
+
+-- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+local servers = { 'clangd', 'jedi_language_server', 'rust_analyzer' }
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    -- on_attach = my_custom_on_attach,
+    capabilities = capabilities,
+  }
+end
+
+-- cmp-luasnip ------------------------------
+local luasnip = require('luasnip')
+
+-- lspkind.nvim -----------------------------
+local lspkind = require('lspkind')
+
+-- nvim-cmp ---------------------------------
+local cmp = require 'cmp'
+cmp.setup {
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol_text', -- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
+      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+      -- The function below will be called before any actual modifications from lspkind
+      -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
+      before = function (entry, vim_item)
+        return vim_item
+      end
+    })
+  },
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+  }),
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' }
+  },
+}
+
+-- fidget.nvim ------------------------------
+require("fidget").setup()
+
+-- lualine.nvim -----------------------------
 require('lualine').setup {
     options = {
         theme = 'iceberg_dark',
@@ -333,7 +368,142 @@ require('lualine').setup {
     }
 }
 
-require("nvim-tree").setup()
+-- nvim-tree.lua ----------------------------
+require("nvim-tree").setup({
 
+})
+
+vim.api.nvim_set_keymap("n", "<F3>", "<cmd>:NvimTreeToggle<cr>",
+  {silent = true, noremap = true}
+)
+
+-- nvim-colorizer.lua -----------------------
+require'colorizer'.setup(nil, {RGB=true;
+                               RRGGBB=true;
+                               names=true;
+                               RRGGBBAA=true;
+                               rgb_fn=true;
+                               hsl_fn=true;
+                               css=true;
+                               css_fn=true;
+                               }
+)
+
+-- auto-save.nvim ---------------------------
+require("auto-save").setup {}
+
+-- Comment.nvim -----------------------------
+require('Comment').setup()
+
+-- hop.nvim ---------------------------------
 -- require'hop'.setup()
-END
+-- vim.api.nvim_set_keymap("n", "<leader>w", "<cmd>:HopWord<CR>",
+--  {silent = true, noremap = true}
+-- )
+
+-- trouble ----------------------------------
+require("trouble").setup {}
+vim.api.nvim_set_keymap("n", "<F5>", "<cmd>:TroubleToggle document_diagnostics<cr>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<F6>", "<cmd>:TroubleToggle loclist<cr>",
+  {silent = true, noremap = true}
+)
+
+-- nvim-treesitter --------------------------
+require('nvim-treesitter.configs').setup  {
+    ensure_installed = { "rust",
+                        "python",
+                        "c",
+                        "cpp",
+                        "javascript",
+                        "html",
+                        "css",
+                        "lua",
+                        "cmake",
+                        "dockerfile",
+                        "latex",
+                        "markdown",
+                        "regex",
+                        "sql",
+                        "toml" }
+}
+
+-- hlargs.nvim ------------------------------
+require('hlargs').setup()
+
+-- rust-tools.nvim --------------------------
+require('rust-tools').setup {}
+
+-- indent-blankline.nvim --------------------
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    use_treesitter = true,
+    show_current_context = true,
+    show_current_context_start = true,
+    -- show_end_of_line = true,
+}
+
+-- todo-comments.nvim -----------------------
+require("todo-comments").setup {
+    keywords = {
+        FIX = {
+            icon = " ",
+            color = "error",
+            alt = { "FIXME", "BUG", "FIXIT", "ISSUE", "VULN" },
+        },
+        TODO = { icon = " ", color = "info" },
+        HACK = { icon = " ", color = "warning" },
+        WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+        PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+        NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+    },
+}
+
+vim.api.nvim_set_keymap("n", "<F7>", "<cmd>:TodoTrouble<cr>",
+  {silent = true, noremap = true}
+)
+
+-- tagbar ----------------------------------
+-- TODO: Replace plugin
+-- autofocus on tagbar open
+vim.g.tagbar_autofocus = 1
+
+-- Neomake ---------------------------------
+-- TODO: Replace plugin
+-- Run linters on read and write
+vim.fn["neomake#configure#automake"]("rw", 1000)
+
+-- Check python code
+vim.g.newmake_python_enabled_makers = {"pyflakes", "pydocstyle", "mypy"}
+
+-- Disable error messages inside the buffer, next to the problematic line
+vim.g.neomake_virtualtext_current_error = 0
+
+-- Jedi-vim --------------------------------
+-- TODO: Replace plugin
+
+-- Disable jedi-vim autocompletion
+vim.g["jedi#completions_enabled"] = 0
+
+-- All these mappings work only for python code:
+-- Go to definition
+vim.g["jedi#goto_command"] = ",d"
+-- Find ocurrences
+vim.g["jedi#usages_command"] = ",o"
+-- Find assignments
+vim.g["jedi#goto_assignments_command"] = ",a"
+-- Go to definition in new tab
+vim.api.nvim_set_keymap("n", ",D", ":tab split<CR>:call jedi#goto()<CR>",
+  {silent = true, noremap = true}
+)
+
+-- Yankring ---------------------------------
+
+vim.g.yankring_history_dir = "~/.config/nvim/"
+-- Fix for yankring and neovim problem when system has non-text things
+-- copied in clipboard
+vim.g.yankring_clipboard_monitor = 0
+
+EOF
+
