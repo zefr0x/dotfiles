@@ -3,11 +3,8 @@
 " Fix background in kitty
 let &t_ut=''
 
-let using_neovim = has('nvim')
-
 " ============================================================================
 " Vim-plug initialization
-" Avoid modifying this section, unless you are very sure of what you are doing
 
 let vim_plug_just_installed = 0
 let vim_plug_path = expand('~/.config/nvim/autoload/plug.vim')
@@ -25,14 +22,7 @@ if vim_plug_just_installed
 endif
 
 " ============================================================================
-" Active plugins
-" You can disable or add new ones here:
-
-" this needs to be here, so vim-plug knows we are declaring the plugins we
-" want to use
 call plug#begin("~/.config/nvim/plugged")
-
-" Now the actual plugins:
 
 " Collection of configurations for built-in LSP client
 Plug 'neovim/nvim-lspconfig'
@@ -42,12 +32,20 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 " Snippets source for nvim-cmp
 Plug 'saadparwaiz1/cmp_luasnip'
+" Autopairs for () and {} etc...
+Plug 'windwp/nvim-autopairs'
 " Snippets plugin
 Plug 'L3MON4D3/LuaSnip'
 "Standalone UI for nvim-lsp progress
 Plug 'j-hui/fidget.nvim'
+" An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support
+Plug 'mfussenegger/nvim-lint'
 " Pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
 Plug 'folke/trouble.nvim'
+" Find, Filter, Preview, Pick. All lua, all the time
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+" FZF sorter for telescope written in c
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 " plenary: full; complete; entire; absolute; unqualified. All the lua functions I don't want to write twice.
 Plug 'nvim-lua/plenary.nvim'
 " Comments todo list
@@ -59,8 +57,17 @@ Plug 'simrat39/rust-tools.nvim'
 
 " Nvim Treesitter configurations and abstraction layer
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Rainbow parentheses for neovim using tree-sitter
+Plug 'p00f/nvim-ts-rainbow'
+" Wisely add 'end' in Vimscript, Lua, etc...
+Plug 'RRethy/nvim-treesitter-endwise'
+" Use treesitter to auto close and auto rename html tag
+Plug 'windwp/nvim-ts-autotag'
+" Determines the text object you meant based on your location in the syntax tree
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 " Highlight arguments' definitions and usages, using Treesitter
 Plug 'm-demare/hlargs.nvim'
+
 " comment code easily
 Plug 'numToStr/Comment.nvim'
 " Lualine
@@ -70,61 +77,37 @@ Plug 'onsails/lspkind.nvim'
 " Paint colors text in for #000000 or rgb(0,0,0) or ... with the real color
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lukas-reineke/indent-blankline.nvim'
+" Surround
+Plug 'kylechui/nvim-surround'
 
 " Better file browser
 Plug 'kyazdani42/nvim-tree.lua'
+" Class/module browser
+Plug 'simrat39/symbols-outline.nvim'
 " Nice icons in the file explorer and file type status line.
 Plug 'kyazdani42/nvim-web-devicons'
-
-
+" Visual git plugin for Neovim
+Plug 'tanvirtin/vgit.nvim'
+" Improved Yank and Put functionalities for Neovim
+Plug 'gbprod/yanky.nvim'
 
 " auto save fiels to disk
 Plug 'Pocco81/auto-save.nvim'
+" Colors theme
+Plug 'Shatur/neovim-ayu'
+
+
 " easy motion
 Plug 'easymotion/vim-easymotion'
-" Plug 'phaazon/hop.nvim'
-" css, html
-Plug 'mattn/emmet-vim'
-" javascript
-Plug 'pangloss/vim-javascript'
-
-" Class/module browser
-Plug 'majutsushi/tagbar'
-" Plug 'simrat39/symbols-outline.nvim'
-" Search results counter
-Plug 'vim-scripts/IndexedSearch'
-
-Plug 'cseelus/vim-colors-lucid'
-
-" Code and files fuzzy finder
-Plug 'junegunn/fzf.vim'
-
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-" Completion from other opened files
-Plug 'Shougo/context_filetype.vim'
-" Just to add the python go-to-definition and similar features, autocompletion
-Plug 'davidhalter/jedi-vim'
-" Automatically close parenthesis, etc
-Plug 'Townk/vim-autoclose'
-" Surround
-Plug 'tpope/vim-surround'
-" Indent text object
-Plug 'michaeljsmith/vim-indent-object'
-" Indentation based movements
-Plug 'jeetsukumaran/vim-indentwise'
-" Better language packs
-Plug 'sheerun/vim-polyglot'
-" Highlight matching html tags
+"vim-polyglot Highlight matching html tags
 Plug 'valloric/MatchTagAlways'
-" Git integration
-Plug 'tpope/vim-fugitive'
-" Git/mercurial/others diff icons on the side of the file lines
-Plug 'mhinz/vim-signify'
-" Yank history navigation
-Plug 'vim-scripts/YankRing.vim'
-" Linters
-Plug 'neomake/neomake'
+
+
+" TODO: Find alternatives.
+" css, html
+" Plug 'mattn/emmet-vim'
+" javascript
+" Plug 'pangloss/vim-javascript'
 " Relative numbering of lines (0 is the current line)
 " (disabled by default because is very intrusive and can't be easily toggled
 " on/off. When the plugin is present, will always activate the relative
@@ -132,98 +115,7 @@ Plug 'neomake/neomake'
 " to avoid that)
 " Plug 'myusuf3/numbers.vim'
 
-" Code searcher. If you enable it, you should also configure g:hound_base_url 
-" and g:hound_port, pointing to your hound instance
-" Plug 'mattn/webapi-vim'
-" Plug 'jfo/hound.vim'
-
-" Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
-
-" Needed by rust.vim
-syntax enable
-filetype plugin indent on
-
-" ============================================================================
-" Install plugins the first time vim runs
-
-if vim_plug_just_installed
-    echo "Installing Bundles, please ignore key map error messages"
-    :PlugInstall
-endif
-
-" ============================================================================
-" Vim settings and mappings
-
-" tab navigation mappings
-map tt :tabnew 
-map <M-Right> :tabn<CR>
-imap <M-Right> <ESC>:tabn<CR>
-map <M-Left> :tabp<CR>
-imap <M-Left> <ESC>:tabp<CR>
-
-" clear search results
-nnoremap <silent> // :noh<CR>
-
-" Ability to add python breakpoints
-" (I use ipdb, but you can change it to whatever tool you use for debugging)
-au FileType python map <silent> <leader>b Oimport ipdb; ipdb.set_trace()<esc>
-
-" ============================================================================
-" Plugins settings and mappings
-
-" Tagbar -----------------------------
-
-" toggle tagbar display
-map <F4> :TagbarToggle<CR>
-
-
-" Fzf ------------------------------
-
-" file finder mapping
-nmap ,e :Files<CR>
-" tags (symbols) in current file finder mapping
-nmap ,g :BTag<CR>
-" the same, but with the word under the cursor pre filled
-nmap ,wg :execute ":BTag " . expand('<cword>')<CR>
-" tags (symbols) in all files finder mapping
-nmap ,G :Tags<CR>
-" the same, but with the word under the cursor pre filled
-nmap ,wG :execute ":Tags " . expand('<cword>')<CR>
-" general code finder in current file mapping
-nmap ,f :BLines<CR>
-" the same, but with the word under the cursor pre filled
-nmap ,wf :execute ":BLines " . expand('<cword>')<CR>
-" general code finder in all files mapping
-nmap ,F :Lines<CR>
-" the same, but with the word under the cursor pre filled
-nmap ,wF :execute ":Lines " . expand('<cword>')<CR>
-" commands finder mapping
-nmap ,c :Commands<CR>
-
-
-" complete with words from any opened file
-let g:context_filetype#same_filetypes = {}
-let g:context_filetype#same_filetypes._ = '_'
-
-
-" Signify ------------------------------
-
-" this first setting decides in which order try to guess your current vcs
-" UPDATE it to reflect your preferences, it will speed up opening files
-let g:signify_vcs_list = ['git', 'hg']
-" mappings to jump to changed blocks
-nmap <leader>sn <plug>(signify-next-hunk)
-nmap <leader>sp <plug>(signify-prev-hunk)
-" nicer colors
-highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
-highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
-highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
-highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
-highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
-highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
-
-
 
 " emmit -------------------------------
 let g:user_emmet_install_global = 0
@@ -256,7 +148,7 @@ vim.opt.scrolloff = 3
 
 -- Config colors
 vim.opt.termguicolors = true
-vim.cmd [[ colorscheme lucid ]]
+vim.opt.background = "dark"
 
 --  Disable autocompletion preview window
 vim.opt.completeopt:remove("preview")
@@ -271,11 +163,28 @@ vim.opt.shell = "/bin/bash"
 -- Used for easymotion plugin
 vim.g.mapleader = ","
 
+-- Clear search results
+vim.api.nvim_set_keymap("n", "//", ":noh<CR>",
+  {silent = true, noremap = true}
+)
+
+-- Open previous buffer
+-- TODO: Map another better key.
+vim.api.nvim_set_keymap("n", "<F12>", "<cmd>e#<CR>",
+  {silent = true, noremap = true}
+)
+
+-- Tabs and windows mappings
+vim.api.nvim_set_keymap("n", "tt", ":tabnew<CR>",
+  {silent = true, noremap = true}
+)
 
 --------- Plugins setup and config ----------
 
 
--- vim.opt.listchars:append "eol:↴"
+-- neovim-ayu -------------------------------
+require('ayu').colorscheme {}
+
 -- nvim-lspconfig ---------------------------
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -292,11 +201,82 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- keymapping
+vim.api.nvim_set_keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.declaration()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>d", "<cmd>lua vim.lsp.buf.definition()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>k", "<cmd>lua vim.lsp.buf.hover()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>r", "<cmd>lua vim.lsp.buf.references()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>s", "<cmd>lua vim.lsp.buf.signature_help()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>i", "<cmd>lua vim.lsp.buf.implementation()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>t", "<cmd>lua vim.lsp.buf.type_definition()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>gw", "<cmd>lua vim.lsp.buf.document_symbol()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>gW", "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>ee", "<cmd>lua vim.lsp.util.show_line_diagnostics()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>n", "<cmd>lua vim.lsp.buf.rename()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>=", "<cmd>lua vim.lsp.buf.formatting()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>ai", "<cmd>lua vim.lsp.buf.incoming_calls()<CR>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>ao", "<cmd>lua vim.lsp.buf.outgoing_calls()<CR>",
+  {silent = true, noremap = true}
+)
+
 -- cmp-luasnip ------------------------------
 local luasnip = require('luasnip')
 
 -- lspkind.nvim -----------------------------
 local lspkind = require('lspkind')
+
+-- nvim-autopairs ---------------------------
+require("nvim-autopairs").setup {}
+local npairs = require("nvim-autopairs")
+local Rule = require('nvim-autopairs.rule')
+
+npairs.setup({
+    check_ts = true,
+    ts_config = {
+        lua = {'string'},-- it will not add a pair on that treesitter node
+        javascript = {'template_string'},
+        java = false,-- don't check treesitter on java
+    }
+})
+
+local ts_conds = require('nvim-autopairs.ts-conds')
+
+-- press % => %% only while inside a comment or string
+npairs.add_rules({
+  Rule("%", "%", "lua")
+    :with_pair(ts_conds.is_ts_node({'string','comment'})),
+  Rule("$", "$", "lua")
+    :with_pair(ts_conds.is_not_ts_node({'function'}))
+})
 
 -- nvim-cmp ---------------------------------
 local cmp = require 'cmp'
@@ -356,7 +336,7 @@ require("fidget").setup()
 -- lualine.nvim -----------------------------
 require('lualine').setup {
     options = {
-        theme = 'iceberg_dark',
+        theme = 'ayu',
     },
     sections = {
         lualine_a = {'mode'},
@@ -378,15 +358,18 @@ vim.api.nvim_set_keymap("n", "<F3>", "<cmd>:NvimTreeToggle<cr>",
 )
 
 -- nvim-colorizer.lua -----------------------
-require'colorizer'.setup(nil, {RGB=true;
-                               RRGGBB=true;
-                               names=true;
-                               RRGGBBAA=true;
-                               rgb_fn=true;
-                               hsl_fn=true;
-                               css=true;
-                               css_fn=true;
-                               }
+require'colorizer'.setup(
+    nil,
+    {
+        RGB=true;
+        RRGGBB=true;
+        names=true;
+        RRGGBBAA=true;
+        rgb_fn=true;
+        hsl_fn=true;
+        css=true;
+        css_fn=true;
+    }
 )
 
 -- auto-save.nvim ---------------------------
@@ -412,22 +395,52 @@ vim.api.nvim_set_keymap("n", "<F6>", "<cmd>:TroubleToggle loclist<cr>",
 
 -- nvim-treesitter --------------------------
 require('nvim-treesitter.configs').setup  {
-    ensure_installed = { "rust",
-                        "python",
-                        "c",
-                        "cpp",
-                        "javascript",
-                        "html",
-                        "css",
-                        "lua",
-                        "cmake",
-                        "dockerfile",
-                        "latex",
-                        "markdown",
-                        "regex",
-                        "sql",
-                        "toml" }
+    ensure_installed = {
+        "rust",
+        "python",
+        "c",
+        "cpp",
+        "javascript",
+        "html",
+        "css",
+        "lua",
+        "cmake",
+        "dockerfile",
+        "latex",
+        "markdown",
+        "regex",
+        "sql",
+        "toml"
+    },
+    autotag = { -- nvim-ts-autotag
+        enable = true,
+        },
+    rainbow = { -- nvim-ts-rainbow
+        enable = true,
+        extended_mode = true,
+        max_file_lines = nil,
+    },
+    endwise = { -- nvim-treesitter-endwise
+        enable = true,
+    },
 }
+
+
+-- nvim-ts-autotag --------------------------
+
+-- Fix closing a tag causes built-in LSP to update diagnostics incorrectly
+-- https://github.com/windwp/nvim-ts-autotag/issues/19
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics,
+    {
+        underline = true,
+        virtual_text = {
+            spacing = 5,
+            severity_limit = 'Warning',
+        },
+        update_in_insert = true,
+    }
+)
 
 -- hlargs.nvim ------------------------------
 require('hlargs').setup()
@@ -464,46 +477,71 @@ vim.api.nvim_set_keymap("n", "<F7>", "<cmd>:TodoTrouble<cr>",
   {silent = true, noremap = true}
 )
 
--- tagbar ----------------------------------
--- TODO: Replace plugin
--- autofocus on tagbar open
-vim.g.tagbar_autofocus = 1
+-- nvim-lint ---------------------------------
+require('lint').linters_by_ft = {
+    python = {"mypy", "flake8", "pydocstyle"}
+}
 
--- Neomake ---------------------------------
--- TODO: Replace plugin
 -- Run linters on read and write
-vim.fn["neomake#configure#automake"]("rw", 1000)
+vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost" }, {
+  callback = function()
+    require("lint").try_lint()
+  end,
+})
 
--- Check python code
-vim.g.newmake_python_enabled_makers = {"pyflakes", "pydocstyle", "mypy"}
+-- yanky.nvim ---------------------------------
+require("yanky").setup {}
 
--- Disable error messages inside the buffer, next to the problematic line
-vim.g.neomake_virtualtext_current_error = 0
 
--- Jedi-vim --------------------------------
--- TODO: Replace plugin
-
--- Disable jedi-vim autocompletion
-vim.g["jedi#completions_enabled"] = 0
-
--- All these mappings work only for python code:
--- Go to definition
-vim.g["jedi#goto_command"] = ",d"
--- Find ocurrences
-vim.g["jedi#usages_command"] = ",o"
--- Find assignments
-vim.g["jedi#goto_assignments_command"] = ",a"
--- Go to definition in new tab
-vim.api.nvim_set_keymap("n", ",D", ":tab split<CR>:call jedi#goto()<CR>",
+vim.api.nvim_set_keymap("n", "p", "<Plug>(YankyPutAfter)",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "P", "<Plug>(YankyPutBefore)",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "gp", "<Plug>(YankyGPutAfter)",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "gP", "<Plug>(YankyGPutBefore)",
   {silent = true, noremap = true}
 )
 
--- Yankring ---------------------------------
+vim.api.nvim_set_keymap("n", "<c-n>", "<Plug>(YankyCycleForward)",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<c-n>", "<plug>(yankycyclebackward)",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<c-h>", "<cmd>Telescope yank_history<cr>",
+  {silent = true, noremap = true}
+)
 
-vim.g.yankring_history_dir = "~/.config/nvim/"
--- Fix for yankring and neovim problem when system has non-text things
--- copied in clipboard
-vim.g.yankring_clipboard_monitor = 0
+-- nvim-surround ----------------------------
+vim.api.nvim_set_keymap("n", "<F4>", "<cmd>:SymbolsOutline<cr>",
+  {silent = true, noremap = true}
+)
+
+-- vgit.nvim --------------------------------
+require('vgit').setup()
+
+-- telescope.nvim ---------------------------
+require('telescope').load_extension('fzf')
+require("telescope").load_extension("yank_history")
+
+
+vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>",
+  {silent = true, noremap = true}
+)
+-- TODO: Add move keymaps for telescope
 
 EOF
 
