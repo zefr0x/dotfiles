@@ -1,12 +1,5 @@
-" This config was built on top of Fisa-vim-config
-
-" Fix background in kitty
-let &t_ut=''
-
-" ============================================================================
 " Vim-plug initialization
 
-let vim_plug_just_installed = 0
 let vim_plug_path = expand('~/.config/nvim/autoload/plug.vim')
 if !filereadable(vim_plug_path)
     echo "Installing Vim-plug..."
@@ -14,14 +7,10 @@ if !filereadable(vim_plug_path)
     silent !mkdir -p ~/.config/nvim/autoload
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     let vim_plug_just_installed = 1
-endif
-
-" manually load vim-plug the first time
-if vim_plug_just_installed
+    " manually load vim-plug the first time
     :execute 'source '.fnameescape(vim_plug_path)
 endif
 
-" ============================================================================
 call plug#begin("~/.config/nvim/plugged")
 
 " Collection of configurations for built-in LSP client
@@ -103,23 +92,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'valloric/MatchTagAlways'
 
 
-" TODO: Find alternatives.
-" css, html
-" Plug 'mattn/emmet-vim'
-" javascript
-" Plug 'pangloss/vim-javascript'
-" Relative numbering of lines (0 is the current line)
-" (disabled by default because is very intrusive and can't be easily toggled
-" on/off. When the plugin is present, will always activate the relative
-" numbering every time you go to normal mode. Author refuses to add a setting
-" to avoid that)
-" Plug 'myusuf3/numbers.vim'
+" TODO: Create a plugin for hybrid line number.
 
 call plug#end()
-
-" emmit -------------------------------
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
 
 lua << EOF
 
@@ -193,13 +168,50 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'jedi_language_server', 'rust_analyzer' }
+local servers = { "clangd", "rust_analyzer", "jedi_language_server", "texlab", "tsserver", "html" }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
     capabilities = capabilities,
   }
 end
+
+-- lua-language-server
+require'lspconfig'.sumneko_lua.setup {
+    capabilities = capabilities,
+    settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        globals = {'vim'},
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
+
+-- For html and cssls. They only provides completions when snippet support is enabled
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+-- vscode-css-languageserver
+require'lspconfig'.cssls.setup{
+    capabilities = capabilities,
+    cmd={ "vscode-css-languageserver", "--stdio" }
+    }
+
+-- vscode-html-languageserver
+require'lspconfig'.cssls.setup{
+    capabilities = capabilities,
+    filetypes = { "html", "htmldjango" },
+    cmd = { "vscode-html-languageserver", "--stdio" }
+    }
 
 -- keymapping
 vim.api.nvim_set_keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.declaration()<CR>",
@@ -479,7 +491,14 @@ vim.api.nvim_set_keymap("n", "<F7>", "<cmd>:TodoTrouble<cr>",
 
 -- nvim-lint ---------------------------------
 require('lint').linters_by_ft = {
-    python = {"mypy", "flake8", "pydocstyle"}
+    cpp = { "clangtidy", "flawfinder" },
+    python = { "mypy", "flake8", "pydocstyle" },
+    tex = { "chktex" },
+    lua = { "selene" },
+    javascript = { "eslint" },
+    html = { "tidy" },
+    htmldjango = { "tidy" },
+    css = { "stylelint" },
 }
 
 -- Run linters on read and write
@@ -541,7 +560,7 @@ vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>",
 vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>",
   {silent = true, noremap = true}
 )
--- TODO: Add move keymaps for telescope
+-- TODO: Add more keymaps for telescope
 
 EOF
 
