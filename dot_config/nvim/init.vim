@@ -1,103 +1,4 @@
-" Vim-plug initialization
-
-let vim_plug_path = expand('~/.config/nvim/autoload/plug.vim')
-if !filereadable(vim_plug_path)
-    echo "Installing Vim-plug..."
-    echo ""
-    silent !mkdir -p ~/.config/nvim/autoload
-    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    let vim_plug_just_installed = 1
-    " manually load vim-plug the first time
-    :execute 'source '.fnameescape(vim_plug_path)
-endif
-
-call plug#begin("~/.config/nvim/plugged")
-
-" Collection of configurations for built-in LSP client
-Plug 'neovim/nvim-lspconfig'
-" Autocompletion plugin
-Plug 'hrsh7th/nvim-cmp'
-" LSP source for nvim-cmp
-Plug 'hrsh7th/cmp-nvim-lsp'
-" Snippets source for nvim-cmp
-Plug 'saadparwaiz1/cmp_luasnip'
-" Autopairs for () and {} etc...
-Plug 'windwp/nvim-autopairs'
-" Snippets plugin
-Plug 'L3MON4D3/LuaSnip'
-"Standalone UI for nvim-lsp progress
-Plug 'j-hui/fidget.nvim'
-" An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support
-Plug 'mfussenegger/nvim-lint'
-" Pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
-Plug 'folke/trouble.nvim'
-" Find, Filter, Preview, Pick. All lua, all the time
-Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
-" FZF sorter for telescope written in c
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-" plenary: full; complete; entire; absolute; unqualified. All the lua functions I don't want to write twice.
-Plug 'nvim-lua/plenary.nvim'
-" Comments todo list
-Plug 'folke/todo-comments.nvim'
-
-
-" Tools for better development in (rust) using neovim's builtin LSP
-Plug 'simrat39/rust-tools.nvim'
-
-" Nvim Treesitter configurations and abstraction layer
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" Rainbow parentheses for neovim using tree-sitter
-Plug 'p00f/nvim-ts-rainbow'
-" Wisely add 'end' in Vimscript, Lua, etc...
-Plug 'RRethy/nvim-treesitter-endwise'
-" Use treesitter to auto close and auto rename html tag
-Plug 'windwp/nvim-ts-autotag'
-" Determines the text object you meant based on your location in the syntax tree
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-" Highlight arguments' definitions and usages, using Treesitter
-Plug 'm-demare/hlargs.nvim'
-
-" comment code easily
-Plug 'numToStr/Comment.nvim'
-" Lualine
-Plug 'nvim-lualine/lualine.nvim'
-" vscode-like pictograms for neovim lsp completion items
-Plug 'onsails/lspkind.nvim'
-" Paint colors text in for #000000 or rgb(0,0,0) or ... with the real color
-Plug 'norcalli/nvim-colorizer.lua'
-Plug 'lukas-reineke/indent-blankline.nvim'
-" Surround
-Plug 'kylechui/nvim-surround'
-
-" Better file browser
-Plug 'kyazdani42/nvim-tree.lua'
-" Class/module browser
-Plug 'simrat39/symbols-outline.nvim'
-" Nice icons in the file explorer and file type status line.
-Plug 'kyazdani42/nvim-web-devicons'
-" Visual git plugin for Neovim
-Plug 'tanvirtin/vgit.nvim'
-" Improved Yank and Put functionalities for Neovim
-Plug 'gbprod/yanky.nvim'
-
-" auto save fiels to disk
-Plug 'Pocco81/auto-save.nvim'
-" Colors theme
-Plug 'Shatur/neovim-ayu'
-
-
-" easy motion
-Plug 'easymotion/vim-easymotion'
-"vim-polyglot Highlight matching html tags
-Plug 'valloric/MatchTagAlways'
-
-
-" TODO: Create a plugin for hybrid line number.
-
-call plug#end()
-
 lua << EOF
-
 --------------- Base configs ----------------
 
 
@@ -155,6 +56,9 @@ vim.api.nvim_set_keymap("n", "tt", ":tabnew<CR>",
 )
 
 --------- Plugins setup and config ----------
+
+-- Load plugins
+require('plugings')
 
 
 -- neovim-ayu -------------------------------
@@ -424,6 +328,9 @@ require('nvim-treesitter.configs').setup  {
         "sql",
         "toml"
     },
+    highlight = {
+        enable = true,
+        },
     autotag = { -- nvim-ts-autotag
         enable = true,
         },
