@@ -21,6 +21,8 @@ vim.opt.nu = true
 -- When scrolling, keep cursor 3 lines away from screen border
 vim.opt.scrolloff = 3
 
+-- Fix cursor being jittery when using live gutter enabled or linting a file
+vim.opt.signcolumn = "yes"
 
 -- Config colors
 vim.opt.termguicolors = true
