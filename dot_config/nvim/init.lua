@@ -1,4 +1,3 @@
-lua << EOF
 --------------- Base configs ----------------
 
 
@@ -470,6 +469,4 @@ vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>",
   {silent = true, noremap = true}
 )
 -- TODO: Add more keymaps for telescope
-
-EOF
 
