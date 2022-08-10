@@ -81,10 +81,10 @@ return require('packer').startup(function(use)
     use { 'tanvirtin/vgit.nvim' }
 
     -- Lualine
-    use { 'nvim-lualine/lualine.nvim', requires={ 'kyazdani42/nvim-web-devicons' } }
+    use { 'nvim-lualine/lualine.nvim', after = "github-nvim-theme", requires={ 'kyazdani42/nvim-web-devicons' } }
 
-    -- Colors theme
-    use 'Shatur/neovim-ayu'
+    -- Colors themes
+    use 'projekt0n/github-nvim-theme'
 
     -- Improved Yank and Put functionalities for Neovim
     use 'gbprod/yanky.nvim'

@@ -62,8 +62,11 @@ vim.api.nvim_set_keymap("n", "tt", ":tabnew<CR>",
 require('plugings')
 
 
--- neovim-ayu -------------------------------
-require('ayu').colorscheme {}
+-- github-nvim-theme -------------------------------
+require('github-theme').setup {
+    theme_style = "dark_default",
+    dark_float = true,
+}
 
 -- nvim-lspconfig ---------------------------
 -- Add additional capabilities supported by nvim-cmp
@@ -112,7 +115,7 @@ require'lspconfig'.cssls.setup{
     }
 
 -- vscode-html-languageserver
-require'lspconfig'.cssls.setup{
+require'lspconfig'.html.setup{
     capabilities = capabilities,
     filetypes = { "html", "htmldjango" },
     cmd = { "vscode-html-languageserver", "--stdio" }
@@ -253,7 +256,7 @@ require("fidget").setup()
 -- lualine.nvim -----------------------------
 require('lualine').setup {
     options = {
-        theme = 'ayu',
+        theme = 'auto',
     },
     sections = {
         lualine_a = {'mode'},
