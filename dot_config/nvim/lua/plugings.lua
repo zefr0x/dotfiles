@@ -7,19 +7,34 @@ return require('packer').startup(function(use)
     -- An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support
     use 'mfussenegger/nvim-lint'
 
+    -- Snippets plugin
+    use { 'L3MON4D3/LuaSnip' }
+
     -- Autocompletion plugin
     use 'hrsh7th/nvim-cmp'
     -- LSP source for nvim-cmp
     use 'hrsh7th/cmp-nvim-lsp'
     -- Snippets source for nvim-cmp
     use 'saadparwaiz1/cmp_luasnip'
+    --  nvim-cmp source for buffer words
+    use "hrsh7th/cmp-buffer"
+    -- nvim-cmp source for textDocument/documentSymbol via nvim-lsp
+    use "hrsh7th/cmp-nvim-lsp-document-symbol"
+    -- cmp-nvim-lsp-signature-help
+    use "hrsh7th/cmp-nvim-lsp-signature-help"
+    --  nvim-cmp source for path
+    use "hrsh7th/cmp-path"
+    --  nvim-cmp source for vim's cmdline
+    use "hrsh7th/cmp-cmdline"
+    -- Add latex symbol support for nvim-cmp
+    use "kdheepak/cmp-latex-symbols"
     -- Autopairs for () and {} etc...
     use 'windwp/nvim-autopairs'
     -- vscode-like pictograms for neovim lsp completion items
     use 'onsails/lspkind.nvim'
 
-    -- Snippets plugin
-    use 'L3MON4D3/LuaSnip'
+    -- TODO: Configure debug adapter protocol client for neovim
+    -- use 'mfussenegger/nvim-dap'
 
     -- Pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing
     use { 'folke/trouble.nvim', requires={ 'kyazdani42/nvim-web-devicons' } }
@@ -78,6 +93,8 @@ return require('packer').startup(function(use)
     use 'simrat39/symbols-outline.nvim'
     -- Visual git plugin for Neovim
     use { 'tanvirtin/vgit.nvim' }
+    -- TODO: Configure testing framework
+    -- use 'nvim-neotest/neotest'
 
     -- Lualine
     use { 'nvim-lualine/lualine.nvim', requires={ 'kyazdani42/nvim-web-devicons' } }
