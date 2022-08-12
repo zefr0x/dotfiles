@@ -60,14 +60,13 @@ return require('packer').startup(function(use)
     -- Paint colors text in for #000000 or rgb(0,0,0) or ... with the real colors
     use 'norcalli/nvim-colorizer.lua'
     -- vim-polyglot Highlight matching html tags
-    -- TODO: Replace
-    use 'valloric/MatchTagAlways'
+    -- TODO: Find plugin like this one
+    -- use 'valloric/MatchTagAlways'
     -- indent guides for neovim
     use 'lukas-reineke/indent-blankline.nvim'
 
-    -- easy motion
-    -- TODO: Replace
-    use 'easymotion/vim-easymotion'
+    -- Speed and easy motions.
+    use { 'phaazon/hop.nvim', branch = "v2" }
     -- Surround
     use 'kylechui/nvim-surround'
     -- Comment code easily
@@ -81,7 +80,11 @@ return require('packer').startup(function(use)
     use { 'tanvirtin/vgit.nvim' }
 
     -- Lualine
-    use { 'nvim-lualine/lualine.nvim', after = "github-nvim-theme", requires={ 'kyazdani42/nvim-web-devicons' } }
+    use { 'nvim-lualine/lualine.nvim', requires={ 'kyazdani42/nvim-web-devicons' } }
+    --  A snazzy bufferline/tabline
+    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+    -- Simple winbar/statusline plugin that shows your current code context
+    use 'SmiteshP/nvim-navic'
 
     -- Colors themes
     use 'projekt0n/github-nvim-theme'
@@ -90,6 +93,10 @@ return require('packer').startup(function(use)
     use 'gbprod/yanky.nvim'
     -- Auto save fiels to disk
     use 'Pocco81/auto-save.nvim'
+    -- Intelligently reopen files at your last edit position in Vim
+    use 'ethanholz/nvim-lastplace'
+    -- Smooth scrolling neovim plugin written in lua
+    use 'karb94/neoscroll.nvim'
 
     --  TODO: Create a plugin for hybrid line number.
 

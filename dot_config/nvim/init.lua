@@ -37,7 +37,6 @@ vim.opt.wildmode = "list:longest"
 vim.opt.shell = "/bin/bash"
 
 -- Set leader key
--- Used for easymotion plugin
 vim.g.mapleader = ","
 
 -- Clear search results
@@ -73,19 +72,26 @@ require('github-theme').setup {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
+-- nvim-navic
+local custom_on_attach = function (client, bufnr)
+    -- FIXME: Doesn't work with some languages.
+    require("nvim-navic").attach(client, bufnr)
+end
+
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { "clangd", "rust_analyzer", "jedi_language_server", "texlab", "tsserver", "html" }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
-    -- on_attach = my_custom_on_attach,
+    on_attach = custom_on_attach,
     capabilities = capabilities,
   }
 end
 
 -- lua-language-server
 require'lspconfig'.sumneko_lua.setup {
+    on_attach = custom_on_attach,
     capabilities = capabilities,
     settings = {
     Lua = {
@@ -110,12 +116,14 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- vscode-css-languageserver
 require'lspconfig'.cssls.setup{
+    on_attach = custom_on_attach,
     capabilities = capabilities,
     cmd={ "vscode-css-languageserver", "--stdio" }
     }
 
 -- vscode-html-languageserver
 require'lspconfig'.html.setup{
+    on_attach = custom_on_attach,
     capabilities = capabilities,
     filetypes = { "html", "htmldjango" },
     cmd = { "vscode-html-languageserver", "--stdio" }
@@ -254,19 +262,64 @@ cmp.setup {
 require("fidget").setup()
 
 -- lualine.nvim -----------------------------
+local navic = require("nvim-navic")
+
 require('lualine').setup {
     options = {
         theme = 'auto',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
     },
     sections = {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {'filename'},
-        lualine_x = {'filesize', 'encoding', 'fileformat', 'filetype'},
+        lualine_c = {'filename', { navic.get_location, cond = navic.is_available } },
+        lualine_x = {
+            'filesize',
+            { 'fileformat', separator = "" },
+            'encoding',
+            'filetype'
+        },
         lualine_y = {'progress'},
         lualine_z = {'location'}
+    },
+    inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {'filename'},
+        lualine_x = {'location'},
+        lualine_y = {},
+        lualine_z = {}
+    },
+    -- TODO: Configure it in neovim 8.0
+    -- winbar = {
+    --     lualine_a = {},
+    --     lualine_b = {},
+    --     lualine_c = {},
+    --     lualine_x = {},
+    --     lualine_y = {},
+    --     lualine_z = {}
+    -- },
+}
+
+-- bufferline.nvim --------------------------
+require("bufferline").setup {
+    options = {
+        always_show_bufferline = false,
+        numbers = "ordinal",
+        show_buffer_close_icons = false,
+        show_close_icon = false,
+        diagnostics = "nvim_lsp",
+        separator_style = "slant",
     }
 }
+
+vim.api.nvim_set_keymap("n", "<leader>bp", "<cmd>BufferLinePick<cr>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>bc", "<cmd>BufferLinePickClose<cr>",
+  {silent = true, noremap = true}
+)
 
 -- nvim-tree.lua ----------------------------
 require("nvim-tree").setup({
@@ -472,4 +525,26 @@ vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>",
   {silent = true, noremap = true}
 )
 -- TODO: Add more keymaps for telescope
+
+-- neoscroll.nvim ---------------------------
+require('neoscroll').setup {}
+
+-- nvim-lastplace ---------------------------
+require'nvim-lastplace'.setup {}
+
+-- hop.nvim
+require("hop").setup {}
+
+vim.api.nvim_set_keymap("n", "<leader>f", "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR })<cr>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>F", "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })<cr>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>t", "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, hint_offset = -1 })<cr>",
+  {silent = true, noremap = true}
+)
+vim.api.nvim_set_keymap("n", "<leader>T", "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, hint_offset = 1 })<cr>",
+  {silent = true, noremap = true}
+)
 
