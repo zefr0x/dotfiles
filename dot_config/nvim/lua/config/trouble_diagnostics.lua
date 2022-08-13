@@ -1,0 +1,3 @@
+-- trouble
+require("trouble").setup {}
+
