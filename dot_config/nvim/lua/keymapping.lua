@@ -21,7 +21,7 @@ map("n", "tt", ":tabnew<CR>")
 -- lspconfig
 map("n", "<leader>D", "<cmd>lua vim.lsp.buf.declaration()<CR>")
 map("n", "<leader>d", "<cmd>lua vim.lsp.buf.definition()<CR>")
-map("n", "<leader>k", "<cmd>lua vim.lsp.buf.hover()<CR>")
+map("n", "<leader>m", "<cmd>lua vim.lsp.buf.hover()<CR>")
 map("n", "<leader>r", "<cmd>lua vim.lsp.buf.references()<CR>")
 map("n", "<leader>s", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
 map("n", "<leader>i", "<cmd>lua vim.lsp.buf.implementation()<CR>")
@@ -80,4 +80,7 @@ map("n", "<leader>f", "<cmd>lua require'hop'.hint_char1({ direction = require'ho
 map("n", "<leader>F", "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })<cr>")
 map("n", "<leader>t", "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, hint_offset = -1 })<cr>")
 map("n", "<leader>T", "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, hint_offset = 1 })<cr>")
+map("n", "<leader>k", "<cmd>lua require'hop'.hint_lines_skip_whitespace({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })<cr>")
+map("n", "<leader>j", "<cmd>lua require'hop'.hint_lines_skip_whitespace({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR })<cr>")
+map("n", "<leader>w", "<cmd>lua require'hop'.hint_words({ current_line_only = true })<cr>")
 
