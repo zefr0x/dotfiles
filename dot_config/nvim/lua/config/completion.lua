@@ -1,6 +1,6 @@
 -- cmp-luasnip
 local luasnip = require('luasnip')
-require("snipits") -- TODO:
+require("snipits.snipits")
 
 -- nvim-autopairs ---------------------------
 require("nvim-autopairs").setup {}
