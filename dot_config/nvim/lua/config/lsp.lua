@@ -62,5 +62,5 @@ require'lspconfig'.html.setup{
     }
 
 -- fidget.nvim ------------------------------
-require("fidget").setup()
+require("fidget").setup {}
 
