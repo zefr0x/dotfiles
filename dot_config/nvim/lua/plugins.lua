@@ -248,10 +248,9 @@ return require("packer").startup(function(use)
     -- rust-analyzer is required
     use {
         "simrat39/rust-tools.nvim",
-        ft = "rust",
         after = "nvim-lspconfig",
         config = function ()
-            require("config.rust_tools")
+            require("config.rust_tools_config")
         end
     }
 
