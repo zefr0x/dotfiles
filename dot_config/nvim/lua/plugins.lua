@@ -253,6 +253,15 @@ return require("packer").startup(function(use)
             require("config.rust_tools_config")
         end
     }
+    -- Healp managing crates.io dependencies
+    use {
+    'saecki/crates.nvim',
+    event = { "BufRead Cargo.toml" },
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+        require("config.crates_config")
+    end,
+}
 
     -- Load the colors theme
     -- If it was loaded with the plugin it will brake the bufferline colors

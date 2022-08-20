@@ -115,3 +115,4 @@ map("n", "<leader>w",
     end
 )
 
+-- TODO: Create keymapping for crates.nvim to be loaded only in Cargo.toml file
