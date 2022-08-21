@@ -178,7 +178,10 @@ return require("packer").startup(function(use)
     -- Class/module browser
     use {
         "simrat39/symbols-outline.nvim",
-        after = { "nvim-treesitter" }
+        after = { "nvim-treesitter" },
+        config = function ()
+            require("config.symbols_outline")
+        end
     }
     -- Visual git plugin for Neovim
     use {
