@@ -48,7 +48,12 @@ return require("packer").startup(function(use)
         end
     }
     -- Autopairs for () and {} etc...
-    use "windwp/nvim-autopairs"
+    use {
+        "windwp/nvim-autopairs",
+        config = function ()
+            require("config.auto_pair")
+        end
+    }
     -- vscode-like pictograms for neovim lsp completion items
     use "onsails/lspkind.nvim"
 
@@ -116,7 +121,7 @@ return require("packer").startup(function(use)
     -- Wisely add 'end' in Vimscript, Lua, etc...
     use {
         "RRethy/nvim-treesitter-endwise",
-        after = { "nvim-treesitter" },
+        after = { "nvim-treesitter" }
     }
     -- Use treesitter to auto close and auto rename html tag
     use {
@@ -183,6 +188,7 @@ return require("packer").startup(function(use)
             require("config.symbols_outline")
         end
     }
+
     -- Visual git plugin for Neovim
     use {
         "tanvirtin/vgit.nvim",

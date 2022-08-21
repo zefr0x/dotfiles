@@ -2,30 +2,6 @@
 local luasnip = require('luasnip')
 require("snipits.snipits")
 
--- nvim-autopairs ---------------------------
-require("nvim-autopairs").setup {}
-local npairs = require("nvim-autopairs")
-local Rule = require('nvim-autopairs.rule')
-
-npairs.setup({
-    check_ts = true,
-    ts_config = {
-        lua = {'string'},-- it will not add a pair on that treesitter node
-        javascript = {'template_string'},
-        java = false,-- don't check treesitter on java
-    }
-})
-
-local ts_conds = require('nvim-autopairs.ts-conds')
-
--- press % => %% only while inside a comment or string
-npairs.add_rules({
-  Rule("%", "%", "lua")
-    :with_pair(ts_conds.is_ts_node({'string','comment'})),
-  Rule("$", "$", "lua")
-    :with_pair(ts_conds.is_not_ts_node({'function'}))
-})
-
 -- nvim-cmp ---------------------------------
 local has_words_before = function()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -111,6 +87,25 @@ require'cmp'.setup.cmdline('/', {
         { name = 'buffer' }
     })
 })
+
+-- nvim-autopairs
+cmp.event:on(
+    "confirm_done",
+    require("nvim-autopairs.completion.cmp").on_confirm_done {
+        filetypes = {
+            -- "*" is a alias to all filetypes
+            ["*"] = {
+                ["("] = {
+                    kind = {
+                        cmp.lsp.CompletionItemKind.Function,
+                        cmp.lsp.CompletionItemKind.Method,
+                    },
+                    handler = require('nvim-autopairs.completion.handlers')["*"]
+                }
+            },
+        }
+    }
+)
 
 -- Lazily add crates.nvim source
 vim.api.nvim_create_autocmd("BufRead", {
