@@ -1,27 +1,60 @@
--- cmp-luasnip
-local luasnip = require('luasnip')
-require("snipits.snipits")
-
--- nvim-cmp ---------------------------------
 local has_words_before = function()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
+local kind_icons = {
+    Text = "  ",
+    Method = " ",
+    Function = "  ",
+    Constructor = "  ",
+    Field = "  ",
+    Variable = "  ",
+    Class = " ﴯ ",
+    Interface = "  ",
+    Module = "  ",
+    Property = " ﰠ ",
+    Unit = "  ",
+    Value = "  ",
+    Enum = "  ",
+    Keyword = "  ",
+    Snippet = "  ",
+    Color = "  ",
+    File = "  ",
+    Reference = "  ",
+    Folder = "  ",
+    EnumMember = "  ",
+    Constant = "  ",
+    Struct = "  ",
+    Event = "  ",
+    Operator = "  ",
+    TypeParameter = "  "
+}
+
+-- luasnip
+local luasnip = require('luasnip')
+require("snipits.snipits")
+
+-- nvim-cmp
 local cmp = require 'cmp'
 
 cmp.setup {
+    window = {
+        completion = {
+            winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None", -- TODO: What is this?
+            col_offset = -3,
+            side_padding = 0,
+        },
+    },
     formatting = {
-        -- lspkind.nvim
-        format = require("lspkind").cmp_format({
-            mode = 'symbol_text', -- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
-            maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
-            -- The function below will be called before any actual modifications from lspkind
-            -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
-            before = function (_entry, vim_item)
+        fields = { "kind", "abbr", "menu" },
+        format = function (entry, vim_item)
+            -- vim_item.menu = "    (" .. vim_item.kind .. ")"
+
+            vim_item.kind = kind_icons[vim_item.kind]
+
             return vim_item
         end
-        })
     },
     snippet = {
         expand = function(args)
@@ -67,7 +100,7 @@ cmp.setup {
             }
         },
         { name = "nvim_lsp_signature_help" },
-        -- { name = "buffer" }, # TODO: What is this?
+        { name = "buffer" }, --  TODO: What is this?
         { name = "latex_symbols" },
     },
 }

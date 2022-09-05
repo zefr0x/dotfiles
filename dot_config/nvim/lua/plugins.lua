@@ -24,7 +24,7 @@ return require("packer").startup(function(use)
     -- Autocompletion plugin
     use {
         "hrsh7th/nvim-cmp",
-        after = { "LuaSnip", "nvim-autopairs", "lspkind.nvim" },
+        after = { "LuaSnip", "nvim-autopairs" },
         requires = {
             -- LSP source for nvim-cmp
             "hrsh7th/cmp-nvim-lsp",
@@ -54,8 +54,6 @@ return require("packer").startup(function(use)
             require("config.auto_pair")
         end
     }
-    -- vscode-like pictograms for neovim lsp completion items
-    use "onsails/lspkind.nvim"
 
     -- TODO: Configure debug adapter protocol client for neovim
     -- use "mfussenegger/nvim-dap"
