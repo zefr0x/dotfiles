@@ -9,6 +9,7 @@ require('nvim-treesitter.configs').setup  {
         "html",
         "css",
         "lua",
+        "bash",
         "cmake",
         "dockerfile",
         "latex",
