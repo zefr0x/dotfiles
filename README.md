@@ -11,10 +11,16 @@ Those config files and dependencies represents my Personalized Development Envir
 - [ghostwriter](https://archlinux.org/packages/community/x86_64/ghostwriter/) <sup>`For writing in Arabic smoothly`</sup>
 - [mpv](https://archlinux.org/packages/community/x86_64/mpv/) <sup>`Media player`</sup>
 - [feh](https://archlinux.org/packages/extra/x86_64/feh/) <sup>`Image viewer`</sup>
+- [qalculate-qt](https://archlinux.org/packages/extra/x86_64/qalculate-qt/)
+
+### Fonts
+- [JetBrainsMono Nerd](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
 
 ### CLI Applications/Tools
 - [zsh](https://archlinux.org/packages/extra/x86_64/zsh/) <sup>`Shell`</sup>
 - [python-livereload](https://archlinux.org/packages/community/any/python-livereload/)
+- [bat](https://archlinux.org/packages/community/x86_64/bat/)
+- [libqalculate](https://archlinux.org/packages/extra/x86_64/libqalculate/)
 
 ### NeoVim
 - [neovim](https://archlinux.org/packages/community/x86_64/neovim/)
@@ -41,7 +47,12 @@ After installing packer, you need to install the plugins for neovim by running:
 - [flawfinder](https://archlinux.org/packages/community/any/flawfinder/) <sup>`C/C++`</sup>
 - [mypy](https://archlinux.org/packages/community/any/mypy/) <sup>`Python`</sup>
 - [flake8](https://archlinux.org/packages/community/any/flake8/) <sup>`Python`</sup>
+    - [pep8-naming](https://aur.archlinux.org/packages/python-pep8-naming)
+    - [flake8-builtins](https://aur.archlinux.org/packages/python-flake8-builtins)
+    - [flake8-comprehensions](https://aur.archlinux.org/packages/python-flake8-comprehensions)
+    - [flake8-bugbear](https://aur.archlinux.org/packages/python-flake8-bugbear)
 - [python-pydocstyle](https://archlinux.org/packages/community/any/python-pydocstyle/) <sup>`Python`</sup>
+- [Bandit](https://archlinux.org/packages/community/any/bandit/) <sup>`Python`</sup>
 - [selene-linter](https://archlinux.org/packages/community/x86_64/selene-linter/) <sup>`Lua`</sup>
 - [eslint](https://archlinux.org/packages/community/any/eslint/) <sup>`JavaScript/TypeScript`</sup>
 - [stylelint](https://archlinux.org/packages/community/any/stylelint/) <sup>`CSS`</sup>
@@ -72,9 +83,9 @@ rustup default stable
 ## Arch linux Installation
 In your shell, run:
 ```shell
-sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-lang texlive-fontsextra ghostwriter kitty mpv feh zsh
+sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-lang texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate
 
-yay -Sa nvim-packer-git
+yay -Sa nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming
 
 rustup default stable
 ```
@@ -83,6 +94,8 @@ Then inside neovim, run:
 ```
 :PackerSync
 ```
+
+The fonts in [fonts](#fonts) section should be installed manually.
 
 ## Screen Shots
 
