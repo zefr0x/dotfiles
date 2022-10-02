@@ -14,7 +14,7 @@ Those config files and dependencies represents my Personalized Development Envir
 - [qalculate-qt](https://archlinux.org/packages/extra/x86_64/qalculate-qt/)
 
 ### Fonts
-- [JetBrainsMono Nerd](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
+- [JetBrainsMono Nerd](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
 
 ### CLI Applications/Tools
 - [zsh](https://archlinux.org/packages/extra/x86_64/zsh/) <sup>`Shell`</sup>
@@ -85,7 +85,7 @@ In your shell, run:
 ```shell
 sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-lang texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate
 
-yay -Sa nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming
+yay -Sa nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono
 
 rustup default stable
 ```
@@ -94,8 +94,6 @@ Then inside neovim, run:
 ```
 :PackerSync
 ```
-
-The fonts in [fonts](#fonts) section should be installed manually.
 
 ## Screen Shots
 
