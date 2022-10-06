@@ -36,6 +36,7 @@ After installing packer, you need to install the plugins for neovim by running:
 - [fd](https://archlinux.org/packages/community/x86_64/fd/)
 
 ### Language Servers
+- [rust-analyzer](https://archlinux.org/packages/community/x86_64/rust-analyzer/) <sup>`Rust`</sup>
 - [jedi-language-server](https://archlinux.org/packages/community/any/jedi-language-server/) <sup>`Python`</sup>
 - [texlab](https://archlinux.org/packages/community/x86_64/texlab/) <sup>`LaTex`</sup>
 - [typescript-language-server](https://archlinux.org/packages/community/any/typescript-language-server/) <sup>`JavaScript/TypeScript`</sup>
@@ -58,6 +59,9 @@ After installing packer, you need to install the plugins for neovim by running:
 - [stylelint](https://archlinux.org/packages/community/any/stylelint/) <sup>`CSS`</sup>
 - [tidy](https://archlinux.org/packages/extra/x86_64/tidy/) <sup>`HTML`</sup>
 
+### Formatters
+- [black](https://archlinux.org/packages/community/any/python-black/) <sup>`Python`</sup>
+
 ### Programming Languages Tools/Compilers/Interpreters
 #### Rust
 - [rustup](https://archlinux.org/packages/community/x86_64/rustup/)
@@ -67,7 +71,7 @@ After installing it you need to run:
 rustup default stable
 ```
 
-> **Note** It includes the language-server, linter and compiler etc...
+> **Note** It includes most the tools used for the Rust language.
 
 #### C/C++
 - [clang](https://archlinux.org/packages/extra/x86_64/clang/)
@@ -83,7 +87,7 @@ rustup default stable
 ## Arch linux Installation
 In your shell, run:
 ```shell
-sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-lang texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate
+sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-lang texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black
 
 yay -Sa nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono
 
