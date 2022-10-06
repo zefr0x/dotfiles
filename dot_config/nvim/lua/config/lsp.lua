@@ -12,8 +12,25 @@ local custom_on_attach = function (client, bufnr)
     require("nvim-navic").attach(client, bufnr)
 end
 
+-- rust-tools.nvim
+require('rust-tools').setup {
+    server = {
+        on_attach = custom_on_attach,
+        capabilities = capabilities,
+        settings = {
+            ['rust-analyzer'] = {
+                checkOnSave = {
+                    overrideCommand = {
+                        "cargo", "clippy", "--workspace", "--message-format=json", "--all-targets", "--all-features"
+                    }
+                }
+            }
+        }
+    }
+}
+
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { "clangd", "rust_analyzer", "jedi_language_server", "texlab", "tsserver", "html" }
+local servers = { "clangd", "jedi_language_server", "texlab", "tsserver", "html" }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = custom_on_attach,
@@ -22,7 +39,7 @@ for _, lsp in ipairs(servers) do
 end
 
 -- lua-language-server
-require'lspconfig'.sumneko_lua.setup {
+lspconfig.sumneko_lua.setup {
     on_attach = custom_on_attach,
     capabilities = capabilities,
     settings = {
@@ -47,14 +64,14 @@ require'lspconfig'.sumneko_lua.setup {
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- vscode-css-languageserver
-require'lspconfig'.cssls.setup{
+lspconfig.cssls.setup{
     on_attach = custom_on_attach,
     capabilities = capabilities,
     cmd={ "vscode-css-languageserver", "--stdio" }
     }
 
 -- vscode-html-languageserver
-require'lspconfig'.html.setup{
+lspconfig.html.setup{
     on_attach = custom_on_attach,
     capabilities = capabilities,
     filetypes = { "html", "htmldjango" },

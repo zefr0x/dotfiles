@@ -2,7 +2,7 @@ return require("packer").startup(function(use)
     -- Collection of configurations for built-in LSP client
     use {
         "neovim/nvim-lspconfig",
-        after = { "nvim-cmp", "nvim-navic" },
+        after = { "nvim-cmp", "nvim-navic", "rust-tools.nvim" },
         config = function ()
             require("config.lsp")
         end
@@ -255,10 +255,6 @@ return require("packer").startup(function(use)
     -- rust-analyzer is required
     use {
         "simrat39/rust-tools.nvim",
-        after = "nvim-lspconfig",
-        config = function ()
-            require("config.rust_tools_config")
-        end
     }
     -- Healp managing crates.io dependencies
     use {
