@@ -17,12 +17,27 @@ Those config files and dependencies represents my Personalized Development Envir
 - [JetBrainsMono Nerd](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
 
 ### CLI Applications/Tools
-- [zsh](https://archlinux.org/packages/extra/x86_64/zsh/) <sup>`Shell`</sup>
+- [git](https://archlinux.org/packages/extra/x86_64/git/)
 - [python-livereload](https://archlinux.org/packages/community/any/python-livereload/)
-- [bat](https://archlinux.org/packages/community/x86_64/bat/)
 - [libqalculate](https://archlinux.org/packages/extra/x86_64/libqalculate/)
 
-### NeoVim
+### CLI Utilities
+- [bat](https://archlinux.org/packages/community/x86_64/bat/)
+- [fd](https://archlinux.org/packages/community/x86_64/fd/) <sup>`find alternative`</sup>
+- [zoxide](https://archlinux.org/packages/community/x86_64/zoxide/) <sup>`cd alternative`</sup>
+- [exa](https://archlinux.org/packages/community/x86_64/exa/) <sup>`ls alternative`</sup>
+- [fzf](https://archlinux.org/packages/community/x86_64/fzf/) <sup>`fuzzy finder`</sup>
+
+### Zsh <sup>`Shell`</sup>
+- [zsh](https://archlinux.org/packages/extra/x86_64/zsh/)
+    - [zsh-autosuggestions](https://archlinux.org/packages/community/any/zsh-autosuggestions/)
+    - [zsh-completions](https://archlinux.org/packages/community/any/zsh-completions/)
+    - [zsh-history-substring-search](https://archlinux.org/packages/community/any/zsh-history-substring-search/)
+    - [zsh-syntax-highlighting](https://archlinux.org/packages/community/any/zsh-syntax-highlighting/)
+    - [zsh-theme-powerlevel10k](https://archlinux.org/packages/community/x86_64/zsh-theme-powerlevel10k/)
+
+
+### NeoVim <sup>`Text Editor`</sup>
 - [neovim](https://archlinux.org/packages/community/x86_64/neovim/)
 - [nvim packer](https://aur.archlinux.org/packages/nvim-packer-git)
 
@@ -33,7 +48,6 @@ After installing packer, you need to install the plugins for neovim by running:
 
 #### sup-dependencies <sup>`Required by NeoVim plugins`</sup>
 - [ripgrep](https://archlinux.org/packages/community/x86_64/ripgrep/)
-- [fd](https://archlinux.org/packages/community/x86_64/fd/)
 
 ### Language Servers
 - [rust-analyzer](https://archlinux.org/packages/community/x86_64/rust-analyzer/) <sup>`Rust`</sup>
@@ -79,7 +93,7 @@ rustup default stable
 #### Python
 - [python](https://archlinux.org/packages/core/x86_64/python/)
 
-### LaTex
+#### LaTex
 - [texlive-most](https://archlinux.org/groups/x86_64/texlive-most/)
 - [texlive-lang](https://archlinux.org/groups/x86_64/texlive-lang/)
 - [texlive-fontsextra](https://archlinux.org/packages/extra/any/texlive-fontsextra/)
@@ -87,7 +101,7 @@ rustup default stable
 ## Arch linux Installation
 In your shell, run:
 ```shell
-sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-lang texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black
+sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-lang texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k
 
 yay -Sa nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono
 
@@ -108,4 +122,4 @@ Then inside neovim, run:
 <img width=500px src="" alt="Screenshot for neovim">
 
 ### [ghostwriter](https://wereturtle.github.io/ghostwriter/) <sup>[~/.config/ghostwriter](https://github.com/zer0-x/dotfiles/tree/main/dot_config/ghostwriter)</sup>
-<img width=500px src="https://raw.githubusercontent.com/zer0-x/dotfiles/main/dot_screenshots/ghostwriter.webp" alt="Screenshot for ghostwriter">
+<img width=500px src="" alt="Screenshot for ghostwriter">
