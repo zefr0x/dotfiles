@@ -3,6 +3,9 @@ local g = vim.g
 
 --------------- Base configs ----------------
 
+-- set GUI options
+vim.api.nvim_set_option("guifont", "JetBrainsMono Nerd Font:h16")
+
 -- Set encoding
 o.encoding = "utf-8"
 
