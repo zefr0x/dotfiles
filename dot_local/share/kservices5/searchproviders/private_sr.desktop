@@ -1,8 +1,0 @@
-[Desktop Entry]
-Charset=
-Hidden=false
-Keys=sr
-Name=searx
-# This will be redirected to a searx instance in the browser.
-Query=https://libredirect.onion/?q=\\{@}
-Type=Service

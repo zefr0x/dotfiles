@@ -1,8 +1,0 @@
-[Desktop Entry]
-Charset=
-Hidden=false
-Keys=st
-Name=simpeTranslate
-# This will be redirected to a simpleTranslate instance in the browser rather then google translate directly.
-Query=https://translate.google.com/?text=\\{@}&sl=auto&tl=ar
-Type=Service

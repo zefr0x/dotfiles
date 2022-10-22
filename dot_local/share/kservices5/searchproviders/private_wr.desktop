@@ -1,7 +1,0 @@
-[Desktop Entry]
-Charset=
-Hidden=false
-Keys=en2ar
-Name=wordreference en to ar
-Query=https://www.wordreference.com/enar/\\{@}
-Type=Service
