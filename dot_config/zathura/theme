@@ -1,0 +1,53 @@
+set font "monospace normal 11"
+
+set guioptions "shv"
+
+set statusbar-h-padding 3
+set statusbar-v-padding 1
+
+set page-padding 3
+
+
+set default-bg "#000000"
+set default-fg "#f0f0f0"
+
+set statusbar-fg "#c0c0c0"
+set statusbar-bg "#200000"
+
+set notification-bg "#30a000"
+set notification-fg "#151515"
+
+set notification-error-bg "#a00000"
+set notification-error-fg "#151515"
+
+set notification-warning-bg "#e05000"
+set notification-warning-fg "#151515"
+
+set inputbar-bg "#151515"
+set inputbar-fg "#f0f0f0"
+
+set completion-bg "#252525"
+set completion-fg "#d0d0d0"
+
+set completion-group-bg "#000000"
+set completion-group-fg "#dedede"
+
+set completion-highlight-fg "#151515"
+set completion-highlight-bg "#30a000"
+
+set render-loading-bg "#ffffff"
+set render-loading-fg "#000000"
+
+set index-fg "#dddddd"
+set index-bg "#101010"
+
+set index-active-fg "#232323"
+set index-active-bg "#307000"
+
+
+set highlight-color "#ffac47"
+set highlight-fg "#ffffff"
+set highlight-active-color "#74cde6"
+
+set recolor-lightcolor "#000000"
+set recolor-darkcolor "#e0e0e0"
