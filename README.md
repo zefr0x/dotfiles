@@ -28,6 +28,8 @@ Those config files and dependencies represents my Personalized Development Envir
 - [git](https://archlinux.org/packages/extra/x86_64/git/)
 - [python-livereload](https://archlinux.org/packages/community/any/python-livereload/)
 - [libqalculate](https://archlinux.org/packages/extra/x86_64/libqalculate/)
+- [xclip](https://archlinux.org/packages/extra/x86_64/xclip/) <sup>`Access clipborad for x11`</sup>
+- [wl-clipboard](https://archlinux.org/packages/community/x86_64/wl-clipboard/) <sup>`Access clipboard for wayland`</sup>
 
 ### CLI Utilities
 - [bat](https://archlinux.org/packages/community/x86_64/bat/)
