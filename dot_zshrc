@@ -125,6 +125,10 @@ alias icat="kitty +kitten icat"
 alias ls="exa --icons"
 alias ll="exa -l --icons"
 alias la="exa -la --icons"
+# To not shoot my self in the leg.
+alias del='rmtrash'
+alias deldir='rmdirtrash'
+alias rm="echo -e Use 'del', or the full path i.e. '/bin/rm'. Can't delete: "
 
 
 # Some configuarations are from manjaro-zsh-config
