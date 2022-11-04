@@ -1,0 +1,12 @@
+daemonize = true
+max_history = 15
+log_level = 'INFO'
+
+[monitor]
+load_current = false
+enable_clipboard = true
+enable_primary = false
+
+[grpc]
+host = '127.0.0.1'
+port = 45045

@@ -14,12 +14,33 @@ Those config files and dependencies represents my Personalized Development Envir
 - [qalculate-qt](https://archlinux.org/packages/extra/x86_64/qalculate-qt/)
 - [zathura](https://archlinux.org/packages/community/x86_64/zathura/) <sup>`Document Viewer`</sup>
     - [zathura-pdf-mupdf](https://archlinux.org/packages/community/x86_64/zathura-pdf-mupdf/)
+- [dolphin](https://archlinux.org/packages/extra/x86_64/dolphin/) <sup>`File Manager`</sup>
 
 ### Desktop Environment
+- [i3-gaps](https://archlinux.org/packages/community/x86_64/i3-gaps/) <sup>`Window Manager`</sup>
+    - [autotiling](https://aur.archlinux.org/packages/autotiling)
+    - [xorg-setxkbmap](https://archlinux.org/packages/extra/x86_64/xorg-setxkbmaps/) <sup>`Configure Keyboard`</sup>
+    - [xorg-xset](https://archlinux.org/packages/extra/x86_64/xorg-xset/) <sup>`X11 Preference`</sup>
+    - [xss-lock](https://archlinux.org/packages/community/x86_64/xss-lock/)
+    - [xdotool](https://archlinux.org/packages/community/x86_64/xdotool/) <sup>`X11 Automation Tool`</sup>
+    - [numlockx](https://archlinux.org/packages/community/x86_64/numlockx/) <sup>`X11 Turn on Numlock`</sup>
+    - [nitrogen](https://archlinux.org/packages/extra/x86_64/nitrogen/) <sup>`X11 Background Setter`</sup>
+    - [dex](https://archlinux.org/packages/community/x86_64/dex/) <sup>`XDG Auto Start / DesktopEntry`</sup>
+- [polybar](https://archlinux.org/packages/community/x86_64/polybar/) <sup>`Status Bar / Panel`</sup>
+    - [pamixer](https://archlinux.org/packages/community/x86_64/pamixer/) <sup>`CLI Audio Mixer`</sup>
+    - [psmisc](https://archlinux.org/packages/core/x86_64/psmisc/) <sup>`Check for /dev/video* usage with (fuser)`</sup>
+- [picom](https://archlinux.org/packages/community/x86_64/picom/) <sup>`X11 Compositor`</sup>
 - [rofi](https://archlinux.org/packages/community/x86_64/rofi/) <sup>`Launcher`</sup>
     - [rofi-calc](https://archlinux.org/packages/community/x86_64/rofi-calc/)
     - [rofi-emoji](https://archlinux.org/packages/community/x86_64/rofi-emoji/)
     - [foxmarks](https://aur.archlinux.org/packages/foxmarks)
+- [deadd-notification-center](https://aur.archlinux.org/packages/deadd-notification-center) <sup>`Notification Center`</sup>
+- [clipcat](https://aur.archlinux.org/packages/clipcat) <sup>`Clipboard Manager`</sup> <sup>`(Need an alternative)`</sup>
+- [network-manager-applet](https://archlinux.org/packages/extra/x86_64/network-manager-applet/)
+- [kwallet](https://archlinux.org/packages/extra/x86_64/kwallet/)
+    - [kwallet-pam](https://archlinux.org/packages/extra/x86_64/kwallet-pam/)
+- [flameshot](https://archlinux.org/packages/community/x86_64/flameshot/) <sup>`Screenshot Software`</sup>
+
 
 ### Fonts
 - [JetBrainsMono Nerd](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
@@ -47,6 +68,7 @@ papirus-folders -C teal --theme Papirus-Dark
 - [wl-clipboard](https://archlinux.org/packages/community/x86_64/wl-clipboard/) <sup>`Access clipboard for wayland`</sup>
 - [trash-cli](https://archlinux.org/packages/community/any/trash-cli/)
     - [rmtrash](https://aur.archlinux.org/packages/rmtrash)
+- [pulsemixer](https://archlinux.org/packages/community/any/pulsemixer/) <sup>`TUI Audio Mixer`</sup>
 
 ### CLI Utilities
 - [bat](https://archlinux.org/packages/community/x86_64/bat/)
