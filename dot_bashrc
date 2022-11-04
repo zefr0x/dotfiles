@@ -1,0 +1,19 @@
+# Shared environment variables.
+source ~/.shared_shell.sh
+
+
+# Enable history appending instead of overwriting.
+shopt -s histappend
+
+export HISTFILE="${XDG_STATE_HOME}"/bash/history
+
+
+# Kitty shell integration
+if test -n "$KITTY_INSTALLATION_DIR"; then
+    export KITTY_SHELL_INTEGRATION="enabled"
+    source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"
+fi
+
+# fzf
+source /usr/share/fzf/completion.bash
+source /usr/share/fzf/key-bindings.bash

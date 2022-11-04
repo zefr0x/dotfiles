@@ -1,7 +1,5 @@
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_STATE_HOME=$HOME/.local/state
-export XDG_CACHE_HOME=$HOME/.cache
+# Shared environment variables.
+source ~/.shared_shell.sh
 
 # Powerlevel10k theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
@@ -79,32 +77,8 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-R
 
-# Variables
-# if [[ "$XDG_SESSION_DESKTOP" == "KDE"  ]]
-# then
-#     export GTK_USE_PORTAL=1
-# fi
-if [[ "$XDG_SESSION_TYPE" == "wayland" ]]
-then
-    export MOZ_ENABLE_WAYLAND=1
-fi
-
 export EDITOR='nvim'
 export VISUAL='code'
-
-export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
-export MYPY_CACHE_DIR="$XDG_CACHE_HOME"/mypy
-export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
-export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
-export CARGO_HOME="$XDG_DATA_HOME"/cargo
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
-export GOPATH="$XDG_DATA_HOME"/go
-export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
-
-# XDG base dirs aliases
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
-alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
-
 
 # Tools/Programmes aliases
 alias py='python'
