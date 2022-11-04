@@ -4,7 +4,7 @@ local navic = require("nvim-navic")
 -- lualine.nvim
 require('lualine').setup {
     options = {
-        theme = 'auto',
+        theme = 'zer0',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     },
