@@ -4,9 +4,7 @@ local vim = vim
 --- Set keymap
 -- @param[opts={silent = true, noremap = true}]
 local function map(mode, keys, action, opts)
-    vim.keymap.set(mode, keys, action,
-    opts or {silent = true, noremap = true}
-    )
+	vim.keymap.set(mode, keys, action, opts or { silent = true, noremap = true })
 end
 
 ------------ General KeyMapping -------------
@@ -38,14 +36,12 @@ map("n", "<leader>=", vim.lsp.buf.formatting)
 map("n", "<leader>ai", vim.lsp.buf.incoming_calls)
 map("n", "<leader>ao", vim.lsp.buf.outgoing_calls)
 
-
 -- bufferline.nvim
 map("n", "<leader>bp", "<cmd>BufferLinePick<cr>")
 map("n", "<leader>bc", "<cmd>BufferLinePickClose<cr>")
 
 -- nvim-tree.lua
 map("n", "<F3>", "<cmd>NvimTreeToggle<cr>")
-
 
 -- trouble
 map("n", "<F5>", "<cmd>TroubleToggle document_diagnostics<cr>")
@@ -54,8 +50,6 @@ map("n", "<F6>", "<cmd>TroubleToggle loclist<cr>")
 
 -- todo-comments.nvim
 map("n", "<F7>", "<cmd>TodoTrouble<cr>")
-
-
 
 -- yanky.nvim
 map("n", "p", "<Plug>(YankyPutAfter)")
@@ -77,42 +71,27 @@ map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 map("n", "<c-h>", "<cmd>Telescope yank_history<cr>")
 -- TODO: Add more keymaps for telescope
 
-
 -- hop.nvim
-map("n", "<leader>f",
-    function()
-        require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR })
-    end
-)
-map("n", "<leader>F",
-    function()
-        require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })
-    end
-)
-map("n", "<leader>t",
-    function()
-        require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, hint_offset = -1 })
-    end
-)
-map("n", "<leader>T",
-    function()
-        require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, hint_offset = 1 })
-    end
-)
-map("n", "<leader>k",
-    function()
-        require'hop'.hint_lines_skip_whitespace({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR })
-    end
-)
-map("n", "<leader>j",
-    function()
-        require'hop'.hint_lines_skip_whitespace({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR })
-    end
-)
-map("n", "<leader>w",
-    function()
-        require'hop'.hint_words({ current_line_only = true })
-    end
-)
+map("n", "<leader>f", function()
+	require("hop").hint_char1({ direction = require("hop.hint").HintDirection.AFTER_CURSOR })
+end)
+map("n", "<leader>F", function()
+	require("hop").hint_char1({ direction = require("hop.hint").HintDirection.BEFORE_CURSOR })
+end)
+map("n", "<leader>t", function()
+	require("hop").hint_char1({ direction = require("hop.hint").HintDirection.AFTER_CURSOR, hint_offset = -1 })
+end)
+map("n", "<leader>T", function()
+	require("hop").hint_char1({ direction = require("hop.hint").HintDirection.BEFORE_CURSOR, hint_offset = 1 })
+end)
+map("n", "<leader>k", function()
+	require("hop").hint_lines_skip_whitespace({ direction = require("hop.hint").HintDirection.BEFORE_CURSOR })
+end)
+map("n", "<leader>j", function()
+	require("hop").hint_lines_skip_whitespace({ direction = require("hop.hint").HintDirection.AFTER_CURSOR })
+end)
+map("n", "<leader>w", function()
+	require("hop").hint_words({ current_line_only = true })
+end)
 
 -- TODO: Create keymapping for crates.nvim to be loaded only in Cargo.toml file

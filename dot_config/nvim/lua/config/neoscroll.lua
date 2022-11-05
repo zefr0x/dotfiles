@@ -1,3 +1,2 @@
 -- neoscroll.nvim
-require('neoscroll').setup {}
-
+require("neoscroll").setup({})

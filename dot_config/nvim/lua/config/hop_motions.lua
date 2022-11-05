@@ -1,3 +1,2 @@
 -- hop.nvim
-require("hop").setup {}
-
+require("hop").setup({})

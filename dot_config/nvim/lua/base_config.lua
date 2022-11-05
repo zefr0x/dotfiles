@@ -11,7 +11,7 @@ o.encoding = "utf-8"
 
 -- Set listchars
 o.list = true
-o.listchars:append "trail:⋅"
+o.listchars:append("trail:⋅")
 
 -- Tabs and spaces handling
 o.expandtab = true
@@ -43,4 +43,3 @@ o.shell = "/bin/bash"
 
 -- Set leader key
 g.mapleader = ","
-

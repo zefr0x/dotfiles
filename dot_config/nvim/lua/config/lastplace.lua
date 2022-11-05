@@ -1,3 +1,2 @@
 -- nvim-lastplace
-require'nvim-lastplace'.setup {}
-
+require("nvim-lastplace").setup({})

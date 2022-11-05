@@ -1,3 +1,2 @@
 -- vgit.nvim
-require('vgit').setup {}
-
+require("vgit").setup({})

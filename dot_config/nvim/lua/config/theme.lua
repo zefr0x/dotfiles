@@ -1,17 +1,16 @@
 local hl = vim.api.nvim_set_hl
 
 -- github-nvim-theme
-require('github-theme').setup {
-    theme_style = "dark_default",
-    dark_float = true,
-}
+require("github-theme").setup({
+	theme_style = "dark_default",
+	dark_float = true,
+})
 
-hl(0, "Normal", { bg="#000000" }) -- normal text
-hl(0, "NormalNC", { bg="#000000" }) -- normal text in non-current windows
-hl(0, "NormalFloat", { bg="#000000" }) -- -- Normal text in floating windows
+hl(0, "Normal", { bg = "#000000" }) -- normal text
+hl(0, "NormalNC", { bg = "#000000" }) -- normal text in non-current windows
+hl(0, "NormalFloat", { bg = "#000000" }) -- -- Normal text in floating windows
 hl(0, "SignColumn", { fg = "#a9a9a9", bg = "#000000" }) -- column where |signs| are displayed
 hl(0, "SignColumnSB", { fg = "#a9a9a9", bg = "#000000" }) -- column where |signs| are displayed
-
 
 -- LSP theming
 -- TODO: define the non lsp then define lsp.
@@ -25,7 +24,6 @@ hl(0, "LspDiagnosticsUnderlineWarning", { sp = "#ff8c00", undercurl = true })
 hl(0, "LspDiagnosticsUnderlineHint", { sp = "#f0e68c", undercurl = true })
 hl(0, "LspDiagnosticsUnderlineInformation", { sp = "#00bfff", undercurl = true })
 
-
 hl(0, "DiagnosticError", { link = "LspDiagnosticsError" })
 hl(0, "DiagnosticWarn", { link = "LspDiagnosticsWarning" })
 hl(0, "DiagnosticHint", { link = "LspDiagnosticsHint" })
@@ -35,7 +33,6 @@ hl(0, "DiagnosticUnderlineError", { link = "LspDiagnosticsUnderlineError" })
 hl(0, "DiagnosticUnderlineWarn", { link = "LspDiagnosticsUnderlineWarning" })
 hl(0, "DiagnosticUnderlineHint", { link = "LspDiagnosticsUnderlineHint" })
 hl(0, "DiagnosticUnderlineInfo", { link = "LspDiagnosticsUnderlineInformation" })
-
 
 -- Plugins theming --------------------
 
@@ -80,8 +77,8 @@ hl(0, "Pmenu", { fg = "#C5CDD9", bg = "#22252A" })
 
 hl(0, "CmpItemAbbrDeprecated", { fg = "#7E8294", bg = nil, strikethrough = true })
 hl(0, "CmpItemAbbrMatch", { fg = "#82AAFF", bg = nil, bold = true })
-hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#82AAFF", bg = nil, bold = true})
-hl(0, "CmpItemMenu", { fg = "#C792EA", bg = nil, italic = true})
+hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#82AAFF", bg = nil, bold = true })
+hl(0, "CmpItemMenu", { fg = "#C792EA", bg = nil, italic = true })
 
 hl(0, "CmpItemKindField", { fg = "#EED8DA", bg = "#B5585F" })
 hl(0, "CmpItemKindProperty", { fg = "#EED8DA", bg = "#B5585F" })
@@ -98,7 +95,7 @@ hl(0, "CmpItemKindReference", { fg = "#FFE082", bg = "#D4BB6C" })
 hl(0, "CmpItemKindFunction", { fg = "#EADFF0", bg = "#A377BF" })
 hl(0, "CmpItemKindStruct", { fg = "#EADFF0", bg = "#A377BF" })
 hl(0, "CmpItemKindClass", { fg = "#EADFF0", bg = "#A377BF" })
-hl(0 , "CmpItemKindModule", { fg = "#EADFF0", bg = "#A377BF" })
+hl(0, "CmpItemKindModule", { fg = "#EADFF0", bg = "#A377BF" })
 hl(0, "CmpItemKindOperator", { fg = "#EADFF0", bg = "#A377BF" })
 
 hl(0, "CmpItemKindVariable", { fg = "#C5CDD9", bg = "#7E8294" })

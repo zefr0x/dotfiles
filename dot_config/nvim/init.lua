@@ -6,4 +6,3 @@ require("plugins")
 
 ---------------- Set KeyMaps -----------------
 require("keymapping")
-

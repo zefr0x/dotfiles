@@ -1,2 +1,2 @@
 -- symbols-outline.nvim
-require("symbols-outline").setup {}
+require("symbols-outline").setup({})

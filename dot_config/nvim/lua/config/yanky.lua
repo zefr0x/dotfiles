@@ -1,3 +1,2 @@
 -- yanky.nvim
-require("yanky").setup {}
-
+require("yanky").setup({})

@@ -1,3 +1,2 @@
 -- hlargs.nvim
-require('hlargs').setup {}
-
+require("hlargs").setup({})
