@@ -124,6 +124,7 @@ After installing packer, you need to install the plugins for neovim by running:
 
 ### Formatters
 - [black](https://archlinux.org/packages/community/any/python-black/) <sup>`Python`</sup>
+- [stylua](https://archlinux.org/packages/community/any/stylua/) <sup>`Lua`</sup>
 
 ### Programming Languages Tools/Compilers/Interpreters
 #### Rust
