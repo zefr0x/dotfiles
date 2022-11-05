@@ -211,7 +211,7 @@ return require("packer").startup(function(use)
 	--  A snazzy bufferline/tabline
 	use({
 		"akinsho/bufferline.nvim",
-		tag = "v2.*",
+		tag = "v3.*",
 		requires = "kyazdani42/nvim-web-devicons",
 		config = function()
 			require("config.bufferline")
