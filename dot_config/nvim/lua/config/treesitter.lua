@@ -17,6 +17,11 @@ require("nvim-treesitter.configs").setup({
 		"regex",
 		"sql",
 		"toml",
+		"git_rebase",
+		"gitignore",
+		"gitattributes",
+		"diff",
+		"comment",
 	},
 	highlight = {
 		enable = true,
