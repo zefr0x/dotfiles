@@ -12,7 +12,7 @@ unset monitors_list[0]
 
 # Start the secondary bar in the other monitors.
 for monitor in ${monitors_list[@]}; do
-    MONITOR=$monitor polybar --reload secondary &
+	MONITOR=$monitor polybar --reload secondary &
 done
 
 echo "Bars launched..."

@@ -86,7 +86,7 @@ alias ipy='ipython'
 alias bpy='bpython'
 alias topdf='libreoffice --headless --invisible --convert-to pdf'
 alias now="date +'%A %d/%m/%Y %H:%M:%S.%N (%Z) %nUnix time: %s'"
-alias cp="cp -i" 
+alias cp="cp -i"
 alias df="df -h"
 alias free="free -m"
 alias grep="grep --colour=always"
@@ -104,15 +104,14 @@ alias del='rmtrash'
 alias deldir='rmdirtrash'
 alias rm="echo -e Use 'del', or the full path i.e. '/bin/rm'. Can't delete: "
 
-
 # Some configuarations are from manjaro-zsh-config
 # https://github.com/Chrysostomus/manjaro-zsh-config
 
 # Clipcat integration
 if type clipcat-menu >/dev/null 2>&1; then
-    alias clipedit=' clipcat-menu --finder=builtin edit'
-    alias clipdel=' clipcat-menu --finder=builtin remove'
+	alias clipedit=' clipcat-menu --finder=builtin edit'
+	alias clipdel=' clipcat-menu --finder=builtin remove'
 
-    bindkey -s '^\' "^Q clipcat-menu --finder=builtin insert ^J"
-    bindkey -s '^]' "^Q clipcat-menu --finder=builtin remove ^J"
+	bindkey -s '^\' "^Q clipcat-menu --finder=builtin insert ^J"
+	bindkey -s '^]' "^Q clipcat-menu --finder=builtin remove ^J"
 fi
