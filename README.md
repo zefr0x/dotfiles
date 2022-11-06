@@ -41,6 +41,9 @@ Those config files and dependencies represents my Personalized Development Envir
 - [kwallet](https://archlinux.org/packages/extra/x86_64/kwallet/)
     - [kwallet-pam](https://archlinux.org/packages/extra/x86_64/kwallet-pam/)
 - [flameshot](https://archlinux.org/packages/community/x86_64/flameshot/) <sup>`Screenshot Software`</sup>
+- [lightdm](https://archlinux.org/packages/extra/x86_64/lightdm/)
+    - [lightdm-gtk-greeter](https://archlinux.org/packages/extra/x86_64/lightdm-gtk-greeter/)
+    - [lightdm-gtk-greeter-settings](https://archlinux.org/packages/extra/x86_64/lightdm-gtk-greeter-settings/)
 
 
 ### Fonts
@@ -153,7 +156,7 @@ rustup default stable
 ## Arch linux Installation
 In your shell, run:
 ```shell
-sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli paru dolphin i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift
+sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli paru dolphin i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 
 yay -Sa nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono foxmarks rmtrash autotiling deadd-notification-center clipcat
 
