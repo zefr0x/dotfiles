@@ -162,6 +162,9 @@ bindsym $mod+Shift+o exec --no-startup-id clipcatctl clear
 ## Toggle the notification center view.
 bindsym $mod+grave exec --no-startup-id "kill -s USR1 $(pidof deadd-notification-center)"
 
+# TODO: Key to toggle redshift
+# bindsym $mod+ exec --no-startup-id "pkill -USR1 redshift-gtk"
+
 
 
 # ------- i3 modes -------
@@ -214,6 +217,9 @@ client.background        #ffffff50
 
 
 # ------- Autostart scripts and deamons -------
+
+# Start redshift to protect my eyes.
+exec --no-startup-id redshift-gtk
 
 # Restore wallpaper.
 exec_always --no-startup-id nitrogen --set-zoom-fill --random  ~/pictures/wallpapers
