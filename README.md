@@ -15,6 +15,7 @@ Those config files and dependencies represents my Personalized Development Envir
 - [zathura](https://archlinux.org/packages/community/x86_64/zathura/) <sup>`Document Viewer`</sup>
     - [zathura-pdf-mupdf](https://archlinux.org/packages/community/x86_64/zathura-pdf-mupdf/)
 - [dolphin](https://archlinux.org/packages/extra/x86_64/dolphin/) <sup>`File Manager`</sup>
+- [slimbookbattery](https://aur.archlinux.org/packages/slimbookbattery) <sup>`Interface for TLP`</sup>
 
 ### Desktop Environment
 - [i3-gaps](https://archlinux.org/packages/community/x86_64/i3-gaps/) <sup>`Window Manager`</sup>
@@ -73,6 +74,9 @@ papirus-folders -C teal --theme Papirus-Dark
 - [trash-cli](https://archlinux.org/packages/community/any/trash-cli/)
     - [rmtrash](https://aur.archlinux.org/packages/rmtrash)
 - [pulsemixer](https://archlinux.org/packages/community/any/pulsemixer/) <sup>`TUI Audio Mixer`</sup>
+- [onefetch](https://archlinux.org/packages/community/x86_64/onefetch/) <sup>`Git Repo Summary`</sup>
+- [nvtop](https://archlinux.org/packages/community/x86_64/nvtop/) <sup>`GPUs Monitoring`</sup>
+- [htop](https://archlinux.org/packages/extra/x86_64/htop/) <sup>`GPUs Monitoring`</sup>
 
 ### CLI Utilities
 - [bat](https://archlinux.org/packages/community/x86_64/bat/)
@@ -156,7 +160,7 @@ rustup default stable
 ## Arch linux Installation
 In your shell, run:
 ```shell
-sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli dolphin i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli dolphin i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings fzf onefetch nvtop htop
 
 rustup default stable
 ```
@@ -164,7 +168,7 @@ rustup default stable
 Now you need [`paur`](https://github.com/Morganamilo/paru#installation) to install AUR packages.
 
 ```shell
-paru -Sa nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono foxmarks rmtrash autotiling deadd-notification-center clipcat
+paru -Sa nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono foxmarks rmtrash autotiling deadd-notification-center clipcat slimbookbattery
 ```
 
 Then inside neovim, run:
