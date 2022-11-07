@@ -50,10 +50,10 @@ Those config files and dependencies represents my Personalized Development Envir
 ### Fonts
 - [JetBrainsMono Nerd](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
 
-### Icons theme
+### Icons Themes / UI Themes
 - [papirus-icon-theme](https://archlinux.org/packages/community/any/papirus-icon-theme/)
     - [papirus-folders](https://aur.archlinux.org/packages/papirus-folders)
-    -[hardcode-tray](https://aur.archlinux.org/packages/hardcode-tray)
+    - [hardcode-tray](https://aur.archlinux.org/packages/hardcode-tray)
 
 Fix hardcoded tray icons:
 ```shell
@@ -76,7 +76,7 @@ papirus-folders -C teal --theme Papirus-Dark
 - [pulsemixer](https://archlinux.org/packages/community/any/pulsemixer/) <sup>`TUI Audio Mixer`</sup>
 - [onefetch](https://archlinux.org/packages/community/x86_64/onefetch/) <sup>`Git Repo Summary`</sup>
 - [nvtop](https://archlinux.org/packages/community/x86_64/nvtop/) <sup>`GPUs Monitoring`</sup>
-- [htop](https://archlinux.org/packages/extra/x86_64/htop/) <sup>`GPUs Monitoring`</sup>
+- [htop](https://archlinux.org/packages/extra/x86_64/htop/) <sup>`System Monitoring`</sup>
 
 ### CLI Utilities
 - [bat](https://archlinux.org/packages/community/x86_64/bat/)
@@ -85,7 +85,7 @@ papirus-folders -C teal --theme Papirus-Dark
 - [exa](https://archlinux.org/packages/community/x86_64/exa/) <sup>`ls alternative`</sup>
 - [fzf](https://archlinux.org/packages/community/x86_64/fzf/) <sup>`fuzzy finder`</sup>
 
-### Zsh <sup>`Shell`</sup>
+### Shell
 - [zsh](https://archlinux.org/packages/extra/x86_64/zsh/)
     - [zsh-autosuggestions](https://archlinux.org/packages/community/any/zsh-autosuggestions/)
     - [zsh-completions](https://archlinux.org/packages/community/any/zsh-completions/)
@@ -176,13 +176,4 @@ Then inside neovim, run:
 :PackerSync
 ```
 
-## Screen Shots
-
-### Kitty & zsh <sup>[~/.config/kitty](https://github.com/zer0-x/dotfiles/tree/main/dot_config/kitty) | [~/.zshrc](https://github.com/zer0-x/dotfiles/blob/main/dot_zshrc)</sup>
-<img width=500px src="" alt="Screenshot for kitty and zsh">
-
-### neovim <sup>[~/.config/nvim/](https://github.com/zer0-x/dotfiles/tree/main/dot_config/nvim)</sup>
-<img width=500px src="" alt="Screenshot for neovim">
-
-### [ghostwriter](https://wereturtle.github.io/ghostwriter/) <sup>[~/.config/ghostwriter](https://github.com/zer0-x/dotfiles/tree/main/dot_config/ghostwriter)</sup>
-<img width=500px src="" alt="Screenshot for ghostwriter">
+<!-- TODO: Create screenshots section. -->
