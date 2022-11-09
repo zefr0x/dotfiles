@@ -1,15 +1,11 @@
 #!/usr/bin/python
 """
-Get the selected text then open it in google translate.
+Get the last selected text from any window in `X11` or `Wayland` then open it in `GNOME Dialect`, which is a translating app.
 
-Of course google translate will be redirected to an alternative frontend later in the browser.
-
-This script is assigned to a hotkey in the window manager so it would be easy to translate text.
+This script is assigned to a hotkey in the window manager to make it easy to translate any text.
 """
 from os import environ
 from subprocess import run, PIPE
-from urllib.parse import quote
-from webbrowser import open
 
 xdg_session_type = environ.get("XDG_SESSION_TYPE")
 
@@ -22,4 +18,4 @@ else:
 
 selection_text = run(command, stdout=PIPE).stdout.decode()
 
-open(f"https://translate.google.com/?text={quote(selection_text)}&sl=auto&tl=ar")
+run(["dialect", "--text", selection_text, "--dest", "ar"])

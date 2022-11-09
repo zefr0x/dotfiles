@@ -17,6 +17,7 @@ Those config files and dependencies represents my Personalized Development Envir
 - [dolphin](https://archlinux.org/packages/extra/x86_64/dolphin/) <sup>`File Manager`</sup>
 - [slimbookbattery](https://aur.archlinux.org/packages/slimbookbattery) <sup>`Interface for TLP`</sup>
 - [system-config-printer](https://archlinux.org/packages/extra/x86_64/system-config-printer/)
+- [dialect](https://aur.archlinux.org/packages/dialect) <sup>`Translating Text`</sup>
 
 ### Desktop Environment
 - [i3-gaps](https://archlinux.org/packages/community/x86_64/i3-gaps/) <sup>`Window Manager`</sup>
@@ -173,7 +174,7 @@ rustup default stable
 Now you need [`paur`](https://github.com/Morganamilo/paru#installation) to install AUR packages.
 
 ```shell
-paru -Sa nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono foxmarks rmtrash autotiling deadd-notification-center clipcat slimbookbattery papirus-folders hardcode-tray
+paru -Sa nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono foxmarks rmtrash autotiling deadd-notification-center clipcat slimbookbattery papirus-folders hardcode-tray dialect
 ```
 
 Then inside neovim, run:
