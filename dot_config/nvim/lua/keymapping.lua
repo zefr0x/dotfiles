@@ -49,7 +49,7 @@ map("n", "<F5>", "<cmd>TroubleToggle document_diagnostics<cr>")
 map("n", "<F6>", "<cmd>TroubleToggle loclist<cr>")
 
 -- todo-comments.nvim
-map("n", "<F7>", "<cmd>TodoTrouble<cr>")
+map("n", "<F7>", "<cmd>TroubleToggle todo<cr>")
 
 -- yanky.nvim
 map("n", "p", "<Plug>(YankyPutAfter)")
