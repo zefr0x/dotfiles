@@ -53,10 +53,14 @@ Those config files and dependencies represents my Personalized Development Envir
 ### Fonts
 - [JetBrainsMono Nerd](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
 
-### Icons Themes / UI Themes
+### Themes
+#### Icons
 - [papirus-icon-theme](https://archlinux.org/packages/community/any/papirus-icon-theme/)
     - [papirus-folders](https://aur.archlinux.org/packages/papirus-folders)
     - [hardcode-tray](https://aur.archlinux.org/packages/hardcode-tray)
+- [adwaita-icon-theme](https://archlinux.org/packages/extra/any/adwaita-icon-theme/)
+#### UI
+- [libadwaita](https://archlinux.org/packages/extra/x86_64/libadwaita/)
 
 Fix hardcoded tray icons:
 ```shell
@@ -66,6 +70,11 @@ sudo -E hardcode-tray --theme Papirus-Dark
 Change the folders color:
 ```shell
 papirus-folders -C teal --theme Papirus-Dark
+```
+
+Prefer dark theme for GTK-4:
+```shell
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 ```
 
 ### CLI Applications/Tools
