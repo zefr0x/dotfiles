@@ -3,16 +3,13 @@ source ~/.shared_shell.sh
 
 # Powerlevel10k theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+source ~/.p10k.zsh
 # Fish-like autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # History substring search
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
 # fzf
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
@@ -48,7 +45,6 @@ WORDCHARS=${WORDCHARS//\/[&.;]}
 eval "$(zoxide init zsh --cmd cd)"
 
 ## Key bindings
-# bindkey -e
 # Home key
 bindkey '^[[H' beginning-of-line
 # End key
@@ -83,7 +79,6 @@ export VISUAL='code'
 # Tools/Programmes aliases
 alias py='python'
 alias ipy='ipython'
-alias bpy='bpython'
 alias topdf='libreoffice --headless --invisible --convert-to pdf'
 alias now="date +'%A %d/%m/%Y %H:%M:%S.%N (%Z) %nUnix time: %s'"
 alias cp="cp -i"

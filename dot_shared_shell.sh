@@ -23,8 +23,8 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 # XDG base dirs aliases
 alias mitmproxy="mitmproxy --set confdir=$XDG_CONFIG_HOME/mitmproxy"
 alias mitmweb="mitmweb --set confdir=$XDG_CONFIG_HOME/mitmproxy"
-alias monerod=monerod --data-dir "$XDG_DATA_HOME/bitmonero"
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+alias monerod="monerod --data-dir $XDG_DATA_HOME/bitmonero"
+alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
 alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
 alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings"
 
