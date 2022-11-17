@@ -1,2 +1,4 @@
-[icon theme]
-Inherits=Breeze_Snow
+[Icon Theme]
+Name=Default
+Comment=Default Cursor Theme
+Inherits=Adwaita
