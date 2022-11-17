@@ -143,7 +143,7 @@ bindsym $mod+b exec "rofi -modi foxmarks:~/scripts/rofi/firefox_bookmarks.py -sh
 bindsym $mod+q exec "rofi -modi managesession:~/scripts/rofi/manage_session.sh -show managesession"
 
 # Start the files browser.
-bindsym $mod+e exec "dolphin"
+bindsym $mod+e exec "thunar"
 
 # Translate selected text.
 bindsym $mod+g exec --no-startup-id "~/scripts/translate_selection.py"
