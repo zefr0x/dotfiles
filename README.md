@@ -60,6 +60,9 @@ Those config files and dependencies represents my Personalized Development Envir
     - [hardcode-tray](https://aur.archlinux.org/packages/hardcode-tray)
 - [adwaita-icon-theme](https://archlinux.org/packages/extra/any/adwaita-icon-theme/)
 #### UI
+- [qt5ct](https://archlinux.org/packages/community/x86_64/qt5ct/) <sup>`Qt5 Configuration Utility` </sup>
+- [qt6ct](https://archlinux.org/packages/community/x86_64/qt6ct/) <sup>`Qt6 Configuration Utility` </sup>
+- [kvantum](https://archlinux.org/packages/community/x86_64/kvantum/) <sup>`Theme Engine for Qt5/6`</sup>
 - [libadwaita](https://archlinux.org/packages/extra/x86_64/libadwaita/)
 
 Fix hardcoded tray icons:
@@ -71,6 +74,8 @@ Change the folders color:
 ```shell
 papirus-folders -C teal --theme Papirus-Dark
 ```
+
+Set the Qt5 theme by adding this line: `QT_QPA_PLATFORMTHEME=qt5ct` to your `/etc/environment` file.
 
 Prefer dark theme for GTK-4:
 ```shell
@@ -175,7 +180,7 @@ rustup default stable
 
 In your shell, run:
 ```shell
-sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli thunar i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings fzf onefetch nvtop htop papirus-icon-theme base-devel rsibreak
+sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli thunar i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings fzf onefetch nvtop htop papirus-icon-theme base-devel rsibreak qt5ct qt6ct kvantum adwaita-icon-theme libadwaita
 
 rustup default stable
 ```
