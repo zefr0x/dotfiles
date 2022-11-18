@@ -10,7 +10,7 @@ configuration {
     disable-history: false;
     case-sensitive: false;
     cycle: false;
-    matching: "fuzzy";
+    matching: "normal";
     tokenize: true;
     window-format: "{t}";
     window-thumbnail: false;
