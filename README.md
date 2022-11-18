@@ -51,6 +51,7 @@ Those config files and dependencies represents my Personalized Development Envir
 
 
 ### Fonts
+- [noto-fonts](https://archlinux.org/packages/extra/any/noto-fonts/)
 - [JetBrainsMono Nerd](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
 
 ### Themes
