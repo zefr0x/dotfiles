@@ -17,6 +17,7 @@ require("nvim-treesitter.configs").setup({
 		"regex",
 		"sql",
 		"toml",
+		"yaml",
 		"git_rebase",
 		"gitignore",
 		"gitattributes",
