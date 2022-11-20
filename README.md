@@ -15,6 +15,13 @@ Those config files and dependencies represents my Personalized Development Envir
 - [zathura](https://archlinux.org/packages/community/x86_64/zathura/) <sup>`Document Viewer`</sup>
     - [zathura-pdf-mupdf](https://archlinux.org/packages/community/x86_64/zathura-pdf-mupdf/)
 - [thunar](https://archlinux.org/packages/extra/x86_64/thunar/) <sup>`File Manager`</sup>
+    - [gvfs](https://archlinux.org/packages/extra/x86_64/gvfs/)
+    - [thunar-archive-plugin](https://archlinux.org/packages/extra/x86_64/thunar-archive-plugin/)
+    - [thunar-media-tags-plugin](https://archlinux.org/packages/extra/x86_64/thunar-media-tags-plugin/)
+    - [tumbler](https://archlinux.org/packages/extra/x86_64/tumbler/)
+        - [ffmpegthumbnailer](https://archlinux.org/packages/extra/x86_64/ffmpegthumbnailer/)
+        - [poppler-glib](https://archlinux.org/packages/extra/x86_64/poppler-glib/)
+        - [libgsf](https://archlinux.org/packages/extra/x86_64/libgsf/)
 - [slimbookbattery](https://aur.archlinux.org/packages/slimbookbattery) <sup>`Interface for TLP`</sup>
 - [system-config-printer](https://archlinux.org/packages/extra/x86_64/system-config-printer/)
 - [dialect](https://aur.archlinux.org/packages/dialect) <sup>`Translating Text`</sup>
