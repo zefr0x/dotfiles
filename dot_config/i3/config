@@ -162,8 +162,18 @@ bindsym $mod+Shift+o exec --no-startup-id clipcatctl clear
 ## Toggle the notification center view.
 bindsym $mod+grave exec --no-startup-id "kill -s USR1 $(pidof deadd-notification-center)"
 
-# TODO: Key to toggle redshift
+# Toggle redshift
 # bindsym $mod+ exec --no-startup-id "pkill -USR1 redshift-gtk"
+
+# bindsym XF86Calculator
+# bindsym XF86Tools
+# bindsym XF86Explorer
+# bindsym XF86Mail
+# bindsym XF86HomePage
+# bindsym XF86Reload
+# bindsym Cancel
+# bindsym XF86Forward
+# bindsym XF86Back
 
 
 
@@ -219,7 +229,7 @@ client.background        #ffffff50
 # ------- Autostart scripts and deamons -------
 
 # Restore wallpaper.
-exec_always --no-startup-id nitrogen --set-zoom-fill --random  ~/pictures/wallpapers
+exec_always --no-startup-id nitrogen --set-zoom-fill --random  ~/Pictures/wallpapers
 
 # Set the behavior of the caps lock key.
 exec_always --no-startup-id setxkbmap -option 'caps:escape'
