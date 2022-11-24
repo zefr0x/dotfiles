@@ -13,6 +13,7 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export NVM_DIR="$XDG_DATA_HOME"/nvm
 export GOPATH="$XDG_DATA_HOME/go"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
@@ -27,6 +28,7 @@ alias monerod="monerod --data-dir $XDG_DATA_HOME/bitmonero"
 alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
 alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
 alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings"
+alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
 
 # Variables depending on the session or the desktop type.
 # if [[ "$XDG_SESSION_DESKTOP" == "KDE"  ]]

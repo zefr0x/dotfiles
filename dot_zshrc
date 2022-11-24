@@ -42,8 +42,6 @@ SAVEHIST=100000
 # Don't consider certain characters part of the word
 WORDCHARS=${WORDCHARS//\/[&.;]}
 
-eval "$(zoxide init zsh --cmd cd)"
-
 ## Key bindings
 # Home key
 bindkey '^[[H' beginning-of-line
@@ -77,6 +75,8 @@ export EDITOR='nvim'
 export VISUAL='code'
 
 # Tools/Programmes aliases
+alias vim="nvim"
+alias svim="sudoedit"
 alias py='python'
 alias ipy='ipython'
 alias topdf='libreoffice --headless --invisible --convert-to pdf'
@@ -99,8 +99,6 @@ alias del='rmtrash'
 alias deldir='rmdirtrash'
 alias rm="echo -e Use 'del', or the full path i.e. '/bin/rm'. Can't delete: "
 
-# Some configuarations are from manjaro-zsh-config
-# https://github.com/Chrysostomus/manjaro-zsh-config
 
 # Clipcat integration
 if type clipcat-menu >/dev/null 2>&1; then
@@ -110,3 +108,10 @@ if type clipcat-menu >/dev/null 2>&1; then
 	bindkey -s '^\' "^Q clipcat-menu --finder=builtin insert ^J"
 	bindkey -s '^]' "^Q clipcat-menu --finder=builtin remove ^J"
 fi
+
+
+# Zoxide integration
+eval "$(zoxide init zsh --cmd cd)"
+
+# Some configuarations are from manjaro-zsh-config
+# https://github.com/Chrysostomus/manjaro-zsh-config
