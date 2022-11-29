@@ -113,5 +113,8 @@ fi
 # Zoxide integration
 eval "$(zoxide init zsh --cmd cd)"
 
+# nnn configuarations
+export NNN_PLUG='j:autojump'
+
 # Some configuarations are from manjaro-zsh-config
 # https://github.com/Chrysostomus/manjaro-zsh-config
