@@ -102,6 +102,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [onefetch](https://archlinux.org/packages/community/x86_64/onefetch/) <sup>`Git Repo Summary`</sup>
 - [nvtop](https://archlinux.org/packages/community/x86_64/nvtop/) <sup>`GPUs Monitoring`</sup>
 - [htop](https://archlinux.org/packages/extra/x86_64/htop/) <sup>`System Monitoring`</sup>
+- [nnn](https://archlinux.org/packages/community/x86_64/nnn/) <sup>`TUI File Manager`</sup>
 
 ### CLI Utilities
 - [bat](https://archlinux.org/packages/community/x86_64/bat/)
