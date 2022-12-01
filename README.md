@@ -32,6 +32,7 @@ Those config files and dependencies represents my Personalized Development Envir
     - [xorg-setxkbmap](https://archlinux.org/packages/extra/x86_64/xorg-setxkbmaps/) <sup>`Configure Keyboard`</sup>
     - [xorg-xset](https://archlinux.org/packages/extra/x86_64/xorg-xset/) <sup>`X11 Preference`</sup>
     - [xss-lock](https://archlinux.org/packages/community/x86_64/xss-lock/)
+    - [i3lock](https://archlinux.org/packages/community/x86_64/i3lock/)
     - [xdotool](https://archlinux.org/packages/community/x86_64/xdotool/) <sup>`X11 Automation Tool`</sup>
     - [numlockx](https://archlinux.org/packages/community/x86_64/numlockx/) <sup>`X11 Turn on Numlock`</sup>
     - [nitrogen](https://archlinux.org/packages/extra/x86_64/nitrogen/) <sup>`X11 Background Setter`</sup>

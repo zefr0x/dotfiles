@@ -11,16 +11,16 @@ if [[ $ROFI_RETV = 0 ]]; then
 elif [[ $ROFI_RETV = 1 ]]; then
 	case $ROFI_INFO in
 	*lock)
-		dm-tool lock
+		loginctl lock-session
 		;;
 	*logout)
 		i3-msg exit
 		;;
 	*suspend)
-		dm-tool lock && sleep 1 && systemctl suspend
+		systemctl suspend
 		;;
 	*hibernate)
-		dm-tool lock && sleep 1 && systemctl hibernate
+		systemctl hibernate
 		;;
 	*reboot)
 		systemctl reboot
