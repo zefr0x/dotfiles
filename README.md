@@ -61,6 +61,8 @@ Those config files and dependencies represents my Personalized Development Envir
 ### Fonts
 - [noto-fonts](https://archlinux.org/packages/extra/any/noto-fonts/)
 - [JetBrainsMono Nerd](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
+- [nerd-fonts-ubuntu](https://aur.archlinux.org/packages/nerd-fonts-ubuntu)
+- [ttf-dejavu-ib](https://aur.archlinux.org/packages/ttf-dejavu-ib) <sup>`Better Arabic Fonts in UI`</sup>
 
 ### Themes
 #### Icons
@@ -69,8 +71,8 @@ Those config files and dependencies represents my Personalized Development Envir
     - [hardcode-tray](https://aur.archlinux.org/packages/hardcode-tray)
 - [adwaita-icon-theme](https://archlinux.org/packages/extra/any/adwaita-icon-theme/)
 #### UI
-- [qt5ct](https://archlinux.org/packages/community/x86_64/qt5ct/) <sup>`Qt5 Configuration Utility` </sup>
-- [qt6ct](https://archlinux.org/packages/community/x86_64/qt6ct/) <sup>`Qt6 Configuration Utility` </sup>
+- [qt5ct](https://archlinux.org/packages/community/x86_64/qt5ct/) <sup>`Qt5 Configuration Utility`</sup>
+- [qt6ct](https://archlinux.org/packages/community/x86_64/qt6ct/) <sup>`Qt6 Configuration Utility`</sup>
 - [kvantum](https://archlinux.org/packages/community/x86_64/kvantum/) <sup>`Theme Engine for Qt5/6`</sup>
 - [libadwaita](https://archlinux.org/packages/extra/x86_64/libadwaita/)
 
