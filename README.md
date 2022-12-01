@@ -40,6 +40,7 @@ Those config files and dependencies represents my Personalized Development Envir
 - [polybar](https://archlinux.org/packages/community/x86_64/polybar/) <sup>`Status Bar / Panel`</sup>
     - [pamixer](https://archlinux.org/packages/community/x86_64/pamixer/) <sup>`CLI Audio Mixer`</sup>
     - [psmisc](https://archlinux.org/packages/core/x86_64/psmisc/) <sup>`Check for /dev/video* usage with (fuser)`</sup>
+    - [cbatticon](https://archlinux.org/packages/community/x86_64/cbatticon/) <sup>`Battery System Tray Icon`</sup>
 - [picom](https://archlinux.org/packages/community/x86_64/picom/) <sup>`X11 Compositor`</sup>
 - [redshift](https://archlinux.org/packages/community/x86_64/redshift/) <sup>`X11 Adjust Screen Temperature`</sup>
 - [rofi](https://archlinux.org/packages/community/x86_64/rofi/) <sup>`Launcher`</sup>

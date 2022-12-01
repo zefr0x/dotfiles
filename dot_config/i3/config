@@ -275,6 +275,9 @@ exec --no-startup-id redshift-gtk
 # Open KWallet PAM Socket Connection
 exec --no-startup-id /usr/lib/pam_kwallet_init
 
+# Check if there was any battery and start battery system tray icon.
+exec --no-startup-id "if cbatticon -p | grep type; then cbatticon; fi"
+
 # Start RSIBreak.
 exec --no-startup-id "rsibreak --autostart"
 
