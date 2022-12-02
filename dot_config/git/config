@@ -19,3 +19,7 @@
     ds = diff --staged
     d = diff
     s = status
+    a = add
+    ap = add --patch
+    rs = restore --staged
+    rsp = restore --staged --patch
