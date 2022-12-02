@@ -174,7 +174,20 @@ bindsym $mod+grave exec --no-startup-id "kill -s USR1 $(pidof deadd-notification
 # Toggle redshift
 # bindsym $mod+ exec --no-startup-id "pkill -USR1 redshift-gtk"
 
+# Screen brightness keys
+bindsym XF86MonBrightnessUp exec --no-startup-id "brightnessctl s 5%+"
+bindsym XF86MonBrightnessDown exec --no-startup-id "brightnessctl s 5%-"
+
+# bindsym XF86TouchpadOn
+# bindsym XF86TouchpadOff
+
+# XF86AudioPlay
+# XF86AudioStop
+# XF86AudioPrev
+# XF86AudioNext
+
 # bindsym XF86Calculator
+
 # bindsym XF86Tools
 # bindsym XF86Explorer
 # bindsym XF86Mail

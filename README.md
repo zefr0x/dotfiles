@@ -41,6 +41,7 @@ Those config files and dependencies represents my Personalized Development Envir
     - [pamixer](https://archlinux.org/packages/community/x86_64/pamixer/) <sup>`CLI Audio Mixer`</sup>
     - [psmisc](https://archlinux.org/packages/core/x86_64/psmisc/) <sup>`Check for /dev/video* usage with (fuser)`</sup>
     - [cbatticon](https://archlinux.org/packages/community/x86_64/cbatticon/) <sup>`Battery System Tray Icon`</sup>
+    - [brightnessctl](https://archlinux.org/packages/community/x86_64/brightnessctl/)
 - [picom](https://archlinux.org/packages/community/x86_64/picom/) <sup>`X11 Compositor`</sup>
 - [redshift](https://archlinux.org/packages/community/x86_64/redshift/) <sup>`X11 Adjust Screen Temperature`</sup>
 - [rofi](https://archlinux.org/packages/community/x86_64/rofi/) <sup>`Launcher`</sup>
@@ -193,7 +194,7 @@ rustup default stable
 
 In your shell, run:
 ```shell
-sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli thunar i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings fzf onefetch nvtop htop papirus-icon-theme base-devel rsibreak qt5ct qt6ct kvantum adwaita-icon-theme libadwaita
+sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli thunar i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings fzf onefetch nvtop htop papirus-icon-theme base-devel rsibreak qt5ct qt6ct kvantum adwaita-icon-theme libadwaita brightnessctl
 
 rustup default stable
 ```
@@ -201,7 +202,7 @@ rustup default stable
 Now you need [`paur`](https://github.com/Morganamilo/paru#installation) to install AUR packages.
 
 ```shell
-paru -Sa nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono foxmarks rmtrash autotiling deadd-notification-center clipcat slimbookbattery papirus-folders hardcode-tray dialect
+paru -Sa --needed nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono foxmarks rmtrash autotiling deadd-notification-center clipcat slimbookbattery papirus-folders hardcode-tray dialect nerd-fonts-ubuntu ttf-dejavu-ib
 ```
 
 Then inside neovim, run:
