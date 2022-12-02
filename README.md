@@ -8,6 +8,7 @@ Those config files and dependencies represents my Personalized Development Envir
 ### GUI Applications
 - [kitty](https://archlinux.org/packages/community/x86_64/kitty/) <sup>`Terminal emulator`</sup>
 - [sqlitebrowser](https://archlinux.org/packages/community/x86_64/sqlitebrowser/)
+- [qt5-tools](https://archlinux.org/packages/extra/x86_64/qt5-tools/)
 - [ghostwriter](https://archlinux.org/packages/community/x86_64/ghostwriter/) <sup>`For writing in Arabic smoothly`</sup>
 - [mpv](https://archlinux.org/packages/community/x86_64/mpv/) <sup>`Media player`</sup>
 - [feh](https://archlinux.org/packages/extra/x86_64/feh/) <sup>`Image viewer`</sup>
@@ -194,7 +195,7 @@ rustup default stable
 
 In your shell, run:
 ```shell
-sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli thunar i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings fzf onefetch nvtop htop papirus-icon-theme base-devel rsibreak qt5ct qt6ct kvantum adwaita-icon-theme libadwaita brightnessctl
+sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli thunar i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings fzf onefetch nvtop htop papirus-icon-theme base-devel rsibreak qt5ct qt6ct kvantum adwaita-icon-theme libadwaita brightnessctl qt5-tools
 
 rustup default stable
 ```
