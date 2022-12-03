@@ -109,6 +109,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [nvtop](https://archlinux.org/packages/community/x86_64/nvtop/) <sup>`GPUs Monitoring`</sup>
 - [htop](https://archlinux.org/packages/extra/x86_64/htop/) <sup>`System Monitoring`</sup>
 - [nnn](https://archlinux.org/packages/community/x86_64/nnn/) <sup>`TUI File Manager`</sup>
+- [dragon-drop](https://aur.archlinux.org/packages/dragon-drop) <sup>`CLI-GUI drag-and-drop source/target`</sup>
 
 ### CLI Utilities
 - [bat](https://archlinux.org/packages/community/x86_64/bat/)
@@ -203,7 +204,7 @@ rustup default stable
 Now you need [`paur`](https://github.com/Morganamilo/paru#installation) to install AUR packages.
 
 ```shell
-paru -Sa --needed nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono foxmarks rmtrash autotiling deadd-notification-center clipcat slimbookbattery papirus-folders hardcode-tray dialect nerd-fonts-ubuntu ttf-dejavu-ib
+paru -Sa --needed nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono foxmarks rmtrash autotiling deadd-notification-center clipcat slimbookbattery papirus-folders hardcode-tray dialect nerd-fonts-ubuntu ttf-dejavu-ib dragon-drop
 ```
 
 Then inside neovim, run:

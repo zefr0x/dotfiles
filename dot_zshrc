@@ -61,6 +61,10 @@ bindkey '^[[B' history-substring-search-down
 # Incremental history search
 bindkey '^R' history-incremental-search-backward
 
+# Keybindings for dragon-drop
+bindkey -s '^b' "dragto "
+bindkey -s '^n' "dragon^J"
+
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'
 export LESS_TERMCAP_md=$'\E[01;32m'
@@ -98,6 +102,9 @@ alias la="exa -la --icons"
 alias del='rmtrash'
 alias deldir='rmdirtrash'
 alias rm="echo -e Use 'del', or the full path i.e. '/bin/rm'. Can't delete: "
+# for dragon-drop
+alias dragto="dragon-drop"
+alias dragon="dragon-drop --target --and-exit"
 
 
 # Clipcat integration
