@@ -117,6 +117,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [zoxide](https://archlinux.org/packages/community/x86_64/zoxide/) <sup>`cd alternative`</sup>
 - [exa](https://archlinux.org/packages/community/x86_64/exa/) <sup>`ls alternative`</sup>
 - [fzf](https://archlinux.org/packages/community/x86_64/fzf/) <sup>`fuzzy finder`</sup>
+- [handlr](https://archlinux.org/packages/community/x86_64/handlr/) <sup>`Alternative to xdg-utils`</sup>
 
 ### Shell
 - [zsh](https://archlinux.org/packages/extra/x86_64/zsh/)
@@ -196,7 +197,7 @@ rustup default stable
 
 In your shell, run:
 ```shell
-sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli thunar i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings fzf onefetch nvtop htop papirus-icon-theme base-devel rsibreak qt5ct qt6ct kvantum adwaita-icon-theme libadwaita brightnessctl qt5-tools
+sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli thunar i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings fzf onefetch nvtop htop papirus-icon-theme base-devel rsibreak qt5ct qt6ct kvantum adwaita-icon-theme libadwaita brightnessctl qt5-tools handlr
 
 rustup default stable
 ```

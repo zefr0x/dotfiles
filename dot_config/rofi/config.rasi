@@ -6,7 +6,7 @@ configuration {
     drun-match-fields: "name,generic,exec,categories,keywords";
     drun-show-actions: false;
     drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-    drun-url-launcher: "xdg-open";
+    drun-url-launcher: "handlr";
     disable-history: false;
     case-sensitive: false;
     cycle: false;
