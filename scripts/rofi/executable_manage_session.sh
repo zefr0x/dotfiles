@@ -11,7 +11,7 @@ if [[ $ROFI_RETV = 0 ]]; then
 elif [[ $ROFI_RETV = 1 ]]; then
 	case $ROFI_INFO in
 	*lock)
-		loginctl lock-session
+		loginctl lock-session && xset dpms force off
 		;;
 	*logout)
 		i3-msg exit
