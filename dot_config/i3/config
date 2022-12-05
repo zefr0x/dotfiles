@@ -292,7 +292,7 @@ exec --no-startup-id /usr/lib/pam_kwallet_init
 exec --no-startup-id "if cbatticon -p | grep type; then cbatticon; fi"
 
 # Start RSIBreak.
-exec --no-startup-id "rsibreak --autostart"
+exec --no-startup-id "rsibreak"
 
 # Start XDG autostart .desktop files using dex (Only files in ~/.config/autostart).
 # See also: https://wiki.archlinux.org/index.php/XDG_Autostart
