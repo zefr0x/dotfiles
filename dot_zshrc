@@ -75,8 +75,12 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-R
 
-export EDITOR='nvim'
-export VISUAL='code'
+export EDITOR="nvim"
+export VISUAL="nvim"
+export TERMINAL="kitty"
+export VIDEO="mpv"
+export IMAGE="feh"
+export OPENER="handlr open"
 
 # Tools/Programmes aliases
 alias vim="nvim"
