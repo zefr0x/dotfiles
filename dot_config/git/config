@@ -3,18 +3,21 @@
     email = zer0-x.7ty50@aleeas.com
 [core]
     editor = nvim
-[diff]
-    tool = nvim -d
 [color]
     ui = true
 [init]
     defaultBranch = main
-[commit]
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+[diff]
+    tool = nvim -d
+[status]
+    branch = true
+    showStash = true
+    short = true
 [alias]
     ds = diff --staged
     d = diff
@@ -23,3 +26,5 @@
     ap = add --patch
     rs = restore --staged
     rsp = restore --staged --patch
+    l = log --shortstat
+    sw = show
