@@ -31,9 +31,6 @@ map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
--- Past from system clipboard
-map("n", "<leader>p", '"+p')
-
 -- Copy to system clipbaord
 map("n", "<leader>y", '"+y')
 map("v", "<leader>y", '"+y')
@@ -59,11 +56,11 @@ map("n", "<leader>ai", vim.lsp.buf.incoming_calls)
 map("n", "<leader>ao", vim.lsp.buf.outgoing_calls)
 
 -- bufferline.nvim
-map("n", "<leader>bp", "<cmd>BufferLinePick<cr>")
-map("n", "<leader>bc", "<cmd>BufferLinePickClose<cr>")
+map("n", "<leader>bp", vim.cmd.BufferLinePick)
+map("n", "<leader>bc", vim.cmd.BufferLinePickClose)
 
 -- nvim-tree.lua
-map("n", "<F3>", "<cmd>NvimTreeToggle<cr>")
+map("n", "<F3>", vim.cmd.NvimTreeToggle)
 
 -- trouble
 map("n", "<F5>", "<cmd>TroubleToggle document_diagnostics<cr>")
@@ -78,11 +75,16 @@ map("n", "p", "<Plug>(YankyPutAfter)")
 map("n", "P", "<Plug>(YankyPutBefore)")
 map("n", "gp", "<Plug>(YankyGPutAfter)")
 map("n", "gP", "<Plug>(YankyGPutBefore)")
+map("n", "]p", "<Plug>(PutIndentAfter)")
+map("n", "[p", "<Plug>(PutIndentBefore)")
 map("n", "<c-n>", "<Plug>(YankyCycleForward)")
-map("n", "<c-n>", "<plug>(yankycyclebackward)")
+map("n", "<c-p>", "<plug>(YankyCycleBackward)")
+-- Past from system clipboard
+map("n", "<leader>p", '"+<Plug>(YankyPutAfter)')
+map("n", "<leader>P", '"+<Plug>(YankyPutBefore)')
 
 -- nvim-surround
-map("n", "<F4>", "<cmd>SymbolsOutline<cr>")
+map("n", "<F4>", vim.cmd.SymbolsOutline)
 
 -- telescope.nvim
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
