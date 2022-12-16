@@ -116,4 +116,7 @@ map("n", "<leader>w", function()
 	require("hop").hint_words({ current_line_only = true })
 end)
 
+-- undotree
+map("n", "<F2>", vim.cmd.UndotreeToggle)
+
 -- TODO: Create keymapping for crates.nvim to be loaded only in Cargo.toml file
