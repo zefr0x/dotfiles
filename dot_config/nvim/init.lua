@@ -2,7 +2,7 @@
 require("base_config")
 
 ---------------- Load Plugins ----------------
-require("plugins")
+require("plugin_loading")
 
 ---------------- Set KeyMaps -----------------
 require("keymapping")

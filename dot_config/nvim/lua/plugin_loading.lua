@@ -4,7 +4,7 @@ return require("packer").startup(function(use)
 		"neovim/nvim-lspconfig",
 		after = { "nvim-cmp", "nvim-navic", "rust-tools.nvim" },
 		config = function()
-			require("config.lsp")
+			require("plugin.lsp")
 		end,
 	})
 	-- Standalone UI for nvim-lsp progress
@@ -14,7 +14,7 @@ return require("packer").startup(function(use)
 	use({
 		"mfussenegger/nvim-lint",
 		config = function()
-			require("config.lint")
+			require("plugin.lint")
 		end,
 	})
 
@@ -44,14 +44,14 @@ return require("packer").startup(function(use)
 			"hrsh7th/cmp-buffer",
 		},
 		config = function()
-			require("config.completion")
+			require("plugin.completion")
 		end,
 	})
 	-- Autopairs for () and {} etc...
 	use({
 		"windwp/nvim-autopairs",
 		config = function()
-			require("config.auto_pair")
+			require("plugin.auto_pair")
 		end,
 	})
 
@@ -63,7 +63,7 @@ return require("packer").startup(function(use)
 		"folke/trouble.nvim",
 		requires = { "kyazdani42/nvim-web-devicons" },
 		config = function()
-			require("config.trouble_diagnostics")
+			require("plugin.trouble_diagnostics")
 		end,
 	})
 	-- Find, Filter, Preview, Pick. All lua, all the time
@@ -80,7 +80,7 @@ return require("packer").startup(function(use)
 		},
 		after = "yanky.nvim",
 		config = function()
-			require("config.telescope")
+			require("plugin.telescope")
 		end,
 	})
 	-- Comments todo list
@@ -89,7 +89,7 @@ return require("packer").startup(function(use)
 		"folke/todo-comments.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
 		config = function()
-			require("config.todo_comments")
+			require("plugin.todo_comments")
 		end,
 	})
 
@@ -100,7 +100,7 @@ return require("packer").startup(function(use)
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
 		config = function()
-			require("config.treesitter")
+			require("plugin.treesitter")
 		end,
 	})
 	-- Rainbow parentheses for neovim using tree-sitter
@@ -113,7 +113,7 @@ return require("packer").startup(function(use)
 		"m-demare/hlargs.nvim",
 		after = { "nvim-treesitter" },
 		config = function()
-			require("config.hlargs")
+			require("plugin.hlargs")
 		end,
 	})
 	-- Wisely add 'end' in Vimscript, Lua, etc...
@@ -126,7 +126,7 @@ return require("packer").startup(function(use)
 		"windwp/nvim-ts-autotag",
 		after = { "nvim-treesitter" },
 		config = function()
-			require("config.ts_autotag")
+			require("plugin.ts_autotag")
 		end,
 	})
 	-- Determines the text object you meant based on your location in the syntax tree
@@ -138,7 +138,7 @@ return require("packer").startup(function(use)
 	use({
 		"norcalli/nvim-colorizer.lua",
 		config = function()
-			require("config.colorizer")
+			require("plugin.colorizer")
 		end,
 	})
 	-- vim-polyglot Highlight matching html tags
@@ -148,7 +148,7 @@ return require("packer").startup(function(use)
 	use({
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
-			require("config.indent_blankline")
+			require("plugin.indent_blankline")
 		end,
 	})
 
@@ -157,7 +157,7 @@ return require("packer").startup(function(use)
 		"phaazon/hop.nvim",
 		branch = "v2",
 		config = function()
-			require("config.hop_motions")
+			require("plugin.hop_motions")
 		end,
 	})
 	-- Surround
@@ -166,7 +166,7 @@ return require("packer").startup(function(use)
 	use({
 		"numToStr/Comment.nvim",
 		config = function()
-			require("config.comment")
+			require("plugin.comment")
 		end,
 	})
 
@@ -175,7 +175,7 @@ return require("packer").startup(function(use)
 		"kyazdani42/nvim-tree.lua",
 		requires = { "kyazdani42/nvim-web-devicons" },
 		config = function()
-			require("config.file_browser")
+			require("plugin.file_browser")
 		end,
 	})
 	-- Class/module browser
@@ -183,7 +183,7 @@ return require("packer").startup(function(use)
 		"simrat39/symbols-outline.nvim",
 		after = { "nvim-treesitter" },
 		config = function()
-			require("config.symbols_outline")
+			require("plugin.symbols_outline")
 		end,
 	})
 
@@ -191,7 +191,7 @@ return require("packer").startup(function(use)
 	use({
 		"tanvirtin/vgit.nvim",
 		config = function()
-			require("config.vgit")
+			require("plugin.vgit")
 		end,
 	})
 	-- TODO: Configure testing framework
@@ -205,7 +205,7 @@ return require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons" },
 		config = function()
-			require("config.lualine")
+			require("plugin.lualine")
 		end,
 	})
 	--  A snazzy bufferline/tabline
@@ -214,7 +214,7 @@ return require("packer").startup(function(use)
 		tag = "v3.*",
 		requires = "kyazdani42/nvim-web-devicons",
 		config = function()
-			require("config.bufferline")
+			require("plugin.bufferline")
 		end,
 	})
 	-- Simple winbar/statusline plugin that shows your current code context
@@ -224,28 +224,28 @@ return require("packer").startup(function(use)
 	use({
 		"gbprod/yanky.nvim",
 		config = function()
-			require("config.yanky")
+			require("plugin.yanky")
 		end,
 	})
 	-- Auto save fiels to disk
 	use({
 		"Pocco81/auto-save.nvim",
 		config = function()
-			require("config.auto_save")
+			require("plugin.auto_save")
 		end,
 	})
 	-- Intelligently reopen files at your last edit position in Vim
 	use({
 		"ethanholz/nvim-lastplace",
 		config = function()
-			require("config.lastplace")
+			require("plugin.lastplace")
 		end,
 	})
 	-- Smooth scrolling neovim plugin written in lua
 	use({
 		"karb94/neoscroll.nvim",
 		config = function()
-			require("config.neoscroll")
+			require("plugin.neoscroll")
 		end,
 	})
 
@@ -262,11 +262,11 @@ return require("packer").startup(function(use)
 		event = { "BufRead Cargo.toml" },
 		requires = { "nvim-lua/plenary.nvim" },
 		config = function()
-			require("config.crates_config")
+			require("plugin.crates_config")
 		end,
 	})
 
 	-- Load the colors theme
 	-- If it was loaded with the plugin it will brake the bufferline colors
-	require("config.theme")
+	require("plugin.theme")
 end)
