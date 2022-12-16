@@ -32,12 +32,12 @@ map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
 -- Past from system clipboard
-map("n", "<leader>p", "\"+p")
+map("n", "<leader>p", '"+p')
 
 -- Copy to system clipbaord
-map("n", "<leader>y", "\"+y")
-map("v", "<leader>y", "\"+y")
-map("n", "<leader>Y", "\"+Y")
+map("n", "<leader>y", '"+y')
+map("v", "<leader>y", '"+y')
+map("n", "<leader>Y", '"+Y')
 
 ------------ Plugins KeyMapping -------------
 
