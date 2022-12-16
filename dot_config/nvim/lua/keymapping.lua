@@ -11,11 +11,33 @@ end
 
 -- Clear search results
 map("n", "//", ":noh<CR>")
+
 -- Go to previous buffer
 -- TODO: Map another better key.
 map("n", "<F12>", "<cmd>e#<CR>")
+
 -- Tabs and windows mappings
 map("n", "tt", ":tabnew<CR>")
+
+-- Move highlited lines up and down.
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Move up and down the file while keeping the curser in it's place.
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+
+-- Keep curser in search in the middle.
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+
+-- Past from system clipboard
+map("n", "<leader>p", "\"+p")
+
+-- Copy to system clipbaord
+map("n", "<leader>y", "\"+y")
+map("v", "<leader>y", "\"+y")
+map("n", "<leader>Y", "\"+Y")
 
 ------------ Plugins KeyMapping -------------
 
