@@ -19,18 +19,20 @@ o.tabstop = 4
 o.softtabstop = 4
 o.shiftwidth = 4
 
+o.smartindent = true
+
 -- Line numbering
-o.nu = true
+o.number = true
+o.relativenumber = true
 
 -- When scrolling, keep cursor 3 lines away from screen border
-o.scrolloff = 3
+o.scrolloff = 7
 
 -- Fix cursor being jittery when using live gutter enabled or linting a file
 o.signcolumn = "yes"
 
 -- Config colors
 o.termguicolors = true
-o.background = "dark"
 
 --  Disable autocompletion preview window
 o.completeopt:remove("preview")
@@ -40,6 +42,11 @@ o.wildmode = "list:longest"
 
 -- Set a shell
 o.shell = "/bin/bash"
+
+-- Backup and undo
+o.swapfile = false
+o.backup = false
+o.undodir = os.getenv("XDG_CACHE_HOME") .. "/nvim/undodir"
 
 -- Set leader key
 g.mapleader = ","
