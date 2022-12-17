@@ -275,5 +275,5 @@ return require("packer").startup(function(use)
 
 	-- Load the colors theme
 	-- If it was loaded with the plugin it will brake the bufferline colors
-	require("plugin.theme")
+	require("plugin.github_theme")
 end)

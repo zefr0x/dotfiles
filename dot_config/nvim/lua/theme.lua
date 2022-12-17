@@ -1,10 +1,7 @@
 local hl = vim.api.nvim_set_hl
 
--- github-nvim-theme
-require("github-theme").setup({
-	theme_style = "dark_default",
-	dark_float = true,
-})
+
+---------------- zer0-x theme ----------------
 
 hl(0, "Normal", { bg = "#000000" }) -- normal text
 hl(0, "NormalNC", { bg = "#000000" }) -- normal text in non-current windows
@@ -39,7 +36,7 @@ hl(0, "DiagnosticUnderlineInfo", { link = "LspDiagnosticsUnderlineInformation" }
 -- todo-comments.nvim
 -- Colors are it the plugin's config file.
 
--- trouble.nvim ---------
+-- trouble.nvim --------
 -- hl(0, "TroubleCount", {})
 -- hl(0, "TroubleNormal", {})
 -- hl(0, "TroubleLocation", {})
@@ -71,7 +68,7 @@ hl(0, "DiagnosticUnderlineInfo", { link = "LspDiagnosticsUnderlineInformation" }
 hl(0, "FidgetTitle", { fg = "#800000", bold = true })
 hl(0, "FidgetTask", { fg = "#58a6ff" })
 
--- nvim-cmp ---------
+-- nvim-cmp ------------
 hl(0, "PmenuSel", { fg = nil, bg = "#282C34" })
 hl(0, "Pmenu", { fg = "#C5CDD9", bg = "#22252A" })
 
