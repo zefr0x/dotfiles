@@ -83,8 +83,8 @@ export IMAGE="feh"
 export OPENER="handlr open"
 
 # Tools/Programmes aliases
-alias vim="nvim"
-alias svim="sudoedit"
+alias nv="nvim"
+alias snv="sudoedit"
 alias py='python'
 alias ipy='ipython'
 alias topdf='libreoffice --headless --invisible --convert-to pdf'
