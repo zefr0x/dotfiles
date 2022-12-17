@@ -5,13 +5,35 @@ local navic = require("nvim-navic")
 require("lualine").setup({
 	options = {
 		theme = "zer0",
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
+		-- globalstatus = true,
+		component_separators = {
+			left = "", --[[ right = "" ]]
+		},
+		section_separators = { left = "", right = "" },
+		disabled_filetypes = { statusline = { "packer", "Trouble", "undotree", "diff" } },
+	},
+	extensions = {
+		"nvim-tree",
+		"symbols-outline",
+		-- { sections = { lualine_a = {  } }, filetypes = { "diff" } },
 	},
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", "diagnostics" },
-		lualine_c = { "filename", { navic.get_location, cond = navic.is_available } },
+		lualine_c = {
+			{
+				"filename",
+				newfile_status = true,
+				path = 1,
+				symbols = {
+					modified = "",
+					readonly = "",
+					unnamed = "[No Name]",
+					newfile = "[New]",
+				},
+			},
+			{ navic.get_location, cond = navic.is_available },
+		},
 		lualine_x = {
 			"filesize",
 			{ "fileformat", separator = "" },
@@ -19,7 +41,9 @@ require("lualine").setup({
 			"filetype",
 		},
 		lualine_y = { "progress" },
-		lualine_z = { "location" },
+		lualine_z = {
+			"location", --[[ "searchcount" ]]
+		},
 	},
 	inactive_sections = {
 		lualine_a = {},
@@ -29,13 +53,4 @@ require("lualine").setup({
 		lualine_y = {},
 		lualine_z = {},
 	},
-	-- TODO: Configure it in neovim 8.0
-	-- winbar = {
-	--     lualine_a = {},
-	--     lualine_b = {},
-	--     lualine_c = {},
-	--     lualine_x = {},
-	--     lualine_y = {},
-	--     lualine_z = {}
-	-- },
 })
