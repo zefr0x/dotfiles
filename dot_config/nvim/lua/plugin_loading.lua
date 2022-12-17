@@ -228,7 +228,12 @@ return require("packer").startup(function(use)
 		end,
 	})
 	-- The undo history visualizer for Vim
-	use({ "mbbill/undotree" })
+	use({
+		"mbbill/undotree",
+		config = function()
+			require("plugin.undotree")
+		end,
+	})
 	-- Auto save fiels to disk
 	use({
 		"Pocco81/auto-save.nvim",

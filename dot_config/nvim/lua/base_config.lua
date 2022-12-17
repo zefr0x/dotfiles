@@ -25,7 +25,7 @@ o.smartindent = true
 o.number = true
 o.relativenumber = true
 
--- When scrolling, keep cursor 3 lines away from screen border
+-- When scrolling, keep cursor 7 lines away from screen border
 o.scrolloff = 7
 
 -- Fix cursor being jittery when using live gutter enabled or linting a file
@@ -47,6 +47,7 @@ o.shell = "/bin/bash"
 o.swapfile = false
 o.backup = false
 o.undodir = os.getenv("XDG_CACHE_HOME") .. "/nvim/undodir"
+o.undofile = true
 
 -- Set leader key
 g.mapleader = ","
