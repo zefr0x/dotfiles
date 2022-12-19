@@ -1,83 +1,83 @@
 # zer0-x's public dotfiles
 > Managed with [chezmoi](https://www.chezmoi.io/)
 
-Those config files and dependencies represents my Personalized Development Environment.
+Those config files represents my Personalized Environment.
 
-## Dependencies
+<details>
+<summary>Dependencies</summary>
 
 ### GUI Applications
-- [kitty](https://archlinux.org/packages/community/x86_64/kitty/) <sup>`Terminal emulator`</sup>
-- [sqlitebrowser](https://archlinux.org/packages/community/x86_64/sqlitebrowser/)
-- [qt5-tools](https://archlinux.org/packages/extra/x86_64/qt5-tools/)
-- [ghostwriter](https://archlinux.org/packages/community/x86_64/ghostwriter/) <sup>`For writing in Arabic smoothly`</sup>
-- [mpv](https://archlinux.org/packages/community/x86_64/mpv/) <sup>`Media player`</sup>
-- [feh](https://archlinux.org/packages/extra/x86_64/feh/) <sup>`Image viewer`</sup>
-- [qalculate-qt](https://archlinux.org/packages/extra/x86_64/qalculate-qt/)
-- [zathura](https://archlinux.org/packages/community/x86_64/zathura/) <sup>`Document Viewer`</sup>
-    - [zathura-pdf-mupdf](https://archlinux.org/packages/community/x86_64/zathura-pdf-mupdf/)
-- [thunar](https://archlinux.org/packages/extra/x86_64/thunar/) <sup>`File Manager`</sup>
-    - [gvfs](https://archlinux.org/packages/extra/x86_64/gvfs/)
-    - [thunar-archive-plugin](https://archlinux.org/packages/extra/x86_64/thunar-archive-plugin/)
-    - [thunar-media-tags-plugin](https://archlinux.org/packages/extra/x86_64/thunar-media-tags-plugin/)
-    - [tumbler](https://archlinux.org/packages/extra/x86_64/tumbler/)
-        - [ffmpegthumbnailer](https://archlinux.org/packages/extra/x86_64/ffmpegthumbnailer/)
-        - [poppler-glib](https://archlinux.org/packages/extra/x86_64/poppler-glib/)
-        - [libgsf](https://archlinux.org/packages/extra/x86_64/libgsf/)
-- [slimbookbattery](https://aur.archlinux.org/packages/slimbookbattery) <sup>`Interface for TLP`</sup>
-- [system-config-printer](https://archlinux.org/packages/extra/x86_64/system-config-printer/)
-- [dialect](https://aur.archlinux.org/packages/dialect) <sup>`Translating Text`</sup>
-
+- [kitty](https://sw.kovidgoyal.net/kitty/)
+- [sqlitebrowser](https://sqlitebrowser.org/)
+- [Qt5 Tools](https://archlinux.org/packages/extra/x86_64/qt5-tools/)
+- [ghostwriter](https://ghostwriter.kde.org/)
+- [mpv](https://mpv.io/)
+- [feh](https://feh.finalrewind.org/)
+- [Qalculate! Qt](https://qalculate.github.io/)
+- [zathura](https://pwmt.org/projects/zathura/)
+    - [zathura-pdf-mupdf](https://pwmt.org/projects/zathura-pdf-mupdf/)
+- [thunar](https://docs.xfce.org/xfce/thunar/start)
+    - [gvfs](https://wiki.gnome.org/Projects/gvfs)
+    - [thunar-archive-plugin](https://docs.xfce.org/xfce/thunar/archive)
+    - [thunar-media-tags-plugin](https://docs.xfce.org/xfce/thunar/media-tags)
+    - [tumbler](https://docs.xfce.org/xfce/tumbler/start)
+        - [ffmpegthumbnailer](https://github.com/dirkvdb/ffmpegthumbnailer)
+        - [poppler-glib](https://poppler.freedesktop.org/)
+        - [libgsf](https://www.digital-scurf.org/software/libgfshare)
+- [slimbookbattery](https://github.com/slimbook/slimbookbattery)
+- [system-config-printer](https://github.com/OpenPrinting/system-config-printer)
+- [dialect](https://apps.gnome.org/app/app.drey.Dialect/)
 ### Desktop Environment
-- [i3-gaps](https://archlinux.org/packages/community/x86_64/i3-gaps/) <sup>`Window Manager`</sup>
-    - [autotiling](https://aur.archlinux.org/packages/autotiling)
-    - [xorg-setxkbmap](https://archlinux.org/packages/extra/x86_64/xorg-setxkbmaps/) <sup>`Configure Keyboard`</sup>
-    - [xorg-xset](https://archlinux.org/packages/extra/x86_64/xorg-xset/) <sup>`X11 Preference`</sup>
-    - [xss-lock](https://archlinux.org/packages/community/x86_64/xss-lock/)
-    - [i3lock](https://archlinux.org/packages/community/x86_64/i3lock/)
-    - [xdotool](https://archlinux.org/packages/community/x86_64/xdotool/) <sup>`X11 Automation Tool`</sup>
-    - [numlockx](https://archlinux.org/packages/community/x86_64/numlockx/) <sup>`X11 Turn on Numlock`</sup>
-    - [nitrogen](https://archlinux.org/packages/extra/x86_64/nitrogen/) <sup>`X11 Background Setter`</sup>
-    - [dex](https://archlinux.org/packages/community/x86_64/dex/) <sup>`XDG Auto Start / DesktopEntry`</sup>
-- [polybar](https://archlinux.org/packages/community/x86_64/polybar/) <sup>`Status Bar / Panel`</sup>
-    - [pamixer](https://archlinux.org/packages/community/x86_64/pamixer/) <sup>`CLI Audio Mixer`</sup>
-    - [psmisc](https://archlinux.org/packages/core/x86_64/psmisc/) <sup>`Check for /dev/video* usage with (fuser)`</sup>
-    - [cbatticon](https://archlinux.org/packages/community/x86_64/cbatticon/) <sup>`Battery System Tray Icon`</sup>
-    - [brightnessctl](https://archlinux.org/packages/community/x86_64/brightnessctl/)
-- [picom](https://archlinux.org/packages/community/x86_64/picom/) <sup>`X11 Compositor`</sup>
-- [redshift](https://archlinux.org/packages/community/x86_64/redshift/) <sup>`X11 Adjust Screen Temperature`</sup>
-- [rofi](https://archlinux.org/packages/community/x86_64/rofi/) <sup>`Launcher`</sup>
-    - [rofi-calc](https://archlinux.org/packages/community/x86_64/rofi-calc/)
-    - [rofi-emoji](https://archlinux.org/packages/community/x86_64/rofi-emoji/)
-    - [foxmarks](https://aur.archlinux.org/packages/foxmarks)
-- [deadd-notification-center](https://aur.archlinux.org/packages/deadd-notification-center) <sup>`Notification Center`</sup>
-- [clipcat](https://aur.archlinux.org/packages/clipcat) <sup>`Clipboard Manager`</sup> <sup>`(Need an alternative)`</sup>
-- [network-manager-applet](https://archlinux.org/packages/extra/x86_64/network-manager-applet/)
+- [i3-gaps](https://github.com/Airblader/i3)
+    - [autotiling](https://github.com/nwg-piotr/autotiling)
+    - [xorg-setxkbmap](https://archlinux.org/packages/extra/x86_64/xorg-setxkbmap/)
+    - [xorg-xset](https://archlinux.org/packages/extra/x86_64/xorg-xset/)
+    - [xss-lock](https://bitbucket.org/raymonad/xss-lock)
+    - [i3lock](https://i3wm.org/i3lock/)
+    - [xdotool](https://www.semicomplete.com/projects/xdotool/)
+    - [numlockx](https://github.com/rg3/numlockx)
+    - [nitrogen](http://projects.l3ib.org/nitrogen/)
+    - [dex](https://github.com/jceb/dex)
+- [polybar](https://github.com/polybar/polybar)
+    - [pamixer](https://github.com/cdemoulins/pamixer)
+    - [psmisc](https://gitlab.com/psmisc/psmisc)
+    - [cbatticon](https://github.com/valr/cbatticon)
+    - [brightnessctl](https://github.com/Hummer12007/brightnessctl)
+- [picom](https://github.com/yshui/picom)
+- [redshift](http://jonls.dk/redshift/)
+- [rofi](https://github.com/DaveDavenport/rofi)
+    - [rofi-calc](https://github.com/svenstaro/rofi-calc)
+    - [rofi-emoji](https://github.com/Mange/rofi-emoji)
+    - [foxmarks](https://github.com/zer0-x/foxmarks)
+- [deadd-notification-center](https://github.com/phuhl/linux_notification_center)
+- [clipcat](https://github.com/xrelkd/clipcat)
+- [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 - [kwallet](https://archlinux.org/packages/extra/x86_64/kwallet/)
     - [kwallet-pam](https://archlinux.org/packages/extra/x86_64/kwallet-pam/)
-- [flameshot](https://archlinux.org/packages/community/x86_64/flameshot/) <sup>`Screenshot Software`</sup>
-- [lightdm](https://archlinux.org/packages/extra/x86_64/lightdm/)
-    - [lightdm-gtk-greeter](https://archlinux.org/packages/extra/x86_64/lightdm-gtk-greeter/)
-    - [lightdm-gtk-greeter-settings](https://archlinux.org/packages/extra/x86_64/lightdm-gtk-greeter-settings/)
-- [rsibreak](https://archlinux.org/packages/community/x86_64/rsibreak/)
+- [flameshot](https://github.com/flameshot-org/flameshot)
+- [lightdm](https://github.com/canonical/lightdm)
+    - [lightdm-gtk-greeter](https://github.com/Xubuntu/lightdm-gtk-greeter)
+    - [lightdm-gtk-greeter-settings](https://github.com/Xubuntu/lightdm-gtk-greeter-settings)
+- [rsibreak](https://apps.kde.org/rsibreak/)
 
 
 ### Fonts
-- [noto-fonts](https://archlinux.org/packages/extra/any/noto-fonts/)
-- [JetBrainsMono Nerd](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
-- [nerd-fonts-ubuntu](https://aur.archlinux.org/packages/nerd-fonts-ubuntu)
-- [ttf-dejavu-ib](https://aur.archlinux.org/packages/ttf-dejavu-ib) <sup>`Better Arabic Fonts in UI`</sup>
+- [noto-fonts](https://fonts.google.com/noto)
+- [JetBrainsMono Nerd](https://www.nerdfonts.com/)
+- [nerd-fonts-ubuntu](https://github.com/ryanoasis/nerd-fonts)
+- [ttf-dejavu-ib](http://dejavu-fonts.org/wiki/Main_Page)
 
 ### Themes
 #### Icons
-- [papirus-icon-theme](https://archlinux.org/packages/community/any/papirus-icon-theme/)
-    - [papirus-folders](https://aur.archlinux.org/packages/papirus-folders)
-    - [hardcode-tray](https://aur.archlinux.org/packages/hardcode-tray)
-- [adwaita-icon-theme](https://archlinux.org/packages/extra/any/adwaita-icon-theme/)
+- [papirus-icon-theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
+    - [papirus-folders](https://github.com/PapirusDevelopmentTeam/papirus-folders)
+    - [hardcode-tray](https://github.com/bil-elmoussaoui/Hardcode-Tray)
+- [adwaita-icon-theme](https://gitlab.gnome.org/GNOME/adwaita-icon-theme)
 #### UI
-- [qt5ct](https://archlinux.org/packages/community/x86_64/qt5ct/) <sup>`Qt5 Configuration Utility`</sup>
-- [qt6ct](https://archlinux.org/packages/community/x86_64/qt6ct/) <sup>`Qt6 Configuration Utility`</sup>
-- [kvantum](https://archlinux.org/packages/community/x86_64/kvantum/) <sup>`Theme Engine for Qt5/6`</sup>
-- [libadwaita](https://archlinux.org/packages/extra/x86_64/libadwaita/)
+- [qt5ct](https://sourceforge.net/projects/qt5ct/)
+- [qt6ct](https://github.com/trialuser02/qt6ct)
+- [kvantum](https://github.com/tsujan/Kvantum)
+- [libadwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/)
 
 Fix hardcoded tray icons:
 ```shell
@@ -97,81 +97,79 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 ```
 
 ### CLI Applications/Tools
-- [git](https://archlinux.org/packages/extra/x86_64/git/)
-- [python-livereload](https://archlinux.org/packages/community/any/python-livereload/)
-- [libqalculate](https://archlinux.org/packages/extra/x86_64/libqalculate/)
-- [xclip](https://archlinux.org/packages/extra/x86_64/xclip/) <sup>`Access clipborad for x11`</sup>
-- [wl-clipboard](https://archlinux.org/packages/community/x86_64/wl-clipboard/) <sup>`Access clipboard for wayland`</sup>
-- [trash-cli](https://archlinux.org/packages/community/any/trash-cli/)
-    - [rmtrash](https://aur.archlinux.org/packages/rmtrash)
-- [pulsemixer](https://archlinux.org/packages/community/any/pulsemixer/) <sup>`TUI Audio Mixer`</sup>
-- [onefetch](https://archlinux.org/packages/community/x86_64/onefetch/) <sup>`Git Repo Summary`</sup>
-- [nvtop](https://archlinux.org/packages/community/x86_64/nvtop/) <sup>`GPUs Monitoring`</sup>
-- [htop](https://archlinux.org/packages/extra/x86_64/htop/) <sup>`System Monitoring`</sup>
-- [nnn](https://archlinux.org/packages/community/x86_64/nnn/) <sup>`TUI File Manager`</sup>
-- [dragon-drop](https://aur.archlinux.org/packages/dragon-drop) <sup>`CLI-GUI drag-and-drop source/target`</sup>
+- [git](https://git-scm.com/)
+- [python-livereload](https://github.com/lepture/python-livereload)
+- [libqalculate](https://qalculate.github.io/)
+- [xclip](https://github.com/astrand/xclip)
+- [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
+- [trash-cli](https://github.com/andreafrancia/trash-cli)
+    - [rmtrash](https://github.com/PhrozenByte/rmtrash)
+- [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
+- [onefetch](https://github.com/o2sh/onefetch)
+- [nvtop](https://github.com/Syllo/nvtop)
+- [htop](https://htop.dev/)
+- [nnn](https://github.com/jarun/nnn)
+- [dragon-drop](https://github.com/mwh/dragon)
 
 ### CLI Utilities
-- [bat](https://archlinux.org/packages/community/x86_64/bat/)
-- [fd](https://archlinux.org/packages/community/x86_64/fd/) <sup>`find alternative`</sup>
-- [zoxide](https://archlinux.org/packages/community/x86_64/zoxide/) <sup>`cd alternative`</sup>
-- [exa](https://archlinux.org/packages/community/x86_64/exa/) <sup>`ls alternative`</sup>
-- [fzf](https://archlinux.org/packages/community/x86_64/fzf/) <sup>`fuzzy finder`</sup>
-- [handlr](https://archlinux.org/packages/community/x86_64/handlr/) <sup>`Alternative to xdg-utils`</sup>
+- [bat](https://github.com/sharkdp/bat)
+- [fd](https://github.com/sharkdp/fd)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [exa](https://the.exa.website/)
+- [fzf](https://github.com/junegunn/fzf)
+- [handlr](https://github.com/chmln/handlr)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ### Shell
-- [zsh](https://archlinux.org/packages/extra/x86_64/zsh/)
-    - [zsh-autosuggestions](https://archlinux.org/packages/community/any/zsh-autosuggestions/)
-    - [zsh-completions](https://archlinux.org/packages/community/any/zsh-completions/)
-    - [zsh-history-substring-search](https://archlinux.org/packages/community/any/zsh-history-substring-search/)
-    - [zsh-syntax-highlighting](https://archlinux.org/packages/community/any/zsh-syntax-highlighting/)
-    - [zsh-theme-powerlevel10k](https://archlinux.org/packages/community/x86_64/zsh-theme-powerlevel10k/)
+- [zsh](https://www.zsh.org/)
+    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+    - [zsh-completions](https://github.com/zsh-users/zsh-completions)
+    - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
+    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+    - [zsh-theme-powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 
 ### NeoVim <sup>`Text Editor`</sup>
-- [neovim](https://archlinux.org/packages/community/x86_64/neovim/)
-- [nvim packer](https://aur.archlinux.org/packages/nvim-packer-git)
+- [neovim](https://neovim.io/)
+- [nvim packer](https://github.com/wbthomason/packer.nvim)
 
 After installing packer, you need to install the plugins for neovim by running:
 ```
 :PackerSync
 ```
 
-#### sup-dependencies <sup>`Required by NeoVim plugins`</sup>
-- [ripgrep](https://archlinux.org/packages/community/x86_64/ripgrep/)
-
 ### Language Servers
-- [rust-analyzer](https://archlinux.org/packages/community/x86_64/rust-analyzer/) <sup>`Rust`</sup>
-- [jedi-language-server](https://archlinux.org/packages/community/any/jedi-language-server/) <sup>`Python`</sup>
-- [texlab](https://archlinux.org/packages/community/x86_64/texlab/) <sup>`LaTex`</sup>
-- [typescript-language-server](https://archlinux.org/packages/community/any/typescript-language-server/) <sup>`JavaScript/TypeScript`</sup>
-- [vscode-css-languageserver](https://archlinux.org/packages/community/any/vscode-css-languageserver/) <sup>`CSS`</sup>
-- [vscode-html-languageserver](https://archlinux.org/packages/community/any/vscode-html-languageserver/) <sup>`HTML`</sup>
-- [lua-language-server](https://archlinux.org/packages/community/x86_64/lua-language-server/) <sup>`Lua`</sup>
+- [rust-analyzer](https://rust-analyzer.github.io/) <sup>`Rust`</sup>
+- [jedi-language-server](https://github.com/pappasam/jedi-language-server) <sup>`Python`</sup>
+- [texlab](https://github.com/latex-lsp/texlab) <sup>`LaTex`</sup>
+- [typescript-language-server](https://github.com/theia-ide/typescript-language-server) <sup>`JavaScript/TypeScript`</sup>
+- [vscode-css-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
+- [vscode-html-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
+- [lua-language-server](https://github.com/sumneko/lua-language-server) <sup>`Lua`</sup>
 
 ### Linters
-- [flawfinder](https://archlinux.org/packages/community/any/flawfinder/) <sup>`C/C++`</sup>
-- [mypy](https://archlinux.org/packages/community/any/mypy/) <sup>`Python`</sup>
-- [flake8](https://archlinux.org/packages/community/any/flake8/) <sup>`Python`</sup>
-    - [pep8-naming](https://aur.archlinux.org/packages/python-pep8-naming)
-    - [flake8-builtins](https://aur.archlinux.org/packages/python-flake8-builtins)
-    - [flake8-comprehensions](https://aur.archlinux.org/packages/python-flake8-comprehensions)
-    - [flake8-bugbear](https://aur.archlinux.org/packages/python-flake8-bugbear)
-- [python-pydocstyle](https://archlinux.org/packages/community/any/python-pydocstyle/) <sup>`Python`</sup>
-- [Bandit](https://archlinux.org/packages/community/any/bandit/) <sup>`Python`</sup>
-- [selene-linter](https://archlinux.org/packages/community/x86_64/selene-linter/) <sup>`Lua`</sup>
-- [eslint](https://archlinux.org/packages/community/any/eslint/) <sup>`JavaScript/TypeScript`</sup>
-- [stylelint](https://archlinux.org/packages/community/any/stylelint/) <sup>`CSS`</sup>
-- [tidy](https://archlinux.org/packages/extra/x86_64/tidy/) <sup>`HTML`</sup>
+- [flawfinder](https://dwheeler.com/flawfinder/) <sup>`C/C++`</sup>
+- [mypy](http://www.mypy-lang.org/) <sup>`Python`</sup>
+- [flake8](https://flake8.pycqa.org/) <sup>`Python`</sup>
+    - [pep8-naming](https://github.com/PyCQA/pep8-naming)
+    - [flake8-builtins](https://github.com/gforcada/flake8-builtins)
+    - [flake8-comprehensions](https://github.com/adamchainz/flake8-comprehensions)
+    - [flake8-bugbear](https://github.com/PyCQA/flake8-bugbear)
+- [python-pydocstyle](http://www.pydocstyle.org/) <sup>`Python`</sup>
+- [Bandit](https://github.com/PyCQA/bandit) <sup>`Python`</sup>
+- [selene-linter](https://github.com/Kampfkarren/selene) <sup>`Lua`</sup>
+- [eslint](https://eslint.org/) <sup>`JavaScript/TypeScript`</sup>
+- [stylelint](https://stylelint.io/) <sup>`CSS`</sup>
+- [tidy](https://www.html-tidy.org/) <sup>`HTML`</sup>
 
 ### Formatters
-- [black](https://archlinux.org/packages/community/any/python-black/) <sup>`Python`</sup>
-- [stylua](https://archlinux.org/packages/community/any/stylua/) <sup>`Lua`</sup>
-- [shfmt](https://archlinux.org/packages/community/any/shfmt/) <sup>`shell`</sup>
+- [black](https://github.com/psf/black) <sup>`Python`</sup>
+- [stylua](https://github.com/JohnnyMorganz/StyLua) <sup>`Lua`</sup>
+- [shfmt](https://github.com/mvdan/sh) <sup>`shell`</sup>
 
 ### Programming Languages Tools/Compilers/Interpreters
 #### Rust
-- [rustup](https://archlinux.org/packages/community/x86_64/rustup/)
+- [rustup](https://github.com/rust-lang/rustup.rs)
 
 After installing it you need to run:
 ```shell
@@ -182,35 +180,22 @@ rustup default stable
 
 #### C/C++
 - [base-devel](https://archlinux.org/groups/x86_64/base-devel/)
-- [clang](https://archlinux.org/packages/extra/x86_64/clang/)
+- [clang](https://clang.llvm.org/)
 
 #### Python
-- [python](https://archlinux.org/packages/core/x86_64/python/)
+- [python](https://www.python.org/)
 
 #### LaTex
 - [texlive-most](https://archlinux.org/groups/x86_64/texlive-most/)
 - [texlive-langextra](https://archlinux.org/packages/extra/any/texlive-langextra/)
 - [texlive-fontsextra](https://archlinux.org/packages/extra/any/texlive-fontsextra/)
 
+</details>
+
 ## Arch linux Installation
-<!-- TODO: Create an inatall script. -->
+> You need [`paur`](https://github.com/Morganamilo/paru#installation) to install AUR packages.
 
-In your shell, run:
-```shell
-sudo pacman -S --needed ripgrep fd clang rustup jedi-language-server texlab typescript-language-server vscode-css-languageserver vscode-html-languageserver lua-language-server flawfinder mypy flake8 python-pydocstyle selene-linter eslint stylelint tidy texlive-most texlive-langextra texlive-fontsextra ghostwriter kitty mpv feh zsh bandit bat qalculate-qt libqalculate rust-analyzer python-black exa zoxide zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k zathura-pdf-mupdf zathura rofi rofi-calc rofi-emoji trash-cli thunar i3-gaps xorg-setxkbmap xorg-xset xss-lock xdotool numlockx nitrogen dex polybar pamixer psmisc picom network-manager-applet kwallet kwallet-pam flameshot pulsemixer stylua shfmt redshift lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings fzf onefetch nvtop htop papirus-icon-theme base-devel rsibreak qt5ct qt6ct kvantum adwaita-icon-theme libadwaita brightnessctl qt5-tools handlr
+To generate the package installing commands run the `run_onchange_before_install_packages.py` script.
 
-rustup default stable
-```
-
-Now you need [`paur`](https://github.com/Morganamilo/paru#installation) to install AUR packages.
-
-```shell
-paru -Sa --needed nvim-packer-git python-flake8-builtins python-flake8-bugbear python-flake8-comprehensions python-pep8-naming nerd-fonts-jetbrains-mono foxmarks rmtrash autotiling deadd-notification-center clipcat slimbookbattery papirus-folders hardcode-tray dialect nerd-fonts-ubuntu ttf-dejavu-ib dragon-drop
-```
-
-Then inside neovim, run:
-```
-:PackerSync
-```
 
 <!-- TODO: Create screenshots section. -->
