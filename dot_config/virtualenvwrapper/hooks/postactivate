@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+export XDG_DATA_HOME=$VIRTUAL_ENV/.local/share
+export XDG_CONFIG_HOME=$VIRTUAL_ENV/.config
+export XDG_STATE_HOME=$VIRTUAL_ENV/.local/state
+export XDG_CACHE_HOME=$VIRTUAL_ENV/.cache

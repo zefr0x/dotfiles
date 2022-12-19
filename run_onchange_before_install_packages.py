@@ -76,6 +76,7 @@ arch_community = {
     "selene-linter",
     "eslint",
     "stylelint",
+    "python-virtualenvwrapper",
 }
 arch_extra = {
     "qt5-tools",

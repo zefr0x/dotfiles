@@ -127,5 +127,10 @@ eval "$(zoxide init zsh --cmd cd)"
 # nnn configuarations
 export NNN_PLUG='j:autojump'
 
+# virtualenvwrapper
+export VIRTUALENVWRAPPER_HOOK_DIR=$XDG_CONFIG_HOME/virtualenvwrapper/hooks
+export WORKON_HOME=$XDG_DATA_HOME/virtualenvs
+source /usr/bin/virtualenvwrapper_lazy.sh
+
 # Some configuarations are from manjaro-zsh-config
 # https://github.com/Chrysostomus/manjaro-zsh-config

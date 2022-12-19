@@ -184,6 +184,7 @@ rustup default stable
 
 #### Python
 - [python](https://www.python.org/)
+- [python-virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/)
 
 #### LaTex
 - [texlive-most](https://archlinux.org/groups/x86_64/texlive-most/)

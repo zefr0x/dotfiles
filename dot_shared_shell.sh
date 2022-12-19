@@ -38,3 +38,6 @@ alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
 if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 	export MOZ_ENABLE_WAYLAND=1
 fi
+
+# Set pip cache dir to not use the virtualenv's cache dir.
+export PIP_CACHE_DIR="$XDG_CACHE_HOME/pip"
