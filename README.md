@@ -27,6 +27,9 @@ Those config files represents my Personalized Environment.
 - [slimbookbattery](https://github.com/slimbook/slimbookbattery)
 - [system-config-printer](https://github.com/OpenPrinting/system-config-printer)
 - [dialect](https://apps.gnome.org/app/app.drey.Dialect/)
+- [Meld](https://meldmerge.org/)
+
+
 ### Desktop Environment
 - [i3-gaps](https://github.com/Airblader/i3)
     - [autotiling](https://github.com/nwg-piotr/autotiling)
