@@ -199,7 +199,7 @@ rustup default stable
 ## Arch linux Installation
 > You need [`paur`](https://github.com/Morganamilo/paru#installation) to install AUR packages.
 
-To generate the package installing commands run the `run_onchange_before_install_packages.py` script.
+To generate the package installing commands run the `install_packages.py` script.
 
 
 <!-- TODO: Create screenshots section. -->
