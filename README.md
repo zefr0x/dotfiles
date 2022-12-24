@@ -113,6 +113,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [htop](https://htop.dev/)
 - [nnn](https://github.com/jarun/nnn)
 - [dragon-drop](https://github.com/mwh/dragon)
+- [difftastic](https://difftastic.wilfred.me.uk/)
 
 ### CLI Utilities
 - [bat](https://github.com/sharkdp/bat)

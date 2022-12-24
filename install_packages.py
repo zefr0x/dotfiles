@@ -54,6 +54,7 @@ arch_community = {
     "exa",  # `ls` alternative
     "fzf",  # fuzzy finder
     "handlr",  # Alternative to xdg-utils
+    "difftastic",  # `diff` alternative
     "zsh-autosuggestions",
     "zsh-completions",
     "zsh-history-substring-search",
