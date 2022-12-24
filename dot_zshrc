@@ -58,8 +58,6 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-# Incremental history search
-bindkey '^R' history-incremental-search-backward
 
 # Keybindings for dragon-drop
 bindkey -s '^b' "dragto "
