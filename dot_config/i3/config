@@ -289,7 +289,7 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id /usr/lib/pam_kwallet_init
 
 # Check if there was any battery and start battery system tray icon.
-exec --no-startup-id "if cbatticon -p | grep type; then cbatticon; fi"
+exec --no-startup-id "if [[ $(cbatticon -p | grep type) ]]; then cbatticon; fi"
 
 # Start RSIBreak.
 exec --no-startup-id "rsibreak"
@@ -298,7 +298,6 @@ exec --no-startup-id "rsibreak"
 # See also: https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id "dex --autostart --environment i3 --search-paths ~/.config/autostart"
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use xdg-screensaver to lock your screen.
-exec_always --no-startup-id "xset dpms 600"
-exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock --color=000000"
+# Setup xss-lock to manage locking and suspending.
+exec_always --no-startup-id "xset dpms 0 600 600"
+exec --no-startup-id "xss-lock --transfer-sleep-lock -- ~/scripts/lock.sh"
