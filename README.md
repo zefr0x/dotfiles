@@ -137,7 +137,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [neovim](https://neovim.io/)
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 
-After installing packer, you need to install the plugins for neovim by running:
+After installing lazy.nvim, you need to install the plugins for neovim by running:
 ```
 :Lazy install
 :Lazy restore

@@ -10,7 +10,7 @@ require("lualine").setup({
 			left = "", --[[ right = "" ]]
 		},
 		section_separators = { left = "", right = "" },
-		disabled_filetypes = { statusline = { "packer", "Trouble", "undotree", "diff" } },
+		disabled_filetypes = { statusline = { "Trouble", "undotree", "diff" } },
 	},
 	extensions = {
 		"nvim-tree",
