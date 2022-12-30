@@ -1,12 +1,8 @@
 local hl = vim.api.nvim_set_hl
 
----------------- zer0-x theme ----------------
+----------- zer0-x theme extention -----------
 
-hl(0, "Normal", { bg = "#000000" }) -- normal text
-hl(0, "NormalNC", { bg = "#000000" }) -- normal text in non-current windows
-hl(0, "NormalFloat", { bg = "#000000" }) -- -- Normal text in floating windows
-hl(0, "SignColumn", { fg = "#a9a9a9", bg = "#000000" }) -- column where |signs| are displayed
-hl(0, "SignColumnSB", { fg = "#a9a9a9", bg = "#000000" }) -- column where |signs| are displayed
+hl(0, "NormalFloat", { bg = "#101010" }) -- Normal text in floating windows
 
 -- LSP theming
 -- TODO: define the non lsp then define lsp.
