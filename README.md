@@ -135,9 +135,8 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 ### NeoVim <sup>`Text Editor`</sup>
 - [neovim](https://neovim.io/)
-- [lazy.nvim](https://github.com/folke/lazy.nvim)
 
-After installing lazy.nvim, you need to install the plugins for neovim by running:
+After installing, you need to install the plugins for neovim by running:
 ```
 :Lazy install
 :Lazy restore
