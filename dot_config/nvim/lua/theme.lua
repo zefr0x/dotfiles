@@ -1,6 +1,5 @@
 local hl = vim.api.nvim_set_hl
 
-
 ---------------- zer0-x theme ----------------
 
 hl(0, "Normal", { bg = "#000000" }) -- normal text

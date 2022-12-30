@@ -136,7 +136,7 @@ arch_user_repo = {
     "hardcode-tray",
     "rmtrash",
     "dragon-drop",  # CLI-GUI drag-and-drop source/target
-    "nvim-packer-git",
+    "nvim-lazy-git",
     "python-pep8-naming",
     "python-flake8-builtins",
     "python-flake8-comprehensions",
