@@ -1,11 +1,10 @@
 -- TODO: Go back to packer.nvim after the lockfile is implemented.
 -- https://github.com/wbthomason/packer.nvim/issues/1009
 
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", lazypath })
-  vim.fn.system({ "git", "-C", lazypath, "checkout", "tags/stable" }) -- last stable release
+	vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", lazypath })
+	vim.fn.system({ "git", "-C", lazypath, "checkout", "tags/stable" }) -- last stable release
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -18,8 +17,8 @@ return require("lazy").setup({
 			require("plugin.lsp")
 		end,
 	},
-	-- Standalone UI for nvim-lsp progress
-	"j-hui/fidget.nvim",
+	-- LSP Progress lualine componenet
+	{ "arkav/lualine-lsp-progress" },
 
 	-- An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support
 	{

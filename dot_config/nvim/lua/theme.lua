@@ -8,7 +8,6 @@ hl(0, "NormalFloat", { bg = "#101010" })
 -- Keep the Todo theming for the todo-comments.nvim plugin
 hl(0, "Todo", { fg = nil, bg = nil })
 
-
 -- Diff theming
 hl(0, "DiffAdd", { fg = "#000000", bg = "#34d058" })
 hl(0, "DiffChange", { fg = "#000000", bg = "#e2c08d" })
@@ -39,8 +38,6 @@ hl(0, "DiagnosticUnderlineError", { link = "LspDiagnosticsUnderlineError" })
 hl(0, "DiagnosticUnderlineWarn", { link = "LspDiagnosticsUnderlineWarning" })
 hl(0, "DiagnosticUnderlineHint", { link = "LspDiagnosticsUnderlineHint" })
 hl(0, "DiagnosticUnderlineInfo", { link = "LspDiagnosticsUnderlineInformation" })
-
-
 
 -- Plugins theming --------------------
 
@@ -74,10 +71,6 @@ hl(0, "DiagnosticUnderlineInfo", { link = "LspDiagnosticsUnderlineInformation" }
 -- hl(0, "TroubleTextWarning", {})
 -- hl(0, "TroubleTextHint", {})
 -- hl(0, "TroubleTextInformation", {})
-
--- fidget.nvim ---------
-hl(0, "FidgetTitle", { fg = "#800000", bold = true })
-hl(0, "FidgetTask", { fg = "#58a6ff" })
 
 -- nvim-cmp ------------
 hl(0, "PmenuSel", { fg = nil, bg = "#282C34" })

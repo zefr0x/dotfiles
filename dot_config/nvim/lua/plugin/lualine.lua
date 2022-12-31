@@ -33,6 +33,20 @@ require("lualine").setup({
 				},
 			},
 			{ navic.get_location, cond = navic.is_available },
+			{
+				"lsp_progress",
+				display_components = { "spinner" },
+				-- timer = { spinner = 1000 },
+				spinner_symbols = {
+					"(●   )",
+					"( ●  )",
+					"(  ● )",
+					"(   ●)",
+					"(  ● )",
+					"( ●  )",
+					"(●   )",
+				},
+			},
 		},
 		lualine_x = {
 			"filesize",

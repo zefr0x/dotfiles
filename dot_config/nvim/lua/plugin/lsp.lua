@@ -91,9 +91,6 @@ lspconfig.html.setup({
 	cmd = { "vscode-html-languageserver", "--stdio" },
 })
 
--- fidget.nvim ------------------------------
-require("fidget").setup({})
-
 -- Set icons for diagnostics in the gutter.
 local signs = {
 	Error = " ",
