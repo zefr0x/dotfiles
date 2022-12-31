@@ -2,7 +2,21 @@ local hl = vim.api.nvim_set_hl
 
 ----------- zer0-x theme extention -----------
 
-hl(0, "NormalFloat", { bg = "#101010" }) -- Normal text in floating windows
+-- Show another background in floating windows
+hl(0, "NormalFloat", { bg = "#101010" })
+
+-- Keep the Todo theming for the todo-comments.nvim plugin
+hl(0, "Todo", { fg = nil, bg = nil })
+
+
+-- Diff theming
+hl(0, "DiffAdd", { fg = "#000000", bg = "#34d058" })
+hl(0, "DiffChange", { fg = "#000000", bg = "#e2c08d" })
+hl(0, "DiffText", { fg = "#000000", bg = "#5fd7d7" })
+hl(0, "DiffDelete", { fg = "#ea4a5a", bg = nil })
+hl(0, "diffAdded", { fg = "#34d058", bg = nil })
+hl(0, "diffRemoved", { fg = "#ea4a5a", bg = nil })
+hl(0, "diffSubname", { fg = "#ff87ff", bg = nil })
 
 -- LSP theming
 -- TODO: define the non lsp then define lsp.
@@ -25,6 +39,8 @@ hl(0, "DiagnosticUnderlineError", { link = "LspDiagnosticsUnderlineError" })
 hl(0, "DiagnosticUnderlineWarn", { link = "LspDiagnosticsUnderlineWarning" })
 hl(0, "DiagnosticUnderlineHint", { link = "LspDiagnosticsUnderlineHint" })
 hl(0, "DiagnosticUnderlineInfo", { link = "LspDiagnosticsUnderlineInformation" })
+
+
 
 -- Plugins theming --------------------
 
