@@ -31,6 +31,9 @@ o.scrolloff = 7
 -- Fix cursor being jittery when using live gutter enabled or linting a file
 o.signcolumn = "yes"
 
+-- Hide the vim mode, since it is shown in the lualine.
+o.showmode = false
+
 -- Config colors
 o.termguicolors = true
 
@@ -41,7 +44,7 @@ o.completeopt:remove("preview")
 o.wildmode = "list:longest"
 
 -- Set a shell
-o.shell = "/bin/bash"
+o.shell = "/usr/bin/bash"
 
 -- Backup and undo
 o.swapfile = false

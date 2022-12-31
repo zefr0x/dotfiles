@@ -31,6 +31,14 @@ require("rust-tools").setup({
 			},
 		},
 	},
+	tools = {
+		inlay_hints = {
+			-- only_current_line = true,
+			parameter_hints_prefix = "<- ",
+			other_hints_prefix = "=> ",
+			highlight = "Comment",
+		},
+	},
 })
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp

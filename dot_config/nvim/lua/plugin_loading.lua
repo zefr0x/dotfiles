@@ -1,3 +1,7 @@
+-- TODO: Go back to packer.nvim after the lockfile is implemented.
+-- https://github.com/wbthomason/packer.nvim/issues/1009
+
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", lazypath })
@@ -70,7 +74,7 @@ return require("lazy").setup({
 	-- Pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing
 	{
 		"folke/trouble.nvim",
-		dependencies = { "kyazdani42/nvim-web-devicons" },
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("plugin.trouble_diagnostics")
 		end,
@@ -86,7 +90,7 @@ return require("lazy").setup({
 			"gbprod/yanky.nvim",
 			"nvim-lua/plenary.nvim",
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-			"kyazdani42/nvim-web-devicons",
+			"nvim-tree/nvim-web-devicons",
 		},
 		config = function()
 			require("plugin.telescope")
@@ -182,7 +186,7 @@ return require("lazy").setup({
 	-- Better file browser
 	{
 		"kyazdani42/nvim-tree.lua",
-		dependencies = { "kyazdani42/nvim-web-devicons" },
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("plugin.file_browser")
 		end,
@@ -209,7 +213,7 @@ return require("lazy").setup({
 	-- Lualine
 	{
 		"nvim-lualine/lualine.nvim",
-		dependencies = { "kyazdani42/nvim-web-devicons" },
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("plugin.lualine")
 		end,
@@ -218,7 +222,7 @@ return require("lazy").setup({
 	{
 		"akinsho/bufferline.nvim",
 		version = "v3.*",
-		dependencies = "kyazdani42/nvim-web-devicons",
+		dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
 			require("plugin.bufferline")
 		end,
@@ -264,11 +268,6 @@ return require("lazy").setup({
 
 	--  TODO: Create a plugin for hybrid line number.
 
-	-- Tools for better development in (rust) using neovim's builtin LSP
-	-- rust-analyzer is required
-	{
-		"simrat39/rust-tools.nvim",
-	},
 	-- Healp managing crates.io dependencies
 	{
 		"saecki/crates.nvim",
