@@ -69,6 +69,7 @@ arch_community = {
     "vscode-css-languageserver",
     "vscode-html-languageserver",
     "lua-language-server",
+    "yaml-language-server",
     "flawfinder",
     "mypy",
     "flake8",

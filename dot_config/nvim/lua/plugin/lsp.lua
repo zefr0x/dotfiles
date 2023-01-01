@@ -42,7 +42,7 @@ require("rust-tools").setup({
 })
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { "clangd", "jedi_language_server", "texlab", "tsserver", "html" }
+local servers = { "clangd", "jedi_language_server", "texlab", "tsserver", "yamlls" }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = custom_on_attach,

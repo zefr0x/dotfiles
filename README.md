@@ -149,8 +149,9 @@ After installing, you need to install the plugins for neovim by running:
 - [typescript-language-server](https://github.com/theia-ide/typescript-language-server) <sup>`JavaScript/TypeScript`</sup>
 - [vscode-css-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
 - [vscode-html-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
-- [emmet-ls](https://github.com/aca/emmet-ls)
+- [emmet-ls](https://github.com/aca/emmet-ls) <sup>`HTML5/CSS3 snippets`</sup>
 - [lua-language-server](https://github.com/sumneko/lua-language-server) <sup>`Lua`</sup>
+- [yaml-language-server](https://github.com/redhat-developer/yaml-language-server) <sup>`YAML`</sup>
 
 ### Linters
 - [flawfinder](https://dwheeler.com/flawfinder/) <sup>`C/C++`</sup>
