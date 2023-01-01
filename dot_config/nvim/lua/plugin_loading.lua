@@ -173,7 +173,12 @@ return require("lazy").setup({
 		end,
 	},
 	-- Surround
-	"kylechui/nvim-surround",
+	{
+		"kylechui/nvim-surround",
+		config = function()
+			require("plugin.surround")
+		end,
+	},
 	-- Comment code easily
 	{
 		"numToStr/Comment.nvim",
