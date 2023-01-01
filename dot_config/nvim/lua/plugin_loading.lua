@@ -1,3 +1,5 @@
+local vim = vim
+
 -- TODO: Go back to packer.nvim after the lockfile is implemented.
 -- https://github.com/wbthomason/packer.nvim/issues/1009
 
@@ -17,8 +19,6 @@ return require("lazy").setup({
 			require("plugin.lsp")
 		end,
 	},
-	-- LSP Progress lualine componenet
-	{ "arkav/lualine-lsp-progress" },
 
 	-- An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support
 	{
@@ -28,15 +28,19 @@ return require("lazy").setup({
 		end,
 	},
 
-	-- Snippets plugin
-	{ "L3MON4D3/LuaSnip" },
-
 	-- Autocompletion plugin
 	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		dependencies = {
-			"windwp/nvim-autopairs",
+            -- Autopairs for () and {} etc...
+			{
+                "windwp/nvim-autopairs",
+                config = function()
+			        require("plugin.auto_pair")
+		        end,
+            },
+            -- Snippets plugin
 			"L3MON4D3/LuaSnip",
 			-- LSP source for nvim-cmp
 			"hrsh7th/cmp-nvim-lsp",
@@ -57,13 +61,6 @@ return require("lazy").setup({
 		},
 		config = function()
 			require("plugin.completion")
-		end,
-	},
-	-- Autopairs for () and {} etc...
-	{
-		"windwp/nvim-autopairs",
-		config = function()
-			require("plugin.auto_pair")
 		end,
 	},
 
@@ -217,7 +214,13 @@ return require("lazy").setup({
 	-- Lualine
 	{
 		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		dependencies = {
+            "nvim-tree/nvim-web-devicons",
+            -- LSP Progress lualine componenet
+            "arkav/lualine-lsp-progress",
+            -- Simple winbar/statusline plugin that shows your current code context
+            "SmiteshP/nvim-navic",
+        },
 		config = function()
 			require("plugin.lualine")
 		end,
@@ -231,8 +234,6 @@ return require("lazy").setup({
 			require("plugin.bufferline")
 		end,
 	},
-	-- Simple winbar/statusline plugin that shows your current code context
-	"SmiteshP/nvim-navic",
 
 	-- Improved Yank and Put functionalities for Neovim
 	{
@@ -242,6 +243,7 @@ return require("lazy").setup({
 		end,
 	},
 	-- The undo history visualizer for Vim
+    -- TODO: Find a lua alternative.
 	{
 		"mbbill/undotree",
 		config = function()
@@ -272,7 +274,7 @@ return require("lazy").setup({
 
 	--  TODO: Create a plugin for hybrid line number.
 
-	-- Healp managing crates.io dependencies
+	-- Help managing crates.io dependencies
 	{
 		"saecki/crates.nvim",
 		event = "BufReadPost Cargo.toml",
