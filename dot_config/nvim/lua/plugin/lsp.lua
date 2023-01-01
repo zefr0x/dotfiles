@@ -73,7 +73,7 @@ lspconfig.sumneko_lua.setup({
 	},
 })
 
--- For html and cssls. They only provides completions when snippet support is enabled
+-- For html, cssls, jsonls and emmet_ls. They only provides completions when snippet support is enabled
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- vscode-css-languageserver
@@ -89,6 +89,12 @@ lspconfig.html.setup({
 	capabilities = capabilities,
 	filetypes = { "html", "htmldjango" },
 	cmd = { "vscode-html-languageserver", "--stdio" },
+})
+
+-- vscode-json-languageserver
+lspconfig.jsonls.setup({
+	on_attach = custom_on_attach,
+	capabilities = capabilities,
 })
 
 -- emmet-ls
