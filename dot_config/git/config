@@ -14,7 +14,7 @@
     required = true
 [diff]
     tool = nvim -d
-    external = difft
+    external = difft --color always
 [status]
     branch = true
     showStash = true
