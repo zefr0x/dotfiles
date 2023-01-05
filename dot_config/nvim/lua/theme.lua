@@ -8,7 +8,10 @@ hl(0, "NormalFloat", { bg = "#101010" })
 -- Keep the Todo theming for the todo-comments.nvim plugin
 hl(0, "Todo", { fg = nil, bg = nil })
 
--- Diff theming
+-- VIM modes
+hl(0, "Visual", { fg = "#000000", bg = "#ff4500" })
+
+-- Diff
 hl(0, "DiffAdd", { fg = "#000000", bg = "#34d058" })
 hl(0, "DiffChange", { fg = "#000000", bg = "#e2c08d" })
 hl(0, "DiffText", { fg = "#000000", bg = "#5fd7d7" })
@@ -17,32 +20,38 @@ hl(0, "diffAdded", { fg = "#34d058", bg = nil })
 hl(0, "diffRemoved", { fg = "#ea4a5a", bg = nil })
 hl(0, "diffSubname", { fg = "#ff87ff", bg = nil })
 
--- LSP theming
--- TODO: define the non lsp then define lsp.
-hl(0, "LspDiagnosticsError", { fg = "#d22222" })
-hl(0, "LspDiagnosticsWarning", { fg = "#ff8c00" })
-hl(0, "LspDiagnosticsHint", { fg = "#f0e68c" })
-hl(0, "LspDiagnosticsInformation", { fg = "#00bfff" })
+-- Git Signs
+hl(0, "GitSignsAdd", { link = "diffAdded" })
+-- hl(0, "GitSignsAddLn", { link = "GitSignsAdd" })
+hl(0, "GitSignsChange", { fg = "#e2c08d", bg = nil })
+hl(0, "GitSignsDelete", { link = "diffRemoved" })
+-- hl(0, "GitSignsDeleteLn", { link = "" })
 
-hl(0, "LspDiagnosticUnderlineError", { sp = "#d22222", undercurl = true })
-hl(0, "LspDiagnosticsUnderlineWarning", { sp = "#ff8c00", undercurl = true })
-hl(0, "LspDiagnosticsUnderlineHint", { sp = "#f0e68c", undercurl = true })
-hl(0, "LspDiagnosticsUnderlineInformation", { sp = "#00bfff", undercurl = true })
+-- LSP
+hl(0, "DiagnosticError", { fg = "#d22222" })
+hl(0, "DiagnosticWarn", { fg = "#ff8c00" })
+hl(0, "DiagnosticsHint", { fg = "#f0e68c" })
+hl(0, "DiagnosticsInformation", { fg = "#00bfff" })
 
-hl(0, "DiagnosticError", { link = "LspDiagnosticsError" })
-hl(0, "DiagnosticWarn", { link = "LspDiagnosticsWarning" })
-hl(0, "DiagnosticHint", { link = "LspDiagnosticsHint" })
-hl(0, "DiagnosticInfo", { link = "LspDiagnosticsInformation" })
+hl(0, "DiagnosticUnderlineError", { sp = "#d22222", undercurl = true })
+hl(0, "DiagnosticsUnderlineWarning", { sp = "#ff8c00", undercurl = true })
+hl(0, "DiagnosticsUnderlineHint", { sp = "#f0e68c", undercurl = true })
+hl(0, "DiagnosticsUnderlineInformation", { sp = "#00bfff", undercurl = true })
 
-hl(0, "DiagnosticUnderlineError", { link = "LspDiagnosticsUnderlineError" })
-hl(0, "DiagnosticUnderlineWarn", { link = "LspDiagnosticsUnderlineWarning" })
-hl(0, "DiagnosticUnderlineHint", { link = "LspDiagnosticsUnderlineHint" })
-hl(0, "DiagnosticUnderlineInfo", { link = "LspDiagnosticsUnderlineInformation" })
+hl(0, "LspDiagnosticsError", { link = "DiagnosticError" })
+hl(0, "LspDiagnosticsWarning", { link = "DiagnosticWarn" })
+hl(0, "LspDiagnosticHint", { link = "DiagnosticsHint" })
+hl(0, "LspDiagnosticInfo", { link = "DiagnosticsInformation" })
+
+hl(0, "LspDiagnosticUnderlineError", { link = "DiagnosticsUnderlineError" })
+hl(0, "LspDiagnosticUnderlineWarn", { link = "DiagnosticsUnderlineWarning" })
+hl(0, "LspDiagnosticUnderlineHint", { link = "DiagnosticsUnderlineHint" })
+hl(0, "LspDiagnosticUnderlineInfo", { link = "DiagnosticsUnderlineInformation" })
 
 -- Plugins theming --------------------
 
 -- todo-comments.nvim
--- Colors are it the plugin's config file.
+-- Colors are in the plugin's config file.
 
 -- trouble.nvim --------
 -- hl(0, "TroubleCount", {})
