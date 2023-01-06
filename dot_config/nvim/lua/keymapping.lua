@@ -121,4 +121,57 @@ end)
 -- undotree
 map("n", "<F2>", vim.cmd.UndotreeToggle)
 
+------------ gitsigns.nvim
+-- Navigation
+map("n", "]c", function()
+	if vim.wo.diff then
+		return "]c"
+	end
+	vim.schedule(function()
+		vim.cmd.Gitsigns("next_hunk")
+		return "<Ignore>"
+	end)
+end, { expr = true })
+map("n", "[c", function()
+	if vim.wo.diff then
+		return "[c"
+	end
+	vim.schedule(function()
+		vim.cmd.Gitsigns("prev_hunk")
+	end)
+	return "<Ignore>"
+end, { expr = true })
+-- Actions
+map({ "n", "v" }, "<leader>hs", function()
+	vim.cmd.Gitsigns("stage_hunk")
+end)
+map("n", "<leader>hS", function()
+	vim.cmd.Gitsigns("stage_buffer")
+end)
+map("n", "<leader>hu", function()
+	vim.cmd.Gitsigns("undo_stage_hunk")
+end)
+map({ "n", "v" }, "<leader>hr", function()
+	vim.cmd.Gitsigns("reset_hunk")
+end)
+map("n", "<leader>hp", function()
+	vim.cmd.Gitsigns("preview_hunk")
+end)
+map("n", "<leader>hb", function()
+	vim.cmd.Gitsigns("blame_line")
+end)
+map("n", "<leader>dt", function()
+	vim.cmd.Gitsigns("diffthis")
+end)
+map("n", "<leader>dT", function()
+	vim.cmd.Gitsigns("diffthis ~")
+end)
+map("n", "<leader>td", function()
+	vim.cmd.Gitsigns("toggle_deleted")
+end)
+-- Text object
+map("n", "<leader>sh", function()
+	vim.cmd.Gitsigns("select_hunk")
+end)
+
 -- TODO: Create keymapping for crates.nvim to be loaded only in Cargo.toml file

@@ -224,12 +224,12 @@ return require("lazy").setup({
 		end,
 	},
 
-	-- Visual git plugin for Neovim
+	-- Git integration for buffers
 	{
-		"tanvirtin/vgit.nvim",
-		event = "UIEnter",
+		"lewis6991/gitsigns.nvim",
+		event = "BufReadPost",
 		config = function()
-			require("plugin.vgit")
+			require("plugin.gitsigns")
 		end,
 	},
 	-- TODO: Configure testing framework
