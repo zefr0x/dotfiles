@@ -102,14 +102,6 @@ return require("lazy").setup({
 			require("plugin.telescope")
 		end,
 	},
-	-- Improved Yank and Put functionalities for Neovim
-	{
-		"gbprod/yanky.nvim",
-		event = "BufReadPost",
-		config = function()
-			require("plugin.yanky")
-		end,
-	},
 	-- Comments todo list
 	-- https://github.com/BurntSushi/ripgrep is required also.
 	{
@@ -261,6 +253,14 @@ return require("lazy").setup({
 		end,
 	},
 
+	-- Improved Yank and Put functionalities for Neovim
+	{
+		"gbprod/yanky.nvim",
+		event = "BufModifiedSet",
+		config = function()
+			require("plugin.yanky")
+		end,
+	},
 	-- The undo history visualizer for Vim
 	-- TODO: Find a lua alternative.
 	{
