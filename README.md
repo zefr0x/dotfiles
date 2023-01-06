@@ -198,6 +198,9 @@ rustup default stable
 - [texlive-langextra](https://archlinux.org/packages/extra/any/texlive-langextra/)
 - [texlive-fontsextra](https://archlinux.org/packages/extra/any/texlive-fontsextra/)
 
+#### Melody
+- [melody](https://github.com/yoav-lavi/melody)
+
 </details>
 
 ## Arch linux Installation

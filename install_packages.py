@@ -143,6 +143,7 @@ arch_user_repo = {
     "python-flake8-builtins",
     "python-flake8-comprehensions",
     "python-flake8-bugbear",
+    "melody",
 }
 
 if is_laptop:
