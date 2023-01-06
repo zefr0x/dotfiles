@@ -139,6 +139,7 @@ arch_user_repo = {
     "rmtrash",
     "dragon-drop",  # CLI-GUI drag-and-drop source/target
     "nodejs-emmet-ls"
+    "jdtls",
     "python-pep8-naming",
     "python-flake8-builtins",
     "python-flake8-comprehensions",

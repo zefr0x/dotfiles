@@ -153,6 +153,7 @@ After installing, you need to install the plugins for neovim by running:
 - [lua-language-server](https://github.com/sumneko/lua-language-server) <sup>`Lua`</sup>
 - [vscode-json-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server) <sup>`JSON`</sup>
 - [yaml-language-server](https://github.com/redhat-developer/yaml-language-server) <sup>`YAML`</sup>
+- [jdtls](https://github.com/eclipse/eclipse.jdt.ls)
 
 ### Linters
 - [flawfinder](https://dwheeler.com/flawfinder/) <sup>`C/C++`</sup>
