@@ -100,7 +100,7 @@ cmp.setup({
 			},
 		},
 		{ name = "nvim_lsp_signature_help" },
-		{ name = "buffer" }, --  TODO: What is this?
+		{ name = "buffer" },
 		{ name = "latex_symbols" },
 	},
 })

@@ -36,7 +36,4 @@ require("nvim-treesitter.configs").setup({
 		extended_mode = true,
 		max_file_lines = nil,
 	},
-	endwise = { -- nvim-treesitter-endwise
-		enable = true,
-	},
 })

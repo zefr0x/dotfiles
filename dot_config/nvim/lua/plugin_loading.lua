@@ -1,6 +1,6 @@
 local vim = vim
 
--- TODO: Go back to packer.nvim after the lockfile is implemented.
+-- TODO: Maybe? Go back to packer.nvim after the lockfile is implemented?
 -- https://github.com/wbthomason/packer.nvim/issues/1009
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -14,7 +14,8 @@ return require("lazy").setup({
 	-- Collection of configurations for built-in LSP client
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = { "hrsh7th/nvim-cmp", "SmiteshP/nvim-navic", "simrat39/rust-tools.nvim" },
+		event = "BufReadPost",
+		dependencies = { "SmiteshP/nvim-navic", "simrat39/rust-tools.nvim" },
 		config = function()
 			require("plugin.lsp")
 		end,
@@ -23,6 +24,7 @@ return require("lazy").setup({
 	-- An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support
 	{
 		"mfussenegger/nvim-lint",
+		event = "BufReadPre",
 		config = function()
 			require("plugin.lint")
 		end,
@@ -33,29 +35,36 @@ return require("lazy").setup({
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		dependencies = {
-            -- Autopairs for () and {} etc...
+			-- Autopairs for () and {} etc...
 			{
-                "windwp/nvim-autopairs",
-                config = function()
-			        require("plugin.auto_pair")
-		        end,
-            },
-            -- Snippets plugin
-			"L3MON4D3/LuaSnip",
+				"windwp/nvim-autopairs",
+				config = function()
+					require("plugin.auto_pair")
+				end,
+			},
+			-- Snippets source for nvim-cmp
+			{
+				"saadparwaiz1/cmp_luasnip",
+				dependencies = {
+					-- Snippets plugin
+					"L3MON4D3/LuaSnip",
+				},
+			},
 			-- LSP source for nvim-cmp
 			"hrsh7th/cmp-nvim-lsp",
 			-- nvim-cmp source for path
 			"hrsh7th/cmp-path",
-			-- Snippets source for nvim-cmp
-			"saadparwaiz1/cmp_luasnip",
 			-- cmp-nvim-lsp-signature-help
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 			-- nvim-cmp source for textDocument/documentSymbol via nvim-lsp
 			"hrsh7th/cmp-nvim-lsp-document-symbol",
 			-- Add latex symbol support for nvim-cmp
-			"kdheepak/cmp-latex-symbols",
+			-- "kdheepak/cmp-latex-symbols",
 			-- nvim-cmp source for vim's cmdline
-			"hrsh7th/cmp-cmdline",
+			{
+				"hrsh7th/cmp-cmdline",
+				-- event = "CmdlineEnter",
+			},
 			-- nvim-cmp source for buffer words
 			"hrsh7th/cmp-buffer",
 		},
@@ -70,6 +79,7 @@ return require("lazy").setup({
 	-- Pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing
 	{
 		"folke/trouble.nvim",
+		event = "CmdUndefined TroubleToggle",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("plugin.trouble_diagnostics")
@@ -82,8 +92,8 @@ return require("lazy").setup({
 	{
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
+		event = "CmdUndefined Telescope",
 		dependencies = {
-			"gbprod/yanky.nvim",
 			"nvim-lua/plenary.nvim",
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 			"nvim-tree/nvim-web-devicons",
@@ -92,10 +102,19 @@ return require("lazy").setup({
 			require("plugin.telescope")
 		end,
 	},
+	-- Improved Yank and Put functionalities for Neovim
+	{
+		"gbprod/yanky.nvim",
+		event = "BufReadPost",
+		config = function()
+			require("plugin.yanky")
+		end,
+	},
 	-- Comments todo list
 	-- https://github.com/BurntSushi/ripgrep is required also.
 	{
 		"folke/todo-comments.nvim",
+		event = "BufReadPost",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("plugin.todo_comments")
@@ -105,6 +124,24 @@ return require("lazy").setup({
 	-- Nvim Treesitter configurations and abstraction layer
 	{
 		"nvim-treesitter/nvim-treesitter",
+		event = "BufReadPost",
+		dependencies = {
+			-- Rainbow parentheses for neovim using tree-sitter
+			{
+				"p00f/nvim-ts-rainbow",
+			},
+			-- Highlight arguments' definitions and usages, using Treesitter
+			{
+				"m-demare/hlargs.nvim",
+				config = function()
+					require("plugin.hlargs")
+				end,
+			},
+			-- Determines the text object you meant based on your location in the syntax tree
+			{
+				"nvim-treesitter/nvim-treesitter-textobjects",
+			},
+		},
 		build = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
@@ -112,40 +149,19 @@ return require("lazy").setup({
 			require("plugin.treesitter")
 		end,
 	},
-	-- Rainbow parentheses for neovim using tree-sitter
-	{
-		"p00f/nvim-ts-rainbow",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-	},
-	-- Highlight arguments' definitions and usages, using Treesitter
-	{
-		"m-demare/hlargs.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		config = function()
-			require("plugin.hlargs")
-		end,
-	},
-	-- Wisely add 'end' in Vimscript, Lua, etc...
-	{
-		"RRethy/nvim-treesitter-endwise",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-	},
 	-- Use treesitter to auto close and auto rename html tag
 	{
 		"windwp/nvim-ts-autotag",
+		event = "InsertEnter *.html",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
 			require("plugin.ts_autotag")
 		end,
 	},
-	-- Determines the text object you meant based on your location in the syntax tree
-	{
-		"nvim-treesitter/nvim-treesitter-textobjects",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-	},
 	-- Paint colors text in for #000000 or rgb(0,0,0) or ... with the real colors
 	{
 		"norcalli/nvim-colorizer.lua",
+		event = "BufReadPost",
 		config = function()
 			require("plugin.colorizer")
 		end,
@@ -153,9 +169,11 @@ return require("lazy").setup({
 	-- vim-polyglot Highlight matching html tags
 	-- TODO: Find plugin like this one
 	-- use "valloric/MatchTagAlways"
+
 	-- indent guides for neovim
 	{
 		"lukas-reineke/indent-blankline.nvim",
+		event = "BufReadPost",
 		config = function()
 			require("plugin.indent_blankline")
 		end,
@@ -164,6 +182,7 @@ return require("lazy").setup({
 	-- Speed and easy motions.
 	{
 		"phaazon/hop.nvim",
+		event = "BufReadPost",
 		branch = "v2",
 		config = function()
 			require("plugin.hop_motions")
@@ -172,6 +191,7 @@ return require("lazy").setup({
 	-- Surround
 	{
 		"kylechui/nvim-surround",
+		event = "BufReadPost",
 		config = function()
 			require("plugin.surround")
 		end,
@@ -179,6 +199,7 @@ return require("lazy").setup({
 	-- Comment code easily
 	{
 		"numToStr/Comment.nvim",
+		event = "BufReadPost",
 		config = function()
 			require("plugin.comment")
 		end,
@@ -187,6 +208,7 @@ return require("lazy").setup({
 	-- Better file browser
 	{
 		"kyazdani42/nvim-tree.lua",
+		event = "CmdUndefined NvimTreeToggle",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("plugin.file_browser")
@@ -195,6 +217,7 @@ return require("lazy").setup({
 	-- Class/module browser
 	{
 		"simrat39/symbols-outline.nvim",
+		event = "CmdUndefined SymbolsOutline",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
 			require("plugin.symbols_outline")
@@ -204,6 +227,7 @@ return require("lazy").setup({
 	-- Visual git plugin for Neovim
 	{
 		"tanvirtin/vgit.nvim",
+		event = "UIEnter",
 		config = function()
 			require("plugin.vgit")
 		end,
@@ -214,13 +238,14 @@ return require("lazy").setup({
 	-- Lualine
 	{
 		"nvim-lualine/lualine.nvim",
+		event = "UIEnter",
 		dependencies = {
-            "nvim-tree/nvim-web-devicons",
-            -- LSP Progress lualine componenet
-            "arkav/lualine-lsp-progress",
-            -- Simple winbar/statusline plugin that shows your current code context
-            "SmiteshP/nvim-navic",
-        },
+			"nvim-tree/nvim-web-devicons",
+			-- LSP Progress lualine componenet
+			"arkav/lualine-lsp-progress",
+			-- Simple winbar/statusline plugin that shows your current code context
+			"SmiteshP/nvim-navic",
+		},
 		config = function()
 			require("plugin.lualine")
 		end,
@@ -229,23 +254,18 @@ return require("lazy").setup({
 	{
 		"akinsho/bufferline.nvim",
 		version = "v3.*",
+		event = "BufReadPost", -- With `BufAdd` it will not load when opening multiple files in the start from the CLI.
 		dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
 			require("plugin.bufferline")
 		end,
 	},
 
-	-- Improved Yank and Put functionalities for Neovim
-	{
-		"gbprod/yanky.nvim",
-		config = function()
-			require("plugin.yanky")
-		end,
-	},
 	-- The undo history visualizer for Vim
-    -- TODO: Find a lua alternative.
+	-- TODO: Find a lua alternative.
 	{
 		"mbbill/undotree",
+		event = "BufReadPost",
 		config = function()
 			require("plugin.undotree")
 		end,
@@ -253,6 +273,7 @@ return require("lazy").setup({
 	-- Auto save fiels to disk
 	{
 		"Pocco81/auto-save.nvim",
+		event = "BufReadPost",
 		config = function()
 			require("plugin.auto_save")
 		end,
@@ -260,6 +281,7 @@ return require("lazy").setup({
 	-- Intelligently reopen files at your last edit position in Vim
 	{
 		"ethanholz/nvim-lastplace",
+		event = "BufReadPost",
 		config = function()
 			require("plugin.lastplace")
 		end,
@@ -267,6 +289,7 @@ return require("lazy").setup({
 	-- Smooth scrolling neovim plugin written in lua
 	{
 		"karb94/neoscroll.nvim",
+		event = "CursorMoved",
 		config = function()
 			require("plugin.neoscroll")
 		end,
