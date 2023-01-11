@@ -58,10 +58,30 @@ Those config files represents my Personalized Environment.
 - [kwallet](https://archlinux.org/packages/extra/x86_64/kwallet/)
     - [kwallet-pam](https://archlinux.org/packages/extra/x86_64/kwallet-pam/)
 - [flameshot](https://github.com/flameshot-org/flameshot)
-- [lightdm](https://github.com/canonical/lightdm)
-    - [lightdm-gtk-greeter](https://github.com/Xubuntu/lightdm-gtk-greeter)
-    - [lightdm-gtk-greeter-settings](https://github.com/Xubuntu/lightdm-gtk-greeter-settings)
+- [greetd](https://git.sr.ht/~kennylevinsen/greetd)
+    - [tuigreet](https://github.com/apognu/tuigreet)
 - [rsibreak](https://apps.kde.org/rsibreak/)
+
+You need to enable `greetd`
+```
+sudo systemctl enable greetd.service
+```
+
+You need to config `greetd` by editing `/etc/greetd/config.toml` to be
+```
+[terminal]
+vt = 1
+
+[default_session]
+command = "tuigreet --remember --remember-user-session --user-menu --time --cmd startx"
+user = "greeter"
+```
+
+To integrate kwallet add those lines to `/etc/pam.d/greetd`
+```
+auth       optional     pam_kwallet5.so
+session    optional     pam_kwallet5.so auto_start force_run
+```
 
 
 ### Fonts

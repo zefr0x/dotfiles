@@ -100,9 +100,6 @@ arch_extra = {
     "network-manager-applet",
     "kwallet",
     "kwallet-pam",
-    "lightdm",
-    "lightdm-gtk-greeter",
-    "lightdm-gtk-greeter-settings",
     "noto-fonts",
     "adwaita-icon-theme",
     "libadwaita",
@@ -131,6 +128,8 @@ arch_user_repo = {
     "foxmarks",
     "deadd-notification-center",  # Notification Center
     "clipcat",  # Clipboard Manager (Need an alternative, it's not good)
+    "greetd",
+    "greetd-tuigreet",
     "nerd-fonts-jetbrains-mono",
     "nerd-fonts-ubuntu",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
