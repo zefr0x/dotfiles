@@ -48,6 +48,12 @@ hl(0, "LspDiagnosticUnderlineWarn", { link = "DiagnosticsUnderlineWarning" })
 hl(0, "LspDiagnosticUnderlineHint", { link = "DiagnosticsUnderlineHint" })
 hl(0, "LspDiagnosticUnderlineInfo", { link = "DiagnosticsUnderlineInformation" })
 
+-- Popup Menu
+hl(0, "Pmenu", { bg = "#080808" })
+hl(0, "PmenuSel", { fg = nil, bg = "#151515" })
+-- hl(0, "PmenuSbar", { fg = nil, bg = "" })
+-- hl(0, "PmenuThumb", { fg = nil, bg = "" })
+
 -- Plugins theming --------------------
 
 -- todo-comments.nvim
@@ -82,43 +88,46 @@ hl(0, "LspDiagnosticUnderlineInfo", { link = "DiagnosticsUnderlineInformation" }
 -- hl(0, "TroubleTextInformation", {})
 
 -- nvim-cmp ------------
-hl(0, "PmenuSel", { fg = nil, bg = "#282C34" })
-hl(0, "Pmenu", { fg = "#C5CDD9", bg = "#22252A" })
-
-hl(0, "CmpItemAbbrDeprecated", { fg = "#7E8294", bg = nil, strikethrough = true })
-hl(0, "CmpItemAbbrMatch", { fg = "#82AAFF", bg = nil, bold = true })
-hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#82AAFF", bg = nil, bold = true })
 hl(0, "CmpItemMenu", { fg = "#C792EA", bg = nil, italic = true })
+hl(0, "CmpItemAbbr", { fg = "#c6c6c6", bg = nil })
+hl(0, "CmpItemAbbrMatch", { fg = "#ff4500", bg = nil, bold = true })
+hl(0, "CmpItemAbbrMatchFuzzy", { fg = "#ff4500", bg = nil, bold = true })
+hl(0, "CmpItemAbbrDeprecated", { fg = "#8b0000", bg = nil, strikethrough = true })
 
-hl(0, "CmpItemKindField", { fg = "#EED8DA", bg = "#B5585F" })
-hl(0, "CmpItemKindProperty", { fg = "#EED8DA", bg = "#B5585F" })
-hl(0, "CmpItemKindEvent", { fg = "#EED8DA", bg = "#B5585F" })
+-- hl(0, "CmpDocumentation", { fg = "", bg = "" })
+-- hl(0, "CmpDocumentationBorder", { fg = "", bg = "" })
 
-hl(0, "CmpItemKindText", { fg = "#C3E88D", bg = "#9FBD73" })
-hl(0, "CmpItemKindEnum", { fg = "#C3E88D", bg = "#9FBD73" })
-hl(0, "CmpItemKindKeyword", { fg = "#C3E88D", bg = "#9FBD73" })
+hl(0, "CmpItemKindDefault", { fg = "#c6c6c6" })
 
-hl(0, "CmpItemKindConstant", { fg = "#FFE082", bg = "#D4BB6C" })
-hl(0, "CmpItemKindConstructor", { fg = "#FFE082", bg = "#D4BB6C" })
-hl(0, "CmpItemKindReference", { fg = "#FFE082", bg = "#D4BB6C" })
+hl(0, "CmpItemKindField", { fg = "#B5585F" })
+hl(0, "CmpItemKindProperty", { fg = "#B5585F" })
+hl(0, "CmpItemKindEvent", { fg = "#B5585F" })
 
-hl(0, "CmpItemKindFunction", { fg = "#EADFF0", bg = "#A377BF" })
-hl(0, "CmpItemKindStruct", { fg = "#EADFF0", bg = "#A377BF" })
-hl(0, "CmpItemKindClass", { fg = "#EADFF0", bg = "#A377BF" })
-hl(0, "CmpItemKindModule", { fg = "#EADFF0", bg = "#A377BF" })
-hl(0, "CmpItemKindOperator", { fg = "#EADFF0", bg = "#A377BF" })
+hl(0, "CmpItemKindText", { fg = "#C3E88D" })
+hl(0, "CmpItemKindEnum", { fg = "#C3E88D" })
+hl(0, "CmpItemKindKeyword", { fg = "#C3E88D" })
 
-hl(0, "CmpItemKindVariable", { fg = "#C5CDD9", bg = "#7E8294" })
-hl(0, "CmpItemKindFile", { fg = "#C5CDD9", bg = "#7E8294" })
+hl(0, "CmpItemKindConstant", { fg = "#D4BB6C" })
+hl(0, "CmpItemKindConstructor", { fg = "#D4BB6C" })
+hl(0, "CmpItemKindReference", { fg = "#D4BB6C" })
 
-hl(0, "CmpItemKindUnit", { fg = "#F5EBD9", bg = "#D4A959" })
-hl(0, "CmpItemKindSnippet", { fg = "#F5EBD9", bg = "#D4A959" })
-hl(0, "CmpItemKindFolder", { fg = "#F5EBD9", bg = "#D4A959" })
+hl(0, "CmpItemKindFunction", { fg = "#A377BF" })
+hl(0, "CmpItemKindStruct", { fg = "#A377BF" })
+hl(0, "CmpItemKindClass", { fg = "#A377BF" })
+hl(0, "CmpItemKindModule", { fg = "#A377BF" })
+hl(0, "CmpItemKindOperator", { fg = "#A377BF" })
 
-hl(0, "CmpItemKindMethod", { fg = "#DDE5F5", bg = "#6C8ED4" })
-hl(0, "CmpItemKindValue", { fg = "#DDE5F5", bg = "#6C8ED4" })
-hl(0, "CmpItemKindEnumMember", { fg = "#DDE5F5", bg = "#6C8ED4" })
+hl(0, "CmpItemKindVariable", { fg = "#7E8294" })
+hl(0, "CmpItemKindFile", { fg = "#7E8294" })
 
-hl(0, "CmpItemKindInterface", { fg = "#D8EEEB", bg = "#58B5A8" })
-hl(0, "CmpItemKindColor", { fg = "#D8EEEB", bg = "#58B5A8" })
-hl(0, "CmpItemKindTypeParameter", { fg = "#D8EEEB", bg = "#58B5A8" })
+hl(0, "CmpItemKindUnit", { fg = "#D4A959" })
+hl(0, "CmpItemKindSnippet", { fg = "#D4A959" })
+hl(0, "CmpItemKindFolder", { fg = "#D4A959" })
+
+hl(0, "CmpItemKindMethod", { fg = "#6C8ED4" })
+hl(0, "CmpItemKindValue", { fg = "#6C8ED4" })
+hl(0, "CmpItemKindEnumMember", { fg = "#6C8ED4" })
+
+hl(0, "CmpItemKindInterface", { fg = "#58B5A8" })
+hl(0, "CmpItemKindColor", { fg = "#58B5A8" })
+hl(0, "CmpItemKindTypeParameter", { fg = "#58B5A8" })
