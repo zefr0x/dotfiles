@@ -10,14 +10,13 @@ end
 ------------ General KeyMapping -------------
 
 -- Clear search results
-map("n", "//", ":noh<CR>")
+map("n", "//", vim.cmd.noh)
 
 -- Go to previous buffer
 -- TODO: Map another better key.
-map("n", "<F12>", "<cmd>e#<CR>")
-
--- Tabs and windows mappings
-map("n", "tt", ":tabnew<CR>")
+map("n", "<F12>", function()
+	vim.cmd.e("#")
+end)
 
 -- Move highlited lines up and down.
 map("v", "J", ":m '>+1<CR>gv=gv")
@@ -64,11 +63,9 @@ map("n", "<F3>", vim.cmd.NvimTreeToggle)
 
 -- trouble
 map("n", "<F5>", "<cmd>TroubleToggle document_diagnostics<cr>")
--- TODO: Conseder deleting key map
-map("n", "<F6>", "<cmd>TroubleToggle loclist<cr>")
 
 -- todo-comments.nvim
-map("n", "<F7>", "<cmd>TroubleToggle todo<cr>")
+map("n", "<F6>", "<cmd>TroubleToggle todo<cr>")
 
 -- yanky.nvim
 map("n", "p", "<Plug>(YankyPutAfter)")
@@ -87,12 +84,22 @@ map("n", "<leader>P", '"+<Plug>(YankyPutBefore)')
 map("n", "<F4>", vim.cmd.SymbolsOutline)
 
 -- telescope.nvim
-map("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
-map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
-map("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
-map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
+map("n", "<leader>zf", function()
+	vim.cmd.Telescope("find_files")
+end)
+map("n", "<leader>zg", function()
+	vim.cmd.Telescope("live_grep")
+end)
+map("n", "<leader>zb", function()
+	vim.cmd.Telescope("buffers")
+end)
+map("n", "<leader>zh", function()
+	vim.cmd.Telescope("help_tags")
+end)
 -- For yanky.nvim
-map("n", "<c-h>", "<cmd>Telescope yank_history<cr>")
+map("n", "<c-h>", function()
+	vim.cmd.Telescope("yank_history")
+end)
 -- TODO: Add more keymaps for telescope
 
 -- hop.nvim
@@ -102,12 +109,14 @@ end)
 map("n", "<leader>F", function()
 	require("hop").hint_char1({ direction = require("hop.hint").HintDirection.BEFORE_CURSOR })
 end)
-map("n", "<leader>t", function()
-	require("hop").hint_char1({ direction = require("hop.hint").HintDirection.AFTER_CURSOR, hint_offset = -1 })
-end)
-map("n", "<leader>T", function()
-	require("hop").hint_char1({ direction = require("hop.hint").HintDirection.BEFORE_CURSOR, hint_offset = 1 })
-end)
+-- FIXME: Conflict with <leader>td
+-- map("n", "<leader>t", function()
+-- 	require("hop").hint_char1({ direction = require("hop.hint").HintDirection.AFTER_CURSOR, hint_offset = -1 })
+-- end)
+--
+-- map("n", "<leader>T", function()
+-- 	require("hop").hint_char1({ direction = require("hop.hint").HintDirection.BEFORE_CURSOR, hint_offset = 1 })
+-- end)
 map("n", "<leader>k", function()
 	require("hop").hint_lines_skip_whitespace({ direction = require("hop.hint").HintDirection.BEFORE_CURSOR })
 end)
@@ -173,5 +182,3 @@ end)
 map("n", "<leader>sh", function()
 	vim.cmd.Gitsigns("select_hunk")
 end)
-
--- TODO: Create keymapping for crates.nvim to be loaded only in Cargo.toml file
