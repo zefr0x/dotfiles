@@ -99,28 +99,30 @@ lspconfig.jsonls.setup({
 
 -- emmet-ls
 lspconfig.emmet_ls.setup({
-    -- on_attach = custom_on_attach,
-    capabilities = capabilities,
-    filetypes = { 'html', "htmldjango", 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
-    init_options = {
-      html = {
-        options = {
-          -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-          ["bem.enabled"] = true,
-        },
-      },
-    }
+	-- on_attach = custom_on_attach,
+	capabilities = capabilities,
+	filetypes = { "html", "htmldjango", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less" },
+	init_options = {
+		html = {
+			options = {
+				-- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+				["bem.enabled"] = true,
+			},
+		},
+	},
 })
 
 -- Set icons for diagnostics in the gutter.
-local signs = {
+for type, icon in pairs({
 	Error = " ",
 	Warning = " ",
 	Hint = " ",
 	Information = " ",
-}
-
-for type, icon in pairs(signs) do
+}) do
 	local hl = "DiagnosticSign" .. type
-	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+	vim.fn.sign_define(hl, {
+		text = icon,
+		texthl = hl,
+		-- numhl = hl,
+	})
 end
