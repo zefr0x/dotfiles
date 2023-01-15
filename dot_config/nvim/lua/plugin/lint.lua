@@ -1,7 +1,7 @@
 -- nvim-lint
 require("lint").linters_by_ft = {
 	cpp = { "clangtidy", "flawfinder" },
-	python = { "mypy", "flake8", "pydocstyle" },
+	python = { "mypy", "flake8", "pydocstyle", "bandit" },
 	tex = { "chktex" },
 	lua = { "selene" },
 	javascript = { "eslint" },
