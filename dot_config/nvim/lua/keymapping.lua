@@ -35,6 +35,10 @@ map("n", "<leader>y", '"+y')
 map("v", "<leader>y", '"+y')
 map("n", "<leader>Y", '"+Y')
 
+-- Open URI
+-- FIXME: Find a way to write it better in Lua.
+map("n", "gx", "<Cmd>! handlr open <cfile><CR>")
+
 ------------ Plugins KeyMapping -------------
 
 -- lspconfig
