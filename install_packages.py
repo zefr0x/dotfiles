@@ -37,6 +37,8 @@ arch_community = {
     "rofi-emoji",
     "flameshot",  # Screenshot Software
     "rsibreak",
+    "ttf-jetbrains-mono-nerd",
+    "ttf-ubuntu-nerd",
     "papirus-icon-theme",
     "qt5ct",  # Qt5 Configuration Utility
     "qt6ct",  # Qt6 Configuration Utility
@@ -130,8 +132,6 @@ arch_user_repo = {
     "clipcat",  # Clipboard Manager (Need an alternative, it's not good)
     "greetd",
     "greetd-tuigreet",
-    "nerd-fonts-jetbrains-mono",
-    "nerd-fonts-ubuntu",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
     # "papirus-folders",
     "hardcode-tray",
