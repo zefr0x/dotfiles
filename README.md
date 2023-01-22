@@ -134,6 +134,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [nnn](https://github.com/jarun/nnn)
 - [dragon-drop](https://github.com/mwh/dragon)
 - [difftastic](https://difftastic.wilfred.me.uk/)
+- [just](https://github.com/casey/just)
 
 ### CLI Utilities
 - [bat](https://github.com/sharkdp/bat)

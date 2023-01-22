@@ -107,6 +107,8 @@ alias rm="echo -e Use 'del', or the full path i.e. '/bin/rm'. Can't delete: "
 # for dragon-drop
 alias dragto="dragon-drop"
 alias dragon="dragon-drop --target --and-exit"
+# just
+alias j="just"
 
 
 # Clipcat integration

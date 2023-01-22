@@ -50,6 +50,7 @@ arch_community = {
     "onefetch",  # Git Repo Summary
     "nvtop",  # GPUs Monitoring
     "nnn",  # TUI File Manager
+    "just",  # Command runner
     "bat",
     "fd",  # `find` alternative
     "zoxide",  # `cd` alternative
