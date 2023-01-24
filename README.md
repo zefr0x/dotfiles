@@ -151,7 +151,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
     - [zsh-completions](https://github.com/zsh-users/zsh-completions)
     - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-    - [zsh-theme-powerlevel10k](https://github.com/romkatv/powerlevel10k)
+    - [starship](https://starship.rs/)
 
 
 ### NeoVim <sup>`Text Editor`</sup>

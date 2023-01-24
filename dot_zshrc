@@ -1,9 +1,8 @@
 # Shared environment variables.
 source ~/.shared_shell.sh
 
-# Powerlevel10k theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source ~/.p10k.zsh
+# The starship prompt
+eval "$(starship init zsh)"
 # Fish-like autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Syntax highlighting

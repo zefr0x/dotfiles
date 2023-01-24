@@ -1,0 +1,393 @@
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$custom\
+$fill\
+$sudo\
+$line_break\
+$jobs\
+$time\
+$os\
+$container\
+$shell\
+$character"""
+
+right_format = "$cmd_duration $status"
+
+add_newline = true
+
+# palette = "zer0"
+# [palettes.zer0]
+
+[fill]
+symbol = " "
+
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+format = "[$path]($style)[$read_only]($read_only_style) "
+repo_root_format = "'[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
+read_only = " "
+truncation_symbol = "…/"
+home_symbol = "~"
+
+[character]
+format = "$symbol "
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold green)"
+vimcmd_replace_one_symbol = "[❮](bold purple)"
+vimcmd_replace_symbol = "[❮](bold purple)"
+vimcmd_visual_symbol = "[❮](bold yellow)"
+
+[line_break]
+disabled = false
+
+[status]
+format = '[$symbol$status]($style)'
+symbol = " "
+success_symbol = ""
+map_symbol = true
+not_executable_symbol = "󰜺 "
+not_found_symbol = "󱀷 "
+sigint_symbol = " "
+signal_symbol = " "
+pipestatus = true
+pipestatus_separator = " | "
+pipestatus_format = '\[ $pipestatus \] => [$symbol$status]($style)'
+disabled = false
+
+[sudo]
+format = '[$symbol]($style)'
+symbol = "󰒃 "
+style = "bold 208"
+disabled = false
+
+[cmd_duration]
+format = '[⏱ $duration]($style)'
+min_time = 2_000
+show_notifications = false
+min_time_to_notify = 45_000
+
+[hostname]
+format = '[$ssh_symbol$hostname]($style) in '
+ssh_only = true
+
+[username]
+format = '[$user]($style) in '
+
+
+[memory_usage]
+symbol = " "
+disabled = true
+
+[battery]
+disabled = true
+
+[shell]
+disabled = true
+
+[os]
+disabled = true
+
+[os.symbols]
+Arch = " "
+
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch(:$remote_branch)]($style) "
+
+[git_commit]
+format = '[\($hash$tag\)]($style) '
+tag_disabled = false
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+
+# Too slow in big repos
+[git_metrics]
+format = '([+$added]($added_style) )([-$deleted]($deleted_style) )'
+disabled = false
+
+# Too slow in big repos
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+ignore_submodules = true
+
+
+[aws]
+disabled = true
+
+[azure]
+disabled = true
+
+[buf]
+disabled = true
+
+[cobol]
+disabled = true
+
+[crystal]
+disabled = true
+
+[daml]
+disabled = true
+
+[dotnet]
+disabled = true
+
+[elixir]
+symbol = " "
+disabled = true
+
+[elm]
+symbol = " "
+disabled = true
+
+[erlang]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[golang]
+symbol = " "
+disabled = true
+
+[guix_shell]
+symbol = " "
+disabled = true
+
+[haskell]
+symbol = " "
+disabled = true
+
+[haxe]
+symbol = "⌘ "
+disabled = true
+
+[helm]
+disabled = true
+
+[vagrant]
+disabled = true
+
+[vlang]
+disabled = true
+
+[vcsh]
+disabled = true
+
+[zig]
+disabled = true
+
+[deno]
+disabled = true
+
+[conda]
+format = "[$symbol$environment]($style) "
+symbol = " "
+disabled = true
+
+[julia]
+symbol = " "
+disabled = true
+
+[kotlin]
+disabled = true
+
+[kubernetes]
+disabled = true
+
+[nim]
+symbol = " "
+disabled = true
+
+[nix_shell]
+symbol = " "
+disabled = true
+
+[ocaml]
+disabled = true
+
+[opa]
+disabled = true
+
+[openstack]
+disabled = true
+
+[perl]
+disabled = true
+
+[hg_branch]
+symbol = " "
+disabled = true
+
+[php]
+disabled = true
+
+[pulumi]
+disabled = true
+
+[purescript]
+disabled = true
+
+[shlvl]
+disabled = true
+
+[scala]
+symbol = " "
+disabled = true
+
+[rlang]
+symbol = "ﳒ "
+disabled = true
+
+[raku]
+disabled = true
+
+[red]
+disabled = true
+
+[ruby]
+symbol = " "
+disabled = true
+
+[singularity]
+disabled = true
+
+[spack]
+symbol = "🅢 "
+disabled = true
+
+[swift]
+disabled = true
+
+[terraform]
+disabled = true
+
+
+# [env_var]
+
+
+[bun]
+format = "[$symbol($version )]($style)"
+
+[c]
+format = "[$symbol($version(-$name) )]($style)"
+symbol = " "
+
+[cmake]
+format = "[$symbol($version )]($style)"
+
+[container]
+format = '[$symbol \[$name\]]($style) '
+
+[dart]
+symbol = " "
+format = "[$symbol($version )]($style)"
+
+[docker_context]
+format = "[$symbol$context]($style) "
+symbol = " "
+
+[java]
+format = '[${symbol}(${version} )]($style)'
+symbol = " "
+
+[jobs]
+format = '[$symbol$number]($style) '
+
+[localip]
+ssh_only = true
+format = '[$localipv4]($style) '
+
+[lua]
+format = '[$symbol($version )]($style)'
+symbol = " "
+
+[meson]
+format = '[$symbol$project]($style) '
+symbol = "喝 "
+
+[nodejs]
+format = '[$symbol($version )]($style)'
+symbol = " "
+
+[package]
+format = '[$symbol$version]($style) '
+symbol = " "
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+detect_extensions = ['.py']
+detect_files = ['Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini']
+
+[rust]
+symbol = " "
+format = '[$symbol($version )]($style)'

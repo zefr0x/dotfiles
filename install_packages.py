@@ -62,7 +62,7 @@ arch_community = {
     "zsh-completions",
     "zsh-history-substring-search",
     "zsh-syntax-highlighting",
-    "zsh-theme-powerlevel10k",
+    "starship",
     "neovim",
     "ripgrep",
     "rust-analyzer",
