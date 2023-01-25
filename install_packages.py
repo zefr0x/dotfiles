@@ -58,10 +58,7 @@ arch_community = {
     "fzf",  # fuzzy finder
     "handlr",  # Alternative to xdg-utils
     "difftastic",  # `diff` alternative
-    "zsh-autosuggestions",
-    "zsh-completions",
-    "zsh-history-substring-search",
-    "zsh-syntax-highlighting",
+    "fish",
     "starship",
     "neovim",
     "ripgrep",
@@ -82,7 +79,6 @@ arch_community = {
     "selene-linter",
     "eslint",
     "stylelint",
-    "python-virtualenvwrapper",
 }
 arch_extra = {
     "qt5-tools",
@@ -110,7 +106,6 @@ arch_extra = {
     "libqalculate",
     "xclip",  # Access clipborad for x11
     "htop",  # System Monitoring
-    "zsh",
     "tidy",
     "python-black",
     "stylua",
@@ -138,6 +133,8 @@ arch_user_repo = {
     "hardcode-tray",
     "rmtrash",
     "dragon-drop",  # CLI-GUI drag-and-drop source/target
+    "bass-fish",
+    "virtualfish",
     "nodejs-emmet-ls"
     "jdtls",
     "python-pep8-naming",

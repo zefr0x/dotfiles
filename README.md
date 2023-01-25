@@ -146,11 +146,9 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ### Shell
-- [zsh](https://www.zsh.org/)
-    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-    - [zsh-completions](https://github.com/zsh-users/zsh-completions)
-    - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
-    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [fish](https://fishshell.com/)
+    - [bass](https://github.com/edc/bass)
+    - [virtualfish](https://github.com/justinmayer/virtualfish)
     - [starship](https://starship.rs/)
 
 
@@ -213,7 +211,6 @@ rustup default stable
 
 #### Python
 - [python](https://www.python.org/)
-- [python-virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/)
 
 #### LaTex
 - [texlive-most](https://archlinux.org/groups/x86_64/texlive-most/)
