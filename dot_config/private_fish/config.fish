@@ -24,6 +24,9 @@ set -x LESS_TERMCAP_ue (set_color normal) # end underline
 set -x LESS_TERMCAP_so (set_color --reverse F0CB02) # start standout
 set -x LESS_TERMCAP_se (set_color normal) # end standout
 
+# `less`
+set -x LESS "-R"
+
 # `virtualfish`
 set VIRTUALFISH_HOME "$XDG_DATA_HOME/virtualenvs"
 
@@ -35,6 +38,7 @@ if status is-interactive
 
 
 # ----------- Abbreviations ------------
+    abbr -a s "sudo"
     abbr -a nv "nvim"
     abbr -a snv "sudoedit"
     abbr -a py "python"
@@ -71,7 +75,6 @@ if status is-interactive
 # Drag to and from Aliases
     alias dragto="dragon-drop"
     alias dragon="dragon-drop --target --and-exit"
-
 
 # ------------ Shell Things ------------
 # A Shell Prompt
