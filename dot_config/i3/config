@@ -166,9 +166,9 @@ bindsym $mod+g exec --no-startup-id "~/scripts/translate_selection.py"
 bindsym Print exec flameshot gui
 
 # ClipBoard manager
-bindsym $mod+p exec clipcat-menu insert
-bindsym $mod+o exec clipcat-menu remove
-bindsym $mod+Shift+o exec --no-startup-id clipcatctl clear
+bindsym $mod+p exec "CM_LAUNCHER='rofi' clipmenu"
+bindsym $mod+o exec "rofi -modi clipmenu_delete:~/scripts/rofi/clipmenu_delete.sh -show clipmenu_delete"
+bindsym $mod+Shift+o exec --no-startup-id "clipdel -d '.*'"
 
 ## Toggle the notification center view.
 bindsym $mod+grave exec --no-startup-id "kill -s USR1 $(pidof deadd-notification-center)"
@@ -265,7 +265,7 @@ exec --no-startup-id numlockx
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Start clipboard manager deamon.
-exec --no-startup-id clipcatd
+exec --no-startup-id "CM_IGNORE_WINDOW='KeePassXC$' clipmenud"
 
 # Start autotiling.
 # exec_always --no-startup-id autotiling-rs # works only in sway

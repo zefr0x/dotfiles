@@ -35,6 +35,7 @@ arch_community = {
     "rofi",  # Launcher
     "rofi-calc",
     "rofi-emoji",
+    "clipmenu",
     "flameshot",  # Screenshot Software
     "rsibreak",
     "ttf-jetbrains-mono-nerd",
@@ -125,7 +126,6 @@ arch_user_repo = {
     "autotiling",
     "foxmarks",
     "deadd-notification-center",  # Notification Center
-    "clipcat",  # Clipboard Manager (Need an alternative, it's not good)
     "greetd",
     "greetd-tuigreet",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
