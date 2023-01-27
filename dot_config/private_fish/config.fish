@@ -129,5 +129,13 @@ end
 
 
 
+# Make going up a number of directories easier
+function multicd
+    echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
+end
+abbr --add dotdot --regex '^\.\.+$' --function multicd
+
+
+
 # Sources:
 #    https://github.com/PatrickF1/colored_man_pages.fish/blob/f885c2507128b70d6c41b043070a8f399988bc7a/functions/cless.fish#L2,L7
