@@ -48,6 +48,9 @@ hl(0, "LspDiagnosticUnderlineWarn", { link = "DiagnosticsUnderlineWarning" })
 hl(0, "LspDiagnosticUnderlineHint", { link = "DiagnosticsUnderlineHint" })
 hl(0, "LspDiagnosticUnderlineInfo", { link = "DiagnosticsUnderlineInformation" })
 
+
+hl(0, "InlineHint", { fg = "#282828" })
+
 -- Popup Menu
 hl(0, "Pmenu", { bg = "#080808" })
 hl(0, "PmenuSel", { fg = nil, bg = "#151515" })

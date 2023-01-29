@@ -36,7 +36,7 @@ require("rust-tools").setup({
 			-- only_current_line = true,
 			parameter_hints_prefix = "<- ",
 			other_hints_prefix = "=> ",
-			highlight = "Comment",
+			highlight = "InlineHint",
 		},
 	},
 })
