@@ -136,7 +136,7 @@ arch_user_repo = {
     "dragon-drop",  # CLI-GUI drag-and-drop source/target
     "bass-fish",
     "virtualfish",
-    "nodejs-emmet-ls"
+    "nodejs-emmet-ls",
     "jdtls",
     "python-pep8-naming",
     "python-flake8-builtins",
