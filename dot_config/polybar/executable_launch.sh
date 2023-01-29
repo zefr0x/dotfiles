@@ -1,7 +1,7 @@
 #!/usr/bin/dash
 # Script to autostart and restart polybar.
 
-POLYBAR_SHELL="/usr/bin/dash"
+export POLYBAR_SHELL="/usr/bin/dash"
 
 # Terminate already running bar instances.
 polybar-msg cmd quit
