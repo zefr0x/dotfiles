@@ -150,6 +150,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
     - [bass](https://github.com/edc/bass)
     - [virtualfish](https://github.com/justinmayer/virtualfish)
     - [starship](https://starship.rs/)
+- [dash](https://en.wikipedia.org/wiki/Debian_Almquist_shell)
 
 
 ### NeoVim <sup>`Text Editor`</sup>

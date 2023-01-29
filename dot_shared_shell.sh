@@ -1,10 +1,12 @@
-# Shared environment variables to be sourced in .bashrc and .zshrc
+# Shared environment variables to be sourced in bash and fish
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_STATE_HOME=$HOME/.local/state
 export XDG_CACHE_HOME=$HOME/.cache
 
+# Tell shh where is the ssh-agent socket
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+# Tell docker to use the user's socket, not the root
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
 # Use XDG base dirs
@@ -31,11 +33,8 @@ alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
 alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings"
 alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
 
-# Variables depending on the session or the desktop type.
-# if [[ "$XDG_SESSION_DESKTOP" == "KDE"  ]]
-# then
-#     export GTK_USE_PORTAL=1
-# fi
-if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+# Variables depending on the session or the desktop type
+# export GTK_USE_PORTAL=1
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 	export MOZ_ENABLE_WAYLAND=1
 fi

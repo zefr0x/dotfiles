@@ -1,14 +1,14 @@
-#!/usr/bin/bash
-# A rofi bash script to manage the session.
+#!/usr/bin/dash
+# A rofi shell script to manage the session.
 
-if [[ $ROFI_RETV = 0 ]]; then
-	echo -en " Lock\0info\x1flock\n"
-	echo -en " Logout\0info\x1flogout\n"
-	echo -en "鈴 Suspend\0info\x1fsuspend\n"
-	echo -en " Hibernate\0info\x1fhibernate\n"
-	echo -en "菱 Reboot\0info\x1freboot\n"
-	echo -en " Shutdown\0info\x1fshutdown\n"
-elif [[ $ROFI_RETV = 1 ]]; then
+if [ "$ROFI_RETV" = "0" ]; then
+	echo " Lock\0info\0037lock\n"
+	echo " Logout\0info\0037logout\n"
+	echo "鈴 Suspend\0info\0037suspend\n"
+	echo " Hibernate\0info\0037hibernate\n"
+	echo "菱 Reboot\0info\0037reboot\n"
+	echo " Shutdown\0info\0037shutdown\n"
+elif [ "$ROFI_RETV" = "1" ]; then
 	case $ROFI_INFO in
 	*lock)
 		loginctl lock-session

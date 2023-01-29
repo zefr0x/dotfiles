@@ -119,6 +119,7 @@ arch_extra = {
 }
 arch_core = {
     "psmisc",  # Check for /dev/video* usage with (fuser)
+    "dash",
     "python",
 }
 arch_user_repo = {
