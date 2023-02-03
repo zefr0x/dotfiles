@@ -48,7 +48,6 @@ hl(0, "LspDiagnosticUnderlineWarn", { link = "DiagnosticsUnderlineWarning" })
 hl(0, "LspDiagnosticUnderlineHint", { link = "DiagnosticsUnderlineHint" })
 hl(0, "LspDiagnosticUnderlineInfo", { link = "DiagnosticsUnderlineInformation" })
 
-
 hl(0, "InlineHint", { fg = "#282828" })
 
 -- Popup Menu
@@ -59,10 +58,10 @@ hl(0, "PmenuSel", { fg = nil, bg = "#151515" })
 
 -- Plugins theming --------------------
 
--- todo-comments.nvim
+-- todo-comments.nvim -----
 -- Colors are in the plugin's config file.
 
--- trouble.nvim --------
+-- trouble.nvim -----------
 -- hl(0, "TroubleCount", {})
 -- hl(0, "TroubleNormal", {})
 -- hl(0, "TroubleLocation", {})
@@ -90,7 +89,7 @@ hl(0, "PmenuSel", { fg = nil, bg = "#151515" })
 -- hl(0, "TroubleTextHint", {})
 -- hl(0, "TroubleTextInformation", {})
 
--- nvim-cmp ------------
+-- nvim-cmp ---------------
 hl(0, "CmpItemMenu", { fg = "#C792EA", bg = nil, italic = true })
 hl(0, "CmpItemAbbr", { fg = "#c6c6c6", bg = nil })
 hl(0, "CmpItemAbbrMatch", { fg = "#ff4500", bg = nil, bold = true })
@@ -134,3 +133,7 @@ hl(0, "CmpItemKindEnumMember", { fg = "#6C8ED4" })
 hl(0, "CmpItemKindInterface", { fg = "#58B5A8" })
 hl(0, "CmpItemKindColor", { fg = "#58B5A8" })
 hl(0, "CmpItemKindTypeParameter", { fg = "#58B5A8" })
+
+-- indent-blankline.nvim --
+hl(0, "IndentBlanklineIndent1", { bg ="#000000", nocombine = true })
+hl(0, "IndentBlanklineIndent2", { bg ="#070707", nocombine = true })
