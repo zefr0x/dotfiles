@@ -106,6 +106,9 @@ if status is-interactive
     alias topdf="libreoffice --headless --invisible --convert-to pdf"
     alias now="date +'%A %d/%m/%Y %H:%M:%S.%N (%Z) %nUnix time: %s'"
 
+# Scripts
+    alias besttime="~/scripts/besttime.sh"
+
 # To not shoot my self in the leg
     alias rm="echo -e Use the \`del\` command, unable to delete "
     alias del="rmtrash"
@@ -121,6 +124,7 @@ if status is-interactive
 
 # ------------ Shell Things ------------
 # A Shell Prompt
+    # TODO: Try the fish built in prompt functions.
     starship init fish | source
 
 # A `cd` Command Alternative
