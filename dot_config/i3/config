@@ -157,7 +157,7 @@ bindsym $mod+q exec "rofi -modi managesession:~/scripts/rofi/manage_session.sh -
 bindsym $mod+e exec "thunar"
 
 # Translate selected text.
-bindsym $mod+g exec --no-startup-id "~/scripts/translate_selection.py"
+bindsym $mod+g exec --no-startup-id "~/scripts/translate_selection.sh"
 
 # Save a screen shot for the whole desktop.
 # bindsym Print exec "import -window root ~/Pictures/Screenshot_$(date '+%Y%m%d-%H%M%S').webp"
