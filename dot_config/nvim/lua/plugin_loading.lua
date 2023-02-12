@@ -152,7 +152,7 @@ return require("lazy").setup({
 	},
 	-- Paint colors text in for #000000 or rgb(0,0,0) or ... with the real colors
 	{
-		"norcalli/nvim-colorizer.lua",
+		"NvChad/nvim-colorizer.lua",
 		event = "BufReadPost",
 		config = function()
 			require("plugin.colorizer")
