@@ -6,7 +6,6 @@ require("lint").linters_by_ft = {
 	lua = { "selene" },
 	javascript = { "eslint" },
 	html = { "tidy" },
-	htmldjango = { "tidy" },
 	css = { "stylelint" },
 }
 
