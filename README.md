@@ -155,6 +155,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 ### NeoVim <sup>`Text Editor`</sup>
 - [neovim](https://neovim.io/)
+    - [packer](https://github.com/wbthomason/packer.nvim)
 
 After installing, you need to install the plugins for neovim by running:
 ```

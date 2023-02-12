@@ -136,6 +136,7 @@ arch_user_repo = {
     "dragon-drop",  # CLI-GUI drag-and-drop source/target
     "bass-fish",
     "virtualfish",
+    "nvim-packer-git",
     "nodejs-emmet-ls",
     "jdtls",
     "python-pep8-naming",

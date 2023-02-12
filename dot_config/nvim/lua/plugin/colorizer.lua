@@ -2,21 +2,22 @@
 require("colorizer").setup({
 	filetypes = {
 		"*",
-		-- html = { mode = 'foreground'; },
+		css = {
+			css_fn = true,
+			rgb_fn = true,
+			hsl_fn = true,
+			css = true,
+		},
 	},
 	user_default_options = {
 		RGB = true,
 		RRGGBB = true,
 		RRGGBBAA = true,
 		AARRGGBB = false,
-		names = true,
-		rgb_fn = true,
-		hsl_fn = true,
-		css = true,
-		css_fn = true,
+		names = false,
 
 		mode = "background",
 		tailwind = false,
-		sass = { enable = false, parsers = { css } },
+		sass = false,
 	},
 })

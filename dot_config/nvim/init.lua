@@ -1,6 +1,9 @@
 local vim = vim
 local g = vim.g
 
+------------ Disable Providers --------------
+g.loaded_python3_provider = 0
+
 --------- Disable builtin plugins -----------
 g.loaded_zip = 1
 g.loaded_zipPlugin = 1

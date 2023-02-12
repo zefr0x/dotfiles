@@ -12,33 +12,38 @@ local custom_on_attach = function(client, bufnr)
 end
 
 -- rust-tools.nvim
-require("rust-tools").setup({
-	server = {
-		on_attach = custom_on_attach,
-		capabilities = capabilities,
-		settings = {
-			["rust-analyzer"] = {
-				checkOnSave = {
-					overrideCommand = {
-						"cargo",
-						"clippy",
-						"--workspace",
-						"--message-format=json",
-						"--all-targets",
-						"--all-features",
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "rust",
+	callback = function()
+		require("rust-tools").setup({
+			server = {
+				on_attach = custom_on_attach,
+				capabilities = capabilities,
+				settings = {
+					["rust-analyzer"] = {
+						checkOnSave = {
+							overrideCommand = {
+								"cargo",
+								"clippy",
+								"--workspace",
+								"--message-format=json",
+								"--all-targets",
+								"--all-features",
+							},
+						},
 					},
 				},
 			},
-		},
-	},
-	tools = {
-		inlay_hints = {
-			-- only_current_line = true,
-			parameter_hints_prefix = "<- ",
-			other_hints_prefix = "=> ",
-			highlight = "InlineHint",
-		},
-	},
+			tools = {
+				inlay_hints = {
+					-- only_current_line = true,
+					parameter_hints_prefix = "<- ",
+					other_hints_prefix = "=> ",
+					highlight = "InlineHint",
+				},
+			},
+		})
+	end,
 })
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
