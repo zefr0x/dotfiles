@@ -26,7 +26,7 @@ o.number = true
 o.relativenumber = true
 
 -- When scrolling, keep cursor 7 lines away from screen border
-o.scrolloff = 7
+o.scrolloff = 3
 
 -- Fix cursor being jittery when using live gutter enabled or linting a file
 -- No need for it, I think it has been fixed.
