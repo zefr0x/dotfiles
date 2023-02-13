@@ -31,7 +31,7 @@ local ls = require("luasnip")
 -- })
 
 -- Lazily load VSCodium style snippets (friendly-snippets)
-ls.loaders.from_vscode.lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load()
 
 -- in a cpp file: search c-snippets, then all-snippets only (no cpp-snippets!!).
 ls.filetype_set("cpp", { "c" })
