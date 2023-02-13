@@ -361,8 +361,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	--  TODO: Create a plugin for hybrid line number.
-
 	-- Help managing crates.io dependencies
 	use({
 		"saecki/crates.nvim",

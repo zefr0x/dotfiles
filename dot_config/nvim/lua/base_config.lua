@@ -25,6 +25,17 @@ o.smartindent = true
 o.number = true
 o.relativenumber = true
 
+vim.api.nvim_create_autocmd("InsertEnter", {
+	callback = function()
+		o.relativenumber = false
+	end,
+})
+vim.api.nvim_create_autocmd("InsertLeave", {
+	callback = function()
+		o.relativenumber = true
+	end,
+})
+
 -- When scrolling, keep cursor 7 lines away from screen border
 o.scrolloff = 3
 
