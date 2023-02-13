@@ -1,6 +1,3 @@
--- To avoid (`vim` is not defined) erorr in every line when using LSP.
-local vim = vim
-
 --- Set keymap
 -- @param[opts={silent = true, noremap = true}]
 local function map(mode, keys, action, opts)
