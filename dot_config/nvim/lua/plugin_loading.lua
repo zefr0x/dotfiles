@@ -77,6 +77,10 @@ return require("packer").startup(function(use)
 		"L3MON4D3/LuaSnip",
 		module = "luasnip",
 	})
+	use({
+		"rafamadriz/friendly-snippets",
+		after = "LuaSnip",
+	})
 	-- cmp-nvim-lsp-signature-help
 	use({
 		"hrsh7th/cmp-nvim-lsp-signature-help",

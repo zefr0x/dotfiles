@@ -33,18 +33,15 @@ local kind_icons = {
 
 -- luasnip
 local luasnip = require("luasnip")
-require("snipits.snipits")
+require("snipits.main")
 
 -- nvim-cmp
 local cmp = require("cmp")
 
 cmp.setup({
 	window = {
-		completion = {
-			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None", -- TODO: What is this?
-			col_offset = -3,
-			side_padding = 0,
-		},
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
@@ -67,15 +64,15 @@ cmp.setup({
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
-			select = true,
+			select = false,
 		}),
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
 			elseif luasnip.expand_or_jumpable() then
 				luasnip.expand_or_jump()
-			elseif has_words_before() then
-				cmp.complete()
+			-- elseif has_words_before() then
+			-- 	cmp.complete({ reason = cmp.ContextReason, config = cmp.ConfigSchema })
 			else
 				fallback()
 			end
@@ -106,14 +103,15 @@ cmp.setup({
 })
 
 -- Completion for commands
-require("cmp").setup.cmdline(":", {
+cmp.setup.cmdline(":", {
 	sources = {
 		{ name = "cmdline" },
+		{ name = "path" },
 	},
 })
 
 -- Completion for search
-require("cmp").setup.cmdline("/", {
+cmp.setup.cmdline("/", {
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp_document_symbol" },
 	}, {
