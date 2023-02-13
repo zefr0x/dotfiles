@@ -173,6 +173,7 @@ return require("packer").startup(function(use)
 			"markdown",
 			"regex",
 			"sql",
+			"json",
 			"toml",
 			"yaml",
 			"git_rebase",
@@ -219,7 +220,7 @@ return require("packer").startup(function(use)
 	-- Paint colors text in for #000000 or rgb(0,0,0) or ... with the real colors
 	use({
 		"NvChad/nvim-colorizer.lua",
-        ft = { "css", "lua" },
+		ft = { "css", "lua" },
 		config = function()
 			require("plugin.colorizer")
 		end,

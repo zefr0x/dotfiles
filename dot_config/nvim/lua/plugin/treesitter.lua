@@ -16,6 +16,7 @@ require("nvim-treesitter.configs").setup({
 		"markdown",
 		"regex",
 		"sql",
+		"json",
 		"toml",
 		"yaml",
 		"git_rebase",
