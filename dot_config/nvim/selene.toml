@@ -1,3 +1,1 @@
-globals:
-  vim:
-  any: true
+std = "selene_vim"
