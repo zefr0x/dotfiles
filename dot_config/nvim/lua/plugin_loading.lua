@@ -165,6 +165,7 @@ return require("packer").startup(function(use)
 			"css",
 			"lua",
 			"bash",
+			"fish",
 			"cmake",
 			"dockerfile",
 			"latex",
