@@ -58,7 +58,6 @@ arch_community = {
     "exa",  # `ls` alternative
     "fzf",  # fuzzy finder
     "handlr",  # Alternative to xdg-utils
-    "difftastic",  # `diff` alternative
     "fish",
     "starship",
     "neovim",
