@@ -53,18 +53,16 @@ return require("packer").startup(function(use)
 	use({
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
-		requires = {
-			-- Autopairs for () and {} etc...
-			{
-				"windwp/nvim-autopairs",
-				after = "nvim-treesitter",
-				config = function()
-					require("plugin.auto_pair")
-				end,
-			},
-		},
 		config = function()
 			require("plugin.completion")
+		end,
+	})
+	-- Autopairs for () and {} etc...
+	use({
+		"windwp/nvim-autopairs",
+		module = "nvim-autopairs",
+		config = function()
+			require("plugin.auto_pair")
 		end,
 	})
 	-- Snippets source for nvim-cmp
@@ -183,6 +181,7 @@ return require("packer").startup(function(use)
 			"comment",
 			"java",
 		},
+		module = "nvim-treesitter",
 		run = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
@@ -232,7 +231,6 @@ return require("packer").startup(function(use)
 	-- indent guides for neovim
 	use({
 		"lukas-reineke/indent-blankline.nvim",
-		event = "BufEnter",
 		after = "nvim-treesitter",
 		config = function()
 			require("plugin.indent_blankline")
