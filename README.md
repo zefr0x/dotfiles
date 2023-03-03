@@ -143,6 +143,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [fzf](https://github.com/junegunn/fzf)
 - [handlr](https://github.com/chmln/handlr)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [Open Doas](https://github.com/Duncaen/OpenDoas)
 
 ### Shell
 - [fish](https://fishshell.com/)

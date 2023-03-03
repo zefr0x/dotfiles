@@ -62,6 +62,7 @@ arch_community = {
     "starship",
     "neovim",
     "ripgrep",
+    "opendoas",
     "rust-analyzer",
     "jedi-language-server",
     "texlab",

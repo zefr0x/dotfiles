@@ -81,9 +81,9 @@ if status is-interactive
     set fish_color_history_current --bold
 
 # ----------- Abbreviations ------------
-    abbr -a s "sudo"
+    abbr -a d "doas"
     abbr -a nv "nvim"
-    abbr -a snv "sudoedit"
+    abbr -a snv "doasedit"
     abbr -a py "python"
     abbr -a ipy "ipython"
     abbr -a j "just"
@@ -91,6 +91,8 @@ if status is-interactive
 
 # -------------- Aliases ---------------
 # Utilities
+    alias sudo="doas"
+    alias doasedit="~/scripts/doasedit.sh"
     alias cp="cp -i"
     alias df="df -h"
     alias free="free -m"
