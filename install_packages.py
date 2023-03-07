@@ -96,6 +96,7 @@ arch_extra = {
     "xorg-setxkbmap",  # Configure Keyboard
     "xorg-xset",  # X11 Preference
     "nitrogen",  # X11 Background Setter
+    "lsof",  # Check for /dev/video* usage with (fuser)
     "network-manager-applet",
     "kwallet",
     "kwallet-pam",
@@ -117,7 +118,6 @@ arch_extra = {
     "meld",  # Visual diff and merge tool
 }
 arch_core = {
-    "psmisc",  # Check for /dev/video* usage with (fuser)
     "dash",
     "python",
 }

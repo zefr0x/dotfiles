@@ -43,7 +43,7 @@ Those config files represents my Personalized Environment.
     - [dex](https://github.com/jceb/dex)
 - [polybar](https://github.com/polybar/polybar)
     - [pamixer](https://github.com/cdemoulins/pamixer)
-    - [psmisc](https://gitlab.com/psmisc/psmisc)
+    - [lsof](https://github.com/lsof-org/lsof)
     - [cbatticon](https://github.com/valr/cbatticon)
     - [brightnessctl](https://github.com/Hummer12007/brightnessctl)
 - [picom](https://github.com/yshui/picom)
