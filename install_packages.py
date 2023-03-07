@@ -59,7 +59,6 @@ arch_community = {
     "fzf",  # fuzzy finder
     "handlr",  # Alternative to xdg-utils
     "fish",
-    "starship",
     "neovim",
     "ripgrep",
     "opendoas",
@@ -134,6 +133,8 @@ arch_user_repo = {
     "hardcode-tray",
     "rmtrash",
     "dragon-drop",  # CLI-GUI drag-and-drop source/target
+    "fish-tide-git",
+    "fish-fzf",
     "bass-fish",
     "virtualfish",
     "nvim-packer-git",

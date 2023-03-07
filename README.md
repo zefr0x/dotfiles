@@ -147,9 +147,10 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 ### Shell
 - [fish](https://fishshell.com/)
+    - [Tide](https://github.com/IlanCosman/tide)
+    - [fzf.fish](https://github.com/PatrickF1/fzf.fish)
     - [bass](https://github.com/edc/bass)
     - [virtualfish](https://github.com/justinmayer/virtualfish)
-    - [starship](https://starship.rs/)
 - [dash](https://en.wikipedia.org/wiki/Debian_Almquist_shell)
 
 

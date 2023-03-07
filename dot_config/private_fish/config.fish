@@ -125,12 +125,8 @@ if status is-interactive
     alias dragon="dragon-drop --target --and-exit"
 
 # ------------ Shell Things ------------
-# A Shell Prompt
-    # TODO: Try the fish built in prompt functions.
-    starship init fish | source
-
 # A `cd` Command Alternative
-    eval "$(zoxide init fish --cmd cd)"
+    zoxide init fish --cmd cd | source
 end
 
 
