@@ -215,6 +215,9 @@ rustup default stable
 #### Python
 - [python](https://www.python.org/)
 
+#### Dart
+- [Dart](https://dart.dev/)
+
 #### LaTex
 - [texlive-most](https://archlinux.org/groups/x86_64/texlive-most/)
 - [texlive-langextra](https://archlinux.org/packages/extra/any/texlive-langextra/)

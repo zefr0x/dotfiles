@@ -79,6 +79,7 @@ arch_community = {
     "selene-linter",
     "eslint",
     "stylelint",
+    "dart",
 }
 arch_extra = {
     "qt5-tools",
