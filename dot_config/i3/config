@@ -150,6 +150,9 @@ bindsym $mod+comma exec "rofi -modi emoji -show emoji"
 # Open firefox bookmarks launcher.
 bindsym $mod+b exec "rofi -modi foxmarks:~/scripts/rofi/firefox_bookmarks.py -show foxmarks"
 
+# Open zoom meetings launcher.
+bindsym $mod+m exec "rofi -modi zoom:~/scripts/rofi/zoom.py -show zoom"
+
 # Manage session.
 bindsym $mod+q exec "rofi -modi managesession:~/scripts/rofi/manage_session.sh -show managesession"
 
