@@ -79,6 +79,7 @@ arch_community = {
     "selene-linter",
     "eslint",
     "stylelint",
+    "mold",
     "dart",
 }
 arch_extra = {

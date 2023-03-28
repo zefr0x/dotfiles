@@ -200,6 +200,7 @@ After installing, you need to install the plugins for neovim by running:
 ### Programming Languages Tools/Compilers/Interpreters
 #### Rust
 - [rustup](https://github.com/rust-lang/rustup.rs)
+- [mold](https://github.com/rui314/mold)
 
 After installing it you need to run:
 ```shell
