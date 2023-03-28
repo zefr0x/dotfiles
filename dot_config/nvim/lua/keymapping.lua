@@ -38,7 +38,7 @@ map("n", "gx", "<Cmd>! handlr open <cfile><CR>")
 
 ------------ Plugins KeyMapping -------------
 
--- lspconfig
+-- LSP
 map("n", "<leader>D", vim.lsp.buf.declaration)
 map("n", "<leader>d", vim.lsp.buf.definition)
 map("n", "<leader>m", vim.lsp.buf.hover)
@@ -46,14 +46,16 @@ map("n", "<leader>r", vim.lsp.buf.references)
 map("n", "<leader>s", vim.lsp.buf.signature_help)
 map("n", "<leader>i", vim.lsp.buf.implementation)
 map("n", "<leader>gt", vim.lsp.buf.type_definition)
-map("n", "<leader>gw", vim.lsp.buf.document_symbol)
-map("n", "<leader>gW", vim.lsp.buf.workspace_symbol)
+-- map("n", "<leader>gW", vim.lsp.buf.document_symbol)
+map("n", "<leader>gw", vim.lsp.buf.workspace_symbol)
 map("n", "<leader>a", vim.lsp.buf.code_action)
-map("n", "<leader>ee", vim.diagnostic.open_float)
 map("n", "<leader>n", vim.lsp.buf.rename)
-map("n", "<leader>=", vim.lsp.buf.formatting)
+map("n", "<leader>=", vim.lsp.buf.format)
 map("n", "<leader>ai", vim.lsp.buf.incoming_calls)
 map("n", "<leader>ao", vim.lsp.buf.outgoing_calls)
+
+-- Diagnostic
+map("n", "<leader>ee", vim.diagnostic.open_float)
 
 -- bufferline.nvim
 map("n", "<leader>bp", vim.cmd.BufferLinePick)
