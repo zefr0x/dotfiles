@@ -93,7 +93,6 @@ session    optional     pam_kwallet5.so auto_start force_run
 ### Themes
 #### Icons
 - [papirus-icon-theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-    - [papirus-folders](https://github.com/PapirusDevelopmentTeam/papirus-folders)
     - [hardcode-tray](https://github.com/bil-elmoussaoui/Hardcode-Tray)
 - [adwaita-icon-theme](https://gitlab.gnome.org/GNOME/adwaita-icon-theme)
 #### UI
@@ -107,11 +106,6 @@ Fix hardcoded tray icons:
 sudo -E hardcode-tray --theme Papirus-Dark
 ```
 
-Change the folders color:
-```shell
-papirus-folders -C teal --theme Papirus-Dark
-```
-
 Set the Qt5 theme by adding this line: `QT_QPA_PLATFORMTHEME=qt5ct` to your `/etc/environment` file.
 
 Prefer dark theme for GTK-4:
@@ -121,6 +115,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 ### CLI Applications/Tools
 - [git](https://git-scm.com/)
+    - [delta](https://github.com/dandavison/delta)
 - [python-livereload](https://github.com/lepture/python-livereload)
 - [libqalculate](https://qalculate.github.io/)
 - [xclip](https://github.com/astrand/xclip)
@@ -129,17 +124,20 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
     - [rmtrash](https://github.com/PhrozenByte/rmtrash)
 - [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
 - [onefetch](https://github.com/o2sh/onefetch)
+- [tokei](https://github.com/XAMPPRocky/tokei)
 - [nvtop](https://github.com/Syllo/nvtop)
 - [htop](https://htop.dev/)
 - [nnn](https://github.com/jarun/nnn)
 - [dragon-drop](https://github.com/mwh/dragon)
 - [just](https://github.com/casey/just)
+- [hyperfine](https://github.com/sharkdp/hyperfine)
 
 ### CLI Utilities
 - [bat](https://github.com/sharkdp/bat)
 - [fd](https://github.com/sharkdp/fd)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [exa](https://the.exa.website/)
+- [hexyl](https://github.com/sharkdp/hexyl)
 - [fzf](https://github.com/junegunn/fzf)
 - [handlr](https://github.com/chmln/handlr)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)

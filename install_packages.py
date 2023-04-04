@@ -44,19 +44,24 @@ arch_community = {
     "qt5ct",  # Qt5 Configuration Utility
     "qt6ct",  # Qt6 Configuration Utility
     "kvantum",  # Theme Engine for Qt5/6
+    "git-delta",  # Syntax-highlighting pager for git, diff, and grep output
     "python-livereload",
     # "wl-clipboard",  # Access clipboard for wayland
     "trash-cli",
     "pulsemixer",  # TUI Audio Mixer
     "onefetch",  # Git Repo Summary
+    "tokei",  # Statistics about your code
     "nvtop",  # GPUs Monitoring
     "nnn",  # TUI File Manager
     "just",  # Command runner
+    "hyperfine",  # command-line benchmarking tool
     "bat",
     "fd",  # `find` alternative
     "zoxide",  # `cd` alternative
     "exa",  # `ls` alternative
+    "hexyl",  # command-line hex viewer
     "fzf",  # fuzzy finder
+    # TODO: "skim",  # fuzzy finder
     "handlr",  # Alternative to xdg-utils
     "fish",
     "neovim",
@@ -131,7 +136,6 @@ arch_user_repo = {
     "greetd",
     "greetd-tuigreet",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
-    # "papirus-folders",
     "hardcode-tray",
     "rmtrash",
     "dragon-drop",  # CLI-GUI drag-and-drop source/target

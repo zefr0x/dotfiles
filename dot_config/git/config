@@ -2,22 +2,30 @@
     name = zer0-x
     email = zer0-x.7ty50@aleeas.com
 [core]
+    pager = delta
     editor = nvim
 [color]
     ui = true
 [init]
     defaultBranch = main
-[filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
-[diff]
-    tool = nvim -d
+[pull]
+    rebase = true
 [status]
     branch = true
     showStash = true
     short = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    light = false
+    line-numbers = true
+    hyperlinks = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+    tool = nvim -d
 [alias]
     ds = diff --staged
     d = diff
