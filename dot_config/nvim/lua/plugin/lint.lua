@@ -4,7 +4,6 @@ require("lint").linters_by_ft = {
 	python = { "mypy", "flake8", "pydocstyle", "bandit" },
 	tex = { "chktex" },
 	lua = { "selene" },
-	javascript = { "eslint" },
 	html = { "tidy" },
 	css = { "stylelint" },
 }

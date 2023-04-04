@@ -70,7 +70,6 @@ arch_community = {
     "rust-analyzer",
     "jedi-language-server",
     "texlab",
-    "typescript-language-server",
     "vscode-css-languageserver",
     "vscode-html-languageserver",
     "lua-language-server",
@@ -82,10 +81,10 @@ arch_community = {
     "python-pydocstyle",
     "bandit",
     "selene-linter",
-    "eslint",
     "stylelint",
     "mold",
     "dart",
+    "deno",
 }
 arch_extra = {
     "qt5-tools",

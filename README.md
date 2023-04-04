@@ -166,7 +166,6 @@ After installing, you need to install the plugins for neovim by running:
 - [rust-analyzer](https://rust-analyzer.github.io/) <sup>`Rust`</sup>
 - [jedi-language-server](https://github.com/pappasam/jedi-language-server) <sup>`Python`</sup>
 - [texlab](https://github.com/latex-lsp/texlab) <sup>`LaTex`</sup>
-- [typescript-language-server](https://github.com/theia-ide/typescript-language-server) <sup>`JavaScript/TypeScript`</sup>
 - [vscode-css-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
 - [vscode-html-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
 - [emmet-ls](https://github.com/aca/emmet-ls) <sup>`HTML5/CSS3 snippets`</sup>
@@ -186,7 +185,6 @@ After installing, you need to install the plugins for neovim by running:
 - [python-pydocstyle](http://www.pydocstyle.org/) <sup>`Python`</sup>
 - [Bandit](https://github.com/PyCQA/bandit) <sup>`Python`</sup>
 - [selene-linter](https://github.com/Kampfkarren/selene) <sup>`Lua`</sup>
-- [eslint](https://eslint.org/) <sup>`JavaScript/TypeScript`</sup>
 - [stylelint](https://stylelint.io/) <sup>`CSS`</sup>
 - [tidy](https://www.html-tidy.org/) <sup>`HTML`</sup>
 
@@ -216,6 +214,11 @@ rustup default stable
 
 #### Dart
 - [Dart](https://dart.dev/)
+
+#### JavaScript/TypeScript
+- [Deno](https://deno.land/)
+
+> **Note** It includes most the tools needed for JS/TS.
 
 #### LaTex
 - [texlive-most](https://archlinux.org/groups/x86_64/texlive-most/)
