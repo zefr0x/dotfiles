@@ -52,7 +52,7 @@ vim.g.markdown_fenced_languages = {
 }
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { "clangd", "jedi_language_server", "texlab", "denols", "yamlls", "dartls", "jdtls" }
+local servers = { "clangd", "jedi_language_server", "texlab", "denols", "yamlls", "jdtls" }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = custom_on_attach,

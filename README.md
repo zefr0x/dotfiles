@@ -212,9 +212,6 @@ rustup default stable
 #### Python
 - [python](https://www.python.org/)
 
-#### Dart
-- [Dart](https://dart.dev/)
-
 #### JavaScript/TypeScript
 - [Deno](https://deno.land/)
 

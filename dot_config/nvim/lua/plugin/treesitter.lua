@@ -26,7 +26,6 @@ require("nvim-treesitter.configs").setup({
 		"gitattributes",
 		"diff",
 		"comment",
-		"dart",
 		"java",
 	},
 	highlight = {
