@@ -46,7 +46,7 @@ cmp.setup({
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
 		format = function(entry, vim_item)
-			-- vim_item.menu = "    (" .. vim_item.kind .. ")"
+			vim_item.menu = nil -- https://github.com/hrsh7th/nvim-cmp/issues/1154
 
 			vim_item.kind = kind_icons[vim_item.kind]
 
@@ -66,11 +66,16 @@ cmp.setup({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = false,
 		}),
+		["<F8>"] = cmp.mapping(function(fallback)
+			if luasnip.expand_or_jumpable() then
+				luasnip.expand_or_jump()
+			end
+		end, { "i", "s" }),
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
+			-- elseif luasnip.expand_or_jumpable() then
+			-- 	luasnip.expand_or_jump()
 			-- elseif has_words_before() then
 			-- 	cmp.complete({ reason = cmp.ContextReason, config = cmp.ConfigSchema })
 			else

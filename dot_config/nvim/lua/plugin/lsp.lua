@@ -48,7 +48,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- To appropriately highlight codefences returned from denols.
 vim.g.markdown_fenced_languages = {
-  "ts=typescript"
+	"ts=typescript",
 }
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
