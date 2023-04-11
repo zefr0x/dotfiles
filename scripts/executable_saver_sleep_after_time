@@ -1,0 +1,8 @@
+#!/bin/dash
+# Screen saver for XSecureLock
+
+# Wait for two hours
+exec sleep 7200
+
+# Suspend device
+exec systemctl suspend

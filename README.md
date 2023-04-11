@@ -36,7 +36,7 @@ Those config files represents my Personalized Environment.
     - [xorg-setxkbmap](https://archlinux.org/packages/extra/x86_64/xorg-setxkbmap/)
     - [xorg-xset](https://archlinux.org/packages/extra/x86_64/xorg-xset/)
     - [xss-lock](https://bitbucket.org/raymonad/xss-lock)
-    - [i3lock](https://i3wm.org/i3lock/)
+    - [XSecureLock](https://github.com/google/xsecurelock)
     - [xdotool](https://www.semicomplete.com/projects/xdotool/)
     - [numlockx](https://github.com/rg3/numlockx)
     - [nitrogen](http://projects.l3ib.org/nitrogen/)

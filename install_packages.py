@@ -23,7 +23,7 @@ arch_community = {
     "zathura-pdf-mupdf",
     "i3-gaps",  # Window Manager
     "xss-lock",
-    "i3lock",
+    "xsecurelock",
     "xdotool",  # X11 Automation Tool
     "numlockx",  # X11 Turn on Numlock
     "dex",  # XDG Auto Start / DesktopEntry
