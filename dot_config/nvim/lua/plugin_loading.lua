@@ -180,6 +180,7 @@ return require("packer").startup(function(use)
 			"gitattributes",
 			"diff",
 			"comment",
+			"mermaid",
 			"java",
 		},
 		module = "nvim-treesitter",
