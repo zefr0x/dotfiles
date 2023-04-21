@@ -109,12 +109,11 @@ if status is-interactive
     alias now="date +'%A %d/%m/%Y %H:%M:%S.%N (%Z) %nUnix time: %s'"
 
 # Scripts
-    alias besttime="~/scripts/besttime.sh"
+    # ...
 
 # To not shoot my self in the leg
-    alias rm="echo -e Use the \`del\` command, unable to delete "
-    alias del="rmtrash"
-    alias deldir="rmdirtrash"
+    alias rm="echo -e Use the \`del\` command, unable to delete: "
+    alias del="trash-put"
 
 # Kitty's Kittens
     alias ssh="kitty +kitten ssh"

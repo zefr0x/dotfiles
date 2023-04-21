@@ -55,6 +55,7 @@ arch_community = {
     "nnn",  # TUI File Manager
     "just",  # Command runner
     "hyperfine",  # command-line benchmarking tool
+    "jless",
     "bat",
     "fd",  # `find` alternative
     "zoxide",  # `cd` alternative
@@ -86,7 +87,7 @@ arch_community = {
     "deno",
 }
 arch_extra = {
-    "qt5-tools",
+    "d-spy",
     "feh",  # Image viewer
     "qalculate-qt",
     "thunar",  # File Manager
@@ -134,8 +135,6 @@ arch_user_repo = {
     "greetd",
     "greetd-tuigreet",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
-    "hardcode-tray",
-    "rmtrash",
     "dragon-drop",  # CLI-GUI drag-and-drop source/target
     "fish-tide-git",
     "fish-fzf",

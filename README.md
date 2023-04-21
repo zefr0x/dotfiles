@@ -9,7 +9,7 @@ Those config files represents my Personalized Environment.
 ### GUI Applications
 - [kitty](https://sw.kovidgoyal.net/kitty/)
 - [sqlitebrowser](https://sqlitebrowser.org/)
-- [Qt5 Tools](https://archlinux.org/packages/extra/x86_64/qt5-tools/)
+- [D Spy](https://apps.gnome.org/app/org.gnome.dspy/)
 - [ghostwriter](https://ghostwriter.kde.org/)
 - [mpv](https://mpv.io/)
 - [feh](https://feh.finalrewind.org/)
@@ -93,18 +93,12 @@ session    optional     pam_kwallet5.so auto_start force_run
 ### Themes
 #### Icons
 - [papirus-icon-theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-    - [hardcode-tray](https://github.com/bil-elmoussaoui/Hardcode-Tray)
 - [adwaita-icon-theme](https://gitlab.gnome.org/GNOME/adwaita-icon-theme)
 #### UI
 - [qt5ct](https://sourceforge.net/projects/qt5ct/)
 - [qt6ct](https://github.com/trialuser02/qt6ct)
 - [kvantum](https://github.com/tsujan/Kvantum)
 - [libadwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/)
-
-Fix hardcoded tray icons:
-```shell
-sudo -E hardcode-tray --theme Papirus-Dark
-```
 
 Set the Qt5 theme by adding this line: `QT_QPA_PLATFORMTHEME=qt5ct` to your `/etc/environment` file.
 
@@ -113,7 +107,7 @@ Prefer dark theme for GTK-4:
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 ```
 
-### CLI Applications/Tools
+### CLI/TUI Applications/Tools
 - [git](https://git-scm.com/)
     - [delta](https://github.com/dandavison/delta)
 - [python-livereload](https://github.com/lepture/python-livereload)
@@ -121,7 +115,6 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [xclip](https://github.com/astrand/xclip)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
 - [trash-cli](https://github.com/andreafrancia/trash-cli)
-    - [rmtrash](https://github.com/PhrozenByte/rmtrash)
 - [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
 - [onefetch](https://github.com/o2sh/onefetch)
 - [tokei](https://github.com/XAMPPRocky/tokei)
@@ -131,6 +124,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [dragon-drop](https://github.com/mwh/dragon)
 - [just](https://github.com/casey/just)
 - [hyperfine](https://github.com/sharkdp/hyperfine)
+- [jless](https://github.com/PaulJuliusMartinez/jless)
 
 ### CLI Utilities
 - [bat](https://github.com/sharkdp/bat)
