@@ -68,7 +68,6 @@ arch_community = {
     "neovim",
     "ripgrep",
     "opendoas",
-    "rust-analyzer",
     "jedi-language-server",
     "texlab",
     "vscode-css-languageserver",

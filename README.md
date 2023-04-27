@@ -157,7 +157,6 @@ After installing, you need to install the plugins for neovim by running:
 ```
 
 ### Language Servers
-- [rust-analyzer](https://rust-analyzer.github.io/) <sup>`Rust`</sup>
 - [jedi-language-server](https://github.com/pappasam/jedi-language-server) <sup>`Python`</sup>
 - [texlab](https://github.com/latex-lsp/texlab) <sup>`LaTex`</sup>
 - [vscode-css-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
@@ -195,6 +194,8 @@ After installing, you need to install the plugins for neovim by running:
 After installing it you need to run:
 ```shell
 rustup default stable
+
+rustup component add rust-analyzer
 ```
 
 > **Note** It includes most the tools used for the Rust language.
