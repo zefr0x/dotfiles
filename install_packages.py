@@ -36,6 +36,7 @@ arch_community = {
     "rofi-calc",
     "rofi-emoji",
     "clipmenu",
+    "lxsession-gtk3",
     "flameshot",  # Screenshot Software
     "rsibreak",
     "ttf-jetbrains-mono-nerd",

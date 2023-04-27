@@ -57,6 +57,7 @@ Those config files represents my Personalized Environment.
 - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 - [kwallet](https://archlinux.org/packages/extra/x86_64/kwallet/)
     - [kwallet-pam](https://archlinux.org/packages/extra/x86_64/kwallet-pam/)
+- [lxsession-gtk3](https://www.lxde.org/)
 - [flameshot](https://github.com/flameshot-org/flameshot)
 - [greetd](https://git.sr.ht/~kennylevinsen/greetd)
     - [tuigreet](https://github.com/apognu/tuigreet)
