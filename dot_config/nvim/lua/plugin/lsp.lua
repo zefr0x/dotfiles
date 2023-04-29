@@ -52,13 +52,30 @@ vim.g.markdown_fenced_languages = {
 }
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { "clangd", "jedi_language_server", "texlab", "denols", "yamlls", "jdtls" }
+local servers = { "clangd", "texlab", "denols", "yamlls", "jdtls" }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = custom_on_attach,
 		capabilities = capabilities,
 	})
 end
+
+-- pylsp
+lspconfig.pylsp.setup({
+	settings = {
+		pylsp = {
+			plugins = {
+				flake8 = { enabled = true },
+				pydocstyle = { enabled = true },
+				pycodestyle = { enabled = false },
+				mccabe = { enabled = false },
+				pyflakes = { enabled = false },
+				autopep8 = { enabled = false },
+				yapf = { enabled = false },
+			},
+		},
+	},
+})
 
 -- lua-language-server
 lspconfig.lua_ls.setup({

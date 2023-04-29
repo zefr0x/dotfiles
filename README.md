@@ -158,7 +158,8 @@ After installing, you need to install the plugins for neovim by running:
 ```
 
 ### Language Servers
-- [jedi-language-server](https://github.com/pappasam/jedi-language-server) <sup>`Python`</sup>
+- [python-lsp-server](https://github.com/python-lsp/python-lsp-server) <sup>`Python`</sup>
+    - [python-lsp-black](https://github.com/python-lsp/python-lsp-black)
 - [texlab](https://github.com/latex-lsp/texlab) <sup>`LaTex`</sup>
 - [vscode-css-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
 - [vscode-html-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
