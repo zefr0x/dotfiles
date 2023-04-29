@@ -138,7 +138,7 @@ bindcode Mod1+$x exec --no-startup-id "(setxkbmap -query | grep us,) && (setxkbm
 bindcode 133 --release exec "rofi -modi drun,window,filebrowser -show drun"
 
 # Open calculator.
-bindsym $mod+c exec "rofi -modi calc -show calc"
+bindsym $mod+c exec "rofi -modi calc -show calc -no-show-match -no-sort"
 
 # Open emoji picker.
 bindsym $mod+comma exec "rofi -modi emoji -show emoji"
