@@ -255,8 +255,8 @@ client.background        #ffffff50
 
 # ------- Autostart scripts and deamons -------
 
-# Restore wallpaper.
-exec_always --no-startup-id nitrogen --set-zoom-fill --random  ~/Pictures/wallpapers
+# Set random wallpaper.
+exec_always --no-startup-id "feh --bg-tile $(find $HOME/Pictures/wallpapers/ -type f  | shuf -n 1)"
 
 # Set the behavior of the caps lock key.
 exec_always --no-startup-id setxkbmap -option 'caps:escape_shifted_capslock'

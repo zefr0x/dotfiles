@@ -39,7 +39,6 @@ Those config files represents my Personalized Environment.
     - [XSecureLock](https://github.com/google/xsecurelock)
     - [xdotool](https://www.semicomplete.com/projects/xdotool/)
     - [numlockx](https://github.com/rg3/numlockx)
-    - [nitrogen](http://projects.l3ib.org/nitrogen/)
     - [dex](https://github.com/jceb/dex)
 - [polybar](https://github.com/polybar/polybar)
     - [pamixer](https://github.com/cdemoulins/pamixer)

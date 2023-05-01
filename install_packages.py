@@ -102,7 +102,6 @@ arch_extra = {
     # "system-config-printer",
     "xorg-setxkbmap",  # Configure Keyboard
     "xorg-xset",  # X11 Preference
-    "nitrogen",  # X11 Background Setter
     "lsof",  # Check for /dev/video* usage with (fuser)
     "network-manager-applet",
     "kwallet",
