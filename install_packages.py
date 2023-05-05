@@ -1,4 +1,4 @@
-#/usr/bin/env python
+# /usr/bin/env python
 """Script to install system packages and initalize environment."""
 import platform
 
@@ -35,6 +35,7 @@ arch_community = {
     "rofi",  # Launcher
     "rofi-calc",
     "rofi-emoji",
+    "dunst",
     "clipmenu",
     "lxsession-gtk3",
     "flameshot",  # Screenshot Software
@@ -133,7 +134,6 @@ arch_user_repo = {
     "dialect",  # Translating Text
     "autotiling",
     "foxmarks",
-    "deadd-notification-center",  # Notification Center
     "greetd",
     "greetd-tuigreet",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI

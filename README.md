@@ -51,7 +51,7 @@ Those config files represents my Personalized Environment.
     - [rofi-calc](https://github.com/svenstaro/rofi-calc)
     - [rofi-emoji](https://github.com/Mange/rofi-emoji)
     - [foxmarks](https://github.com/zer0-x/foxmarks)
-- [deadd-notification-center](https://github.com/phuhl/linux_notification_center)
+- [dunst](https://dunst-project.org/)
 - [clipmenu](https://github.com/cdown/clipmenu)
 - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 - [kwallet](https://archlinux.org/packages/extra/x86_64/kwallet/)

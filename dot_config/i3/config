@@ -173,8 +173,8 @@ bindsym $mod+p exec "CM_LAUNCHER='rofi' clipmenu"
 bindsym $mod+o exec "rofi -modi clipmenu_delete:~/scripts/rofi/clipmenu_delete.sh -show clipmenu_delete"
 bindsym $mod+Shift+o exec --no-startup-id "clipdel -d '.*'"
 
-## Toggle the notification center view.
-bindsym $mod+grave exec --no-startup-id "kill -s USR1 $(pidof deadd-notification-center)"
+## Pop the last notification one by one.
+bindsym $mod+grave exec --no-startup-id "dunstctl history-pop"
 
 # Toggle redshift
 # bindsym $mod+ exec --no-startup-id "pkill -USR1 redshift-gtk"
@@ -275,7 +275,7 @@ exec --no-startup-id "CM_IGNORE_WINDOW='KeePassXC$' clipmenud"
 exec_always --no-startup-id autotiling
 
 # Start the notification center and server.
-exec --no-startup-id deadd-notification-center
+exec --no-startup-id dunst
 
 # NetworkManager system tray GUI.
 exec --no-startup-id nm-applet
