@@ -141,9 +141,9 @@ lspconfig.emmet_ls.setup({
 
 -- Set icons for diagnostics in the gutter.
 for type, icon in pairs({
-	Error = " ",
-	Warning = " ",
-	Hint = " ",
+	Error = " ",
+	Warning = " ",
+	Hint = "󰌶 ",
 	Information = " ",
 }) do
 	local hl = "DiagnosticSign" .. type

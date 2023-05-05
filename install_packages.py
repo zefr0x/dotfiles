@@ -107,6 +107,8 @@ arch_extra = {
     "kwallet",
     "kwallet-pam",
     "noto-fonts",
+    "noto-fonts-cjk",
+    "noto-fonts-extra",
     "adwaita-icon-theme",
     "libadwaita",
     "git",

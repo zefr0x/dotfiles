@@ -85,7 +85,7 @@ session    optional     pam_kwallet5.so auto_start force_run
 
 
 ### Fonts
-- [noto-fonts](https://fonts.google.com/noto)
+- [Noto Fonts](https://fonts.google.com/noto)
 - [JetBrainsMono Nerd](https://www.nerdfonts.com/)
 - [nerd-fonts-ubuntu](https://github.com/ryanoasis/nerd-fonts)
 - [ttf-dejavu-ib](http://dejavu-fonts.org/wiki/Main_Page)

@@ -16,16 +16,16 @@ configuration {
     window-thumbnail: false;
     /* drun-use-desktop-cache: false; */
     /*drun-reload-desktop-cache: false;*/
-    display-window: "缾";
-    display-drun: "";
-    display-managesession: "拉";
+    display-window: "";
+    display-drun: "󱓞";
+    display-managesession: "";
     display-foxmarks: "";
-    display-run: "";
-    display-calc: "";
-    display-emoji: "";
+    display-run: "";
+    display-calc: "";
+    display-emoji: "󰞅";
     display-keys: "";
-    display-filebrowser: "";
-    display-ssh: "";
+    display-filebrowser: "";
+    display-ssh: "󰣀";
     display-combi: "";
     display-windowcd: "";
     /*kb-primary-paste: "Control+V,Shift+Insert";*/

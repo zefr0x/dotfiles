@@ -1,6 +1,6 @@
 local hl = vim.api.nvim_set_hl
 
------------ zer0-x theme extention -----------
+------------ Theme modifications -------------
 
 -- Show another background in floating windows
 hl(0, "NormalFloat", { bg = "#101010" })
@@ -135,5 +135,5 @@ hl(0, "CmpItemKindColor", { fg = "#58B5A8" })
 hl(0, "CmpItemKindTypeParameter", { fg = "#58B5A8" })
 
 -- indent-blankline.nvim --
-hl(0, "IndentBlanklineIndent1", { bg ="#000000", nocombine = true })
-hl(0, "IndentBlanklineIndent2", { bg ="#070707", nocombine = true })
+hl(0, "IndentBlanklineIndent1", { bg = "#000000", nocombine = true })
+hl(0, "IndentBlanklineIndent2", { bg = "#070707", nocombine = true })
