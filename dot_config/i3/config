@@ -256,7 +256,7 @@ client.background        #ffffff50
 # ------- Autostart scripts and deamons -------
 
 # Set random wallpaper.
-exec_always --no-startup-id "feh --bg-tile $(find $HOME/Pictures/wallpapers/ -type f  | shuf -n 1)"
+exec_always --no-startup-id "feh --no-fehbg --bg-tile $(find $HOME/Pictures/wallpapers/ -type f  | shuf -n 1)"
 
 # Set the behavior of the caps lock key.
 exec_always --no-startup-id setxkbmap -option 'caps:escape_shifted_capslock'
