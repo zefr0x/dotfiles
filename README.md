@@ -1,14 +1,14 @@
 # zer0-x's public dotfiles
 > Managed with [chezmoi](https://www.chezmoi.io/)
 
-Those config files represents my Personalized Environment.
+Those software and config files represents my Personalized Environment.
 
 <details>
 <summary>Dependencies</summary>
 
 ### GUI Applications
-- [kitty](https://sw.kovidgoyal.net/kitty/)
-- [sqlitebrowser](https://sqlitebrowser.org/)
+- [Kitty](https://sw.kovidgoyal.net/kitty/)
+- [SQliteBrowser](https://sqlitebrowser.org/)
 - [D Spy](https://apps.gnome.org/app/org.gnome.dspy/)
 - [ghostwriter](https://ghostwriter.kde.org/)
 - [mpv](https://mpv.io/)
@@ -16,7 +16,7 @@ Those config files represents my Personalized Environment.
 - [Qalculate! Qt](https://qalculate.github.io/)
 - [zathura](https://pwmt.org/projects/zathura/)
     - [zathura-pdf-mupdf](https://pwmt.org/projects/zathura-pdf-mupdf/)
-- [thunar](https://docs.xfce.org/xfce/thunar/start)
+- [Thunar](https://docs.xfce.org/xfce/thunar/start)
     - [gvfs](https://wiki.gnome.org/Projects/gvfs)
     - [thunar-archive-plugin](https://docs.xfce.org/xfce/thunar/archive)
     - [thunar-media-tags-plugin](https://docs.xfce.org/xfce/thunar/media-tags)
@@ -24,14 +24,13 @@ Those config files represents my Personalized Environment.
         - [ffmpegthumbnailer](https://github.com/dirkvdb/ffmpegthumbnailer)
         - [poppler-glib](https://poppler.freedesktop.org/)
         - [libgsf](https://www.digital-scurf.org/software/libgfshare)
-- [slimbookbattery](https://github.com/slimbook/slimbookbattery)
-- [system-config-printer](https://github.com/OpenPrinting/system-config-printer)
-- [dialect](https://apps.gnome.org/app/app.drey.Dialect/)
-- [Meld](https://meldmerge.org/)
+- [SlimBookBattery](https://github.com/slimbook/slimbookbattery)
+- [System Config Printer](https://github.com/OpenPrinting/system-config-printer)
+- [Dialect](https://apps.gnome.org/app/app.drey.Dialect/)
 
 
 ### Desktop Environment
-- [i3-gaps](https://github.com/Airblader/i3)
+- [i3](https://github.com/i3/i3)
     - [autotiling](https://github.com/nwg-piotr/autotiling)
     - [xorg-setxkbmap](https://archlinux.org/packages/extra/x86_64/xorg-setxkbmap/)
     - [xorg-xset](https://archlinux.org/packages/extra/x86_64/xorg-xset/)
@@ -60,7 +59,7 @@ Those config files represents my Personalized Environment.
 - [flameshot](https://github.com/flameshot-org/flameshot)
 - [greetd](https://git.sr.ht/~kennylevinsen/greetd)
     - [tuigreet](https://github.com/apognu/tuigreet)
-- [rsibreak](https://apps.kde.org/rsibreak/)
+- [RSIBreak](https://apps.kde.org/rsibreak/)
 
 You need to enable `greetd`
 ```
@@ -87,13 +86,13 @@ session    optional     pam_kwallet5.so auto_start force_run
 ### Fonts
 - [Noto Fonts](https://fonts.google.com/noto)
 - [JetBrainsMono Nerd](https://www.nerdfonts.com/)
-- [nerd-fonts-ubuntu](https://github.com/ryanoasis/nerd-fonts)
+- [Nerd Fonts Ubuntu](https://github.com/ryanoasis/nerd-fonts)
 - [ttf-dejavu-ib](http://dejavu-fonts.org/wiki/Main_Page)
 
 ### Themes
 #### Icons
-- [papirus-icon-theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-- [adwaita-icon-theme](https://gitlab.gnome.org/GNOME/adwaita-icon-theme)
+- [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
+- [Adwaita Icon Theme](https://gitlab.gnome.org/GNOME/adwaita-icon-theme)
 #### UI
 - [qt5ct](https://sourceforge.net/projects/qt5ct/)
 - [qt6ct](https://github.com/trialuser02/qt6ct)
@@ -110,32 +109,32 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 ### CLI/TUI Applications/Tools
 - [git](https://git-scm.com/)
     - [delta](https://github.com/dandavison/delta)
+- [just](https://github.com/casey/just)
 - [python-livereload](https://github.com/lepture/python-livereload)
 - [libqalculate](https://qalculate.github.io/)
-- [xclip](https://github.com/astrand/xclip)
-- [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
-- [trash-cli](https://github.com/andreafrancia/trash-cli)
-- [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
-- [onefetch](https://github.com/o2sh/onefetch)
-- [tokei](https://github.com/XAMPPRocky/tokei)
-- [nvtop](https://github.com/Syllo/nvtop)
-- [htop](https://htop.dev/)
-- [nnn](https://github.com/jarun/nnn)
-- [dragon-drop](https://github.com/mwh/dragon)
-- [just](https://github.com/casey/just)
-- [hyperfine](https://github.com/sharkdp/hyperfine)
-- [jless](https://github.com/PaulJuliusMartinez/jless)
 
 ### CLI Utilities
+- [Open Doas](https://github.com/Duncaen/OpenDoas)
 - [bat](https://github.com/sharkdp/bat)
 - [fd](https://github.com/sharkdp/fd)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [exa](https://the.exa.website/)
-- [hexyl](https://github.com/sharkdp/hexyl)
-- [fzf](https://github.com/junegunn/fzf)
-- [handlr](https://github.com/chmln/handlr)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [Open Doas](https://github.com/Duncaen/OpenDoas)
+- [hexyl](https://github.com/sharkdp/hexyl)
+- [handlr](https://github.com/chmln/handlr)
+- [trash-cli](https://github.com/andreafrancia/trash-cli)
+- [dragon-drop](https://github.com/mwh/dragon)
+- [nnn](https://github.com/jarun/nnn)
+- [hyperfine](https://github.com/sharkdp/hyperfine)
+- [tokei](https://github.com/XAMPPRocky/tokei)
+- [jless](https://github.com/PaulJuliusMartinez/jless)
+- [fzf](https://github.com/junegunn/fzf)
+- [xclip](https://github.com/astrand/xclip)
+- [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
+- [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
+- [onefetch](https://github.com/o2sh/onefetch)
+- [nvtop](https://github.com/Syllo/nvtop)
+- [htop](https://htop.dev/)
 
 ### Shell
 - [fish](https://fishshell.com/)
@@ -152,24 +151,23 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 After installing, you need to install the plugins for neovim by running:
 ```
-:Lazy install
-:Lazy restore
+:PackerInstall
 ```
 
 ### Language Servers
-- [python-lsp-server](https://github.com/python-lsp/python-lsp-server) <sup>`Python`</sup>
+- [Python LSP Server](https://github.com/python-lsp/python-lsp-server) <sup>`Python`</sup>
     - [python-lsp-black](https://github.com/python-lsp/python-lsp-black)
-- [texlab](https://github.com/latex-lsp/texlab) <sup>`LaTex`</sup>
-- [vscode-css-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
-- [vscode-html-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
+- [TexLab](https://github.com/latex-lsp/texlab) <sup>`LaTex`</sup>
+- [VSCode CSS LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
+- [VSCode HTML LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
 - [emmet-ls](https://github.com/aca/emmet-ls) <sup>`HTML5/CSS3 snippets`</sup>
 - [lua-language-server](https://github.com/sumneko/lua-language-server) <sup>`Lua`</sup>
-- [vscode-json-languageserver](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server) <sup>`JSON`</sup>
-- [yaml-language-server](https://github.com/redhat-developer/yaml-language-server) <sup>`YAML`</sup>
-- [jdtls](https://github.com/eclipse/eclipse.jdt.ls)
+- [VSCode jSON LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server) <sup>`JSON`</sup>
+- [YAML Language Server](https://github.com/redhat-developer/yaml-language-server) <sup>`YAML`</sup>
+- [Eclipse JDT Language Server](https://github.com/eclipse/eclipse.jdt.ls)
 
 ### Linters
-- [flawfinder](https://dwheeler.com/flawfinder/) <sup>`C/C++`</sup>
+- [Flawfinder](https://dwheeler.com/flawfinder/) <sup>`C/C++`</sup>
 - [mypy](http://www.mypy-lang.org/) <sup>`Python`</sup>
 - [flake8](https://flake8.pycqa.org/) <sup>`Python`</sup>
     - [pep8-naming](https://github.com/PyCQA/pep8-naming)
@@ -179,12 +177,12 @@ After installing, you need to install the plugins for neovim by running:
 - [python-pydocstyle](http://www.pydocstyle.org/) <sup>`Python`</sup>
 - [Bandit](https://github.com/PyCQA/bandit) <sup>`Python`</sup>
 - [selene-linter](https://github.com/Kampfkarren/selene) <sup>`Lua`</sup>
-- [stylelint](https://stylelint.io/) <sup>`CSS`</sup>
-- [tidy](https://www.html-tidy.org/) <sup>`HTML`</sup>
+- [Stylelint](https://stylelint.io/) <sup>`CSS`</sup>
+- [Tidy](https://www.html-tidy.org/) <sup>`HTML`</sup>
 
 ### Formatters
-- [black](https://github.com/psf/black) <sup>`Python`</sup>
-- [stylua](https://github.com/JohnnyMorganz/StyLua) <sup>`Lua`</sup>
+- [Black](https://github.com/psf/black) <sup>`Python`</sup>
+- [StyLua](https://github.com/JohnnyMorganz/StyLua) <sup>`Lua`</sup>
 - [shfmt](https://github.com/mvdan/sh) <sup>`shell`</sup>
 
 ### Programming Languages Tools/Compilers/Interpreters
@@ -203,10 +201,10 @@ rustup component add rust-analyzer
 
 #### C/C++
 - [base-devel](https://archlinux.org/groups/x86_64/base-devel/)
-- [clang](https://clang.llvm.org/)
+- [Clang](https://clang.llvm.org/)
 
 #### Python
-- [python](https://www.python.org/)
+- [Python](https://www.python.org/)
 
 #### JavaScript/TypeScript
 - [Deno](https://deno.land/)

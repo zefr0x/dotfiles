@@ -124,7 +124,6 @@ arch_extra = {
     "clang",
     "texlive-langextra",
     "texlive-fontsextra",
-    "meld",  # Visual diff and merge tool
 }
 arch_core = {
     "dash",
