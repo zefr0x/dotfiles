@@ -54,7 +54,6 @@ arch_community = {
     "onefetch",  # Git Repo Summary
     "tokei",  # Statistics about your code
     "nvtop",  # GPUs Monitoring
-    "nnn",  # TUI File Manager
     "just",  # Command runner
     "hyperfine",  # command-line benchmarking tool
     "jless",
@@ -69,6 +68,8 @@ arch_community = {
     "fish",
     "neovim",
     "ripgrep",
+    "lfs",
+    "broot",
     "opendoas",
     "python-lsp-server",
     "python-lsp-black",

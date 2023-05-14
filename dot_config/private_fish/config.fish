@@ -13,8 +13,6 @@ set -x OPENER "handlr open"
 
 
 # ------------ Tools Config ------------
-# `nnn`
-set -x NNN_PLUG "j:autojump"
 
 # Color `man` Pages
 set -x LESS_TERMCAP_md (set_color --bold 0280A5) # start bold
@@ -87,7 +85,7 @@ if status is-interactive
     abbr -a py "python"
     abbr -a ipy "ipython"
     abbr -a j "just"
-    abbr -a n "nnn"
+    abbr -a b "br"
 
 # -------------- Aliases ---------------
 # Utilities
@@ -126,17 +124,30 @@ if status is-interactive
 # ------------ Shell Things ------------
 # A `cd` Command Alternative
     zoxide init fish --cmd cd | source
+
+#
+function br --wraps=broot
+    set -l cmd_file (mktemp)
+    if broot --outcmd $cmd_file $argv
+        read --local --null cmd < $cmd_file
+        command rm -f $cmd_file
+        eval $cmd
+    else
+        set -l code $status
+        command rm -f $cmd_file
+        return $code
+    end
 end
-
-
 
 # Make going up a number of directories easier
-function multicd
-    echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
-end
-abbr --add dotdot --regex '^\.\.+$' --function multicd
+    function multicd
+        echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
+    end
+    abbr --add dotdot --regex '^\.\.+$' --function multicd
 
+end
 
 
 # Sources:
+#    https://github.com/Canop/broot
 #    https://github.com/PatrickF1/colored_man_pages.fish/blob/f885c2507128b70d6c41b043070a8f399988bc7a/functions/cless.fish#L2,L7

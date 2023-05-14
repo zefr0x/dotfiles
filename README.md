@@ -120,11 +120,12 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [exa](https://the.exa.website/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [lfs](https://github.com/Canop/lfs)
 - [hexyl](https://github.com/sharkdp/hexyl)
 - [handlr](https://github.com/chmln/handlr)
 - [trash-cli](https://github.com/andreafrancia/trash-cli)
 - [dragon-drop](https://github.com/mwh/dragon)
-- [nnn](https://github.com/jarun/nnn)
+- [broot](https://github.com/Canop/broot)
 - [hyperfine](https://github.com/sharkdp/hyperfine)
 - [tokei](https://github.com/XAMPPRocky/tokei)
 - [jless](https://github.com/PaulJuliusMartinez/jless)
@@ -135,6 +136,11 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [onefetch](https://github.com/o2sh/onefetch)
 - [nvtop](https://github.com/Syllo/nvtop)
 - [htop](https://htop.dev/)
+
+Since the `br` shell function is custom, after restarting the shell, run that:
+```
+br --set-install-state refused
+```
 
 ### Shell
 - [fish](https://fishshell.com/)
