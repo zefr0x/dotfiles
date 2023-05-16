@@ -1,7 +1,23 @@
 # zer0-x's public dotfiles
-> Managed with [chezmoi](https://www.chezmoi.io/)
+> Managed with [Toml Bombadil](https://oknozor.github.io/toml-bombadil/)
 
 Those software and config files represents my Personalized Environment.
+
+## Usage
+
+1. Install `Toml Bombadil`.
+2. Clone this repo to `.dotfiles`:
+```
+git clone https://github.com/zer0-x/dotfiles.git .dotfiles
+```
+3. Link bombadil:
+```
+bombadil install .dotfiles
+```
+4. To use the i3 desktop environment do:
+```
+bombadil link -p DE_i3
+```
 
 <details>
 <summary>Dependencies</summary>
