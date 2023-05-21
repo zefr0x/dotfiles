@@ -14,7 +14,7 @@ arch_groups = {
     "base-devel",
     "texlive-most",
 }
-arch_community = {
+arch_extra = {
     "kitty",  # Terminal emulator
     "sqlitebrowser",
     "ghostwriter",  # For writing in Arabic smoothly
@@ -39,6 +39,8 @@ arch_community = {
     "clipmenu",
     "lxsession-gtk3",
     "flameshot",  # Screenshot Software
+    "greetd",
+    "greetd-tuigreet",
     "rsibreak",
     "ttf-jetbrains-mono-nerd",
     "ttf-ubuntu-nerd",
@@ -88,8 +90,6 @@ arch_community = {
     "stylelint",
     "mold",
     "deno",
-}
-arch_extra = {
     "d-spy",
     "feh",  # Image viewer
     "qalculate-qt",
@@ -134,8 +134,6 @@ arch_user_repo = {
     "dialect",  # Translating Text
     "autotiling",
     "foxmarks",
-    "greetd",
-    "greetd-tuigreet",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
     "dragon-drop",  # CLI-GUI drag-and-drop source/target
     "fish-tide-git",
@@ -154,10 +152,10 @@ arch_user_repo = {
 
 if is_laptop:
     arch_user_repo.add("slimbookbattery")  # Interface for TLP
-    arch_community.add("cbatticon")  # Battery System Tray Icon
+    arch_extra.add("cbatticon")  # Battery System Tray Icon
 
 
-pacman_install = f"sudo pacman -S --needed {' '.join(arch_core)} {' '.join(arch_extra)} {' '.join(arch_community)} {' '.join(arch_groups)}"
+pacman_install = f"sudo pacman -S --needed {' '.join(arch_core)} {' '.join(arch_extra)} {' '.join(arch_groups)}"
 
 paru_install = f"paru -Sa --needed {' '.join(arch_user_repo)}"
 
