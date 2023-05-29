@@ -114,8 +114,10 @@ if status is-interactive
     alias del="trash-put"
 
 # Kitty's Kittens
-    alias ssh="kitty +kitten ssh"
-    alias icat="kitty +kitten icat"
+    if [ $TERM = "xterm-kitty" ]
+        alias ssh="kitty +kitten ssh"
+        alias icat="kitty +kitten icat"
+    end
 
 # Drag to and from Aliases
     alias dragto="dragon-drop"
