@@ -6,7 +6,7 @@ bass source ~/.shared_shell.sh
 # ------------- Variables --------------
 set -x EDITOR "nvim"
 set -x VISUAL "nvim"
-set -x TERMINAL "kitty"
+set -x TERMINAL "alacritty"
 set -x VIDEO "mpv"
 set -x IMAGE "feh"
 set -x OPENER "handlr open"
@@ -112,12 +112,6 @@ if status is-interactive
 # To not shoot my self in the leg
     alias rm="echo -e Use the \`del\` command, unable to delete: "
     alias del="trash-put"
-
-# Kitty's Kittens
-    if [ $TERM = "xterm-kitty" ]
-        alias ssh="kitty +kitten ssh"
-        alias icat="kitty +kitten icat"
-    end
 
 # Drag to and from Aliases
     alias dragto="dragon-drop"

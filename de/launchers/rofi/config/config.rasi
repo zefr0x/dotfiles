@@ -1,7 +1,7 @@
 configuration {
     modi: "window,filebrowser,drun";
     show-icons: true;
-    terminal: "kitty";
+    terminal: "alacritty";
     icon-theme: "Papirus";
     drun-match-fields: "name,generic,exec,categories,keywords";
     drun-show-actions: false;

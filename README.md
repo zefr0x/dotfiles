@@ -23,7 +23,7 @@ bombadil link -p DE_i3
 <summary>Dependencies</summary>
 
 ### GUI Applications
-- [Kitty](https://sw.kovidgoyal.net/kitty/)
+- [Alacritty](https://alacritty.org/)
 - [SQliteBrowser](https://sqlitebrowser.org/)
 - [D Spy](https://apps.gnome.org/app/org.gnome.dspy/)
 - [ghostwriter](https://ghostwriter.kde.org/)

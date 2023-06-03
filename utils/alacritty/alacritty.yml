@@ -1,0 +1,290 @@
+env:
+  TERM: alacritty
+
+window:
+  decorations: none
+
+  title: Alacritty
+
+  dynamic_title: true
+
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+  decorations_theme_variant: None
+
+  resize_increments: false
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    family: JetBrainsMono NF
+    style: Medium
+  bold:
+    family: JetBrainsMono NF
+    style: Bold
+  italic:
+    family: JetBrainsMono NF
+    style: Medium Italic
+  bold_italic:
+    family: JetBrainsMono NF
+    style: Bold Italic
+
+  size: 16.0
+
+  builtin_box_drawing: true
+
+draw_bold_text_with_bright_colors: true
+
+colors:
+  primary:
+   background: '#000000'
+   foreground: '#b3b1ad'
+
+  dim_foreground: '#828482'
+  bright_foreground: '#eaeaea'
+
+  cursor:
+   text: '#000000'
+   cursor: '#8b949e'
+
+  vi_mode_cursor:
+   text: CellBackground
+   cursor: CellForeground
+
+  search:
+    matches:
+     foreground: '#000000'
+     background: '#ffffff'
+    focused_match:
+     foreground: '#ffffff'
+     background: '#000000'
+
+  hints:
+    start:
+     foreground: '#1d1f21'
+     background: '#e9ff5e'
+
+    end:
+     foreground: '#e9ff5e'
+     background: '#1d1f21'
+
+  line_indicator:
+   foreground: None
+   background: None
+
+  footer_bar:
+   background: '#c5c8c6'
+   foreground: '#1d1f21'
+
+  selection:
+   text: '#ffffe0'
+   background: '#161b22'
+
+  normal:
+   black:   '#000000'
+   red:     '#cc0403'
+   green:   '#19cb00'
+   yellow:  '#cecb00'
+   blue:    '#0d73cc'
+   magenta: '#cb1ed1'
+   cyan:    '#0dcdcd'
+   white:   '#dddddd'
+
+  bright:
+   black:   '#6e7681'
+   red:     '#f2201f'
+   green:   '#23fd00'
+   yellow:  '#fffd00'
+   blue:    '#1a8fff'
+   magenta: '#fd28ff'
+   cyan:    '#14ffff'
+   white:   '#ffffff'
+
+  dim:
+   black:   '#131415'
+   red:     '#864343'
+   green:   '#777c44'
+   yellow:  '#9e824c'
+   blue:    '#556a7d'
+   magenta: '#75617b'
+   cyan:    '#5b7d78'
+   white:   '#828482'
+
+  transparent_background_colors: false
+
+bell:
+  animation: EaseOut
+  duration: 300
+  color: '#ffffff'
+
+  # Show notification.
+  command:
+    program: "dunstify"
+    args: [ "Alacritty Bell" ]
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  save_to_clipboard: false
+
+cursor:
+  style:
+    shape: Beam
+    blinking: Off
+
+  vi_mode_style:
+    shape: Block
+
+  unfocused_hollow: true
+
+live_config_reload: false
+
+shell:
+ program: /bin/fish
+
+working_directory: None
+
+ipc_socket: false
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+
+  hide_when_typing: false
+
+hints:
+  # Keys used for the hint labels.
+  alphabet: "jfkdls;ahgurieowpq"
+
+  enabled:
+  - regex: "(magnet:|mailto:|https:|http:|file:)\
+            [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+    hyperlinks: true
+    command:
+      program: "handlr"
+      args: [ "open" ]
+    post_processing: true
+    mouse:
+      enabled: true
+      mods: None
+    binding:
+      key: U
+      mods: Control|Shift
+
+mouse_bindings:
+ - { mouse: Right,                 action: ExpandSelection }
+ - { mouse: Right,  mods: Control, action: ExpandSelection }
+ - { mouse: Middle, mode: ~Vi,     action: PasteSelection  }
+
+key_bindings:
+  # New window from the current instance
+  - { key: T,   mods: Control|Shift, action: CreateNewWindow }
+  # Quit alacritty
+  - { key: W,   mods: Control|Shift, action: Quit }
+
+  - { key: L,         mods: Control,                    action: ClearLogNotice }
+  - { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"          }
+  - { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp   }
+  - { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown }
+  - { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop    }
+  - { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
+
+  # TODO:
+  #   - ClearHistory
+  #       Remove the terminal's scrollback history.
+  #   - SpawnNewInstance
+  #       Spawn a new instance of Alacritty.
+
+  # Search Mode
+  - { key: Return,                mode: Search|Vi,  action: SearchConfirm         }
+  - { key: Escape,                mode: Search,     action: SearchCancel          }
+  - { key: C,      mods: Control, mode: Search,     action: SearchCancel          }
+  - { key: U,      mods: Control, mode: Search,     action: SearchClear           }
+  - { key: W,      mods: Control, mode: Search,     action: SearchDeleteWord      }
+  - { key: P,      mods: Control, mode: Search,     action: SearchHistoryPrevious }
+  - { key: N,      mods: Control, mode: Search,     action: SearchHistoryNext     }
+  - { key: Up,                    mode: Search,     action: SearchHistoryPrevious }
+  - { key: Down,                  mode: Search,     action: SearchHistoryNext     }
+  - { key: Return,                mode: Search|~Vi, action: SearchFocusNext       }
+  - { key: Return, mods: Shift,   mode: Search|~Vi, action: SearchFocusPrevious   }
+
+  # (Windows, Linux, and BSD only)
+  - { key: V,              mods: Control|Shift, mode: ~Vi,        action: Paste            }
+  - { key: C,              mods: Control|Shift,                   action: Copy             }
+  - { key: F,              mods: Control|Shift, mode: ~Search,    action: SearchForward    }
+  - { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }
+  - { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
+  - { key: Insert,         mods: Shift,                           action: PasteSelection   }
+  - { key: Key0,           mods: Control,                         action: ResetFontSize    }
+  - { key: Equals,         mods: Control,                         action: IncreaseFontSize }
+  - { key: Plus,           mods: Control,                         action: IncreaseFontSize }
+  - { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
+  - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
+  - { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
+    # TODO:
+  #   - CopySelection
+  #       Copy from the selection buffer.
+
+  # Vi Mode
+  - { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
+  - { key: Space,  mods: Shift|Control, mode: Vi|~Search, action: ScrollToBottom          }
+  - { key: Escape,                      mode: Vi|~Search, action: ClearSelection          }
+  - { key: I,                           mode: Vi|~Search, action: ToggleViMode            }
+  - { key: I,                           mode: Vi|~Search, action: ScrollToBottom          }
+  - { key: C,      mods: Control,       mode: Vi|~Search, action: ToggleViMode            }
+  - { key: Y,      mods: Control,       mode: Vi|~Search, action: ScrollLineUp            }
+  - { key: E,      mods: Control,       mode: Vi|~Search, action: ScrollLineDown          }
+  - { key: G,                           mode: Vi|~Search, action: ScrollToTop             }
+  - { key: G,      mods: Shift,         mode: Vi|~Search, action: ScrollToBottom          }
+  - { key: B,      mods: Control,       mode: Vi|~Search, action: ScrollPageUp            }
+  - { key: F,      mods: Control,       mode: Vi|~Search, action: ScrollPageDown          }
+  - { key: U,      mods: Control,       mode: Vi|~Search, action: ScrollHalfPageUp        }
+  - { key: D,      mods: Control,       mode: Vi|~Search, action: ScrollHalfPageDown      }
+  - { key: Y,                           mode: Vi|~Search, action: Copy                    }
+  - { key: Y,                           mode: Vi|~Search, action: ClearSelection          }
+  - { key: Copy,                        mode: Vi|~Search, action: ClearSelection          }
+  - { key: V,                           mode: Vi|~Search, action: ToggleNormalSelection   }
+  - { key: V,      mods: Shift,         mode: Vi|~Search, action: ToggleLineSelection     }
+  - { key: V,      mods: Control,       mode: Vi|~Search, action: ToggleBlockSelection    }
+  - { key: V,      mods: Alt,           mode: Vi|~Search, action: ToggleSemanticSelection }
+  - { key: Return,                      mode: Vi|~Search, action: Open                    }
+  - { key: Z,                           mode: Vi|~Search, action: CenterAroundViCursor    }
+  - { key: K,                           mode: Vi|~Search, action: Up                      }
+  - { key: J,                           mode: Vi|~Search, action: Down                    }
+  - { key: H,                           mode: Vi|~Search, action: Left                    }
+  - { key: L,                           mode: Vi|~Search, action: Right                   }
+  - { key: Up,                          mode: Vi|~Search, action: Up                      }
+  - { key: Down,                        mode: Vi|~Search, action: Down                    }
+  - { key: Left,                        mode: Vi|~Search, action: Left                    }
+  - { key: Right,                       mode: Vi|~Search, action: Right                   }
+  - { key: Key0,                        mode: Vi|~Search, action: First                   }
+  - { key: Key4,   mods: Shift,         mode: Vi|~Search, action: Last                    }
+  - { key: Key6,   mods: Shift,         mode: Vi|~Search, action: FirstOccupied           }
+  - { key: H,      mods: Shift,         mode: Vi|~Search, action: High                    }
+  - { key: M,      mods: Shift,         mode: Vi|~Search, action: Middle                  }
+  - { key: L,      mods: Shift,         mode: Vi|~Search, action: Low                     }
+  - { key: B,                           mode: Vi|~Search, action: SemanticLeft            }
+  - { key: W,                           mode: Vi|~Search, action: SemanticRight           }
+  - { key: E,                           mode: Vi|~Search, action: SemanticRightEnd        }
+  - { key: B,      mods: Shift,         mode: Vi|~Search, action: WordLeft                }
+  - { key: W,      mods: Shift,         mode: Vi|~Search, action: WordRight               }
+  - { key: E,      mods: Shift,         mode: Vi|~Search, action: WordRightEnd            }
+  - { key: Key5,   mods: Shift,         mode: Vi|~Search, action: Bracket                 }
+  - { key: Slash,                       mode: Vi|~Search, action: SearchForward           }
+  - { key: Slash,  mods: Shift,         mode: Vi|~Search, action: SearchBackward          }
+  - { key: N,                           mode: Vi|~Search, action: SearchNext              }
+  - { key: N,      mods: Shift,         mode: Vi|~Search, action: SearchPrevious          }
+  # TODO:
+  #   - SemanticLeftEnd
+  #       End of the previous semantically separated word.
+  #   - WordLeftEnd
+  #       End of the previous whitespace separated word.
+  #   - SearchStart
+  #       Start of the match to the left of the vi mode cursor.
+  #   - SearchEnd
+  #       End of the match to the right of the vi mode cursor.

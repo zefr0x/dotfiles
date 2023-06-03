@@ -15,7 +15,7 @@ arch_groups = {
     "texlive-most",
 }
 arch_extra = {
-    "kitty",  # Terminal emulator
+    "alacritty",  # Terminal emulator
     "sqlitebrowser",
     "ghostwriter",  # For writing in Arabic smoothly
     "mpv",  # Media player
