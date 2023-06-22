@@ -111,6 +111,7 @@ arch_extra = {
     "noto-fonts",
     "noto-fonts-cjk",
     "noto-fonts-extra",
+    "cantarell-fonts",
     "adwaita-icon-theme",
     "libadwaita",
     "git",
