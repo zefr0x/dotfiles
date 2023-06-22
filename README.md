@@ -235,9 +235,8 @@ rustup component add rust-analyzer
 > **Note** It includes most the tools needed for JS/TS.
 
 #### LaTex
-- [texlive-most](https://archlinux.org/groups/x86_64/texlive-most/)
-- [texlive-langextra](https://archlinux.org/packages/extra/any/texlive-langextra/)
-- [texlive-fontsextra](https://archlinux.org/packages/extra/any/texlive-fontsextra/)
+- [texlive](https://archlinux.org/groups/x86_64/texlive/)
+- [texlive-langother](https://archlinux.org/packages/extra/any/texlive-langother/)
 
 #### Melody
 - [melody](https://github.com/yoav-lavi/melody)

@@ -12,7 +12,7 @@ is_laptop = False
 # Arch Linux
 arch_groups = {
     "base-devel",
-    "texlive-most",
+    "texlive",
 }
 arch_extra = {
     "alacritty",  # Terminal emulator
@@ -124,8 +124,7 @@ arch_extra = {
     "shfmt",
     "rustup",
     "clang",
-    "texlive-langextra",
-    "texlive-fontsextra",
+    "texlive-langother",
 }
 arch_core = {
     "dash",
