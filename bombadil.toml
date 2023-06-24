@@ -24,14 +24,14 @@ shared_env = { source = "shared_environment_vars.sh", target = ".shared_shell.sh
 
 
 [profiles.gtk.dots]
-gtk3 = { source = "de/gtk/gtk-3.0/settings.ini", target = ".config/gtk-3.0/settings.ini" }
-gtk4 = { source = "de/gtk/gtk-4.0/settings.ini", target = ".config/gtk-4.0/settings.ini" }
+gtk3 = { source = "de/gui/gtk/gtk-3.0/settings.ini", target = ".config/gtk-3.0/settings.ini" }
+gtk4 = { source = "de/gui/gtk/gtk-4.0/settings.ini", target = ".config/gtk-4.0/settings.ini" }
 
 
 [profiles.qt.dots]
-qt5 = { source = "de/qt/qt5ct.conf", target = ".config/qt5ct/qt5ct.conf" }
-qt6 = { source = "de/qt/qt6ct.conf", target = ".config/qt6ct/qt6ct.conf" }
-kvantum = { source = "de/qt/Kvantum", target = ".config/Kvantum" }
+qt5 = { source = "de/gui/qt/qt5ct.conf", target = ".config/qt5ct/qt5ct.conf" }
+qt6 = { source = "de/gui/qt/qt6ct.conf", target = ".config/qt6ct/qt6ct.conf" }
+kvantum = { source = "de/gui/qt/Kvantum", target = ".config/Kvantum" }
 
 
 [profiles.DE_generic.dots]
@@ -61,9 +61,9 @@ polybar = { source = "de/x11_i3/polybar", target = ".config/polybar" }
 reshift_config = { source = "de/x11_i3/redshift.conf", target = ".config/redshift/redshift.conf" }
 xresources = { source = "de/x11_i3/Xresources", target = ".Xresources" }
 xinitrc = { source = "de/x11_i3/xinitrc", target = ".xinitrc" }
-flameshot = { source = "tools/flameshot.ini", target = ".config/flameshot/flameshot.ini" }
+flameshot = { source = "de/x11_i3/flameshot.ini", target = ".config/flameshot/flameshot.ini" }
 
-dunst = { source = "de/notifications_manager/dunstrc", target = ".config/dunst/dunstrc" }
+dunst = { source = "de/x11_i3/dunstrc", target = ".config/dunst/dunstrc" }
 
 
 [profiles.DE_hyprland]
@@ -71,8 +71,8 @@ extra_profiles = [ "DE_generic", "gtk", "qt" ]
 posthooks = [ "hyprctl reload", "swaync-client -R", "swaync-client -rs" ]
 
 [profiles.DE_hyprland.dots]
-hyprland = { source = "de/wayland_hyprland/hypr", target = ".config/hypr" }
-waybar = { source = "de/wayland_hyprland/waybar", target = ".config/waybar" }
-swaync = { source = "de/wayland_hyprland/swaync", target = ".config/swaync" }
-swaylock = { source = "de/wayland_hyprland/swaylock_config", target = ".config/swaylock/config" }
-swappy = { source = "de/wayland_hyprland/swappy_config", target = ".config/swappy/config" }
+hyprland = { source = "de/wayland/hyprland", target = ".config/hypr" }
+waybar = { source = "de/wayland/waybar", target = ".config/waybar" }
+swaync = { source = "de/wayland/swaync", target = ".config/swaync" }
+swaylock = { source = "de/wayland/swaylock_config", target = ".config/swaylock/config" }
+swappy = { source = "de/wayland/swappy_config", target = ".config/swappy/config" }
