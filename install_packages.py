@@ -19,6 +19,7 @@ arch_extra = {
     "sqlitebrowser",
     "ghostwriter",  # For writing in Arabic smoothly
     "mpv",  # Media player
+    "mpv-mpris",
     "zathura",  # Document Viewer
     "zathura-pdf-mupdf",
     "i3-gaps",  # Window Manager
@@ -32,16 +33,24 @@ arch_extra = {
     "brightnessctl",
     "picom",  # X11 Compositor
     "redshift",  # X11 Adjust Screen Temperature
-    "rofi",  # Launcher
     "rofi-calc",
     "rofi-emoji",
     "dunst",
     "clipmenu",
-    "lxsession-gtk3",
+    "polkit-gnome",
     "flameshot",  # Screenshot Software
     "greetd",
     "greetd-tuigreet",
     "rsibreak",
+    "hyprland",
+    "xdg-desktop-portal-hyprland",
+    "xdg-desktop-portal-gtk",
+    "waybar",
+    "swayidle",
+    "swaylock",
+    "swappy",  # Snapshot and Editor Tool
+    "grim",  # Screenshot utility
+    "slurp",  # Select a region in a Wayland
     "ttf-jetbrains-mono-nerd",
     "ttf-ubuntu-nerd",
     "papirus-icon-theme",
@@ -52,7 +61,6 @@ arch_extra = {
     "python-livereload",
     # "wl-clipboard",  # Access clipboard for wayland
     "trash-cli",
-    "pulsemixer",  # TUI Audio Mixer
     "onefetch",  # Git Repo Summary
     "tokei",  # Statistics about your code
     "nvtop",  # GPUs Monitoring
@@ -92,6 +100,7 @@ arch_extra = {
     "deno",
     "d-spy",
     "feh",  # Image viewer
+    "swayimg",  # Image viewer
     "qalculate-qt",
     "thunar",  # File Manager
     "gvfs",
@@ -131,9 +140,10 @@ arch_core = {
     "python",
 }
 arch_user_repo = {
-    "dialect",  # Translating Text
-    "autotiling",
+    "rofi-lbonn-wayland",  # Launcher
     "foxmarks",
+    "autotiling",
+    "swaync",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
     "dragon-drop",  # CLI-GUI drag-and-drop source/target
     "fish-tide-git",
@@ -149,6 +159,10 @@ arch_user_repo = {
     "python-flake8-bugbear",
     "melody",
 }
+flathub = {
+    "app.drey.Dialect",  # Translating Text
+    "com.github.wwmm.easyeffects",  # Audio Manipulation
+}
 
 if is_laptop:
     arch_user_repo.add("slimbookbattery")  # Interface for TLP
@@ -159,10 +173,11 @@ pacman_install = f"sudo pacman -S --needed {' '.join(arch_core)} {' '.join(arch_
 
 paru_install = f"paru -Sa --needed {' '.join(arch_user_repo)}"
 
-print(pacman_install)
-print()
-print(paru_install)
+flathub_install = f"flatpack install flathub {' '.join(flathub)}"
+
+print(pacman_install, paru_install, flathub_install, sep="\n\n")
 
 # TODO: Install paru if not existing.
+# TODO: Install flatpak if not existing.
 # TODO: Auto install pacman and paru packages.
 # TODO: Autorun other commands to setup things.

@@ -28,7 +28,10 @@ bombadil link -p DE_i3
 - [D Spy](https://apps.gnome.org/app/org.gnome.dspy/)
 - [ghostwriter](https://ghostwriter.kde.org/)
 - [mpv](https://mpv.io/)
+    - [mpv-mpris](https://github.com/hoyon/mpv-mpris)
 - [feh](https://feh.finalrewind.org/)
+- [swayimg](https://github.com/artemsen/swayimg)
+- [Easy Effects](https://github.com/wwmm/easyeffects)
 - [Qalculate! Qt](https://qalculate.github.io/)
 - [zathura](https://pwmt.org/projects/zathura/)
     - [zathura-pdf-mupdf](https://pwmt.org/projects/zathura-pdf-mupdf/)
@@ -46,6 +49,22 @@ bombadil link -p DE_i3
 
 
 ### Desktop Environment
+
+- [rofi](https://github.com/lbonn/rofi)
+    - [rofi-calc](https://github.com/svenstaro/rofi-calc)
+    - [rofi-emoji](https://github.com/Mange/rofi-emoji)
+    - [foxmarks](https://github.com/zer0-x/foxmarks)
+- [dunst](https://dunst-project.org/)
+- [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
+- [kwallet](https://archlinux.org/packages/extra/x86_64/kwallet/)
+    - [kwallet-pam](https://archlinux.org/packages/extra/x86_64/kwallet-pam/)
+- [PolKit Gnome](https://gitlab.gnome.org/Archive/policykit-gnome)
+- [greetd](https://git.sr.ht/~kennylevinsen/greetd)
+    - [tuigreet](https://github.com/apognu/tuigreet)
+- [brightnessctl](https://github.com/Hummer12007/brightnessctl)
+
+#### X11
+
 - [i3](https://github.com/i3/i3)
     - [autotiling](https://github.com/nwg-piotr/autotiling)
     - [xorg-setxkbmap](https://archlinux.org/packages/extra/x86_64/xorg-setxkbmap/)
@@ -59,23 +78,23 @@ bombadil link -p DE_i3
     - [pamixer](https://github.com/cdemoulins/pamixer)
     - [lsof](https://github.com/lsof-org/lsof)
     - [cbatticon](https://github.com/valr/cbatticon)
-    - [brightnessctl](https://github.com/Hummer12007/brightnessctl)
 - [picom](https://github.com/yshui/picom)
 - [redshift](http://jonls.dk/redshift/)
-- [rofi](https://github.com/DaveDavenport/rofi)
-    - [rofi-calc](https://github.com/svenstaro/rofi-calc)
-    - [rofi-emoji](https://github.com/Mange/rofi-emoji)
-    - [foxmarks](https://github.com/zer0-x/foxmarks)
-- [dunst](https://dunst-project.org/)
 - [clipmenu](https://github.com/cdown/clipmenu)
-- [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
-- [kwallet](https://archlinux.org/packages/extra/x86_64/kwallet/)
-    - [kwallet-pam](https://archlinux.org/packages/extra/x86_64/kwallet-pam/)
-- [lxsession-gtk3](https://www.lxde.org/)
 - [flameshot](https://github.com/flameshot-org/flameshot)
-- [greetd](https://git.sr.ht/~kennylevinsen/greetd)
-    - [tuigreet](https://github.com/apognu/tuigreet)
 - [RSIBreak](https://apps.kde.org/rsibreak/)
+
+#### Wayland
+- [Hyprland](https://github.com/hyprwm/Hyprland)
+    - [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland)
+    - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk)
+    - [Waybar](https://github.com/Alexays/Waybar)
+    - [swayidle](https://github.com/swaywm/swayidle)
+    - [swaylock](https://github.com/swaywm/swaylock)
+- [swappy](https://github.com/jtheoof/swappy)
+    - [grim](https://sr.ht/~emersion/grim/)
+    - [slurp](https://github.com/emersion/slurp)
+- [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
 
 You need to enable `greetd`
 ```
@@ -88,7 +107,7 @@ You need to config `greetd` by editing `/etc/greetd/config.toml` to be
 vt = 1
 
 [default_session]
-command = "tuigreet --remember --remember-user-session --user-menu --time --cmd startx"
+command = "tuigreet --remember --remember-user-session --user-menu --time --cmd Hyprland"
 user = "greeter"
 ```
 
@@ -149,7 +168,6 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [fzf](https://github.com/junegunn/fzf)
 - [xclip](https://github.com/astrand/xclip)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
-- [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
 - [onefetch](https://github.com/o2sh/onefetch)
 - [nvtop](https://github.com/Syllo/nvtop)
 - [htop](https://htop.dev/)

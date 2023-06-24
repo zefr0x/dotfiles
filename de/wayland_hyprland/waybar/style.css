@@ -1,0 +1,118 @@
+window#waybar {
+  font-family: Ubuntu Nerd Font;
+  font-weight: 700;
+  font-size: 15px;
+
+  background-color: #000000;
+  border-bottom: 1px solid rgba(90, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+#submap,
+#workspaces,
+#window,
+#idle_inhibitor,
+#clock,
+#language,
+#network,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#wireplumber,
+#pulseaudio,
+#battery,
+#custom-notification,
+#tray {
+  margin: 0 7px;
+}
+
+#workspaces button {
+  padding: 0 3px;
+  background-color: transparent;
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+#workspaces button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px rgba(150, 0, 0, 0.7);
+}
+
+#workspaces button.active {
+  box-shadow: inset 0 -3px #960000;
+}
+
+#workspaces button.urgent {
+  background-color: #960000;
+}
+
+#idle_inhibitor {
+  color: gray;
+  padding: 0px 5px;
+  box-shadow: inset 0 -2px #960000;
+  min-width: 16px;
+}
+
+#idle_inhibitor.activated {
+  color: #ffffff;
+  background-color: #960000;
+}
+
+#language {
+  padding: 0px 5px;
+  min-width: 16px;
+  box-shadow: inset 0 -2px #960000;
+}
+
+#network.disconnected {
+  background-color: #e5a50a;
+}
+
+#temperature.critical {
+  color: #e01b24;
+}
+
+#wireplumber.muted {
+  color: #e5a50a;
+}
+
+#pulseaudio.muted {
+  color: #e5a50a;
+}
+
+#pulseaudio.source-muted {
+  color: #e5a50a;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #2ec27e;
+}
+
+@keyframes blink {
+  to {
+    color: #ffffff;
+  }
+}
+
+#battery.critical:not(.charging) {
+  color: #e01b24;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #960000;
+}

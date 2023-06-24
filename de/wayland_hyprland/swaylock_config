@@ -1,0 +1,8 @@
+show-failed-attempts
+daemonize
+show-keyboard-layout
+indicator-caps-lock
+color=000000
+font=pango:Cantarell
+font-size=14
+indicator-idle-visible

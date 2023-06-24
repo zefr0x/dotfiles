@@ -1,0 +1,224 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "modules-left": [
+        "hyprland/submap",
+        "wlr/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "idle_inhibitor",
+        "clock",
+        "hyprland/language"
+        // TODO: Show caps-lock indecator.
+    ],
+    "modules-right": [
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "backlight",
+        // "wireplumber",
+        "pulseaudio",
+        "battery",
+        "custom/notification",
+        "tray"
+    ],
+    // Modules configuration
+    "hyprland/submap": {
+        "format": "{}",
+        "max-length": 8,
+        "tooltip": false
+    },
+    "wlr/workspaces": {
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "urgent": "",
+            "default": "",
+            "focused": ""
+        },
+        "sort-by-name": false,
+        "sort-by-coordinates": true,
+        "all-outputs": true,
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-click": "activate"
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "separate-outputs": true
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "clock": {
+        "interval": 1,
+        "format": "  {:%H:%M:%S / %A %b %Y-%m-%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            },
+            "actions": {
+                "on-click-right": "mode",
+                "on-click-forward": "tz_up",
+                "on-click-backward": "tz_down",
+                "on-scroll-up": "shift_up",
+                "on-scroll-down": "shift_down"
+            }
+        }
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "EN",
+        "format-ar": "AR"
+    },
+    "network": {
+        "interval": 1,
+        "format-wifi": "  ({signalStrength}%) {bandwidthDownBytes}   {bandwidthUpBytes} ",
+        "format-ethernet": "󰈁 {bandwidthDownBytes}   {bandwidthUpBytes} ",
+        "tooltip-format": "{ipaddr} in {essid}",
+        "format-linked": "{ifname} ",
+        "format-disconnected": "Disconnected ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "cpu": {
+        "format": "{usage}% "
+    },
+    "memory": {
+        "format": "{percentage}% "
+    },
+    "temperature": {
+        "interval": 3,
+        // FIX: Make it work by default.
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input",
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-critical": "{temperatureC}°C {icon}",
+        "tooltip": false,
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    // TODO: Wait for more features in the WirePlumber module.
+    // "wireplumber": {
+    //     "format": "{volume}% {icon}",
+    //     "format-muted": "󰝟",
+    //     "format-icons": [
+    //         "",
+    //         "",
+    //         ""
+    //     ],
+    //     "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 3%+",
+    //     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-",
+    //     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    //     "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    //     "on-click-middle": "helvum"
+    // },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "󰝟 {icon} {format_source}",
+        "format-muted": "󰝟 {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": ["", "", ""],
+            "headphone": "󰋋",
+            // "speaker": "",
+            // "hdmi": "",
+            "headset": "󰋎",
+            // "hands-free": "",
+            "portable": "",
+            "car": "",
+            // "hifi": "",
+            "phone": ""
+        },
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ],
+        "scroll-step": 3,
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 3%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-click-middle": "helvum"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{power} {icon}",
+        "tooltip-format": "{time}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "custom/notification": {
+        "tooltip-format": "{}",
+        "format": "{icon}",
+        "format-icons": {
+          "notification": "<span foreground='red'><sup></sup></span>",
+          "none": "",
+          "dnd-notification": "<span foreground='red'><sup></sup></span>",
+          "dnd-none": "",
+          "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+          "inhibited-none": "",
+          "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+          "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+  },
+    "tray": {
+        "icon-size": 15,
+        "show-passive-items": true,
+        "spacing": 10
+    }
+}
+
+// vim: set ft=jsonc :

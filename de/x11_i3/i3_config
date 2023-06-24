@@ -293,7 +293,7 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id /usr/lib/pam_kwallet_init
 
 # polkit authentication agents
-exec --no-startup-id lxpolkit
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Check if there was any battery and start battery system tray icon.
 exec --no-startup-id "if [[ $(cbatticon -p | grep type) ]]; then cbatticon; fi"
