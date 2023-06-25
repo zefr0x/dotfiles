@@ -115,8 +115,7 @@ arch_extra = {
     "xorg-xset",  # X11 Preference
     "lsof",  # Check for /dev/video* usage with (fuser)
     "network-manager-applet",
-    "kwallet",
-    "kwallet-pam",
+    "gnome-keyring",
     "noto-fonts",
     "noto-fonts-cjk",
     "noto-fonts-extra",

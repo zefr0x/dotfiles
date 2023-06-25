@@ -44,5 +44,3 @@ void main() {
 
     gl_FragColor = outCol;
 }
-
-

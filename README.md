@@ -56,8 +56,7 @@ bombadil link -p DE_i3
     - [foxmarks](https://github.com/zer0-x/foxmarks)
 - [dunst](https://dunst-project.org/)
 - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
-- [kwallet](https://archlinux.org/packages/extra/x86_64/kwallet/)
-    - [kwallet-pam](https://archlinux.org/packages/extra/x86_64/kwallet-pam/)
+- [gnome-keyring](https://wiki.gnome.org/Projects/GnomeKeyring)
 - [PolKit Gnome](https://gitlab.gnome.org/Archive/policykit-gnome)
 - [greetd](https://git.sr.ht/~kennylevinsen/greetd)
     - [tuigreet](https://github.com/apognu/tuigreet)
@@ -111,10 +110,14 @@ command = "tuigreet --remember --remember-user-session --user-menu --time --cmd 
 user = "greeter"
 ```
 
-To integrate kwallet add those lines to `/etc/pam.d/greetd`
+To integrate gnome-keyring add those lines to `/etc/pam.d/greetd` and `/etc/pam.d/login`
 ```
-auth       optional     pam_kwallet5.so
-session    optional     pam_kwallet5.so auto_start force_run
+auth       optional     pam_gnome_keyring.so
+session    optional     pam_gnome_keyring.so auto_start
+```
+and add this line to `/etc/pam.d/passwd`
+```
+password	optional	pam_gnome_keyring.so
 ```
 
 

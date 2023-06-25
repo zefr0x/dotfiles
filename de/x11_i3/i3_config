@@ -290,7 +290,7 @@ exec_always --no-startup-id picom
 exec --no-startup-id redshift-gtk
 
 # Open KWallet PAM Socket Connection
-exec --no-startup-id /usr/lib/pam_kwallet_init
+exec --no-startup-id "gnome-keyring-daemon --start --components=secrets"
 
 # polkit authentication agents
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
