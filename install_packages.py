@@ -29,7 +29,6 @@ arch_extra = {
     "numlockx",  # X11 Turn on Numlock
     "dex",  # XDG Auto Start / DesktopEntry
     "polybar",  # Status Bar / Panel
-    "pamixer",  # CLI Audio Mixer
     "brightnessctl",
     "picom",  # X11 Compositor
     "redshift",  # X11 Adjust Screen Temperature

@@ -119,12 +119,12 @@ bindsym $mod+Shift+r restart
 
 # ------- Other keybindings -------
 
-# Use pamixer to adjust volume and mute and unmute in PipeWire.
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --increase 5
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer --decrease 5
-bindsym XF86AudioMute exec --no-startup-id pamixer --toggle-mute
-# TODO: Apply to every source and not just the default.
-bindsym XF86AudioMicMute exec --no-startup-id pamixer --default-source --toggle-mute
+# Use WirePlumber to adjust volume and mute and unmute in PipeWire.
+bindsym XF86AudioRaiseVolume exec --no-startup-id wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 3%+
+bindsym XF86AudioLowerVolume exec --no-startup-id wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-
+bindsym XF86AudioMute exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+# FIX: Apply to every source and not just the default.
+bindsym XF86AudioMicMute exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
 # start a terminal
 bindsym $mod+Tab exec alacritty

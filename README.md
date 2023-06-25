@@ -74,7 +74,6 @@ bombadil link -p DE_i3
     - [numlockx](https://github.com/rg3/numlockx)
     - [dex](https://github.com/jceb/dex)
 - [polybar](https://github.com/polybar/polybar)
-    - [pamixer](https://github.com/cdemoulins/pamixer)
     - [lsof](https://github.com/lsof-org/lsof)
     - [cbatticon](https://github.com/valr/cbatticon)
 - [picom](https://github.com/yshui/picom)
