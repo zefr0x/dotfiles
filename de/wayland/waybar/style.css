@@ -14,6 +14,8 @@ window#waybar {
 #idle_inhibitor,
 #clock,
 #language,
+#custom-webcam_indecator,
+#custom-microphone_indecator,
 #network,
 #cpu,
 #memory,
@@ -68,6 +70,23 @@ window#waybar {
   box-shadow: inset 0 -2px #960000;
 }
 
+@keyframes blink {
+  to {
+    color: #ffffff;
+  }
+}
+
+#custom-webcam_indecator,
+#custom-microphone_indecator
+{
+  color: #e01b24;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 #network.disconnected {
   background-color: #e5a50a;
 }
@@ -91,12 +110,6 @@ window#waybar {
 #battery.charging,
 #battery.plugged {
   color: #2ec27e;
-}
-
-@keyframes blink {
-  to {
-    color: #ffffff;
-  }
 }
 
 #battery.critical:not(.charging) {
