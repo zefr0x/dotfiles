@@ -360,14 +360,4 @@ return require("packer").startup(function(use)
 			require("plugin.neoscroll")
 		end,
 	})
-
-	-- Help managing crates.io dependencies
-	use({
-		"saecki/crates.nvim",
-		event = "BufReadPost Cargo.toml",
-		requires = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("plugin.crates_config")
-		end,
-	})
 end)
