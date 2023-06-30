@@ -12,7 +12,7 @@ else
 fi
 
 if [ "$selection_text" ]; then
-	dialect --text "$selection_text"
+	app.drey.Dialect --text "$selection_text"
 else
 	echo >&2 "Error: No text is currently selected."
 	exit 1
