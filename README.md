@@ -87,6 +87,7 @@ bombadil link -p DE_i3
     - [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland)
     - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk)
     - [Waybar](https://github.com/Alexays/Waybar)
+    - [Hyprland Per Window Layout](https://github.com/coffebar/hyprland-per-window-layout)
     - [swayidle](https://github.com/swaywm/swayidle)
     - [swaylock](https://github.com/swaywm/swaylock)
 - [swappy](https://github.com/jtheoof/swappy)

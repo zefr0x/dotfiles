@@ -141,6 +141,7 @@ arch_user_repo = {
     "rofi-lbonn-wayland",  # Launcher
     "foxmarks",
     "autotiling",
+    "hyprland-per-window-layout",
     "swaync",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
     "dragon-drop",  # CLI-GUI drag-and-drop source/target
