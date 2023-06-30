@@ -3,29 +3,29 @@
     "position": "top",
     "height": 24,
     "modules-left": [
-        "hyprland/submap",
-        "wlr/workspaces",
-        "hyprland/window"
+        "tray",
+        "custom/notification",
+        "battery",
+        "pulseaudio",
+        // "wireplumber",
+        "backlight",
+        "temperature",
+        "memory",
+        "cpu",
+        "network"
     ],
     "modules-center": [
-        "idle_inhibitor",
-        "clock",
         "hyprland/language",
         // TODO: Show caps-lock indecator.
         "custom/webcam_indecator",
-        "custom/microphone_indecator"
+        "custom/microphone_indecator",
+        "clock",
+        "idle_inhibitor"
     ],
     "modules-right": [
-        "network",
-        "cpu",
-        "memory",
-        "temperature",
-        "backlight",
-        // "wireplumber",
-        "pulseaudio",
-        "battery",
-        "custom/notification",
-        "tray"
+        "hyprland/window",
+        "wlr/workspaces",
+        "hyprland/submap"
     ],
     // Modules configuration
     "hyprland/submap": {

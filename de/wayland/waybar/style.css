@@ -9,7 +9,6 @@ window#waybar {
 }
 
 #submap,
-#workspaces,
 #window,
 #idle_inhibitor,
 #clock,
@@ -127,5 +126,5 @@ window#waybar {
 
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
-  background-color: #960000;
+  box-shadow: inset 0 -3px #960000;
 }
