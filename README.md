@@ -229,10 +229,20 @@ After installing, you need to install the plugins for neovim by running:
 - [StyLua](https://github.com/JohnnyMorganz/StyLua) <sup>`Lua`</sup>
 - [shfmt](https://github.com/mvdan/sh) <sup>`shell`</sup>
 
+### Linkers
+- [mold](https://github.com/rui314/mold)
+
 ### Programming Languages Tools/Compilers/Interpreters
 #### Rust
 - [rustup](https://github.com/rust-lang/rustup.rs)
-- [mold](https://github.com/rui314/mold)
+    - [cargo-outdated](https://github.com/kbknapp/cargo-outdated)
+    - [cargo-bloat](https://github.com/RazrFalcon/cargo-bloat)
+    - [cargo-nextest](https://nexte.st/)
+    - [cargo-asm](https://github.com/gnzlbg/cargo-as)
+    - [cargo-depgraph](https://github.com/jplatte/cargo-depgraph)
+    - [cargo-supply-chain](https://github.com/rust-secure-code/cargo-supply-chain)
+    - [cargo-deny](https://github.com/EmbarkStudios/cargo-deny)
+    - [cargo-sort](https://github.com/DevinR528/cargo-sort)
 
 After installing it you need to run:
 ```shell
