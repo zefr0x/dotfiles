@@ -9,6 +9,7 @@ require("nvim-treesitter.configs").setup({
 		"javascript",
 		"html",
 		"css",
+		"scss",
 		"lua",
 		"bash",
 		"fish",

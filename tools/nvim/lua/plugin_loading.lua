@@ -163,6 +163,7 @@ return require("packer").startup(function(use)
 			"html",
 			"htmldjango",
 			"css",
+			"scss",
 			"lua",
 			"bash",
 			"fish",
@@ -221,7 +222,7 @@ return require("packer").startup(function(use)
 	-- Paint colors text in for #000000 or rgb(0,0,0) or ... with the real colors
 	use({
 		"NvChad/nvim-colorizer.lua",
-		ft = { "css", "lua" },
+		ft = { "css", "scss", "lua" },
 		config = function()
 			require("plugin.colorizer")
 		end,
