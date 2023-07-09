@@ -5,7 +5,11 @@ from os import environ
 if environ.get("ROFI_RETV") == "0":
     import subprocess
 
-    results = subprocess.run(["foxmarks", "bookmarks"], stdout=subprocess.PIPE).stdout.decode().splitlines()
+    results = (
+        subprocess.run(["foxmarks", "bookmarks"], stdout=subprocess.PIPE)
+        .stdout.decode()
+        .splitlines()
+    )
     for result in results:
         result_splited = result.split(";")
         try:

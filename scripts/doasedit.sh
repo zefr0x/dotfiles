@@ -48,4 +48,3 @@ for file; do
 
 	rm "$tmp" "$tmpcopy"
 done
-

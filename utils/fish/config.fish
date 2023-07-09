@@ -4,11 +4,11 @@ bass source ~/.shared_shell.sh
 
 
 # ------------- Variables --------------
-set -x EDITOR "nvim"
-set -x VISUAL "nvim"
-set -x TERMINAL "alacritty"
-set -x VIDEO "mpv"
-set -x IMAGE "feh"
+set -x EDITOR nvim
+set -x VISUAL nvim
+set -x TERMINAL alacritty
+set -x VIDEO mpv
+set -x IMAGE feh
 set -x OPENER "handlr open"
 
 
@@ -23,7 +23,7 @@ set -x LESS_TERMCAP_so (set_color --reverse F0CB02) # start standout
 set -x LESS_TERMCAP_se (set_color normal) # end standout
 
 # `less`
-set -x LESS "-R"
+set -x LESS -R
 
 # `virtualfish`
 set VIRTUALFISH_HOME "$XDG_DATA_HOME/virtualenvs"
@@ -31,11 +31,11 @@ set VIRTUALFISH_HOME "$XDG_DATA_HOME/virtualenvs"
 
 
 if status is-interactive
-# ------------ Fish Config -------------
+    # ------------ Fish Config -------------
     fish_vi_key_bindings
 
-# ------------ Fish Theme --------------
-# Syntax Highlighting
+    # ------------ Fish Theme --------------
+    # Syntax Highlighting
     set fish_color_normal normal
     set fish_color_command FF9400
     set fish_color_keyword FF9400
@@ -60,7 +60,7 @@ if status is-interactive
     set fish_color_cancel --reverse
     set fish_color_search_match bryellow --background=brblack
 
-# Pager Color
+    # Pager Color
     set fish_pager_color_progress brwhite --background=cyan
     set fish_pager_color_background
     set fish_pager_color_prefix normal --bold --underline
@@ -75,20 +75,20 @@ if status is-interactive
     set fish_pager_color_secondary_completion
     set fish_pager_color_secondary_description
 
-# `dirh`
+    # `dirh`
     set fish_color_history_current --bold
 
-# ----------- Abbreviations ------------
-    abbr -a d "doas"
-    abbr -a nv "nvim"
-    abbr -a snv "doasedit"
-    abbr -a py "python"
-    abbr -a ipy "ipython"
-    abbr -a j "just"
-    abbr -a b "br"
+    # ----------- Abbreviations ------------
+    abbr -a d doas
+    abbr -a nv nvim
+    abbr -a snv doasedit
+    abbr -a py python
+    abbr -a ipy ipython
+    abbr -a j just
+    abbr -a b br
 
-# -------------- Aliases ---------------
-# Utilities
+    # -------------- Aliases ---------------
+    # Utilities
     alias sudo="doas"
     alias doasedit="~/scripts/doasedit.sh"
     alias cp="cp -i"
@@ -100,42 +100,42 @@ if status is-interactive
     alias ll="exa -l --icons"
     alias la="exa -la --icons"
 
-# Tools
+    # Tools
     alias feh="feh --scale-down"
 
     alias topdf="libreoffice --headless --invisible --convert-to pdf"
     alias now="date +'%A %d/%m/%Y %H:%M:%S.%N (%Z) %nUnix time: %s'"
 
-# Scripts
+    # Scripts
     # ...
 
-# To not shoot my self in the leg
+    # To not shoot my self in the leg
     alias rm="echo -e Use the \`del\` command, unable to delete: "
     alias del="trash-put"
 
-# Drag to and from Aliases
+    # Drag to and from Aliases
     alias dragto="dragon-drop"
     alias dragon="dragon-drop --target --and-exit"
 
-# ------------ Shell Things ------------
-# A `cd` Command Alternative
+    # ------------ Shell Things ------------
+    # A `cd` Command Alternative
     zoxide init fish --cmd cd | source
 
-#
-function br --wraps=broot
-    set -l cmd_file (mktemp)
-    if broot --outcmd $cmd_file $argv
-        read --local --null cmd < $cmd_file
-        command rm -f $cmd_file
-        eval $cmd
-    else
-        set -l code $status
-        command rm -f $cmd_file
-        return $code
+    # The broot file browser
+    function br --wraps=broot
+        set -l cmd_file (mktemp)
+        if broot --outcmd $cmd_file $argv
+            read --local --null cmd <$cmd_file
+            command rm -f $cmd_file
+            eval $cmd
+        else
+            set -l code $status
+            command rm -f $cmd_file
+            return $code
+        end
     end
-end
 
-# Make going up a number of directories easier
+    # Make going up a number of directories easier
     function multicd
         echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
     end

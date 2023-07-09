@@ -48,7 +48,7 @@ bindsym $mod+Mod1+Down move workspace to output right
 bindsym $mod+Mod1+Up move workspace to output up
 bindsym $mod+Mod1+Right move workspace to output right
 # Move all workspaces from one screen to other.
-# TODO: 
+# TODO:
 
 # split in horizontal/vertical orientation
 bindsym $mod+w split toggle

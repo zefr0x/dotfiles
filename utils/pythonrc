@@ -15,4 +15,3 @@ def write_history():
         pass
 
 atexit.register(write_history)
-
