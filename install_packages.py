@@ -77,7 +77,7 @@ arch_extra = {
     "fish",
     "neovim",
     "ripgrep",
-    "lfs",
+    "dysk",
     "broot",
     "opendoas",
     "python-lsp-server",
@@ -123,6 +123,7 @@ arch_extra = {
     "libadwaita",
     "git",
     "libqalculate",
+    "pastel",
     "xclip",  # Access clipborad for x11
     "htop",  # System Monitoring
     "tidy",

@@ -173,6 +173,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [just](https://github.com/casey/just)
 - [python-livereload](https://github.com/lepture/python-livereload)
 - [libqalculate](https://qalculate.github.io/)
+- [pastel](https://github.com/sharkdp/pastel)
 
 ### CLI Utilities
 
@@ -182,7 +183,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [exa](https://the.exa.website/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [lfs](https://github.com/Canop/lfs)
+- [dysk](https://github.com/Canop/dysk)
 - [hexyl](https://github.com/sharkdp/hexyl)
 - [handlr](https://github.com/chmln/handlr)
 - [trash-cli](https://github.com/andreafrancia/trash-cli)
