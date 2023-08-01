@@ -71,8 +71,7 @@ arch_extra = {
     "zoxide",  # `cd` alternative
     "exa",  # `ls` alternative
     "hexyl",  # command-line hex viewer
-    "fzf",  # fuzzy finder
-    # TODO: "skim",  # fuzzy finder
+    "skim",  # fuzzy finder
     "handlr",  # Alternative to xdg-utils
     "fish",
     "neovim",
@@ -155,7 +154,6 @@ arch_user_repo = {
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
     "dragon-drop",  # CLI-GUI drag-and-drop source/target
     "fish-tide-git",
-    "fish-fzf",
     "bass-fish",
     "virtualfish",
     "nvim-packer-git",

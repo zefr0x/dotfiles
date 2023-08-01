@@ -6,6 +6,6 @@ shopt -s histappend
 
 export HISTFILE="${XDG_STATE_HOME}/bash/history"
 
-# fzf
-source /usr/share/fzf/completion.bash
-source /usr/share/fzf/key-bindings.bash
+# Fuzzy Finder
+source /usr/share/skim/completion.bash
+source /usr/share/skim/key-bindings.bash

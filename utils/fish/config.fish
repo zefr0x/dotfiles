@@ -121,6 +121,9 @@ if status is-interactive
     # A `cd` Command Alternative
     zoxide init fish --cmd cd | source
 
+    # Fuzzy Finder
+    skim_key_bindings
+
     # The broot file browser
     function br --wraps=broot
         set -l cmd_file (mktemp)

@@ -192,7 +192,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [hyperfine](https://github.com/sharkdp/hyperfine)
 - [tokei](https://github.com/XAMPPRocky/tokei)
 - [jless](https://github.com/PaulJuliusMartinez/jless)
-- [fzf](https://github.com/junegunn/fzf)
+- [skim](https://github.com/lotabout/skim)
 - [xclip](https://github.com/astrand/xclip)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
 - [onefetch](https://github.com/o2sh/onefetch)
@@ -209,7 +209,6 @@ br --set-install-state refused
 
 - [fish](https://fishshell.com/)
   - [Tide](https://github.com/IlanCosman/tide)
-  - [fzf.fish](https://github.com/PatrickF1/fzf.fish)
   - [bass](https://github.com/edc/bass)
   - [virtualfish](https://github.com/justinmayer/virtualfish)
 - [dash](https://en.wikipedia.org/wiki/Debian_Almquist_shell)
