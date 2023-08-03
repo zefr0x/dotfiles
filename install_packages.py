@@ -152,7 +152,7 @@ arch_user_repo = {
     "hyprland-per-window-layout",
     "swaync",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
-    "dragon-drop",  # CLI-GUI drag-and-drop source/target
+    "ripdrag-git",  # CLI-GUI drag-and-drop source/target
     "fish-tide-git",
     "bass-fish",
     "virtualfish",

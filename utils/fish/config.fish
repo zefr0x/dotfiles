@@ -114,8 +114,8 @@ if status is-interactive
     alias del="trash-put"
 
     # Drag to and from Aliases
-    alias dragto="dragon-drop"
-    alias dragon="dragon-drop --target --and-exit"
+    alias dragto="ripdrag"
+    alias dragon="ripdrag --target --and-exit"
 
     # ------------ Shell Things ------------
     # A `cd` Command Alternative

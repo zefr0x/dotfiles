@@ -187,7 +187,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [hexyl](https://github.com/sharkdp/hexyl)
 - [handlr](https://github.com/chmln/handlr)
 - [trash-cli](https://github.com/andreafrancia/trash-cli)
-- [dragon-drop](https://github.com/mwh/dragon)
+- [ripdrag](https://github.com/nik012003/ripdrag)
 - [broot](https://github.com/Canop/broot)
 - [hyperfine](https://github.com/sharkdp/hyperfine)
 - [tokei](https://github.com/XAMPPRocky/tokei)
