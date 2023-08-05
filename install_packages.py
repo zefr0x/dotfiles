@@ -22,25 +22,13 @@ arch_extra = {
     "mpv-mpris",
     "zathura",  # Document Viewer
     "zathura-pdf-mupdf",
-    "i3-gaps",  # Window Manager
-    "xss-lock",
-    "xsecurelock",
-    "xdotool",  # X11 Automation Tool
-    "numlockx",  # X11 Turn on Numlock
     "dex",  # XDG Auto Start / DesktopEntry
-    "polybar",  # Status Bar / Panel
     "brightnessctl",
-    "picom",  # X11 Compositor
-    "redshift",  # X11 Adjust Screen Temperature
     "rofi-calc",
     "rofi-emoji",
-    "dunst",
-    "clipmenu",
     "polkit-gnome",
-    "flameshot",  # Screenshot Software
     "greetd",
     "greetd-tuigreet",
-    "rsibreak",
     "hyprland",
     "xdg-desktop-portal-hyprland",
     "xdg-desktop-portal-gtk",
@@ -109,8 +97,6 @@ arch_extra = {
     "poppler-glib",
     "libgsf",
     # "system-config-printer",
-    "xorg-setxkbmap",  # Configure Keyboard
-    "xorg-xset",  # X11 Preference
     "lsof",  # Check for /dev/video* usage with (fuser)
     "network-manager-applet",
     "gnome-keyring",
@@ -123,7 +109,6 @@ arch_extra = {
     "git",
     "libqalculate",
     "pastel",
-    "xclip",  # Access clipborad for x11
     "htop",  # System Monitoring
     "tidy",
     "python-black",
@@ -148,7 +133,6 @@ arch_core = {
 arch_user_repo = {
     "rofi-lbonn-wayland",  # Launcher
     "foxmarks",
-    "autotiling",
     "hyprland-per-window-layout",
     "swaync",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
@@ -172,7 +156,6 @@ flathub = {
 
 if is_laptop:
     arch_user_repo.add("slimbookbattery")  # Interface for TLP
-    arch_extra.add("cbatticon")  # Battery System Tray Icon
 
 
 pacman_install = f"sudo pacman -S --needed {' '.join(arch_core)} {' '.join(arch_extra)} {' '.join(arch_groups)}"

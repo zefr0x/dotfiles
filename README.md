@@ -23,10 +23,6 @@ bombadil install .dotfiles
 
 ```
 bombadil link -p DE_hyprland
-
-# Or for i3-wm
-
-bombadil link -p DE_i3
 ```
 
 <details>
@@ -64,40 +60,21 @@ bombadil link -p DE_i3
   - [rofi-calc](https://github.com/svenstaro/rofi-calc)
   - [rofi-emoji](https://github.com/Mange/rofi-emoji)
   - [foxmarks](https://github.com/zer0-x/foxmarks)
-- [dunst](https://dunst-project.org/)
 - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 - [gnome-keyring](https://wiki.gnome.org/Projects/GnomeKeyring)
 - [PolKit Gnome](https://gitlab.gnome.org/Archive/policykit-gnome)
 - [greetd](https://git.sr.ht/~kennylevinsen/greetd)
   - [tuigreet](https://github.com/apognu/tuigreet)
 - [brightnessctl](https://github.com/Hummer12007/brightnessctl)
+- [dex](https://github.com/jceb/dex)
 
-#### X11
-
-- [i3](https://github.com/i3/i3)
-  - [autotiling](https://github.com/nwg-piotr/autotiling)
-  - [xorg-setxkbmap](https://archlinux.org/packages/extra/x86_64/xorg-setxkbmap/)
-  - [xorg-xset](https://archlinux.org/packages/extra/x86_64/xorg-xset/)
-  - [xss-lock](https://bitbucket.org/raymonad/xss-lock)
-  - [XSecureLock](https://github.com/google/xsecurelock)
-  - [xdotool](https://www.semicomplete.com/projects/xdotool/)
-  - [numlockx](https://github.com/rg3/numlockx)
-  - [dex](https://github.com/jceb/dex)
-- [polybar](https://github.com/polybar/polybar)
-  - [lsof](https://github.com/lsof-org/lsof)
-  - [cbatticon](https://github.com/valr/cbatticon)
-- [picom](https://github.com/yshui/picom)
-- [redshift](http://jonls.dk/redshift/)
-- [clipmenu](https://github.com/cdown/clipmenu)
-- [flameshot](https://github.com/flameshot-org/flameshot)
-- [RSIBreak](https://apps.kde.org/rsibreak/)
-
-#### Wayland
+#### Hyprland (Wayland)
 
 - [Hyprland](https://github.com/hyprwm/Hyprland)
   - [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland)
   - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk)
   - [Waybar](https://github.com/Alexays/Waybar)
+    - [lsof](https://github.com/lsof-org/lsof)
   - [Hyprland Per Window Layout](https://github.com/coffebar/hyprland-per-window-layout)
   - [swayidle](https://github.com/swaywm/swayidle)
   - [swaylock](https://github.com/swaywm/swaylock)
@@ -193,7 +170,6 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [tokei](https://github.com/XAMPPRocky/tokei)
 - [jless](https://github.com/PaulJuliusMartinez/jless)
 - [skim](https://github.com/lotabout/skim)
-- [xclip](https://github.com/astrand/xclip)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
 - [onefetch](https://github.com/o2sh/onefetch)
 - [nvtop](https://github.com/Syllo/nvtop)

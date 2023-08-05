@@ -50,22 +50,6 @@ icons = { source = "de/default_icons/index.theme", target = ".icons/default/inde
 feh_desktop_file = { source = "de/desktop_files/feh.desktop", target = ".local/share/applications/feh.desktop" }
 
 
-[profiles.DE_i3]
-extra_profiles = [ "DE_generic", "gtk", "qt" ]
-posthooks = [ "i3-msg reload" ]
-
-[profiles.DE_i3.dots]
-i3_config = { source = "de/x11_i3/i3_config", target = ".config/i3/config" }
-picom_config = { source = "de/x11_i3/picom.conf", target = ".config/picom/picom.conf" }
-polybar = { source = "de/x11_i3/polybar", target = ".config/polybar" }
-reshift_config = { source = "de/x11_i3/redshift.conf", target = ".config/redshift/redshift.conf" }
-xresources = { source = "de/x11_i3/Xresources", target = ".Xresources" }
-xinitrc = { source = "de/x11_i3/xinitrc", target = ".xinitrc" }
-flameshot = { source = "de/x11_i3/flameshot.ini", target = ".config/flameshot/flameshot.ini" }
-
-dunst = { source = "de/x11_i3/dunstrc", target = ".config/dunst/dunstrc" }
-
-
 [profiles.DE_hyprland]
 extra_profiles = [ "DE_generic", "gtk", "qt" ]
 posthooks = [ "hyprctl reload", "swaync-client -R", "swaync-client -rs" ]

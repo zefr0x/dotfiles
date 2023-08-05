@@ -14,7 +14,7 @@ elif [ "$ROFI_RETV" = "1" ]; then
 		loginctl lock-session
 		;;
 	*logout)
-		i3-msg exit || hyprctl dispatch exit
+		hyprctl dispatch exit
 		;;
 	*suspend)
 		systemctl suspend
