@@ -14,7 +14,9 @@ elif [ "$ROFI_RETV" = "1" ]; then
 		loginctl lock-session
 		;;
 	*logout)
-		hyprctl dispatch exit
+		if [ "$XDG_CURRENT_DESKTOP" = "Hyprland" ]; then
+			hyprctl dispatch exit
+		fi
 		;;
 	*suspend)
 		systemctl suspend
@@ -29,5 +31,4 @@ elif [ "$ROFI_RETV" = "1" ]; then
 		systemctl poweroff -i
 		;;
 	esac
-
 fi
