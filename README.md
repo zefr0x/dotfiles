@@ -158,7 +158,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [bat](https://github.com/sharkdp/bat)
 - [fd](https://github.com/sharkdp/fd)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
-- [exa](https://the.exa.website/)
+- [eza](https://github.com/eza-community/eza)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [dysk](https://github.com/Canop/dysk)
 - [hexyl](https://github.com/sharkdp/hexyl)

@@ -57,7 +57,6 @@ arch_extra = {
     "bat",
     "fd",  # `find` alternative
     "zoxide",  # `cd` alternative
-    "exa",  # `ls` alternative
     "hexyl",  # command-line hex viewer
     "skim",  # fuzzy finder
     "handlr",  # Alternative to xdg-utils
@@ -136,6 +135,7 @@ arch_user_repo = {
     "hyprland-per-window-layout",
     "swaync",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
+    "eza-git",  # `ls` alternative
     "ripdrag-git",  # CLI-GUI drag-and-drop source/target
     "fish-tide-git",
     "bass-fish",

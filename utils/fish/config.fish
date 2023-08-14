@@ -96,9 +96,9 @@ if status is-interactive
     alias free="free -m"
     alias grep="grep --colour=always"
 
-    alias ls="exa --icons"
-    alias ll="exa -l --icons"
-    alias la="exa -la --icons"
+    alias ls="eza --icons"
+    alias ll="eza -l --icons"
+    alias la="eza -la --icons"
 
     # Tools
     alias feh="feh --scale-down"
