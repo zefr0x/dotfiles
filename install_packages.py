@@ -36,7 +36,6 @@ arch_extra = {
     "swayidle",
     "swaylock",
     "swappy",  # Snapshot and Editor Tool
-    "grim",  # Screenshot utility
     "slurp",  # Select a region in a Wayland
     "ttf-jetbrains-mono-nerd",
     "ttf-ubuntu-nerd",
@@ -133,6 +132,7 @@ arch_user_repo = {
     "rofi-lbonn-wayland",  # Launcher
     "foxmarks",
     "hyprland-per-window-layout",
+    "wayshot",  # Screenshot utility
     "swaync",
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
     "eza-git",  # `ls` alternative

@@ -79,7 +79,7 @@ bombadil link -p DE_hyprland
   - [swayidle](https://github.com/swaywm/swayidle)
   - [swaylock](https://github.com/swaywm/swaylock)
 - [swappy](https://github.com/jtheoof/swappy)
-  - [grim](https://sr.ht/~emersion/grim/)
+  - [wayshot](https://github.com/waycrate/wayshot)
   - [slurp](https://github.com/emersion/slurp)
 - [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
 
