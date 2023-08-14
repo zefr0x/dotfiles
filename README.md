@@ -1,4 +1,4 @@
-# zer0-x's public dotfiles
+# zefr0x's public dotfiles
 
 > Managed with [Toml Bombadil](https://oknozor.github.io/toml-bombadil/)
 
@@ -10,7 +10,7 @@ Those software and config files represents my Personalized Environment.
 2. Clone this repo to `.dotfiles`:
 
 ```
-git clone https://github.com/zer0-x/dotfiles.git .dotfiles
+git clone https://github.com/zefr0x/dotfiles.git .dotfiles
 ```
 
 3. Link bombadil:
@@ -59,7 +59,7 @@ bombadil link -p DE_hyprland
 - [rofi](https://github.com/lbonn/rofi)
   - [rofi-calc](https://github.com/svenstaro/rofi-calc)
   - [rofi-emoji](https://github.com/Mange/rofi-emoji)
-  - [foxmarks](https://github.com/zer0-x/foxmarks)
+  - [foxmarks](https://github.com/zefr0x/foxmarks)
 - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 - [gnome-keyring](https://wiki.gnome.org/Projects/GnomeKeyring)
 - [PolKit Gnome](https://gitlab.gnome.org/Archive/policykit-gnome)
