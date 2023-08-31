@@ -103,7 +103,7 @@ if status is-interactive
     # Tools
     alias feh="feh --scale-down"
 
-    alias topdf="libreoffice --headless --invisible --convert-to pdf"
+    alias topdf="org.libreoffice.LibreOffice --headless --invisible --convert-to pdf"
     alias now="date +'%A %d/%m/%Y %H:%M:%S.%N (%Z) %nUnix time: %s'"
 
     # Scripts
