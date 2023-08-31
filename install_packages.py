@@ -140,7 +140,6 @@ arch_user_repo = {
     "fish-tide-git",
     "bass-fish",
     "virtualfish",
-    "nvim-packer-git",
     "nodejs-emmet-ls",
     "jdtls",
     "python-pep8-naming",

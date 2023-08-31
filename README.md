@@ -192,13 +192,6 @@ br --set-install-state refused
 ### NeoVim <sup>`Text Editor`</sup>
 
 - [neovim](https://neovim.io/)
-  - [packer](https://github.com/wbthomason/packer.nvim)
-
-After installing, you need to install the plugins for neovim by running:
-
-```
-:PackerInstall
-```
 
 ### Language Servers
 
