@@ -123,6 +123,8 @@ arch_extra = {
     "cargo-sort",
     "clang",
     "texlive-langother",
+    "jdk-openjdk",
+    "gradle",
 }
 arch_core = {
     "dash",

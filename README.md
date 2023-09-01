@@ -279,6 +279,11 @@ rustup component add rust-analyzer
 
 - [melody](https://github.com/yoav-lavi/melody)
 
+### Java
+
+- [OpenJDK](https://openjdk.org/)
+- [Gradle](https://gradle.org/)
+
 </details>
 
 ## Arch linux Installation
