@@ -15,10 +15,11 @@
         "network"
     ],
     "modules-center": [
-        "hyprland/language",
-        // TODO: Show caps-lock indecator.
         "custom/webcam_indecator",
         "custom/microphone_indecator",
+        "custom/screensharing_indecator",
+        "hyprland/language",
+        // TODO: Show caps-lock indecator.
         "clock",
         "idle_inhibitor"
     ],
@@ -95,7 +96,7 @@
     "custom/webcam_indecator": {
         "tooltip": false,
         "restart-interval": 3,
-        "exec": "for cam in $(ls /dev/video* 2> /dev/null); do if $(lsof $cam > /dev/null); then echo -n ' '; else echo -n ''; fi; done"
+        "exec": "echo ''; for cam in $(ls /dev/video* 2> /dev/null); do if $(lsof $cam > /dev/null); then echo -n ' '; else echo -n ''; fi; done"
     },
     "custom/microphone_indecator": {
         "tooltip": false,
@@ -103,6 +104,11 @@
         // FIX: Recognize `ALSA monitor sources` from normal sources.
         "exec": "echo ''; for mic in $(pactl list short sources | grep 'RUNNING' | cut -f1); do if [ $(pactl get-source-mute $mic | cut -d ' ' -f2) = 'yes' ]; then echo -n ' '; else echo -n ' '; fi; done",
         "on-click": "for mic in $(pactl list short sources | grep 'RUNNING' | cut -f1); do pactl set-source-mute $mic toggle; done"
+    },
+    "custom/screensharing_indecator": {
+        "tooltip": false,
+        "restart-interval": 3,
+        "exec": "echo ''; pw-dump | jq -r 'map(.info?.props?) | map(select(.[\"media.name\"]? == \"webrtc-consume-stream\")) | map(.[\"stream.is-live\"]? == true | \"󰄙\") | .[]?'"
     },
     "network": {
         "interval": 1,

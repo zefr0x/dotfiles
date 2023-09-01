@@ -75,6 +75,7 @@ bombadil link -p DE_hyprland
   - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk)
   - [Waybar](https://github.com/Alexays/Waybar)
     - [lsof](https://github.com/lsof-org/lsof)
+    - [jq](https://github.com/jqlang/jq)
   - [Hyprland Per Window Layout](https://github.com/coffebar/hyprland-per-window-layout)
   - [swayidle](https://github.com/swaywm/swayidle)
   - [swaylock](https://github.com/swaywm/swaylock)
