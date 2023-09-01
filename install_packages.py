@@ -137,6 +137,7 @@ arch_user_repo = {
     "hyprland-per-window-layout",
     "wayshot",  # Screenshot utility
     "swaync",
+    "ianny-git",  # Periodically informes user to take breaks
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
     "eza-git",  # `ls` alternative
     "ripdrag-git",  # CLI-GUI drag-and-drop source/target

@@ -83,6 +83,7 @@ bombadil link -p DE_hyprland
   - [wayshot](https://github.com/waycrate/wayshot)
   - [slurp](https://github.com/emersion/slurp)
 - [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
+  - [ianny](https://github.com/zefr0x/ianny)
 
 You need to enable `greetd`
 
