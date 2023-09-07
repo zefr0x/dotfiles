@@ -45,7 +45,7 @@ arch_extra = {
     "kvantum",  # Theme Engine for Qt5/6
     "git-delta",  # Syntax-highlighting pager for git, diff, and grep output
     "python-livereload",
-    # "wl-clipboard",  # Access clipboard for wayland
+    "wl-clipboard",  # Access clipboard for wayland
     "trash-cli",
     "onefetch",  # Git Repo Summary
     "tokei",  # Statistics about your code
@@ -84,7 +84,6 @@ arch_extra = {
     "mold",
     "deno",
     "d-spy",
-    "feh",  # Image viewer
     "swayimg",  # Image viewer
     "qalculate-qt",
     "thunar",  # File Manager

@@ -36,7 +36,6 @@ bombadil link -p DE_hyprland
 - [ghostwriter](https://ghostwriter.kde.org/)
 - [mpv](https://mpv.io/)
   - [mpv-mpris](https://github.com/hoyon/mpv-mpris)
-- [feh](https://feh.finalrewind.org/)
 - [swayimg](https://github.com/artemsen/swayimg)
 - [Easy Effects](https://github.com/wwmm/easyeffects)
 - [Qalculate! Qt](https://qalculate.github.io/)
@@ -227,7 +226,6 @@ br --set-install-state refused
 
 - [Black](https://github.com/psf/black) <sup>`Python`</sup>
 - [StyLua](https://github.com/JohnnyMorganz/StyLua) <sup>`Lua`</sup>
-- [shfmt](https://github.com/mvdan/sh) <sup>`shell`</sup>
 
 ### Linkers
 

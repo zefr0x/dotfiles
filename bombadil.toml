@@ -46,9 +46,6 @@ rofi = { source = "de/launchers/rofi/config", target = ".config/rofi" }
 
 icons = { source = "de/default_icons/index.theme", target = ".icons/default/index.theme" }
 
-# .desktop files
-feh_desktop_file = { source = "de/desktop_files/feh.desktop", target = ".local/share/applications/feh.desktop" }
-
 
 [profiles.DE_hyprland]
 extra_profiles = [ "DE_generic", "gtk", "qt" ]
