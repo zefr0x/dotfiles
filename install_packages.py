@@ -56,6 +56,7 @@ arch_extra = {
     "bat",
     "fd",  # `find` alternative
     "zoxide",  # `cd` alternative
+    "eza",  # `ls` alternative
     "hexyl",  # command-line hex viewer
     "skim",  # fuzzy finder
     "handlr",  # Alternative to xdg-utils
@@ -78,7 +79,7 @@ arch_extra = {
     "flake8",
     "python-pydocstyle",
     "bandit",
-    "selene-linter",
+    "selene",
     "stylelint",
     "mold",
     "deno",
@@ -139,7 +140,6 @@ arch_user_repo = {
     "swaync",
     "ianny-git",  # Periodically informes user to take breaks
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
-    "eza-git",  # `ls` alternative
     "ripdrag-git",  # CLI-GUI drag-and-drop source/target
     "fish-tide-git",
     "bass-fish",
