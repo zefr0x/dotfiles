@@ -9,42 +9,9 @@ capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 local custom_on_attach = function(client, bufnr)
 	-- FIXME: Doesn't work with some languages.
 	require("nvim-navic").attach(client, bufnr)
-end
 
--- rust-tools.nvim
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "rust",
-	callback = function()
-		require("rust-tools").setup({
-			server = {
-				on_attach = custom_on_attach,
-				capabilities = capabilities,
-				settings = {
-					["rust-analyzer"] = {
-						checkOnSave = {
-							overrideCommand = {
-								"cargo",
-								"clippy",
-								"--workspace",
-								"--message-format=json",
-								"--all-targets",
-								"--all-features",
-							},
-						},
-					},
-				},
-			},
-			tools = {
-				inlay_hints = {
-					-- only_current_line = true,
-					parameter_hints_prefix = "<- ",
-					other_hints_prefix = "=> ",
-					highlight = "InlineHint",
-				},
-			},
-		})
-	end,
-})
+	require("lsp-inlayhints").on_attach(client, bufnr)
+end
 
 -- To appropriately highlight codefences returned from denols.
 vim.g.markdown_fenced_languages = {
@@ -60,8 +27,30 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
+-- rust analyzer
+lspconfig.rust_analyzer.setup({
+	on_attach = custom_on_attach,
+	capabilities = capabilities,
+	settings = {
+		["rust-analyzer"] = {
+			checkOnSave = {
+				overrideCommand = {
+					"cargo",
+					"clippy",
+					"--workspace",
+					"--message-format=json",
+					"--all-targets",
+					"--all-features",
+				},
+			},
+		},
+	},
+})
+
 -- pylsp
 lspconfig.pylsp.setup({
+	on_attach = custom_on_attach,
+	capabilities = capabilities,
 	settings = {
 		pylsp = {
 			plugins = {

@@ -39,15 +39,18 @@ return require("packer").startup(function(use)
 			require("plugin.lsp")
 		end,
 	})
+	-- LSP inlay hints.
+	use({
+		"lvimuser/lsp-inlayhints.nvim",
+		event = "LspAttach",
+		config = function()
+			require("plugin.inlyhints")
+		end,
+	})
 	-- LSP source for nvim-cmp
 	use({
 		"hrsh7th/cmp-nvim-lsp",
 		module = "cmp_nvim_lsp",
-	})
-	-- Tools for better development in rust using neovim's builtin lsp
-	use({
-		"simrat39/rust-tools.nvim",
-		module = "rust-tools",
 	})
 	-- Simple winbar/statusline plugin that shows your current code context
 	use({
