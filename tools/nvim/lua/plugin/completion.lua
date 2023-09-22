@@ -50,6 +50,8 @@ cmp.setup({
 
 			vim_item.kind = kind_icons[vim_item.kind]
 
+			vim_item.abbr = string.sub(vim_item.abbr, 1, 50)
+
 			return vim_item
 		end,
 	},
