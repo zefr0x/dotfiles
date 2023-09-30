@@ -125,6 +125,17 @@ return require("packer").startup(function(use)
 	-- Add latex symbol support for nvim-cmp
 	-- "kdheepak/cmp-latex-symbols",
 
+	--  Help managing dependencies in Cargo.toml files
+	use({
+		"saecki/crates.nvim",
+		event = "BufReadPost Cargo.toml",
+		tag = "v0.3.0",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("plugin.crates")
+		end,
+	})
+
 	-- TODO: Configure debug adapter protocol client for neovim
 	-- use "mfussenegger/nvim-dap"
 
