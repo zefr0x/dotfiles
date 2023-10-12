@@ -137,3 +137,5 @@ hl(0, "CmpItemKindTypeParameter", { fg = "#58B5A8" })
 -- indent-blankline.nvim --
 hl(0, "IndentBlanklineIndent1", { bg = "#000000", nocombine = true })
 hl(0, "IndentBlanklineIndent2", { bg = "#070707", nocombine = true })
+-- TODO: Chnage color.
+hl(0, "IndentBlankLineScope", { fg = "#ffffff", nocombine = true })

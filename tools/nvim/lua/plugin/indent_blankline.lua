@@ -1,23 +1,29 @@
 -- indent-blankline.nvim
-require("indent_blankline").setup({
-	char = " ",
-	space_char_highlight_list = {
-		"IndentBlanklineIndent1",
-		"IndentBlanklineIndent2",
+require("ibl").setup({
+	indent = {
+		char = " ",
+		tab_char = ">",
 	},
-	context_char = "│",
-	use_treesitter = true,
-	show_current_context = true,
-	show_current_context_start = true,
-	-- use_treesitter_scope = true, -- TODO: See if it's better or not.
-	show_trailing_blankline_indent = false,
-	filetype_exclude = {
-		"lspinfo",
-		"checkhealth",
-		"help",
-		"man",
-		"Trouble",
-		"undotree",
-		"",
+	whitespace = {
+		highlight = {
+			"IndentBlanklineIndent1",
+			"IndentBlanklineIndent2",
+		},
+		remove_blankline_trail = false,
+	},
+	scope = {
+		char = "│",
+		highlight = "IndentBlanklineScope",
+	},
+	exclude = {
+		filetypes = {
+			"lspinfo",
+			"checkhealth",
+			"help",
+			"man",
+			"Trouble",
+			"undotree",
+			"",
+		},
 	},
 })
