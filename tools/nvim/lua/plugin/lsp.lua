@@ -19,13 +19,31 @@ vim.g.markdown_fenced_languages = {
 }
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { "clangd", "texlab", "denols", "yamlls", "jdtls" }
+local servers = {
+	"clangd",
+	"texlab",
+	"denols",
+	"yamlls",
+}
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_attach = custom_on_attach,
 		capabilities = capabilities,
 	})
 end
+
+-- eclipse.jdt.ls
+lspconfig.jdtls.setup({
+	on_attach = custom_on_attach,
+	capabilities = capabilities,
+	settings = {
+		java = {
+			autobuild = {
+				enabled = false,
+			},
+		},
+	},
+})
 
 -- rust analyzer
 lspconfig.rust_analyzer.setup({
