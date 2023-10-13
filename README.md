@@ -282,6 +282,7 @@ rustup component add rust-analyzer
 ### Java
 
 - [OpenJDK](https://openjdk.org/)
+- [OpenJDK-17](https://openjdk.org/)
 - [Gradle](https://gradle.org/)
 
 </details>

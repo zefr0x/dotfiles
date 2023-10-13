@@ -125,6 +125,7 @@ arch_extra = {
     "clang",
     "texlive-langother",
     "jdk-openjdk",
+    "jdk17-openjdk",
     "gradle",
 }
 arch_core = {
