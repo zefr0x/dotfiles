@@ -212,6 +212,7 @@ return require("packer").startup(function(use)
 			"comment",
 			"mermaid",
 			"java",
+			"kotlin",
 		},
 		module = "nvim-treesitter",
 		run = function()

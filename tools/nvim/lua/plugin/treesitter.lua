@@ -29,6 +29,7 @@ require("nvim-treesitter.configs").setup({
 		"comment",
 		"mermaid",
 		"java",
+		"kotlin",
 	},
 	highlight = {
 		enable = true,
