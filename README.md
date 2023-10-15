@@ -289,7 +289,7 @@ rustup component add rust-analyzer
 
 ## Arch linux Installation
 
-> You need [`paur`](https://github.com/Morganamilo/paru#installation) to install AUR packages.
+> You need [`yay`](https://github.com/Jguer/yay#installation) to install AUR packages.
 
 To generate the package installing commands run the `install_packages.py` script.
 

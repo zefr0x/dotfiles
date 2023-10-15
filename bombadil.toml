@@ -16,7 +16,7 @@ bashrc = { source = "utils/bashrc", target = ".bashrc" }
 fish = { source = "utils/fish/config.fish", target = ".config/fish/config.fish" }
 handlr = { source = "utils/handlr.toml", target = ".config/handlr/handlr.toml" }
 npm = { source = "utils/npmrc", target = ".config/npm/npmrc" }
-paru = { source = "utils/paru.conf", target = ".config/paru/paru.conf" }
+yay = { source = "utils/yay.json", target = ".config/yay/config.json" }
 python = { source = "utils/pythonrc", target = ".config/python/pythonrc" }
 # Scripts
 scripts = { source = "scripts", target = "scripts" }

@@ -1,0 +1,9 @@
+{
+  "editor": "nvim",
+  "answerdiff": "all",
+  "removemake": "all",
+  "sudobin": "doas",
+  "maxconcurrentdownloads": 4,
+  "devel": true,
+  "editmenu": true
+}

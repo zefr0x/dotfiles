@@ -163,13 +163,13 @@ if is_laptop:
 
 pacman_install = f"sudo pacman -S --needed {' '.join(arch_core)} {' '.join(arch_extra)} {' '.join(arch_groups)}"
 
-paru_install = f"paru -Sa --needed {' '.join(arch_user_repo)}"
+aur_install = f"yay -Sa --needed {' '.join(arch_user_repo)}"
 
 flathub_install = f"flatpack install flathub {' '.join(flathub)}"
 
-print(pacman_install, paru_install, flathub_install, sep="\n\n")
+print(pacman_install, aur_install, flathub_install, sep="\n\n")
 
-# TODO: Install paru if not existing.
+# TODO: Install yay or paru if not existing.
 # TODO: Install flatpak if not existing.
-# TODO: Auto install pacman and paru packages.
+# TODO: Auto install pacman and AUR packages.
 # TODO: Autorun other commands to setup things.
