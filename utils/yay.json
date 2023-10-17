@@ -1,7 +1,7 @@
 {
   "editor": "nvim",
   "answerdiff": "all",
-  "removemake": "all",
+  "removemake": "yes",
   "sudobin": "doas",
   "maxconcurrentdownloads": 4,
   "devel": true,
