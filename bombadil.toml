@@ -44,8 +44,6 @@ alacritty = { source = "utils/alacritty", target = ".config/alacritty" }
 
 rofi = { source = "de/launchers/rofi/config", target = ".config/rofi" }
 
-icons = { source = "de/default_icons/index.theme", target = ".icons/default/index.theme" }
-
 
 [profiles.DE_hyprland]
 extra_profiles = [ "DE_generic", "gtk", "qt" ]
