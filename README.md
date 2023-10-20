@@ -121,6 +121,7 @@ password	optional	pam_gnome_keyring.so
 - [Nerd Fonts Ubuntu](https://github.com/ryanoasis/nerd-fonts)
 - [ttf-dejavu-ib](http://dejavu-fonts.org/wiki/Main_Page)
 - [Cantarell](https://cantarell.gnome.org/)
+- [Amiri](https://github.com/aliftype/amiri)
 
 ### Themes
 

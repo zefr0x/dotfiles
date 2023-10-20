@@ -140,6 +140,7 @@ arch_user_repo = {
     "swaync",
     "ianny-git",  # Periodically informes user to take breaks
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
+    "ttf-amiri",
     "ripdrag-git",  # CLI-GUI drag-and-drop source/target
     "fish-tide-git",
     "bass-fish",
