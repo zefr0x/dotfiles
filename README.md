@@ -274,6 +274,7 @@ rustup component add rust-analyzer
 #### LaTex
 
 - [texlive](https://archlinux.org/groups/x86_64/texlive/)
+- [texlive-langarabic](https://archlinux.org/packages/extra/any/texlive-langarabic/)
 - [texlive-langother](https://archlinux.org/packages/extra/any/texlive-langother/)
 
 #### Melody

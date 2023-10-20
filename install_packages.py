@@ -123,6 +123,7 @@ arch_extra = {
     "cargo-deny",
     "cargo-sort",
     "clang",
+    "texlive-langarabic",
     "texlive-langother",
     "jdk-openjdk",
     "jdk17-openjdk",
