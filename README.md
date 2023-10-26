@@ -38,6 +38,7 @@ bombadil link -p DE_hyprland
   - [mpv-mpris](https://github.com/hoyon/mpv-mpris)
 - [swayimg](https://github.com/artemsen/swayimg)
 - [Easy Effects](https://github.com/wwmm/easyeffects)
+- [Helvum](https://gitlab.freedesktop.org/pipewire/helvum)
 - [Qalculate! Qt](https://qalculate.github.io/)
 - [zathura](https://pwmt.org/projects/zathura/)
   - [zathura-pdf-mupdf](https://pwmt.org/projects/zathura-pdf-mupdf/)
@@ -191,9 +192,10 @@ br --set-install-state refused
   - [virtualfish](https://github.com/justinmayer/virtualfish)
 - [dash](https://en.wikipedia.org/wiki/Debian_Almquist_shell)
 
-### NeoVim <sup>`Text Editor`</sup>
+### Text Editors
 
 - [neovim](https://neovim.io/)
+- [GNOME Text Editor](https://apps.gnome.org/TextEditor/)
 
 ### Language Servers
 

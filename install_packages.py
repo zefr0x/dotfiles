@@ -83,7 +83,6 @@ arch_extra = {
     "stylelint",
     "mold",
     "deno",
-    "d-spy",
     "swayimg",  # Image viewer
     "qalculate-qt",
     "thunar",  # File Manager
@@ -155,8 +154,11 @@ arch_user_repo = {
     "melody",
 }
 flathub = {
-    "app.drey.Dialect",  # Translating Text
+    "org.gnome.dspy",  # D-Bus connections explorer
     "com.github.wwmm.easyeffects",  # Audio Manipulation
+    "org.pipewire.Helvum",  # D-Bus connections explorer
+    "app.drey.Dialect",  # Translating Text
+    "org.gnome.TextEditor",  # For writing in Arabic smoothly
 }
 
 if is_laptop:

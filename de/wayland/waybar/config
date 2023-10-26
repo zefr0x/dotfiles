@@ -96,6 +96,8 @@
     "custom/webcam_indecator": {
         "tooltip": false,
         "restart-interval": 3,
+        // TODO: Ignore pipewire and wireplumber listening to camera.
+        // TODO: Get info directly from pipewire.
         "exec": "echo ''; for cam in $(ls /dev/video* 2> /dev/null); do if $(lsof $cam > /dev/null); then echo -n ' '; else echo -n ''; fi; done"
     },
     "custom/microphone_indecator": {
@@ -166,7 +168,7 @@
     //     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-",
     //     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     //     "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-    //     "on-click-middle": "helvum"
+    //     "on-click-middle": "org.pipewire.Helvum"
     // },
     // TODO: Separate source module from output module.
     "pulseaudio": {
@@ -196,7 +198,7 @@
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-        "on-click-middle": "helvum"
+        "on-click-middle": "org.pipewire.Helvum"
     },
     "battery": {
         "states": {
