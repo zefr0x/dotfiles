@@ -33,7 +33,6 @@ bombadil link -p DE_hyprland
 - [Alacritty](https://alacritty.org/)
 - [SQliteBrowser](https://sqlitebrowser.org/)
 - [D Spy](https://apps.gnome.org/app/org.gnome.dspy/)
-- [ghostwriter](https://ghostwriter.kde.org/)
 - [mpv](https://mpv.io/)
   - [mpv-mpris](https://github.com/hoyon/mpv-mpris)
 - [swayimg](https://github.com/artemsen/swayimg)

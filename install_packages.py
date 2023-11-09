@@ -17,7 +17,6 @@ arch_groups = {
 arch_extra = {
     "alacritty",  # Terminal emulator
     "sqlitebrowser",
-    "ghostwriter",  # For writing in Arabic smoothly
     "mpv",  # Media player
     "mpv-mpris",
     "zathura",  # Document Viewer

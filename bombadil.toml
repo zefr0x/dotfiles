@@ -36,7 +36,6 @@ kvantum = { source = "de/gui/qt/Kvantum", target = ".config/Kvantum" }
 
 [profiles.DE_generic.dots]
 # Apps
-ghostwriter_theme = { source = "apps/ghostwriter/zer0_theme.json", target = ".config/ghostwriter/themes/zer0_theme.json" }
 mpv_config = { source = "apps/mpv.conf", target = ".config/mpv/mpv.conf" }
 zathura = { source = "apps/zathura", target = ".config/zathura" }
 # Utils
