@@ -78,6 +78,7 @@ bombadil link -p DE_hyprland
   - [Hyprland Per Window Layout](https://github.com/coffebar/hyprland-per-window-layout)
   - [swayidle](https://github.com/swaywm/swayidle)
   - [swaylock](https://github.com/swaywm/swaylock)
+  - [Gammastep](https://gitlab.com/chinstrap/gammastep)
 - [swappy](https://github.com/jtheoof/swappy)
   - [wayshot](https://github.com/waycrate/wayshot)
   - [slurp](https://github.com/emersion/slurp)

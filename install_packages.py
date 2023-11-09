@@ -34,6 +34,7 @@ arch_extra = {
     "waybar",
     "swayidle",
     "swaylock",
+    "gammastep",
     "swappy",  # Snapshot and Editor Tool
     "slurp",  # Select a region in a Wayland
     "ttf-jetbrains-mono-nerd",

@@ -54,3 +54,4 @@ waybar = { source = "de/wayland/waybar", target = ".config/waybar" }
 swaync = { source = "de/wayland/swaync", target = ".config/swaync" }
 swaylock = { source = "de/wayland/swaylock_config", target = ".config/swaylock/config" }
 swappy = { source = "de/wayland/swappy_config", target = ".config/swappy/config" }
+gammastep = { source = "de/wayland/gammastep.ini", target = ".config/gammastep/config.ini" }
