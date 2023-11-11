@@ -8,7 +8,7 @@ set -x EDITOR nvim
 set -x VISUAL nvim
 set -x TERMINAL alacritty
 set -x VIDEO mpv
-set -x IMAGE feh
+set -x IMAGE swayimg
 set -x OPENER "handlr open"
 
 
@@ -101,8 +101,6 @@ if status is-interactive
     alias la="eza -la --icons"
 
     # Tools
-    alias feh="feh --scale-down"
-
     alias topdf="org.libreoffice.LibreOffice --headless --invisible --convert-to pdf"
     alias now="date +'%A %d/%m/%Y %H:%M:%S.%N (%Z) %nUnix time: %s'"
 
