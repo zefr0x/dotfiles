@@ -56,7 +56,6 @@ bombadil link -p DE_hyprland
 ### Desktop Environment
 
 - [rofi](https://github.com/lbonn/rofi)
-  - [rofi-calc](https://github.com/svenstaro/rofi-calc)
   - [rofi-emoji](https://github.com/Mange/rofi-emoji)
   - [foxmarks](https://github.com/zefr0x/foxmarks)
 - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
@@ -152,7 +151,6 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
   - [delta](https://github.com/dandavison/delta)
 - [just](https://github.com/casey/just)
 - [python-livereload](https://github.com/lepture/python-livereload)
-- [libqalculate](https://qalculate.github.io/)
 - [pastel](https://github.com/sharkdp/pastel)
 
 ### CLI Utilities

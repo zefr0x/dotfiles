@@ -23,7 +23,6 @@ arch_extra = {
     "zathura-pdf-mupdf",
     "dex",  # XDG Auto Start / DesktopEntry
     "brightnessctl",
-    "rofi-calc",
     "rofi-emoji",
     "polkit-gnome",
     "greetd",
@@ -84,7 +83,6 @@ arch_extra = {
     "mold",
     "deno",
     "swayimg",  # Image viewer
-    "qalculate-qt",
     "thunar",  # File Manager
     "gvfs",
     "thunar-archive-plugin",
@@ -105,7 +103,6 @@ arch_extra = {
     "adwaita-icon-theme",
     "libadwaita",
     "git",
-    "libqalculate",
     "pastel",
     "htop",  # System Monitoring
     "tidy",
@@ -157,6 +154,7 @@ flathub = {
     "org.gnome.dspy",  # D-Bus connections explorer
     "com.github.wwmm.easyeffects",  # Audio Manipulation
     "org.pipewire.Helvum",  # D-Bus connections explorer
+    "io.github.Qalculate.qalculate-qt",
     "app.drey.Dialect",  # Translating Text
     "org.gnome.TextEditor",  # For writing in Arabic smoothly
 }

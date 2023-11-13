@@ -21,7 +21,6 @@ configuration {
     display-managesession: "";
     display-foxmarks: "";
     display-run: "";
-    display-calc: "";
     display-emoji: "󰞅";
     display-keys: "";
     display-filebrowser: "";
