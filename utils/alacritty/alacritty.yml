@@ -124,8 +124,8 @@ bell:
 
   # Show notification.
   command:
-    program: "dunstify"
-    args: ["Alacritty Bell"]
+    program: "hyprctl"
+    args: ["notify", "2", "3000", "rgb(960000)", " Alacritty Bell"]
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
