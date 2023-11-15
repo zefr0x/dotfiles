@@ -83,10 +83,8 @@ arch_extra = {
     "mold",
     "deno",
     "swayimg",  # Image viewer
-    "thunar",  # File Manager
+    "pcmanfm-gtk3",  # File Manager
     "gvfs",
-    "thunar-archive-plugin",
-    "thunar-media-tags-plugin",
     "tumbler",
     "ffmpegthumbnailer",
     "poppler-glib",

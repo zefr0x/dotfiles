@@ -43,6 +43,8 @@ alacritty = { source = "utils/alacritty", target = ".config/alacritty" }
 
 rofi = { source = "de/launchers/rofi/config", target = ".config/rofi" }
 
+pcmanfm = { source = "utils/pcmanfm.conf", target = ".config/pcmanfm/default/pcmanfm.conf" }
+
 
 [profiles.DE_hyprland]
 extra_profiles = [ "DE_generic", "gtk", "qt" ]
