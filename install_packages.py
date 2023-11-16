@@ -83,7 +83,7 @@ arch_extra = {
     "mold",
     "deno",
     "swayimg",  # Image viewer
-    "pcmanfm-gtk3",  # File Manager
+    "pcmanfm-qt",  # File Manager
     "gvfs",
     "tumbler",
     "ffmpegthumbnailer",

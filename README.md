@@ -41,7 +41,7 @@ bombadil link -p DE_hyprland
 - [Qalculate! Qt](https://qalculate.github.io/)
 - [zathura](https://pwmt.org/projects/zathura/)
   - [zathura-pdf-mupdf](https://pwmt.org/projects/zathura-pdf-mupdf/)
-- [PCManFM](https://github.com/lxde/pcmanfm)
+- [PCManFM](https://github.com/lxqt/pcmanfm-qt)
   - [gvfs](https://wiki.gnome.org/Projects/gvfs)
   - [tumbler](https://docs.xfce.org/xfce/tumbler/start)
     - [ffmpegthumbnailer](https://github.com/dirkvdb/ffmpegthumbnailer)
