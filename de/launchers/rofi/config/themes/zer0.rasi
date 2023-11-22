@@ -1,6 +1,6 @@
 * {
-    font: "JetBrainsMono Nerd Font Medium 20";
-    bold-font: "JetBrainsMono Nerd Font Bold 20";
+    font: "JetBrainsMono NF Medium 20";
+    bold-font: "JetBrainsMono NF Bold 20";
 
     bg0: #000000;
     bg1: #90000050;
