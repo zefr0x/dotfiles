@@ -51,6 +51,7 @@ arch_extra = {
     "nvtop",  # GPUs Monitoring
     "just",  # Command runner
     "hyperfine",  # command-line benchmarking tool
+    "less",
     "jless",
     "bat",
     "fd",  # `find` alternative

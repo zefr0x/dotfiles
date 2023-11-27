@@ -167,6 +167,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [broot](https://github.com/Canop/broot)
 - [hyperfine](https://github.com/sharkdp/hyperfine)
 - [tokei](https://github.com/XAMPPRocky/tokei)
+- [less](https://www.greenwoodsoftware.com/less/)
 - [jless](https://github.com/PaulJuliusMartinez/jless)
 - [skim](https://github.com/lotabout/skim)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
