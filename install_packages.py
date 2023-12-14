@@ -104,6 +104,7 @@ arch_extra = {
     "git",
     "pastel",
     "htop",  # System Monitoring
+    "imagemagick",
     "tidy",
     "python-black",
     "stylua",
