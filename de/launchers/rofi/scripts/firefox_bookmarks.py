@@ -24,6 +24,6 @@ if environ.get("ROFI_RETV") == "0":
         print(f"{title}\0icon\x1fbookmarks\x1fmeta\x1f{url}\x1finfo\x1f{url}\x1f\n")
 
 elif environ.get("ROFI_RETV") == "1":
-    from webbrowser import open
+    from webbrowser import open as open_url
 
-    open(f"{environ.get('ROFI_INFO') or ''}")
+    open_url(f"{environ.get('ROFI_INFO') or ''}")

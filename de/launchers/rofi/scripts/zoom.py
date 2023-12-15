@@ -1,10 +1,8 @@
 #!/usr/bin/python
 """A rofi python script to list zoom meetings and open them."""
 import subprocess
-from configparser import ConfigParser
 from os import environ
 from pathlib import Path
-from typing import Optional, Union
 
 
 def load_meetings() -> list[dict[str, str]]:
@@ -21,9 +19,6 @@ def load_meetings() -> list[dict[str, str]]:
 
             name: str = results.pop()
 
-            # meeting_uri = f"zoommtg://zoom.us/join?action=join&confno={meeting_id}" + (
-            #     "&pwd=" + passcode if passcode else ""
-            # )
             meeting_uri = f"https://zoom.us/wc/join/{meeting_id}" + (
                 "?pwd=" + passcode if passcode else ""
             )

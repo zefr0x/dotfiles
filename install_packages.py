@@ -162,13 +162,13 @@ if is_laptop:
     arch_user_repo.add("slimbookbattery")  # Interface for TLP
 
 
-pacman_install = f"sudo pacman -S --needed {' '.join(arch_core)} {' '.join(arch_extra)} {' '.join(arch_groups)}"
-
-aur_install = f"yay -Sa --needed {' '.join(arch_user_repo)}"
-
-flathub_install = f"flatpack install flathub {' '.join(flathub)}"
-
-print(pacman_install, aur_install, flathub_install, sep="\n\n")
+print(
+    "sudo pacman -S --needed "
+    + " ".join(arch_core.union(arch_extra).union(arch_groups)),
+    "yay -Sa --needed " + " ".join(arch_user_repo),
+    "flatpack install flathub " + " ".join(flathub),
+    sep="\n\n",
+)
 
 # TODO: Install yay or paru if not existing.
 # TODO: Install flatpak if not existing.
