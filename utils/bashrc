@@ -1,11 +1,4 @@
-# Shared environment variables.
-source ~/.shared_shell.sh
-
 # Enable history appending instead of overwriting.
 shopt -s histappend
 
 export HISTFILE="${XDG_STATE_HOME}/bash/history"
-
-# Fuzzy Finder
-source /usr/share/skim/completion.bash
-source /usr/share/skim/key-bindings.bash

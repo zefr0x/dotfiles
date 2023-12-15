@@ -140,7 +140,6 @@ arch_user_repo = {
     "ttf-amiri",
     "ripdrag-git",  # CLI-GUI drag-and-drop source/target
     "fish-tide-git",
-    "bass-fish",
     "virtualfish",
     "nodejs-emmet-ls",
     "jdtls",

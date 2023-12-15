@@ -1,8 +1,5 @@
 set fish_greeting
 
-bass source ~/.shared_shell.sh
-
-
 # ------------- Variables --------------
 set -x EDITOR nvim
 set -x VISUAL nvim
@@ -95,6 +92,10 @@ if status is-interactive
     alias df="df -h"
     alias free="free -m"
     alias grep="grep --colour=always"
+    alias img="swayimg"
+    alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
+    alias mitmproxy="mitmproxy --set confdir=$XDG_CONFIG_HOME/mitmproxy"
+    alias mitmweb="mitmweb --set confdir=$XDG_CONFIG_HOME/mitmproxy"
 
     alias ls="eza --icons"
     alias ll="eza -l --icons"

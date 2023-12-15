@@ -20,7 +20,7 @@ yay = { source = "utils/yay.json", target = ".config/yay/config.json" }
 python = { source = "utils/pythonrc", target = ".config/python/pythonrc" }
 # Scripts
 scripts = { source = "scripts", target = "scripts" }
-shared_env = { source = "shared_environment_vars.sh", target = ".shared_shell.sh" }
+env_profile = { source = "profile", target = ".profile" }
 
 
 [profiles.gtk.dots]

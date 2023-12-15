@@ -1,4 +1,6 @@
-# Shared environment variables to be sourced in bash and fish
+# Shared environment variables to be sourced in the login shell.
+# Every shell should inherit those vars.
+
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_STATE_HOME=$HOME/.local/state
@@ -23,15 +25,7 @@ export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
-
-# XDG base dirs aliases
-alias mitmproxy="mitmproxy --set confdir=$XDG_CONFIG_HOME/mitmproxy"
-alias mitmweb="mitmweb --set confdir=$XDG_CONFIG_HOME/mitmproxy"
-alias monerod="monerod --data-dir $XDG_DATA_HOME/bitmonero"
-alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
-alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
-alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings"
-alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
+export ANDROID_HOME="$XDG_DATA_HOME"/android
 
 # Variables depending on the session or the desktop type
 # export GTK_USE_PORTAL=1

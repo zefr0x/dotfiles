@@ -186,7 +186,6 @@ br --set-install-state refused
 
 - [fish](https://fishshell.com/)
   - [Tide](https://github.com/IlanCosman/tide)
-  - [bass](https://github.com/edc/bass)
   - [virtualfish](https://github.com/justinmayer/virtualfish)
 - [dash](https://en.wikipedia.org/wiki/Debian_Almquist_shell)
 
