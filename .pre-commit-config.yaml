@@ -1,6 +1,7 @@
 repos:
+  # General
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.5.0
     hooks:
       - id: check-added-large-files
       - id: check-executables-have-shebangs
@@ -13,25 +14,56 @@ repos:
       - id: detect-private-key
       - id: end-of-file-fixer
       - id: trailing-whitespace
+  # Lua
   - repo: https://github.com/JohnnyMorganz/StyLua
-    rev: v0.18.0
+    rev: v0.19.1
     hooks:
       - id: stylua
+  # Python
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.7.1
+    hooks:
+      - id: mypy
+        args:
+          - "--check-untyped-defs"
+          - "--ignore-missing-imports"
+        additional_dependencies:
+          - types-setuptools
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+      - id: flake8
+        additional_dependencies:
+          - pep8-naming
+          - "git+https://github.com/zefr0x/flake8-typehinting#egg=flake8-typehinting"
+          - flake8-builtins
+          - flake8-bugbear
+          - flake8-comprehensions
   - repo: https://github.com/psf/black
-    rev: 23.3.0
+    rev: 23.12.0
     hooks:
       - id: black
+  - repo: https://github.com/asottile/reorder_python_imports
+    rev: v3.12.0
+    hooks:
+      - id: reorder-python-imports
+  - repo: https://github.com/PyCQA/pydocstyle
+    rev: 6.3.0
+    hooks:
+      - id: pydocstyle
+  # Fish
   - repo: https://github.com/hugoh/pre-commit-fish.git
     rev: v1.2
     hooks:
       - id: fish_syntax
       - id: fish_indent
+  # Prettier
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.0
+    rev: v4.0.0-alpha.5
     hooks:
       - id: prettier
         types_or: [markdown, css, scss, json, yaml, toml]
   - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-    rev: v2.9.0
+    rev: v2.11.0
     hooks:
       - id: pretty-format-ini
