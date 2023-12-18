@@ -3,9 +3,6 @@ require("lint").linters_by_ft = {
 	cpp = { "clangtidy", "flawfinder" },
 	python = { "mypy", "bandit" },
 	tex = { "chktex" },
-	lua = { "selene" },
-	html = { "tidy" },
-	css = { "stylelint" },
 }
 
 -- Run linters on read and write

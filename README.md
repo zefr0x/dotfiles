@@ -197,6 +197,8 @@ br --set-install-state refused
 ### Language Servers
 
 - [Python LSP Server](https://github.com/python-lsp/python-lsp-server) <sup>`Python`</sup>
+  - [python-pydocstyle](http://www.pydocstyle.org/) <sup>`Python`</sup>
+  - [flake8](https://flake8.pycqa.org/) <sup>`Python`</sup>
   - [python-lsp-black](https://github.com/python-lsp/python-lsp-black)
 - [TexLab](https://github.com/latex-lsp/texlab) <sup>`LaTex`</sup>
 - [VSCode CSS LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
@@ -211,16 +213,9 @@ br --set-install-state refused
 
 - [Flawfinder](https://dwheeler.com/flawfinder/) <sup>`C/C++`</sup>
 - [mypy](http://www.mypy-lang.org/) <sup>`Python`</sup>
-- [flake8](https://flake8.pycqa.org/) <sup>`Python`</sup>
-  - [pep8-naming](https://github.com/PyCQA/pep8-naming)
-  - [flake8-builtins](https://github.com/gforcada/flake8-builtins)
-  - [flake8-comprehensions](https://github.com/adamchainz/flake8-comprehensions)
-  - [flake8-bugbear](https://github.com/PyCQA/flake8-bugbear)
-- [python-pydocstyle](http://www.pydocstyle.org/) <sup>`Python`</sup>
 - [Bandit](https://github.com/PyCQA/bandit) <sup>`Python`</sup>
-- [selene-linter](https://github.com/Kampfkarren/selene) <sup>`Lua`</sup>
-- [Stylelint](https://stylelint.io/) <sup>`CSS`</sup>
-- [Tidy](https://www.html-tidy.org/) <sup>`HTML`</sup>
+
+> Other complex set of linters should be used as a pre-commit hook.
 
 ### Formatters
 
@@ -253,7 +248,8 @@ rustup default stable
 rustup component add rust-analyzer
 ```
 
-> **Note** It includes most the tools used for the Rust language.
+> [!Note]
+> It includes most the tools used for the Rust language.
 
 #### C/C++
 
@@ -268,7 +264,8 @@ rustup component add rust-analyzer
 
 - [Deno](https://deno.land/)
 
-> **Note** It includes most the tools needed for JS/TS.
+> [!Note]
+> It includes most the tools needed for JS/TS.
 
 #### LaTex
 

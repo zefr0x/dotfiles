@@ -79,8 +79,6 @@ arch_extra = {
     "flake8",
     "python-pydocstyle",
     "bandit",
-    "selene",
-    "stylelint",
     "mold",
     "deno",
     "swayimg",  # Image viewer
@@ -105,7 +103,6 @@ arch_extra = {
     "pastel",
     "htop",  # System Monitoring
     "imagemagick",
-    "tidy",
     "python-black",
     "stylua",
     "shfmt",
@@ -143,10 +140,6 @@ arch_user_repo = {
     "virtualfish",
     "nodejs-emmet-ls",
     "jdtls",
-    "python-pep8-naming",
-    "python-flake8-builtins",
-    "python-flake8-comprehensions",
-    "python-flake8-bugbear",
     "melody",
 }
 flathub = {
