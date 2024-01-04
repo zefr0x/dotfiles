@@ -83,6 +83,10 @@ if status is-interactive
     abbr -a ipy ipython
     abbr -a j just
     abbr -a b br
+    abbr -a g git
+    abbr -a p pacman
+    abbr -a dp doas pacman
+    abbr -a fu flatpak update
 
     # -------------- Aliases ---------------
     # Utilities
