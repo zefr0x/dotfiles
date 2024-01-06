@@ -26,9 +26,3 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export ANDROID_HOME="$XDG_DATA_HOME"/android
-
-# Variables depending on the session or the desktop type
-# export GTK_USE_PORTAL=1
-if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
-	export MOZ_ENABLE_WAYLAND=1
-fi
