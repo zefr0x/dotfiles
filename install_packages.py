@@ -149,6 +149,7 @@ flathub = {
     "io.github.Qalculate.qalculate-qt",
     "app.drey.Dialect",  # Translating Text
     "org.gnome.TextEditor",  # For writing in Arabic smoothly
+    "org.gnome.Gtranslator",  # Gettext po file editor
 }
 
 if is_laptop:

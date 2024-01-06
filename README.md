@@ -193,6 +193,7 @@ br --set-install-state refused
 
 - [neovim](https://neovim.io/)
 - [GNOME Text Editor](https://apps.gnome.org/TextEditor/)
+- [Gtranslator](https://wiki.gnome.org/Apps/Gtranslator)
 
 ### Language Servers
 
