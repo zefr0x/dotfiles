@@ -77,8 +77,9 @@ require("lazy").setup({
 			"hrsh7th/cmp-path",
 			-- nvim-cmp source for vim's cmdline
 			"hrsh7th/cmp-cmdline",
-			-- nvim-cmp source for buffer words
-			"hrsh7th/cmp-buffer",
+			-- nvim-cmp source for ripgrep
+			-- https://github.com/BurntSushi/ripgrep is required.
+			"lukas-reineke/cmp-rg",
 			-- Add latex symbol support for nvim-cmp
 			-- "kdheepak/cmp-latex-symbols",
 			-- Snippets source for nvim-cmp

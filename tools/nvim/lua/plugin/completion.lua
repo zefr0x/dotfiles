@@ -104,7 +104,10 @@ cmp.setup({
 			},
 		},
 		{ name = "nvim_lsp_signature_help" },
-		{ name = "buffer" },
+		{
+			name = "rg",
+			keyword_length = 3,
+		},
 		{ name = "latex_symbols" },
 	},
 })
