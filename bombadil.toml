@@ -2,7 +2,6 @@ dotfiles_dir = ".dotfiles"
 
 [settings]
 vars = [ "vars.toml" ]
-posthooks = [ "nvim --headless -c 'autocmd User PackerCompileDone quitall' -c 'PackerCompile'" ]
 
 [settings.dots]
 # Tools
