@@ -130,6 +130,7 @@ arch_user_repo = {
     "rofi-lbonn-wayland",  # Launcher
     "foxmarks",
     "hyprland-per-window-layout",
+    "hyprpicker",
     "wayshot",  # Screenshot utility
     "swaync",
     "ianny-git",  # Periodically informes user to take breaks

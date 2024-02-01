@@ -73,6 +73,7 @@ bombadil link -p DE_hyprland
     - [lsof](https://github.com/lsof-org/lsof)
     - [jq](https://github.com/jqlang/jq)
   - [Hyprland Per Window Layout](https://github.com/coffebar/hyprland-per-window-layout)
+  - [hyprpicker](https://github.com/hyprwm/hyprpicker)
   - [swayidle](https://github.com/swaywm/swayidle)
   - [swaylock](https://github.com/swaywm/swaylock)
   - [Gammastep](https://gitlab.com/chinstrap/gammastep)
