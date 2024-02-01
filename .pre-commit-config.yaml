@@ -64,7 +64,3 @@ repos:
     hooks:
       - id: prettier
         types_or: [markdown, css, scss, json, yaml, toml]
-  - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-    rev: v2.11.0
-    hooks:
-      - id: pretty-format-ini
