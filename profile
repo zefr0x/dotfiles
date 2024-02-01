@@ -8,8 +8,6 @@ export XDG_CACHE_HOME=$HOME/.cache
 
 # Tell shh where is the ssh-agent socket
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-# Tell docker to use the user's socket, not the root
-export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
 # Use XDG base dirs
 export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
