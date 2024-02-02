@@ -1,0 +1,11 @@
+# New window from the current instance
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "T"
+mods = "Control|Shift"
+
+# Quit alacritty
+[[keyboard.bindings]]
+action = "Quit"
+key = "W"
+mods = "Control|Shift"

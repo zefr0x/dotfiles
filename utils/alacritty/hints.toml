@@ -1,0 +1,24 @@
+[hints]
+# Keys used for the hint labels
+alphabet = "jfkdls;ahgurieowpq"
+
+
+[[hints.enabled]]
+hyperlinks = true
+post_processing = true
+regex = "(magnet:|mailto:|https:|http:|file:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
+
+
+[hints.enabled.binding]
+key = "U"
+mods = "Control|Shift"
+
+
+[hints.enabled.command]
+args = ["open"]
+program = "handlr"
+
+
+[hints.enabled.mouse]
+enabled = true
+mods = "None"

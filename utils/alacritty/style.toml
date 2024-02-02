@@ -1,0 +1,97 @@
+[font]
+builtin_box_drawing = true
+size = 16.0
+
+normal.family = "JetBrainsMono NF"
+normal.style = "Medium"
+
+bold.family = "JetBrainsMono NF"
+bold.style = "Bold"
+
+italic.family = "JetBrainsMono NF"
+italic.style = "Medium Italic"
+
+bold_italic.family = "JetBrainsMono NF"
+bold_italic.style = "Bold Italic"
+
+
+[cursor]
+unfocused_hollow = true
+style.blinking = "Off"
+style.shape = "Beam"
+vi_mode_style.shape = "Block"
+
+
+[colors]
+draw_bold_text_with_bright_colors = true
+transparent_background_colors = false
+
+[colors.primary]
+background = "#000000"
+foreground = "#b3b1ad"
+
+[colors.cursor]
+cursor = "#8b949e"
+text = "#000000"
+
+[colors.vi_mode_cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[colors.search.focused_match]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.search.matches]
+background = "#ffffff"
+foreground = "#000000"
+
+[colors.hints.end]
+background = "#1d1f21"
+foreground = "#e9ff5e"
+
+[colors.hints.start]
+background = "#e9ff5e"
+foreground = "#1d1f21"
+
+[colors.line_indicator]
+background = "None"
+foreground = "None"
+
+[colors.footer_bar]
+background = "#c5c8c6"
+foreground = "#1d1f21"
+
+[colors.selection]
+background = "#161b22"
+text = "#ffffe0"
+
+[colors.normal]
+black = "#000000"
+blue = "#0d73cc"
+cyan = "#0dcdcd"
+green = "#19cb00"
+magenta = "#cb1ed1"
+red = "#cc0403"
+white = "#dddddd"
+yellow = "#cecb00"
+
+[colors.bright]
+black = "#6e7681"
+blue = "#1a8fff"
+cyan = "#14ffff"
+green = "#23fd00"
+magenta = "#fd28ff"
+red = "#f2201f"
+white = "#ffffff"
+yellow = "#fffd00"
+
+[colors.dim]
+black = "#131415"
+blue = "#556a7d"
+cyan = "#5b7d78"
+green = "#777c44"
+magenta = "#75617b"
+red = "#864343"
+white = "#828482"
+yellow = "#9e824c"
