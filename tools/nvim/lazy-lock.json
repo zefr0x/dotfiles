@@ -5,7 +5,7 @@
   },
   "LuaSnip": {
     "branch": "master",
-    "commit": "68153ebb03e65d8a437c6240553645c57f17cf99"
+    "commit": "2dbef19461198630b3d7c39f414d09fb07d1fdd2"
   },
   "auto-save.nvim": {
     "branch": "main",
@@ -49,15 +49,15 @@
   },
   "friendly-snippets": {
     "branch": "main",
-    "commit": "53d3df271d031c405255e99410628c26a8f0d2b0"
+    "commit": "b8fae73a479ae0a1c54f5c98fa687ae8a0addc53"
   },
   "gitsigns.nvim": {
     "branch": "main",
-    "commit": "3e6e91b09f0468c32d3b96dcacf4b947f037ce25"
+    "commit": "2c2463dbd82eddd7dbab881c3a62cfbfbe3c67ae"
   },
   "hlargs.nvim": {
     "branch": "main",
-    "commit": "872c332dcc65324604011fa6056c4d71253e399b"
+    "commit": "e881f3a424139cc70c83121ec548732efdd67682"
   },
   "hop.nvim": {
     "branch": "v2",
@@ -65,11 +65,11 @@
   },
   "indent-blankline.nvim": {
     "branch": "master",
-    "commit": "3c8a185da4b8ab7aef487219f5e001b11d4b6aaf"
+    "commit": "12e92044d313c54c438bd786d11684c88f6f78cd"
   },
   "lazy.nvim": {
     "branch": "main",
-    "commit": "96584866b9c5e998cbae300594d0ccfd0c464627"
+    "commit": "aedcd79811d491b60d0a6577a9c1701063c2a609"
   },
   "lsp-inlayhints.nvim": {
     "branch": "main",
@@ -81,7 +81,7 @@
   },
   "lualine.nvim": {
     "branch": "master",
-    "commit": "566b7036f717f3d676362742630518a47f132fff"
+    "commit": "7d131a8d3ba5016229e8a1d08bf8782acea98852"
   },
   "neoscroll.nvim": {
     "branch": "master",
@@ -89,11 +89,11 @@
   },
   "nvim-autopairs": {
     "branch": "master",
-    "commit": "9fd41181693dd4106b3e414a822bb6569924de81"
+    "commit": "096d0baecc34f6c5d8a6dd25851e9d5ad338209b"
   },
   "nvim-cmp": {
     "branch": "main",
-    "commit": "538e37ba87284942c1d76ed38dd497e54e65b891"
+    "commit": "04e0ca376d6abdbfc8b52180f8ea236cbfddf782"
   },
   "nvim-colorizer.lua": {
     "branch": "master",
@@ -105,11 +105,11 @@
   },
   "nvim-lint": {
     "branch": "master",
-    "commit": "d44185d3e57e00c164485a454174294b36ef7067"
+    "commit": "76af3422e3c82ea40adf9ade1ccf1dc1eb361789"
   },
   "nvim-lspconfig": {
     "branch": "master",
-    "commit": "796394fd19fb878e8dbc4fd1e9c9c186ed07a5f4"
+    "commit": "9a6279953c82d01b58825a46ede032ab246a5983"
   },
   "nvim-navic": {
     "branch": "master",
@@ -117,23 +117,23 @@
   },
   "nvim-surround": {
     "branch": "main",
-    "commit": "633a0ab03159569a66b65671b0ffb1a6aed6cf18"
+    "commit": "f81bbef3da28bd2a7d5a736575c71f3f953d49f9"
   },
   "nvim-tree.lua": {
     "branch": "master",
-    "commit": "6a99f5af78b5dd531d49ec0a5158dd0f9a7c992b"
+    "commit": "f39f7b6fcd3865ac2146de4cb4045286308f2935"
   },
   "nvim-treesitter": {
     "branch": "master",
-    "commit": "5032f9952ad2a3a7f7792ac438c4f9e2bd53e0b9"
+    "commit": "b7e1a6c2cdc934315cd1914f25763a2a8038c855"
   },
   "nvim-treesitter-textobjects": {
     "branch": "master",
-    "commit": "85b9d0cbd4ff901abcda862b50dbb34e0901848b"
+    "commit": "8edd5a6d96936bdff23333d3bc177481388839e5"
   },
   "nvim-ts-autotag": {
     "branch": "main",
-    "commit": "8515e48a277a2f4947d91004d9aa92c29fdc5e18"
+    "commit": "a65b202cfd08e0e69e531eab737205ff5bc082a4"
   },
   "nvim-ts-rainbow": {
     "branch": "master",
@@ -141,11 +141,11 @@
   },
   "nvim-web-devicons": {
     "branch": "master",
-    "commit": "db0c864375c198cacc171ff373e76bfce2a85045"
+    "commit": "aaec87dbdaa776bfa0a13c8694bec9bcb7454719"
   },
   "plenary.nvim": {
     "branch": "master",
-    "commit": "55d9fe89e33efd26f532ef20223e5f9430c8b0c0"
+    "commit": "4f71c0c4a196ceb656c824a70792f3df3ce6bb6d"
   },
   "symbols-outline.nvim": {
     "branch": "master",
@@ -161,7 +161,7 @@
   },
   "todo-comments.nvim": {
     "branch": "main",
-    "commit": "4a6737a8d70fe1ac55c64dfa47fcb189ca431872"
+    "commit": "833d8dd8b07eeda37a09e99460f72a02616935cb"
   },
   "trouble.nvim": {
     "branch": "main",
@@ -169,7 +169,7 @@
   },
   "undotree": {
     "branch": "master",
-    "commit": "36ff7abb6b60980338344982ad4cdf03f7961ecd"
+    "commit": "a1758ba9990b7189f601a3a5acdfc8ca3907a700"
   },
   "yanky.nvim": {
     "branch": "main",
