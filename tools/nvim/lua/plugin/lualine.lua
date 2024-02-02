@@ -26,8 +26,8 @@ require("lualine").setup({
 				newfile_status = true,
 				path = 1,
 				symbols = {
-					modified = "",
-					readonly = "",
+					modified = " ",
+					readonly = " ",
 					unnamed = "[No Name]",
 					newfile = "[New]",
 				},
