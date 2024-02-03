@@ -110,7 +110,7 @@ arch_extra = {
     "cargo-outdated",
     "cargo-bloat",
     "cargo-nextest",
-    "cargo-asm",
+    "cargo-show-asm",
     "cargo-depgraph",
     "cargo-supply-chain",
     "cargo-deny",
