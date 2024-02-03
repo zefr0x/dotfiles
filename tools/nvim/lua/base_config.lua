@@ -56,7 +56,7 @@ o.completeopt:remove("preview")
 o.wildmode = "list:longest"
 
 -- Set a shell
-o.shell = "/usr/bin/bash"
+o.shell = "/usr/bin/dash"
 
 -- Backup and undo
 o.swapfile = false
