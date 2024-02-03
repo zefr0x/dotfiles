@@ -2,7 +2,7 @@
 
 > Managed with [Toml Bombadil](https://oknozor.github.io/toml-bombadil/)
 
-Those software and config files represents my Personalized Environment.
+Those software and config files represents my Personalized Desktop Environment.
 
 ## Usage
 
@@ -46,8 +46,8 @@ bombadil link -p DE_hyprland
   - [tumbler](https://docs.xfce.org/xfce/tumbler/start)
     - [ffmpegthumbnailer](https://github.com/dirkvdb/ffmpegthumbnailer)
     - [poppler-glib](https://poppler.freedesktop.org/)
-    - [libgsf](https://www.digital-scurf.org/software/libgfshare)
-- [SlimBookBattery](https://github.com/slimbook/slimbookbattery)
+    - [libgsf](https://gitlab.gnome.org/GNOME/libgsf)
+- [SlimBookBattery](https://github.com/Slimbook-Team/slimbookbattery)
 - [System Config Printer](https://github.com/OpenPrinting/system-config-printer)
 - [Dialect](https://apps.gnome.org/app/app.drey.Dialect/)
 
@@ -58,6 +58,7 @@ bombadil link -p DE_hyprland
   - [foxmarks](https://github.com/zefr0x/foxmarks)
 - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 - [gnome-keyring](https://wiki.gnome.org/Projects/GnomeKeyring)
+  - [Seahorse](https://wiki.gnome.org/Apps/Seahorse)
 - [PolKit Gnome](https://gitlab.gnome.org/Archive/policykit-gnome)
 - [greetd](https://git.sr.ht/~kennylevinsen/greetd)
   - [tuigreet](https://github.com/apognu/tuigreet)
@@ -117,26 +118,22 @@ password	optional	pam_gnome_keyring.so
 
 - [Noto Fonts](https://fonts.google.com/noto)
 - [JetBrainsMono Nerd](https://www.nerdfonts.com/)
-- [Nerd Fonts Ubuntu](https://github.com/ryanoasis/nerd-fonts)
+- [Nerd Fonts Ubuntu](https://www.nerdfonts.com/)
 - [ttf-dejavu-ib](http://dejavu-fonts.org/wiki/Main_Page)
 - [Cantarell](https://cantarell.gnome.org/)
-- [Amiri](https://github.com/aliftype/amiri)
+- [Amiri](https://www.amirifont.org/)
 
 ### Themes
 
 #### Icons
 
 - [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-- [Adwaita Icon Theme](https://gitlab.gnome.org/GNOME/adwaita-icon-theme)
 
 #### UI
 
 - [qt5ct](https://sourceforge.net/projects/qt5ct/)
 - [qt6ct](https://github.com/trialuser02/qt6ct)
 - [kvantum](https://github.com/tsujan/Kvantum)
-- [libadwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/)
-
-Set the Qt5 theme by adding this line: `QT_QPA_PLATFORMTHEME=qt5ct` to your `/etc/environment` file.
 
 Prefer dark theme for GTK-4:
 
@@ -152,7 +149,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [python-livereload](https://github.com/lepture/python-livereload)
 - [pastel](https://github.com/sharkdp/pastel)
 
-### CLI Utilities
+### CLI/TUI Utilities
 
 - [Open Doas](https://github.com/Duncaen/OpenDoas)
 - [bat](https://github.com/sharkdp/bat)
@@ -206,7 +203,7 @@ br --set-install-state refused
 - [VSCode CSS LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
 - [VSCode HTML LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
 - [emmet-ls](https://github.com/aca/emmet-ls) <sup>`HTML5/CSS3 snippets`</sup>
-- [lua-language-server](https://github.com/sumneko/lua-language-server) <sup>`Lua`</sup>
+- [lua-language-server](https://github.com/LuaLS/lua-language-server) <sup>`Lua`</sup>
 - [VSCode jSON LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server) <sup>`JSON`</sup>
 - [YAML Language Server](https://github.com/redhat-developer/yaml-language-server) <sup>`YAML`</sup>
 - [Eclipse JDT Language Server](https://github.com/eclipse/eclipse.jdt.ls)
@@ -232,7 +229,7 @@ br --set-install-state refused
 
 #### Rust
 
-- [rustup](https://github.com/rust-lang/rustup.rs)
+- [rustup](https://github.com/rust-lang/rustup)
   - [cargo-outdated](https://github.com/kbknapp/cargo-outdated)
   - [cargo-bloat](https://github.com/RazrFalcon/cargo-bloat)
   - [cargo-nextest](https://nexte.st/)
@@ -255,7 +252,7 @@ rustup component add rust-analyzer
 
 #### C/C++
 
-- [base-devel](https://archlinux.org/groups/x86_64/base-devel/)
+- [base-devel](https://archlinux.org/packages/core/any/base-devel/)
 - [Clang](https://clang.llvm.org/)
 
 #### Python
@@ -269,7 +266,7 @@ rustup component add rust-analyzer
 > [!Note]
 > It includes most the tools needed for JS/TS.
 
-#### LaTex
+#### LaTeX
 
 - [texlive](https://archlinux.org/groups/x86_64/texlive/)
 - [texlive-langarabic](https://archlinux.org/packages/extra/any/texlive-langarabic/)
