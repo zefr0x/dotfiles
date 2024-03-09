@@ -1,12 +1,13 @@
 #!/usr/bin/python
 """A rofi python script that uses foxmarks to list and launch firefox bookmarks."""
+
 from os import environ
 
 if environ.get("ROFI_RETV") == "0":
     import subprocess
 
     results = (
-        subprocess.run(["foxmarks", "bookmarks"], stdout=subprocess.PIPE)
+        subprocess.run(["/usr/bin/foxmarks", "bookmarks"], stdout=subprocess.PIPE)  # noqa: S603
         .stdout.decode()
         .splitlines()
     )

@@ -1,5 +1,6 @@
 #!/usr/bin/python
 """A rofi python script to list zoom meetings and open them."""
+
 import subprocess
 from os import environ
 from pathlib import Path
@@ -9,7 +10,7 @@ def load_meetings() -> list[dict[str, str]]:
     """Load meetings list from `.zoom_meetings` file."""
     meetings = []
 
-    with open(Path.joinpath(Path.home(), ".zoom_meetings"), "r") as file:
+    with Path.open(Path.joinpath(Path.home(), ".zoom_meetings"), "r") as file:
         for line in file.readlines():
             results = line.strip().split(";")
 
@@ -34,7 +35,7 @@ if environ.get("ROFI_RETV") == "0":
             f"{meeting['name']}\0icon\x1fcamera-web\x1finfo\x1f{meeting['uri']}\x1f\n"
         )
 elif environ.get("ROFI_RETV") == "1":
-    subprocess.call(["handlr", "open", environ.get("ROFI_INFO") or ""])
+    subprocess.call(["/usr/bin/handlr", "open", environ.get("ROFI_INFO") or ""])  # noqa: S603
 elif environ.get("ROFI_RETV") == "2":
     # TODO: Accept opening a meeting directly with it's ID
     pass

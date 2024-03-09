@@ -7,8 +7,10 @@ capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 -- nvim-navic
 local custom_on_attach = function(client, bufnr)
-	-- FIXME: Doesn't work with some languages.
-	require("nvim-navic").attach(client, bufnr)
+	if client.server_capabilities.documentSymbolProvider then
+		-- FIXME: Doesn't work with some languages.
+		require("nvim-navic").attach(client, bufnr)
+	end
 
 	require("lsp-inlayhints").on_attach(client, bufnr)
 end
@@ -21,6 +23,7 @@ vim.g.markdown_fenced_languages = {
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = {
 	"clangd",
+	"ruff_lsp",
 	"texlab",
 	"denols",
 	"yamlls",
@@ -69,19 +72,6 @@ lspconfig.rust_analyzer.setup({
 lspconfig.pylsp.setup({
 	on_attach = custom_on_attach,
 	capabilities = capabilities,
-	settings = {
-		pylsp = {
-			plugins = {
-				flake8 = { enabled = true },
-				pydocstyle = { enabled = true },
-				pycodestyle = { enabled = false },
-				mccabe = { enabled = false },
-				pyflakes = { enabled = false },
-				autopep8 = { enabled = false },
-				yapf = { enabled = false },
-			},
-		},
-	},
 })
 
 -- lua-language-server

@@ -1,10 +1,11 @@
 # /usr/bin/env python
 """Script to install system packages and initalize environment."""
+
 import platform
 
-
 if platform.freedesktop_os_release()["ID"] not in ("arch",):
-    raise SystemExit("Error: Your linux distribution is not supported by this script.")
+    err_msg = "Error: Your linux distribution is not supported by this script."
+    raise SystemExit(err_msg)
 
 is_laptop = False
 
@@ -66,8 +67,6 @@ arch_extra = {
     "dysk",
     "broot",
     "opendoas",
-    "python-lsp-server",
-    "python-lsp-black",
     "texlab",
     "vscode-css-languageserver",
     "vscode-html-languageserver",
@@ -75,10 +74,6 @@ arch_extra = {
     "vscode-json-languageserver",
     "yaml-language-server",
     "flawfinder",
-    "mypy",
-    "flake8",
-    "python-pydocstyle",
-    "bandit",
     "mold",
     "deno",
     "swayimg",  # Image viewer
@@ -103,7 +98,6 @@ arch_extra = {
     "pastel",
     "htop",  # System Monitoring
     "imagemagick",
-    "python-black",
     "stylua",
     "shfmt",
     "rustup",
@@ -116,6 +110,11 @@ arch_extra = {
     "cargo-deny",
     "cargo-sort",
     "clang",
+    "uv",
+    "python-lsp-server",
+    "ruff",
+    "ruff-lsp",
+    "mypy",
     "texlive-langarabic",
     "texlive-langother",
     "jdk-openjdk",

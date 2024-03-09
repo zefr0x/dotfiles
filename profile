@@ -24,3 +24,6 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export ANDROID_HOME="$XDG_DATA_HOME"/android
+
+# Set ruff's cache dir, so it be global not per workspace
+export RUFF_CACHE_DIR=~/.cache/ruff

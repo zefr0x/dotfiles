@@ -195,10 +195,6 @@ br --set-install-state refused
 
 ### Language Servers
 
-- [Python LSP Server](https://github.com/python-lsp/python-lsp-server) <sup>`Python`</sup>
-  - [python-pydocstyle](http://www.pydocstyle.org/) <sup>`Python`</sup>
-  - [flake8](https://flake8.pycqa.org/) <sup>`Python`</sup>
-  - [python-lsp-black](https://github.com/python-lsp/python-lsp-black)
 - [TexLab](https://github.com/latex-lsp/texlab) <sup>`LaTex`</sup>
 - [VSCode CSS LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
 - [VSCode HTML LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
@@ -206,19 +202,16 @@ br --set-install-state refused
 - [lua-language-server](https://github.com/LuaLS/lua-language-server) <sup>`Lua`</sup>
 - [VSCode jSON LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server) <sup>`JSON`</sup>
 - [YAML Language Server](https://github.com/redhat-developer/yaml-language-server) <sup>`YAML`</sup>
-- [Eclipse JDT Language Server](https://github.com/eclipse/eclipse.jdt.ls)
+- [Eclipse JDT Language Server](https://github.com/eclipse/eclipse.jdt.ls) <sup>`Java`</sup>
 
 ### Linters
 
 - [Flawfinder](https://dwheeler.com/flawfinder/) <sup>`C/C++`</sup>
-- [mypy](http://www.mypy-lang.org/) <sup>`Python`</sup>
-- [Bandit](https://github.com/PyCQA/bandit) <sup>`Python`</sup>
 
 > Other complex set of linters should be used as a pre-commit hook.
 
 ### Formatters
 
-- [Black](https://github.com/psf/black) <sup>`Python`</sup>
 - [StyLua](https://github.com/JohnnyMorganz/StyLua) <sup>`Lua`</sup>
 
 ### Linkers
@@ -258,6 +251,11 @@ rustup component add rust-analyzer
 #### Python
 
 - [Python](https://www.python.org/)
+- [uv](https://github.com/astral-sh/uv)
+- [Python LSP Server](https://github.com/python-lsp/python-lsp-server)
+- [Ruff](https://github.com/astral-sh/ruff)
+  - [Ruff LSP](https://github.com/astral-sh/ruff-lsp)
+- [mypy](http://www.mypy-lang.org/)
 
 #### JavaScript/TypeScript
 

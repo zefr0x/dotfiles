@@ -30,28 +30,12 @@ repos:
           - "--ignore-missing-imports"
         additional_dependencies:
           - types-setuptools
-  - repo: https://github.com/PyCQA/flake8
-    rev: 7.0.0
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.3.1
     hooks:
-      - id: flake8
-        additional_dependencies:
-          - pep8-naming
-          - "git+https://github.com/zefr0x/flake8-typehinting#egg=flake8-typehinting"
-          - flake8-builtins
-          - flake8-bugbear
-          - flake8-comprehensions
-  - repo: https://github.com/psf/black
-    rev: 24.1.1
-    hooks:
-      - id: black
-  - repo: https://github.com/asottile/reorder_python_imports
-    rev: v3.12.0
-    hooks:
-      - id: reorder-python-imports
-  - repo: https://github.com/PyCQA/pydocstyle
-    rev: 6.3.0
-    hooks:
-      - id: pydocstyle
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
   # Fish
   - repo: https://github.com/hugoh/pre-commit-fish.git
     rev: v1.2

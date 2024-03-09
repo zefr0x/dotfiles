@@ -1,0 +1,6 @@
+[tool.ruff.lint]
+select = ["F", "E", "W", "C90", "I", "N", "D", "UP", "YTT", "ANN", "ASYNC", "S", "BLE", "FBT", "B", "A", "COM", "C4", "DTZ", "T10", "EM", "EXE", "ISC", "ICN", "G", "INP", "PIE", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "ERA", "PGH", "TRY", "FLY", "PERF", "FURB", "LOG", "RUF"]
+
+ignore = ["D203", "D212", "ANN101", "ANN102", "COM812", "ISC001", "TD002", "TD003", "FIX"]
+
+task-tags = ["FIX", "TODO", "HACK", "WARN", "PERF", "NOTE"]
