@@ -201,32 +201,7 @@ br --set-install-state refused
 - [GNOME Text Editor](https://apps.gnome.org/TextEditor/)
 - [Gtranslator](https://wiki.gnome.org/Apps/Gtranslator)
 
-### Language Servers
-
-- [TexLab](https://github.com/latex-lsp/texlab) <sup>`LaTex`</sup>
-- [VSCode CSS LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
-- [VSCode HTML LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
-- [emmet-ls](https://github.com/aca/emmet-ls) <sup>`HTML5/CSS3 snippets`</sup>
-- [lua-language-server](https://github.com/LuaLS/lua-language-server) <sup>`Lua`</sup>
-- [VSCode jSON LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server) <sup>`JSON`</sup>
-- [YAML Language Server](https://github.com/redhat-developer/yaml-language-server) <sup>`YAML`</sup>
-- [Eclipse JDT Language Server](https://github.com/eclipse/eclipse.jdt.ls) <sup>`Java`</sup>
-
-### Linters
-
-- [Flawfinder](https://dwheeler.com/flawfinder/) <sup>`C/C++`</sup>
-
-> Other complex set of linters should be used as a pre-commit hook.
-
-### Formatters
-
-- [StyLua](https://github.com/JohnnyMorganz/StyLua) <sup>`Lua`</sup>
-
-### Linkers
-
-- [mold](https://github.com/rui314/mold)
-
-### Programming Languages Tools/Compilers/Interpreters
+### Programming Languages Tools/Compilers/Interpreters/etc...
 
 #### Rust
 
@@ -239,6 +214,7 @@ br --set-install-state refused
   - [cargo-supply-chain](https://github.com/rust-secure-code/cargo-supply-chain)
   - [cargo-deny](https://github.com/EmbarkStudios/cargo-deny)
   - [cargo-sort](https://github.com/DevinR528/cargo-sort)
+- [mold](https://github.com/rui314/mold)
 
 After installing it you need to run:
 
@@ -248,13 +224,12 @@ rustup default stable
 rustup component add rust-analyzer
 ```
 
-> [!Note]
-> It includes most the tools used for the Rust language.
 
 #### C/C++
 
 - [base-devel](https://archlinux.org/packages/core/any/base-devel/)
 - [Clang](https://clang.llvm.org/)
+- [Flawfinder](https://dwheeler.com/flawfinder/)
 
 #### Python
 
@@ -277,15 +252,30 @@ rustup component add rust-analyzer
 - [texlive](https://archlinux.org/groups/x86_64/texlive/)
 - [texlive-langarabic](https://archlinux.org/packages/extra/any/texlive-langarabic/)
 - [texlive-langother](https://archlinux.org/packages/extra/any/texlive-langother/)
+- [TexLab](https://github.com/latex-lsp/texlab)
 
-#### Melody
+#### Lua
+
+- [lua-language-server](https://github.com/LuaLS/lua-language-server)
+- [StyLua](https://github.com/JohnnyMorganz/StyLua)
+
+#### Regex
 
 - [melody](https://github.com/yoav-lavi/melody)
 
-### Java
+#### Java
 
 - [OpenJDK](https://openjdk.org/)
 - [OpenJDK-17](https://openjdk.org/)
 - [Gradle](https://gradle.org/)
+- [Eclipse JDT Language Server](https://github.com/eclipse/eclipse.jdt.ls)
+
+#### Other
+
+- [VSCode CSS LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
+- [VSCode HTML LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
+- [emmet-ls](https://github.com/aca/emmet-ls) <sup>`HTML5/CSS3 snippets`</sup>
+- [VSCode jSON LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server) <sup>`JSON`</sup>
+- [YAML Language Server](https://github.com/redhat-developer/yaml-language-server) <sup>`YAML`</sup>
 
 </details>
