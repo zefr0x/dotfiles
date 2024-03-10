@@ -2,7 +2,9 @@
 
 > Managed with [Toml Bombadil](https://oknozor.github.io/toml-bombadil/)
 
-Those software and config files represents my Personalized Desktop Environment.
+Those software and config files represent my Personalized Desktop Environment.
+
+![ScreenShot](https://github.com/zefr0x/dotfiles/assets/65136727/7f795f3e-fb3c-451f-8966-a6a60fe1ad8a)
 
 ## Usage
 
@@ -25,8 +27,14 @@ bombadil install .dotfiles
 bombadil link -p DE_hyprland
 ```
 
+## Arch linux Installation
+
+> You need [`yay`](https://github.com/Jguer/yay#installation) to install AUR packages.
+
+To generate the package installing commands run the `install_packages.py` script.
+
 <details>
-<summary>Dependencies</summary>
+<summary>Dependencies And Instructions</summary>
 
 ### GUI Applications
 
@@ -281,11 +289,3 @@ rustup component add rust-analyzer
 - [Gradle](https://gradle.org/)
 
 </details>
-
-## Arch linux Installation
-
-> You need [`yay`](https://github.com/Jguer/yay#installation) to install AUR packages.
-
-To generate the package installing commands run the `install_packages.py` script.
-
-<!-- TODO: Create screenshots section. -->
