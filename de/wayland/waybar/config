@@ -3,8 +3,8 @@
     "position": "top",
     "height": 24,
     "modules-left": [
-        "tray",
         "custom/notification",
+        "tray",
         "battery",
         "pulseaudio",
         // "wireplumber",
