@@ -167,7 +167,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [dysk](https://github.com/Canop/dysk)
 - [hexyl](https://github.com/sharkdp/hexyl)
-- [handlr](https://github.com/chmln/handlr)
+- [handlr](https://github.com/Anomalocaridid/handlr-regex)
 - [trash-cli](https://github.com/andreafrancia/trash-cli)
 - [ripdrag](https://github.com/nik012003/ripdrag)
 - [broot](https://github.com/Canop/broot)

@@ -60,7 +60,7 @@ arch_extra = {
     "eza",  # `ls` alternative
     "hexyl",  # command-line hex viewer
     "skim",  # fuzzy finder
-    "handlr",  # Alternative to xdg-utils
+    "handlr-regex",  # Alternative to xdg-utils
     "fish",
     "neovim",
     "ripgrep",
