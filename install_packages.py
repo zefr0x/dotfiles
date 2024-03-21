@@ -85,7 +85,6 @@ arch_extra = {
     "libgsf",
     # "system-config-printer",
     "lsof",  # Check for /dev/video* usage with (fuser)
-    "jq",  # Parse pw-dump json output.
     "network-manager-applet",
     "gnome-keyring",
     "noto-fonts",

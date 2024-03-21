@@ -14,8 +14,6 @@ window#waybar {
 #clock,
 #language,
 #custom-webcam_indecator,
-#custom-microphone_indecator,
-#custom-screensharing_indecator,
 #network,
 #cpu,
 #memory,
@@ -77,8 +75,8 @@ window#waybar {
 }
 
 #custom-webcam_indecator,
-#custom-microphone_indecator,
-#custom-screensharing_indecator {
+#privacy-item.screenshare,
+#privacy-item.audio-in {
   color: #e01b24;
   animation-name: blink;
   animation-duration: 2s;
