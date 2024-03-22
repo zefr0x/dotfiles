@@ -28,8 +28,6 @@ gtk4 = { source = "de/gui/gtk/gtk-4.0/settings.ini", target = ".config/gtk-4.0/s
 
 
 [profiles.qt.dots]
-qt5 = { source = "de/gui/qt/qt5ct.conf", target = ".config/qt5ct/qt5ct.conf" }
-qt6 = { source = "de/gui/qt/qt6ct.conf", target = ".config/qt6ct/qt6ct.conf" }
 kvantum = { source = "de/gui/qt/Kvantum", target = ".config/Kvantum" }
 
 

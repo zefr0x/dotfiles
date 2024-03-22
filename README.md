@@ -138,8 +138,6 @@ password	optional	pam_gnome_keyring.so
 
 #### UI
 
-- [qt5ct](https://sourceforge.net/projects/qt5ct/)
-- [qt6ct](https://github.com/trialuser02/qt6ct)
 - [kvantum](https://github.com/tsujan/Kvantum)
 
 Prefer dark theme for GTK-4:

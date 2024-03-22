@@ -40,8 +40,6 @@ arch_extra = {
     "ttf-jetbrains-mono-nerd",
     "ttf-ubuntu-nerd",
     "papirus-icon-theme",
-    "qt5ct",  # Qt5 Configuration Utility
-    "qt6ct",  # Qt6 Configuration Utility
     "kvantum",  # Theme Engine for Qt5/6
     "git-delta",  # Syntax-highlighting pager for git, diff, and grep output
     "python-livereload",
