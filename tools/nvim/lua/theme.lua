@@ -52,7 +52,7 @@ hl(0, "InlineHint", { fg = "#282828" })
 
 -- Popup Menu
 hl(0, "Pmenu", { bg = "#080808" })
-hl(0, "PmenuSel", { fg = nil, bg = "#151515" })
+hl(0, "PmenuSel", { fg = nil, bg = "#252525" })
 -- hl(0, "PmenuSbar", { fg = nil, bg = "" })
 -- hl(0, "PmenuThumb", { fg = nil, bg = "" })
 
