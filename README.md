@@ -58,6 +58,7 @@ To generate the package installing commands run the `install_packages.py` script
 - [SlimBookBattery](https://github.com/Slimbook-Team/slimbookbattery)
 - [System Config Printer](https://github.com/OpenPrinting/system-config-printer)
 - [Dialect](https://apps.gnome.org/app/app.drey.Dialect/)
+- [Hieroglyphic](https://github.com/FineFindus/Hieroglyphic)
 
 ### Desktop Environment
 

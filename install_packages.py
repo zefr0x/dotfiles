@@ -148,6 +148,7 @@ flathub = {
     "org.gnome.seahorse.Application",  # Frontend for gnome-keyring
     "org.gnome.TextEditor",  # For writing in Arabic smoothly
     "org.gnome.Gtranslator",  # Gettext po file editor
+    "io.github.finefindus.Hieroglyphic",  # Find LaTeX symbols
 }
 
 if is_laptop:
