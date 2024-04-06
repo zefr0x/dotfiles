@@ -77,10 +77,6 @@ arch_extra = {
     "swayimg",  # Image viewer
     "pcmanfm-qt",  # File Manager
     "gvfs",
-    "tumbler",
-    "ffmpegthumbnailer",
-    "poppler-glib",
-    "libgsf",
     # "system-config-printer",
     "lsof",  # Check for /dev/video* usage with (fuser)
     "network-manager-applet",
