@@ -32,8 +32,8 @@ arch_extra = {
     "xdg-desktop-portal-hyprland",
     "xdg-desktop-portal-gtk",
     "waybar",
-    "swayidle",
-    "swaylock",
+    "hypridle",
+    "hyprlock",
     "gammastep",
     "swappy",  # Snapshot and Editor Tool
     "slurp",  # Select a region in a Wayland
