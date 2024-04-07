@@ -13,7 +13,6 @@ require("lualine").setup({
 		disabled_filetypes = { statusline = { "Trouble", "undotree", "diff" } },
 	},
 	extensions = {
-		"nvim-tree",
 		"symbols-outline",
 		-- { sections = { lualine_a = {  } }, filetypes = { "diff" } },
 	},

@@ -273,15 +273,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- Better file browser
-	{
-		"kyazdani42/nvim-tree.lua",
-		cmd = "NvimTreeToggle",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("plugin.file_browser")
-		end,
-	},
 	-- Class/module browser
 	{
 		"simrat39/symbols-outline.nvim",

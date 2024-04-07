@@ -61,9 +61,6 @@ map("n", "<leader>ee", vim.diagnostic.open_float)
 map("n", "<leader>bp", vim.cmd.BufferLinePick)
 map("n", "<leader>bc", vim.cmd.BufferLinePickClose)
 
--- nvim-tree.lua
-map("n", "<F3>", vim.cmd.NvimTreeToggle)
-
 -- trouble
 map("n", "<F5>", "<cmd>TroubleToggle document_diagnostics<cr>")
 
