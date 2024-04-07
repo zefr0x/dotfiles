@@ -52,4 +52,3 @@ hyprland = { source = "de/wayland/hyprland", target = ".config/hypr" }
 waybar = { source = "de/wayland/waybar", target = ".config/waybar" }
 swaync = { source = "de/wayland/swaync", target = ".config/swaync" }
 swappy = { source = "de/wayland/swappy_config", target = ".config/swappy/config" }
-gammastep = { source = "de/wayland/gammastep.ini", target = ".config/gammastep/config.ini" }

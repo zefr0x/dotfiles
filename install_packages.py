@@ -34,7 +34,6 @@ arch_extra = {
     "waybar",
     "hypridle",
     "hyprlock",
-    "gammastep",
     "swappy",  # Snapshot and Editor Tool
     "slurp",  # Select a region in a Wayland
     "ttf-jetbrains-mono-nerd",
@@ -123,6 +122,7 @@ arch_user_repo = {
     "foxmarks",
     "hyprland-per-window-layout",
     "hyprpicker",
+    "wl-gammarelay-rs",
     "wayshot",  # Screenshot utility
     "swaync",
     "ianny-git",  # Periodically informes user to take breaks

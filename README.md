@@ -81,7 +81,7 @@ To generate the package installing commands run the `install_packages.py` script
   - [hyprpicker](https://github.com/hyprwm/hyprpicker)
   - [hypridle](https://github.com/hyprwm/hypridle)
   - [hyprlock](https://github.com/hyprwm/hyprlock)
-  - [Gammastep](https://gitlab.com/chinstrap/gammastep)
+  - [wl-gammarelay-rs](https://github.com/MaxVerevkin/wl-gammarelay-rs)
 - [swappy](https://github.com/jtheoof/swappy)
   - [wayshot](https://github.com/waycrate/wayshot)
   - [slurp](https://github.com/emersion/slurp)
