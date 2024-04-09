@@ -1,26 +1,27 @@
 window#waybar {
   font-family: Ubuntu Nerd Font;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 15px;
 
-  background-color: #000000;
-  border-bottom: 1px solid rgba(90, 0, 0, 0.5);
+  background-color: transparent;
   color: #ffffff;
 }
 
-#submap,
 #window,
 #idle_inhibitor,
 #clock,
 #language,
+#privacy-item,
 #custom-webcam_indecator,
-#network,
 #cpu,
 #memory,
 #temperature,
-#backlight,
+#custom-wl-gammarelay-brightness,
+#custom-wl-gammarelay-temperature,
+#custom-wl-gammarelay-gamma,
+#custom-wl-gammarelay-invert,
+#custom-wl-gammarelay-auto,
 #wireplumber,
-#pulseaudio,
 #battery,
 #custom-notification,
 #tray {
@@ -29,49 +30,55 @@ window#waybar {
 
 #workspaces button {
   padding: 0 3px;
-  background-color: transparent;
-  /* Use box-shadow instead of border so the text isn't offset */
-  box-shadow: inset 0 -3px transparent;
-  /* Avoid rounded borders under each button name */
+  color: gray;
   border: none;
-  border-radius: 0;
+  border-radius: 15px;
 }
 
 #workspaces button:hover {
-  background: inherit;
-  box-shadow: inset 0 -3px rgba(150, 0, 0, 0.7);
+  background: rgba(211, 211, 211, 0.2);
 }
 
 #workspaces button.active {
-  box-shadow: inset 0 -3px #960000;
+  color: white;
 }
 
 #workspaces button.urgent {
-  background-color: #960000;
+  border-left: solid 3px rgba(224, 27, 36, 0.6);
+  border-right: solid 3px rgba(224, 27, 36, 0.6);
+}
+
+#window {
+  /* TODO: Use `Cantarell` when Arabic is supported: https://gitlab.gnome.org/GNOME/cantarell-fonts/-/issues/18 */
+  font-family: Noto Naskh Arabic UI;
+
+  padding-left: 15px;
+
+  color: #9acd32;
 }
 
 #idle_inhibitor {
   color: gray;
-  padding: 0px 5px;
-  box-shadow: inset 0 -2px #960000;
-  min-width: 16px;
-}
-
-#idle_inhibitor.activated {
-  color: #ffffff;
-  background-color: #960000;
-}
-
-#language {
-  padding: 0px 5px;
-  min-width: 16px;
-  box-shadow: inset 0 -2px #960000;
 }
 
 @keyframes blink {
   to {
     color: #ffffff;
   }
+}
+
+#idle_inhibitor.activated {
+  color: #e01b24;
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#language {
+  font-family: Amiri;
+  font-size: 13px;
 }
 
 #custom-webcam_indecator,
@@ -85,23 +92,7 @@ window#waybar {
   animation-direction: alternate;
 }
 
-#network.disconnected {
-  background-color: #e5a50a;
-}
-
-#temperature.critical {
-  color: #e01b24;
-}
-
 #wireplumber.muted {
-  color: #e5a50a;
-}
-
-#pulseaudio.muted {
-  color: #e5a50a;
-}
-
-#pulseaudio.source-muted {
   color: #e5a50a;
 }
 
@@ -110,10 +101,15 @@ window#waybar {
   color: #2ec27e;
 }
 
-#battery.critical:not(.charging) {
+#battery.warning:not(.charging) {
+  color: #e5a50a;
+}
+
+#battery.critical:not(.charging),
+#temperature.critical {
   color: #e01b24;
   animation-name: blink;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -125,5 +121,10 @@ window#waybar {
 
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
-  box-shadow: inset 0 -3px #960000;
+
+  /* FIX: Padding doesn't work. */
+  padding: 0 3px;
+  border-radius: 15px;
+  border-left: solid 3px rgba(224, 27, 36, 0.6);
+  border-right: solid 3px rgba(224, 27, 36, 0.6);
 }

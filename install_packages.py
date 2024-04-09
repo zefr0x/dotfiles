@@ -23,7 +23,6 @@ arch_extra = {
     "zathura",  # Document Viewer
     "zathura-pdf-mupdf",
     "dex",  # XDG Auto Start / DesktopEntry
-    "brightnessctl",
     "rofi-emoji",
     "polkit-gnome",
     "greetd",

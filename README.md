@@ -67,7 +67,6 @@ To generate the package installing commands run the `install_packages.py` script
 - [PolKit Gnome](https://gitlab.gnome.org/Archive/policykit-gnome)
 - [greetd](https://git.sr.ht/~kennylevinsen/greetd)
   - [tuigreet](https://github.com/apognu/tuigreet)
-- [brightnessctl](https://github.com/Hummer12007/brightnessctl)
 - [dex](https://github.com/jceb/dex)
 
 #### Hyprland (Wayland)

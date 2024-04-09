@@ -3,6 +3,8 @@
 
 import subprocess
 from datetime import datetime
+from os import environ
+from pathlib import Path
 from time import sleep
 
 TEMP_DAY = 4000.0
@@ -14,7 +16,9 @@ DUSK_TIME = 64800.0  # 6pm (Shoulbe be > WINDOW + DAWN_TIME)
 # Time during which the temperature changes gradually until it reaches the desired value
 WINDOW = 900  # 15m
 
-
+control_file = Path(environ["XDG_RUNTIME_DIR"]).joinpath(
+    "auto-display-settings-disabled"
+)
 temp = None
 
 # NOTE: This is done only one time when the script starts, which reduces accuracy.
@@ -49,6 +53,12 @@ while True:
             ]
         )
 
-    sleep(2)
     # NOTE: Calculatig current_time manually improves performance, but reduces accuracy.
     current_time += 2
+
+    while True:
+        sleep(2)
+
+        # Method to stop auto change of settings (for manual change).
+        if not control_file.is_file():
+            break
