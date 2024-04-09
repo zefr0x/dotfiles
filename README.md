@@ -173,6 +173,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 - [onefetch](https://github.com/o2sh/onefetch)
 - [nvtop](https://github.com/Syllo/nvtop)
 - [htop](https://htop.dev/)
+- [bandwhich](https://github.com/imsnif/bandwhich)
 - [imagemagick](https://imagemagick.org/)
 
 Since the `br` shell function is custom, after restarting the shell, run that:

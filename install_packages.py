@@ -88,6 +88,7 @@ arch_extra = {
     "git",
     "pastel",
     "htop",  # System Monitoring
+    "bandwhich",  # Network Bandwidth Monitoring
     "imagemagick",
     "stylua",
     "shfmt",
