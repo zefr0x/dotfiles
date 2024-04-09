@@ -7,8 +7,6 @@ if platform.freedesktop_os_release()["ID"] not in ("arch",):
     err_msg = "Error: Your linux distribution is not supported by this script."
     raise SystemExit(err_msg)
 
-is_laptop = False
-
 
 # Arch Linux
 arch_groups = {
@@ -146,9 +144,6 @@ flathub = {
     "org.gnome.Gtranslator",  # Gettext po file editor
     "io.github.finefindus.Hieroglyphic",  # Find LaTeX symbols
 }
-
-if is_laptop:
-    arch_user_repo.add("slimbookbattery")  # Interface for TLP
 
 
 print(
