@@ -1,70 +1,31 @@
 * {
-    font: "JetBrainsMono NF Medium 20";
-    bold-font: "JetBrainsMono NF Bold 20";
-
-    bg0: #000000;
-    bg1: #90000050;
-    bg2: #90000050;
-    bg3: #90000070;
-
-    fg0: #DEDEDE;
-    fg1: #DEDEDE;
-    fg2: #DEDEDE80;
-    fg3: @fg2;
-    fg4: #FFFFFF;
-
-    br0: #90000050;
+    font: "Cantarell Regular 20";
+    bold-font: "Cantarell Bold 20";
 
     background-color: transparent;
-    text-color: @fg0;
-
-    margin: 0;
-    padding: 0;
-    spacing: 0;
+    text-color: #ffffff;
 }
 
 window {
     children: [ overlay, mainbox ];
 
     location: center;
-    width: 700;
     y-offset: 0;
-    border-radius: 7;
+    width: 650;
+    padding: 5px;
+    border-radius: 30px;
 
-    background-color: @bg0;
-    border: 5px;
-    border-color: @br0;
+    background-color: #000000;
 }
-
-/*
-overlay {
-
-}
-*/
 
 mainbox {
     children: [ inputbar, message, listview, mode-switcher ];
 }
 
 inputbar {
-    font: @font;
-    padding: 12px;
-    spacing: 12px;
-    children: [ textbox-prompt, entry, num-filtered-rows ];
-}
-
-textbox-prompt {
-    expand: false;
-    str: "";
-    padding: 6px 20px 6px 12px;
-    border-radius: 7px;
-
-    background-color: @bg3;
-    text-color: @bg0;
-}
-
-textbox-prompt, num-filtered-rows, entry, element-icon, element-text {
-    vertical-align: 0.5;
+    padding: 15px 15px 15px 21px;
+    spacing: 10px;
+    children: [ entry, num-filtered-rows ];
 }
 
 entry {
@@ -72,15 +33,27 @@ entry {
     cursor: pointer;
 
     placeholder: "Search";
-    placeholder-color: @fg2;
+    placeholder-color: #6f6f6f;
 }
 
 num-filtered-rows {
-    color: @fg2;
+    font: @bold-font;
+    color: #6f6f6f;
+}
+
+message {
+    border: 2px;
+    border-radius: 15;
+    border-color: #008080;
+    margin: 3px 8px;
+}
+
+textbox {
+    padding: 8px 16px;
 }
 
 listview {
-    lines: 10;
+    lines: 9;
     columns: 1;
 
     fixed-height: false;
@@ -90,53 +63,40 @@ element {
     orientation: horizontal;
     children: [ element-icon, element-text ];
 
-    padding: 8px 16px;
-    spacing: 16px;
-
-    border-radius: 16;
-    margin: 8px 8px 0 8px;
+    padding: 8px;
+    spacing: 10px;
+    border-radius: 15;
+    margin: 3px 8px;
 }
 
-element normal active {
-    text-color: @bg2;
+element selected {
+    background-color: #008080;
 }
 
-element selected normal, element selected active {
-    background-color: @bg2;
-    text-color: @fg1;
+element active {
+    border: 3px;
+    border-color: #8b008b;
+}
+
+element selected active {
+    background-color: #008080;
+
+    border: 3px;
+    border-color: #8b008b;
 }
 
 element-icon {
     size: 1em;
 }
 
-element-text {
-    text-color: @fg1;
-}
-
-element-text span {
-    text-color: red;
-}
-
 mode-switcher {
     padding: 8px;
-    margin: 8px 0 0 0;
 }
 
 button {
-    color: @fg3;
+    color: #6f6f6f;
 }
 
-button selected.normal {
-    color: @fg4;
-}
-
-message {
-    border: 2px 0 0;
-    border-color: @bg1;
-    background-color: @bg1;
-}
-
-textbox {
-    padding: 8px 24px;
+button selected {
+    color: #ffffff;
 }
