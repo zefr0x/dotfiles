@@ -30,6 +30,9 @@ require("nvim-treesitter.configs").setup({
 		"mermaid",
 		"java",
 		"kotlin",
+		"hyprlang",
+		"meson",
+		"po",
 	},
 	highlight = {
 		enable = true,

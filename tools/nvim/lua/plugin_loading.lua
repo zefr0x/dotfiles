@@ -186,6 +186,9 @@ require("lazy").setup({
 			"mermaid",
 			"java",
 			"kotlin",
+			"hyprlang",
+			"meson",
+			"po",
 		},
 		build = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
