@@ -1,0 +1,1 @@
+nvidia_driver = "false" # Only for Nvidia proprietary GPU driver
