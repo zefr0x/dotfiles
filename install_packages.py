@@ -137,7 +137,7 @@ flathub = {
     "org.gnome.dspy",  # D-Bus connections explorer
     "com.github.wwmm.easyeffects",  # Audio Manipulation
     "org.pipewire.Helvum",  # D-Bus connections explorer
-    "io.github.Qalculate.qalculate-qt",
+    "io.github.Qalculate",  # Qalculate! GTK+ UI
     "app.drey.Dialect",  # Translating Text
     "org.gnome.seahorse.Application",  # Frontend for gnome-keyring
     "org.gnome.TextEditor",  # For writing in Arabic smoothly

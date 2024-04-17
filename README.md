@@ -46,7 +46,7 @@ To generate the package installing commands run the `install_packages.py` script
 - [swayimg](https://github.com/artemsen/swayimg)
 - [Easy Effects](https://github.com/wwmm/easyeffects)
 - [Helvum](https://gitlab.freedesktop.org/pipewire/helvum)
-- [Qalculate! Qt](https://qalculate.github.io/)
+- [Qalculate!](https://qalculate.github.io/)
 - [zathura](https://pwmt.org/projects/zathura/)
   - [zathura-pdf-mupdf](https://pwmt.org/projects/zathura-pdf-mupdf/)
 - [PCManFM](https://github.com/lxqt/pcmanfm-qt)
