@@ -81,7 +81,7 @@ To generate the package installing commands run the `install_packages.py` script
   - [hyprlock](https://github.com/hyprwm/hyprlock)
   - [wl-gammarelay-rs](https://github.com/MaxVerevkin/wl-gammarelay-rs)
 - [swappy](https://github.com/jtheoof/swappy)
-  - [wayshot](https://github.com/waycrate/wayshot)
+  - [grim](https://sr.ht/~emersion/grim/)
   - [slurp](https://github.com/emersion/slurp)
 - [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
   - [ianny](https://github.com/zefr0x/ianny)
