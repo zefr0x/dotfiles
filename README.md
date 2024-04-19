@@ -233,6 +233,12 @@ rustup component add rust-analyzer
   - [Ruff LSP](https://github.com/astral-sh/ruff-lsp)
 - [mypy](http://www.mypy-lang.org/)
 
+#### Go
+
+- [Go](https://go.dev/)
+- [gopls](https://github.com/golang/tools/tree/master/gopls)
+- [go-tools](https://github.com/golang/tools)
+
 #### JavaScript/TypeScript
 
 - [Deno](https://deno.land/)

@@ -19,6 +19,7 @@ require("lazy").setup({
 		ft = {
 			"rust",
 			"c",
+			"go",
 			"cpp",
 			"python",
 			"tex",
@@ -160,6 +161,7 @@ require("lazy").setup({
 			"rust",
 			"python",
 			"c",
+			"go",
 			"cpp",
 			"javascript",
 			"html",

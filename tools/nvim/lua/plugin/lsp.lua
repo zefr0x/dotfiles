@@ -24,6 +24,7 @@ vim.g.markdown_fenced_languages = {
 local servers = {
 	"clangd",
 	"ruff_lsp",
+	"gopls",
 	"texlab",
 	"denols",
 	"yamlls",
