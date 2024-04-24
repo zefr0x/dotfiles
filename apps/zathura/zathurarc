@@ -1,23 +1,21 @@
-set selection-clipboard clipboard
+set adjust-open "width"
+set continuous-hist-save true
 
-set continuous-hist-save "true"
 set database "sqlite"
+set dbus-service false
 
-# set sandbox strict
+set sandbox strict
+
+set scroll-full-overlap 0.01
+set scroll-step 100
+set scroll-page-aware true
+
+set selection-notification false
+
+set statusbar-home-tilde true
 
 set window-title-basename true
 set window-title-page true
 
-set statusbar-home-tilde true
-
-set adjust-open "width"
-
-set scroll-step 100
-set scroll-full-overlap 0.01
-set scroll-page-aware true
-
-set recolor true
-set recolor-reverse-video true
-set recolor-keephue true
 
 include theme

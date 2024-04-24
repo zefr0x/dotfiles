@@ -1,53 +1,55 @@
-set font "monospace normal 11"
+set font "Cantarell 14"
 
-set guioptions "shv"
-
-set statusbar-h-padding 3
-set statusbar-v-padding 1
+set guioptions "hv"
 
 set page-padding 3
 
 
 set default-bg "#000000"
-set default-fg "#f0f0f0"
-
-set statusbar-fg "#c0c0c0"
-set statusbar-bg "#200000"
-
-set notification-bg "#30a000"
-set notification-fg "#151515"
-
-set notification-error-bg "#a00000"
-set notification-error-fg "#151515"
-
-set notification-warning-bg "#e05000"
-set notification-warning-fg "#151515"
+set default-fg "#ffffff"
 
 set inputbar-bg "#151515"
-set inputbar-fg "#f0f0f0"
+set inputbar-fg "#ffffff"
+
+set notification-bg "#3584e4"
+set notification-fg "#ffffff"
+
+set notification-error-bg "#e01b24"
+set notification-error-fg "#000000"
+
+set notification-warning-bg "#e5a50a"
+set notification-warning-fg "#000000"
+
+set statusbar-bg "#252525"
+set statusbar-fg "#ffffff"
+set statusbar-h-padding 3
+set statusbar-v-padding 1
 
 set completion-bg "#252525"
-set completion-fg "#d0d0d0"
+set completion-fg "#ffffff"
 
 set completion-group-bg "#000000"
-set completion-group-fg "#dedede"
+set completion-group-fg "#ffffff"
 
 set completion-highlight-fg "#151515"
 set completion-highlight-bg "#30a000"
 
+set highlight-active-color "rgba(0,188,0,0.5)"
+set highlight-color "rgba(159,251,0,0.5)"
+set highlight-fg "rgba(0,0,0,0.5)"
+
+set index-active-bg "#9FBC00"
+set index-active-fg "#232323"
+
+set index-bg "#232323"
+set index-fg "#DDDDDD"
+
 set render-loading-bg "#ffffff"
 set render-loading-fg "#000000"
 
-set index-fg "#dddddd"
-set index-bg "#101010"
 
-set index-active-fg "#232323"
-set index-active-bg "#307000"
-
-
-set highlight-color "#ffac47"
-set highlight-fg "#ffffff"
-set highlight-active-color "#74cde6"
-
+set recolor true
+set recolor-darkcolor "#c0c0c0"
+set recolor-keephue true
 set recolor-lightcolor "#000000"
-set recolor-darkcolor "#e0e0e0"
+set recolor-reverse-video true
