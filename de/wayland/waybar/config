@@ -96,7 +96,7 @@
         "format": "{usage}% "
     },
     "memory": {
-        "format": "{percentage}% ",
+        "format": "{percentage}% ",
         "tooltip-format": "{used:0.1f} / {total:0.1f} GiB RAM — {swapUsed:0.1f} / {swapTotal:0.1f} GiB SWAP"
     },
     "temperature": {
@@ -117,6 +117,7 @@
         "orientation": "horizontal",
         "drawer": {},
         "modules": [
+            "backlight",
             "custom/wl-gammarelay-brightness",
             "custom/wl-gammarelay-temperature",
             "custom/wl-gammarelay-gamma",
@@ -124,22 +125,37 @@
             "custom/wl-gammarelay-auto"
         ]
     },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "󱩎",
+            "󱩏",
+            "󱩐",
+            "󱩑",
+            "󱩒",
+            "󱩓",
+            "󱩔",
+            "󱩕",
+            "󱩖",
+            "󰛨"
+        ]
+    },
     "custom/wl-gammarelay-brightness": {
-        "format": "{}% ",
+        "format": "{}% ",
         "tooltip": false,
         "exec": "wl-gammarelay-rs watch {bp}",
         "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.02",
         "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.02"
     },
     "custom/wl-gammarelay-temperature": {
-        "format": "{} ",
+        "format": "{} 󰏈",
         "tooltip": false,
         "exec": "wl-gammarelay-rs watch {t}",
         "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
         "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
     },
     "custom/wl-gammarelay-gamma": {
-        "format": "{}% γ",
+        "format": "{} 󱃮",
         "tooltip": false,
         "exec": "wl-gammarelay-rs watch {g}",
         "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d +0.02",

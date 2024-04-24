@@ -16,6 +16,7 @@ window#waybar {
 #cpu,
 #memory,
 #temperature,
+#backlight,
 #custom-wl-gammarelay-brightness,
 #custom-wl-gammarelay-temperature,
 #custom-wl-gammarelay-gamma,
