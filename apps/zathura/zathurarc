@@ -4,7 +4,7 @@ set continuous-hist-save true
 set database "sqlite"
 set dbus-service false
 
-set sandbox strict
+#set sandbox strict
 
 set scroll-full-overlap 0.01
 set scroll-step 100
