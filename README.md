@@ -141,6 +141,15 @@ Prefer dark theme for GTK-4:
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 ```
 
+Flatpak allowed files:
+- `xdg-config/gtk-4.0:ro`
+- `xdg-config/gtk-3.0:ro`
+- `xdg-config/kdeglobals:ro`
+
+Flatpak variables:
+- `XDG_CURRENT_DESKTOP=KDE`
+- `QT_STYLE_OVERRIDE=Breeze`
+
 ### CLI/TUI Applications/Tools
 
 - [git](https://git-scm.com/)

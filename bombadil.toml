@@ -29,6 +29,7 @@ gtk4 = { source = "de/gui/gtk/gtk-4.0/settings.ini", target = ".config/gtk-4.0/s
 
 [profiles.qt.dots]
 kvantum = { source = "de/gui/qt/Kvantum", target = ".config/Kvantum" }
+kdeglobals = { source = "de/gui/qt/kdeglobals", target = ".config/kdeglobals" }
 
 
 [profiles.DE_generic.dots]
