@@ -31,7 +31,6 @@ arch_extra = {
     "waybar",
     "hypridle",
     "hyprlock",
-    "swappy",  # Snapshot and Editor Tool
     "grim",  # Screenshot utility
     "slurp",  # Select a region in a Wayland
     "ttf-jetbrains-mono-nerd",
@@ -125,6 +124,7 @@ arch_user_repo = {
     "hyprland-per-window-layout",
     "hyprpicker",
     "wl-gammarelay-rs",
+    "satty",
     "swaync",
     "ianny-git",  # Periodically informes user to take breaks
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI

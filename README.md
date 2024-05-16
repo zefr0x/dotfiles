@@ -80,7 +80,7 @@ To generate the package installing commands run the `install_packages.py` script
   - [hypridle](https://github.com/hyprwm/hypridle)
   - [hyprlock](https://github.com/hyprwm/hyprlock)
   - [wl-gammarelay-rs](https://github.com/MaxVerevkin/wl-gammarelay-rs)
-- [swappy](https://github.com/jtheoof/swappy)
+- [Satty](https://github.com/gabm/Satty)
   - [grim](https://sr.ht/~emersion/grim/)
   - [slurp](https://github.com/emersion/slurp)
 - [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)

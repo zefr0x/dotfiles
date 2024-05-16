@@ -1,4 +1,0 @@
-[Default]
-save_dir=$HOME/Pictures
-save_filename_format=screenshot_%Y_%m_%d_%H_%M_%S.png
-text_font=sans-serif
