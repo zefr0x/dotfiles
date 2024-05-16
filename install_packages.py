@@ -73,6 +73,7 @@ arch_extra = {
     "swayimg",  # Image viewer
     "pcmanfm-qt",  # File Manager
     "gvfs",
+    "rofi-wayland",  # Launcher
     # "system-config-printer",
     "lsof",  # Check for /dev/video* usage with (fuser)
     "network-manager-applet",
@@ -119,7 +120,6 @@ arch_core = {
     "python",
 }
 arch_user_repo = {
-    "rofi-lbonn-wayland",  # Launcher
     "foxmarks",
     "hyprland-per-window-layout",
     "hyprpicker",
