@@ -86,6 +86,8 @@ if status is-interactive
     abbr -a g git
     abbr -a p pacman
     abbr -a dp doas pacman
+    abbr -a pu doas pacman -Syu
+    abbr -a yu yay -Syua
     abbr -a fu flatpak update
 
     # -------------- Aliases ---------------
