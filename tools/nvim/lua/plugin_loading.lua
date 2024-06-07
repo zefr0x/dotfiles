@@ -104,7 +104,7 @@ require("lazy").setup({
 	{
 		"saecki/crates.nvim",
 		event = "BufReadPost Cargo.toml",
-		version = "v0.3.0",
+		version = "v0.4.0",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("plugin.crates")
@@ -117,7 +117,7 @@ require("lazy").setup({
 	-- Pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing
 	{
 		"folke/trouble.nvim",
-		cmd = "TroubleToggle",
+		cmd = "Trouble",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("plugin.trouble_diagnostics")
@@ -278,16 +278,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- Class/module browser
-	{
-		"simrat39/symbols-outline.nvim",
-		cmd = "SymbolsOutline",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		config = function()
-			require("plugin.symbols_outline")
-		end,
-	},
-
 	-- Git integration for buffers
 	{
 		"lewis6991/gitsigns.nvim",
@@ -321,7 +311,7 @@ require("lazy").setup({
 	{
 		"akinsho/bufferline.nvim",
 		event = "BufEnter",
-		version = "v3.*",
+		version = "v4.*",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("plugin.bufferline")

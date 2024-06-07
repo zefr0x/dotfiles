@@ -62,10 +62,11 @@ map("n", "<leader>bp", vim.cmd.BufferLinePick)
 map("n", "<leader>bc", vim.cmd.BufferLinePickClose)
 
 -- trouble
-map("n", "<F5>", "<cmd>TroubleToggle document_diagnostics<cr>")
+map("n", "<F5>", "<cmd>Trouble diagnostics toggle<cr>")
+map("n", "<F4>", "<cmd>Trouble lsp_document_symbols toggle<cr>")
 
 -- todo-comments.nvim
-map("n", "<F6>", "<cmd>TroubleToggle todo<cr>")
+map("n", "<F6>", "<cmd>Trouble todo toggle<cr>")
 
 -- yanky.nvim
 map("n", "p", "<Plug>(YankyPutAfter)")
@@ -79,9 +80,6 @@ map("n", "<c-p>", "<plug>(YankyCycleBackward)")
 -- Past from system clipboard
 map("n", "<leader>p", '"+<Plug>(YankyPutAfter)')
 map("n", "<leader>P", '"+<Plug>(YankyPutBefore)')
-
--- nvim-surround
-map("n", "<F4>", vim.cmd.SymbolsOutline)
 
 -- telescope.nvim
 map("n", "<leader>zf", function()

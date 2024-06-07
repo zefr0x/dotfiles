@@ -46,9 +46,6 @@ o.scrolloff = 3
 -- Hide the vim mode, since it is shown in the lualine.
 o.showmode = false
 
--- Config colors
-o.termguicolors = true
-
 --  Disable autocompletion preview window
 o.completeopt:remove("preview")
 -- autocompletion of files and commands behaves like shell
