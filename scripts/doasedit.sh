@@ -21,7 +21,7 @@ EOF
 
 case "$1" in --help|-h) help; exit 0;; esac
 
-export TMPDIR=/dev/shm/
+export TMPDIR=$XDG_RUNTIME_DIR
 trap 'trap - EXIT HUP QUIT TERM INT ABRT; rm -f "$tmp" "$tmpcopy"' EXIT HUP QUIT TERM INT ABRT
 
 for file; do
@@ -37,7 +37,7 @@ for file; do
 	tmpcopy="$(mktemp)"
 	cat "$tmp" > "$tmpcopy"
 
-	${EDITOR:-vi} "$tmp"
+	${EDITOR} "$tmp"
 
 	if cmp -s "$tmp" "$tmpcopy"; then
 		echo 'File unchanged, exiting...'
