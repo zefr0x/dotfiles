@@ -1,1 +1,2 @@
 nvidia_driver = "false" # Only for Nvidia proprietary GPU driver
+hardware_cursors = "true" # When mirroring display, we should use software cursor.
