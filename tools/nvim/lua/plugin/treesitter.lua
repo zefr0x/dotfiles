@@ -33,6 +33,7 @@ require("nvim-treesitter.configs").setup({
 		"hyprlang",
 		"meson",
 		"po",
+		"xml",
 	},
 	highlight = {
 		enable = true,

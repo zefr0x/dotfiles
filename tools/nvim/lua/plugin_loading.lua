@@ -191,6 +191,7 @@ require("lazy").setup({
 			"hyprlang",
 			"meson",
 			"po",
+			"xml",
 		},
 		build = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
