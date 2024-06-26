@@ -33,10 +33,10 @@ arch_extra = {
     "hyprlock",
     "grim",  # Screenshot utility
     "slurp",  # Select a region in a Wayland
-    "ttf-jetbrains-mono-nerd",
+    "ttf-firacode-nerd",
     "ttf-ubuntu-nerd",
     "papirus-icon-theme",
-    "kvantum",  # Theme Engine for Qt5/6
+    "kvantum",  # Theme Engine for Qt6
     "git-delta",  # Syntax-highlighting pager for git, diff, and grep output
     "python-livereload",
     "wl-clipboard",  # Access clipboard for wayland

@@ -1,17 +1,17 @@
 [font]
 builtin_box_drawing = true
-size = 16.0
+size = 17.5
 
-normal.family = "JetBrainsMono NF"
+normal.family = "FiraCode Nerd Font"
 normal.style = "Medium"
 
-bold.family = "JetBrainsMono NF"
+bold.family = "FiraCode Nerd Font"
 bold.style = "Bold"
 
-italic.family = "JetBrainsMono NF"
+italic.family = "FiraCode Nerd Font"
 italic.style = "Medium Italic"
 
-bold_italic.family = "JetBrainsMono NF"
+bold_italic.family = "FiraCode Nerd Font"
 bold_italic.style = "Bold Italic"
 
 

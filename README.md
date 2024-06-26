@@ -119,7 +119,7 @@ password	optional	pam_gnome_keyring.so
 ### Fonts
 
 - [Noto Fonts](https://fonts.google.com/noto)
-- [JetBrainsMono Nerd](https://www.nerdfonts.com/)
+- [FiraCode Nerd](https://www.nerdfonts.com/)
 - [Nerd Fonts Ubuntu](https://www.nerdfonts.com/)
 - [ttf-dejavu-ib](http://dejavu-fonts.org/wiki/Main_Page)
 - [Cantarell](https://cantarell.gnome.org/)
@@ -142,11 +142,13 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 ```
 
 Flatpak allowed files:
+
 - `xdg-config/gtk-4.0:ro`
 - `xdg-config/gtk-3.0:ro`
 - `xdg-config/kdeglobals:ro`
 
 Flatpak variables:
+
 - `XDG_CURRENT_DESKTOP=KDE`
 - `QT_STYLE_OVERRIDE=Breeze`
 
