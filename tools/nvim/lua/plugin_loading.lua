@@ -199,6 +199,8 @@ require("lazy").setup({
 		dependencies = {
 			-- Determines the text object you meant based on your location in the syntax tree
 			"nvim-treesitter/nvim-treesitter-textobjects",
+			-- Setting the commentstring based on the cursor location in a file
+			"JoosepAlviste/nvim-ts-context-commentstring",
 			-- Rainbow parentheses for neovim using tree-sitter
 			"https://git.sr.ht/~p00f/nvim-ts-rainbow",
 			-- Highlight arguments' definitions and usages, using Treesitter

@@ -131,6 +131,10 @@
     "branch": "main",
     "commit": "6eb4120a1aadef07ac312f1c4bc6456712220007"
   },
+  "nvim-ts-context-commentstring": {
+    "branch": "main",
+    "commit": "2b7dcf6aab0947b9c4195f1d8aa592cdcd944ffe"
+  },
   "nvim-ts-rainbow": {
     "branch": "master",
     "commit": "ef95c15a935f97c65a80e48e12fe72d49aacf9b9"
