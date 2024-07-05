@@ -6,10 +6,8 @@ require("lualine").setup({
 	options = {
 		theme = "zer0",
 		-- globalstatus = true,
-		component_separators = {
-			left = "", --[[ right = "" ]]
-		},
-		section_separators = { left = "", right = "" },
+		component_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
 		disabled_filetypes = { statusline = { "Trouble", "undotree", "diff" } },
 	},
 	extensions = {
@@ -17,7 +15,14 @@ require("lualine").setup({
 		-- { sections = { lualine_a = {  } }, filetypes = { "diff" } },
 	},
 	sections = {
-		lualine_a = { "mode" },
+		lualine_a = {
+			{
+				"mode",
+				fmt = function(str)
+					return str:sub(1, 1)
+				end,
+			},
+		},
 		lualine_b = { "branch", "diff", "diagnostics" },
 		lualine_c = {
 			{
@@ -30,25 +35,29 @@ require("lualine").setup({
 					unnamed = "[No Name]",
 					newfile = "[New]",
 				},
+				separator = "",
 			},
-			{ navic.get_location, cond = navic.is_available },
 			{
-				"lsp_progress",
-				display_components = { "spinner" },
-				-- timer = { spinner = 1000 },
-				spinner_symbols = {
-					"(●   )",
-					"( ●  )",
-					"(  ● )",
-					"(   ●)",
-					"(  ● )",
-					"( ●  )",
-					"(●   )",
-				},
+				function()
+					return navic.get_location({
+						-- FIX: Make the depth dynamic and trucate it from the right
+						depth_limit = 1,
+						separator = "  ",
+						format_text = function(text)
+							return text
+						end,
+					})
+				end,
+				cond = navic.is_available,
+				separator = "",
+			},
+			{
+				function()
+					return require("lsp-progress").progress()
+				end,
 			},
 		},
 		lualine_x = {
-			"filesize",
 			{ "fileformat", separator = "" },
 			"encoding",
 			"filetype",
@@ -66,4 +75,12 @@ require("lualine").setup({
 		lualine_y = {},
 		lualine_z = {},
 	},
+})
+
+-- listen lsp-progress event and refresh lualine
+vim.api.nvim_create_augroup("lualine_augroup", { clear = true })
+vim.api.nvim_create_autocmd("User", {
+	group = "lualine_augroup",
+	pattern = "LspProgressStatusUpdated",
+	callback = require("lualine").refresh,
 })

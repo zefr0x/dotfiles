@@ -5,13 +5,13 @@ local lspconfig = require("lspconfig")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
--- nvim-navic
 local custom_on_attach = function(client, bufnr)
+	-- nvim-navic
 	if client.server_capabilities.documentSymbolProvider then
-		-- FIXME: Doesn't work with some languages.
 		require("nvim-navic").attach(client, bufnr)
 	end
 
+	-- lsp-inlayhints.nvim
 	require("lsp-inlayhints").on_attach(client, bufnr)
 end
 

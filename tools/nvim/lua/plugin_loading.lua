@@ -300,10 +300,18 @@ require("lazy").setup({
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 			-- LSP Progress lualine componenet
-			"arkav/lualine-lsp-progress",
+			{
+				"linrongbin16/lsp-progress.nvim",
+				config = function()
+					require("plugin.lsp_progress")
+				end,
+			},
 			-- Simple winbar/statusline plugin that shows your current code context
 			{
 				"SmiteshP/nvim-navic",
+				config = function()
+					require("plugin.navic")
+				end,
 			},
 		},
 		config = function()
