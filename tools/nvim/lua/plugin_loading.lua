@@ -217,11 +217,11 @@ require("lazy").setup({
 					require("plugin.auto_pair")
 				end,
 			},
-			-- Use treesitter to auto close and auto rename html tag
+			-- Use treesitter to auto close and auto rename tags
 			{
 				"windwp/nvim-ts-autotag",
+				-- TODO: Only load it for supported files.
 				-- HTML files may have diffrent file types.
-				event = "InsertEnter *.html",
 				config = function()
 					require("plugin.ts_autotag")
 				end,

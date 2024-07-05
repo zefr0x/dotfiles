@@ -1,4 +1,5 @@
 -- nvim-ts-autotag
+require("nvim-ts-autotag").setup({})
 
 -- Fix closing a tag causes built-in LSP to update diagnostics incorrectly
 -- https://github.com/windwp/nvim-ts-autotag/issues/19
