@@ -241,7 +241,6 @@ rustup component add rust-analyzer
 - [uv](https://github.com/astral-sh/uv)
 - [Python LSP Server](https://github.com/python-lsp/python-lsp-server)
 - [Ruff](https://github.com/astral-sh/ruff)
-  - [Ruff LSP](https://github.com/astral-sh/ruff-lsp)
 - [mypy](http://www.mypy-lang.org/)
 
 #### Go

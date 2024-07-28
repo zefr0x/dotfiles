@@ -104,7 +104,6 @@ arch_extra = {
     "uv",
     "python-lsp-server",
     "ruff",
-    "ruff-lsp",
     "mypy",
     "go",
     "gopls",

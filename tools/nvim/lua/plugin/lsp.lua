@@ -23,7 +23,7 @@ vim.g.markdown_fenced_languages = {
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = {
 	"clangd",
-	"ruff_lsp",
+	"ruff",
 	"gopls",
 	"texlab",
 	"denols",
