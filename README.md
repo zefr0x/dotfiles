@@ -196,7 +196,6 @@ br --set-install-state refused
 
 - [fish](https://fishshell.com/)
   - [Tide](https://github.com/IlanCosman/tide)
-  - [virtualfish](https://github.com/justinmayer/virtualfish)
 - [dash](https://en.wikipedia.org/wiki/Debian_Almquist_shell)
 
 ### Text Editors
