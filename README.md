@@ -227,7 +227,6 @@ rustup default stable
 rustup component add rust-analyzer
 ```
 
-
 #### C/C++
 
 - [base-devel](https://archlinux.org/packages/core/any/base-devel/)
@@ -274,7 +273,7 @@ rustup component add rust-analyzer
 #### Java
 
 - [OpenJDK](https://openjdk.org/)
-- [OpenJDK-17](https://openjdk.org/)
+- [OpenJDK-21](https://openjdk.org/)
 - [Gradle](https://gradle.org/)
 - [Eclipse JDT Language Server](https://github.com/eclipse/eclipse.jdt.ls)
 
