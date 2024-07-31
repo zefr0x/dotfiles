@@ -35,6 +35,7 @@ require("lazy").setup({
 		dependencies = {
 			-- LSP inlay hints.
 			{
+				-- VULN: Project is archived since 22/2/2024
 				"lvimuser/lsp-inlayhints.nvim",
 				-- FIX: Load it only in supported file types.
 				event = "LspAttach",
@@ -104,7 +105,7 @@ require("lazy").setup({
 	{
 		"saecki/crates.nvim",
 		event = "BufReadPost Cargo.toml",
-		version = "v0.4.0",
+		version = "v0.5.1",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("plugin.crates")
@@ -205,6 +206,7 @@ require("lazy").setup({
 			"https://git.sr.ht/~p00f/nvim-ts-rainbow",
 			-- Highlight arguments' definitions and usages, using Treesitter
 			{
+				-- TODO: Delete when most LSPs do support semantic tokens.
 				"m-demare/hlargs.nvim",
 				config = function()
 					require("plugin.hlargs")
@@ -356,6 +358,7 @@ require("lazy").setup({
 	},
 	-- Intelligently reopen files at your last edit position in Vim
 	{
+		-- VULN: Project is archived since 27/7/2023.
 		"ethanholz/nvim-lastplace",
 		event = "BufReadPre",
 		config = function()
