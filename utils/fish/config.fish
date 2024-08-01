@@ -22,9 +22,6 @@ set -x LESS_TERMCAP_se (set_color normal) # end standout
 # `less`
 set -x LESS -R
 
-# `virtualfish`
-set VIRTUALFISH_HOME "$XDG_DATA_HOME/virtualenvs"
-
 
 
 if status is-interactive
