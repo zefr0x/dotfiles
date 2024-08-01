@@ -31,9 +31,13 @@ window#waybar {
 
 #workspaces button {
   padding: 0 3px;
-  color: gray;
+  color: #707070;
   border: none;
   border-radius: 15px;
+}
+
+#workspaces .hosting-monitor {
+  color: #a0a0a0;
 }
 
 #workspaces button:hover {
