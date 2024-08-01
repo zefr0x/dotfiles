@@ -1,0 +1,18 @@
+root = true
+
+[*]
+trim_trailing_whitespace = true
+
+[*.{lua,sh,toml}]
+indent_style = tab
+indent_size = 4
+
+# PERF: Use tabs for fish.
+[*.{fish,py}]
+indent_style = space
+indent_size = 4
+
+# PERF: Use tabs for css and json.
+[*.{css,json,md,yaml,yml}]
+indent_style = space
+indent_size = 2
