@@ -375,6 +375,9 @@ require("lazy").setup({
 	},
 }, {
 	lockfile = vim.fn.expand("~/.dotfiles/tools/nvim/lazy-lock.json"),
+	rocks = {
+		enabled = false,
+	},
 	performance = {
 		rtp = {
 			disabled_plugins = {
