@@ -33,6 +33,7 @@ arch_extra = {
     "hyprlock",
     "grim",  # Screenshot utility
     "slurp",  # Select a region in a Wayland
+    "swaync",
     "ttf-firacode-nerd",
     "ttf-ubuntu-nerd",
     "papirus-icon-theme",
@@ -124,7 +125,6 @@ arch_user_repo = {
     "hyprpicker",
     "wl-gammarelay-rs",
     "satty",
-    "swaync",
     "ianny-git",  # Periodically informes user to take breaks
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
     "ttf-amiri",
