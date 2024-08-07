@@ -71,10 +71,6 @@
     "branch": "main",
     "commit": "077102c5bfc578693f12377846d427f49bc50076"
   },
-  "lsp-inlayhints.nvim": {
-    "branch": "main",
-    "commit": "d981f65c9ae0b6062176f0accb9c151daeda6f16"
-  },
   "lsp-progress.nvim": {
     "branch": "main",
     "commit": "d5f4d28efe75ce636bfbe271eb45f39689765aab"

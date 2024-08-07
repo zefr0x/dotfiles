@@ -32,24 +32,6 @@ require("lazy").setup({
 			"html",
 			"json",
 		},
-		dependencies = {
-			-- LSP inlay hints.
-			{
-				-- VULN: Project is archived since 22/2/2024
-				"lvimuser/lsp-inlayhints.nvim",
-				-- FIX: Load it only in supported file types.
-				event = "LspAttach",
-				ft = {
-					"rust",
-					"c",
-					"cpp",
-					"java",
-				},
-				config = function()
-					require("plugin.inlyhints")
-				end,
-			},
-		},
 		config = function()
 			require("plugin.lsp")
 		end,

@@ -11,8 +11,9 @@ local custom_on_attach = function(client, bufnr)
 		require("nvim-navic").attach(client, bufnr)
 	end
 
-	-- lsp-inlayhints.nvim
-	require("lsp-inlayhints").on_attach(client, bufnr)
+	if client.server_capabilities.inlayHintProvider then
+		vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+	end
 end
 
 -- To appropriately highlight codefences returned from denols.
