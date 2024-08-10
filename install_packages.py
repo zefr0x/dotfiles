@@ -20,7 +20,6 @@ arch_extra = {
     "mpv-mpris",
     "zathura",  # Document Viewer
     "zathura-pdf-mupdf",
-    "dex",  # XDG Auto Start / DesktopEntry
     "rofi-emoji",
     "polkit-gnome",
     "greetd",
