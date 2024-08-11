@@ -263,7 +263,6 @@ rustup component add rust-analyzer
 #### Lua
 
 - [lua-language-server](https://github.com/LuaLS/lua-language-server)
-- [StyLua](https://github.com/JohnnyMorganz/StyLua)
 
 #### Regex
 

@@ -9,7 +9,6 @@ broot = { source = "tools/broot_config.hjson", target = ".config/broot/conf.hjso
 cargo = { source = "tools/cargo_config.toml", target = ".local/share/cargo/config.toml" }
 git = { source = "tools/git_config", target = ".config/git/config" }
 nvim = { source = "tools/nvim", target = ".config/nvim" }
-stylua = { source = "tools/stylua.toml", target = ".config/stylua/stylua.toml" }
 # Utils
 bashrc = { source = "utils/bashrc", target = ".bashrc" }
 fish_config = { source = "utils/fish/config.fish", target = ".config/fish/config.fish" }

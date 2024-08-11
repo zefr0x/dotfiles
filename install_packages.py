@@ -89,7 +89,6 @@ arch_extra = {
     "htop",  # System Monitoring
     "bandwhich",  # Network Bandwidth Monitoring
     "imagemagick",
-    "stylua",
     "shfmt",
     "rustup",
     "cargo-outdated",
