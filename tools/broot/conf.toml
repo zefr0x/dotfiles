@@ -1,0 +1,27 @@
+imports = [
+	"style.toml",
+	"verbs.toml",
+]
+
+show_selection_mark = true
+
+cols_order = [
+    "mark",
+    "size",
+    "permission",
+    "date",
+    "count",
+    "git",
+    "branch",
+    "name",
+]
+
+terminal_title = "{file}"
+
+capture_mouse = false
+
+quit_on_last_cancel = true
+
+date_time_format = "%Y-%m-%d %T"
+
+content_search_max_file_size = "1MB"

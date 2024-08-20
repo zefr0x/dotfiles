@@ -5,7 +5,7 @@ vars = [ "vars.toml" ]
 
 [settings.dots]
 # Tools
-broot = { source = "tools/broot_config.hjson", target = ".config/broot/conf.hjson" }
+broot = { source = "tools/broot", target = ".config/broot" }
 cargo = { source = "tools/cargo_config.toml", target = ".local/share/cargo/config.toml" }
 git = { source = "tools/git_config", target = ".config/git/config" }
 nvim = { source = "tools/nvim", target = ".config/nvim" }

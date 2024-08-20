@@ -1,0 +1,19 @@
+[[verbs]]
+invocation = "gio_open_stay"
+key = "enter"
+execution = "setsid -f gio open {file}"
+apply_to = "file"
+leave_broot = false
+
+[[verbs]]
+invocation = "edit"
+shortcut = "e"
+execution = "$EDITOR +{line} {file}"
+apply_to = "text_file"
+leave_broot = false
+
+[[verbs]]
+invocation = "trash"
+shortcut = "del"
+execution = "trash-put {file}"
+leave_broot = false
