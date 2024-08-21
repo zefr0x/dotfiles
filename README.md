@@ -21,7 +21,9 @@ git clone https://github.com/zefr0x/dotfiles.git .dotfiles
 bombadil install .dotfiles
 ```
 
-4. To use the desktop environment do:
+4. Edit [`vars.toml`](./vars.toml)
+
+5. To use the desktop environment do:
 
 ```
 bombadil link -p DE_hyprland
@@ -31,7 +33,7 @@ bombadil link -p DE_hyprland
 
 > You need [`yay`](https://github.com/Jguer/yay#installation) to install AUR packages.
 
-To generate the package installing commands run the `install_packages.py` script.
+To generate the package installing commands run the [`install_packages.py`](./install_packages.py) script.
 
 <details>
 <summary>Dependencies And Instructions</summary>
@@ -248,7 +250,7 @@ rustup component add rust-analyzer
 
 - [Deno](https://deno.land/)
 
-> [!Note]
+> [!NOTE]
 > It includes most the tools needed for JS/TS.
 
 #### LaTeX
