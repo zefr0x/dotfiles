@@ -1,6 +1,6 @@
 [user]
-    name = zefr0x
-    email = zer0-x.7ty50@aleeas.com
+    name = {{git_username}}
+    email = {{git_email}}
 [core]
     pager = delta
     editor = nvim

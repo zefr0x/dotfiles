@@ -1,2 +1,5 @@
 nvidia_driver = "false" # Only for Nvidia proprietary GPU driver
 hardware_cursors = "true" # When mirroring display, we should use software cursor.
+
+git_username = "zefr0x"
+git_email = "zer0-x.7ty50@aleeas.com"
