@@ -167,7 +167,6 @@ Flatpak variables:
 - [eza](https://github.com/eza-community/eza)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [dysk](https://github.com/Canop/dysk)
-- [hexyl](https://github.com/sharkdp/hexyl)
 - [handlr](https://github.com/Anomalocaridid/handlr-regex)
 - [trash-cli](https://github.com/andreafrancia/trash-cli)
 - [ripdrag](https://github.com/nik012003/ripdrag)

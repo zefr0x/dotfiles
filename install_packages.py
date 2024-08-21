@@ -52,7 +52,6 @@ arch_extra = {
     "fd",  # `find` alternative
     "zoxide",  # `cd` alternative
     "eza",  # `ls` alternative
-    "hexyl",  # command-line hex viewer
     "skim",  # fuzzy finder
     "handlr-regex",  # Alternative to xdg-utils
     "fish",
