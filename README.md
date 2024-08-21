@@ -74,7 +74,6 @@ To generate the package installing commands run the `install_packages.py` script
   - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk)
   - [Waybar](https://github.com/Alexays/Waybar)
     - [lsof](https://github.com/lsof-org/lsof)
-  - [Hyprland Per Window Layout](https://github.com/coffebar/hyprland-per-window-layout)
   - [hyprpicker](https://github.com/hyprwm/hyprpicker)
   - [hypridle](https://github.com/hyprwm/hypridle)
   - [hyprlock](https://github.com/hyprwm/hyprlock)

@@ -119,7 +119,6 @@ arch_core = {
 }
 arch_user_repo = {
     "foxmarks",
-    "hyprland-per-window-layout",
     "hyprpicker",
     "wl-gammarelay-rs",
     "satty",
