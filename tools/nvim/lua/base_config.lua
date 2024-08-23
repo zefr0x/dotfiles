@@ -18,6 +18,9 @@ o.shiftwidth = 4
 
 o.smartindent = true
 
+-- Mouse
+o.mouse = ""
+
 -- Line numbering
 o.number = true
 o.relativenumber = true
