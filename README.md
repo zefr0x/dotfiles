@@ -124,8 +124,10 @@ UseIn=gnome;Hyprland
 
 <!-- TODO: There should be a pacman hook for this. -->
 
-> [!NOTE]
+> [!Note]
 > You will need to do this everytime you update those two XDG portals.
+
+Create a `~/Pictures` directiory for screenshots.
 
 ### Fonts
 
@@ -196,6 +198,22 @@ Flatpak variables:
 - [bandwhich](https://github.com/imsnif/bandwhich)
 - [imagemagick](https://imagemagick.org/)
 
+Configure `doas` by editing `/etc/doas.conf`:
+
+```
+permit setenv :wheel
+
+```
+
+> [!Note]
+> The configuration file must end with a newline.
+
+Now you can uninstall `sudo`:
+
+```
+doas pacman -Rnsdd sudo
+```
+
 Since the `br` shell function is custom, after restarting the shell, run that:
 
 ```
@@ -261,7 +279,7 @@ rustup component add rust-analyzer
 
 - [Deno](https://deno.land/)
 
-> [!NOTE]
+> [!Note]
 > It includes most the tools needed for JS/TS.
 
 #### LaTeX
