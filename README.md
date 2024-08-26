@@ -116,6 +116,17 @@ and add this line to `/etc/pam.d/passwd`
 password	optional	pam_gnome_keyring.so
 ```
 
+Edit the `UseIn` value in `/usr/share/xdg-desktop-portal/portals/gtk.portal` and `/usr/share/xdg-desktop-portal/portals/gnome-keyring.portal` to include `Hyprland`:
+
+```
+UseIn=gnome;Hyprland
+```
+
+<!-- TODO: There should be a pacman hook for this. -->
+
+> [!NOTE]
+> You will need to do this everytime you update those two XDG portals.
+
 ### Fonts
 
 - [Noto Fonts](https://fonts.google.com/noto)
