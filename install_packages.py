@@ -147,7 +147,7 @@ print(
     "sudo pacman -S --needed "
     + " ".join(arch_core.union(arch_extra).union(arch_groups)),
     "yay -Sa --needed " + " ".join(arch_user_repo),
-    "flatpack install flathub " + " ".join(flathub),
+    "flatpak install flathub " + " ".join(flathub),
     sep="\n\n",
 )
 
