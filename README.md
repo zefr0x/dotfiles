@@ -300,7 +300,6 @@ rustup component add rust-analyzer
 #### Java
 
 - [OpenJDK](https://openjdk.org/)
-- [OpenJDK-21](https://openjdk.org/)
 - [Gradle](https://gradle.org/)
 - [Eclipse JDT Language Server](https://github.com/eclipse/eclipse.jdt.ls)
 

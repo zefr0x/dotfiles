@@ -109,7 +109,6 @@ arch_extra = {
     "texlive-langarabic",
     "texlive-langother",
     "jdk-openjdk",
-    "jdk21-openjdk",
     "gradle",
 }
 arch_core = {
