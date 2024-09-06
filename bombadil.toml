@@ -13,7 +13,6 @@ nvim = { source = "tools/nvim", target = ".config/nvim" }
 bashrc = { source = "utils/bashrc", target = ".bashrc" }
 fish_config = { source = "utils/fish/config.fish", target = ".config/fish/config.fish" }
 fish_functions = { source = "utils/fish/functions", target = ".config/fish/functions" }
-handlr = { source = "utils/handlr.toml", target = ".config/handlr/handlr.toml" }
 npm = { source = "utils/npmrc", target = ".config/npm/npmrc" }
 yay = { source = "utils/yay.json", target = ".config/yay/config.json" }
 python = { source = "utils/pythonrc", target = ".config/python/pythonrc" }

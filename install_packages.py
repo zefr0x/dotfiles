@@ -52,7 +52,6 @@ arch_extra = {
     "zoxide",  # `cd` alternative
     "eza",  # `ls` alternative
     "skim",  # fuzzy finder
-    "handlr-regex",  # Alternative to xdg-utils
     "fish",
     "neovim",
     "ripgrep",

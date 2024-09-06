@@ -34,7 +34,7 @@ map("n", "<leader>Y", '"+Y')
 
 -- Open URI
 -- FIXME: Find a way to write it better in Lua.
-map("n", "gx", "<Cmd>! handlr open <cfile><CR>")
+map("n", "gx", "<Cmd>! gio open <cfile><CR>")
 
 ------------ Plugins KeyMapping -------------
 

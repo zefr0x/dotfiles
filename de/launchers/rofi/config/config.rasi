@@ -6,7 +6,7 @@ configuration {
     drun-match-fields: "name,generic,exec,categories,keywords";
     drun-show-actions: false;
     drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-    drun-url-launcher: "handlr open";
+    drun-url-launcher: "gio open";
     disable-history: false;
     case-sensitive: false;
     cycle: true;
@@ -29,7 +29,7 @@ configuration {
         delay:  0;
     }
     filebrowser {
-        command: "handlr open";
+        command: "gio open";
     }
 }
 

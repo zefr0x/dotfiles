@@ -35,7 +35,7 @@ if environ.get("ROFI_RETV") == "0":
             f"{meeting['name']}\0icon\x1fcamera-web\x1finfo\x1f{meeting['uri']}\x1f\n"
         )
 elif environ.get("ROFI_RETV") == "1":
-    subprocess.call(["/usr/bin/handlr", "open", environ.get("ROFI_INFO") or ""])  # noqa: S603
+    subprocess.call(["/usr/bin/gio", "open", environ.get("ROFI_INFO") or ""])  # noqa: S603
 elif environ.get("ROFI_RETV") == "2":
     # TODO: Accept opening a meeting directly with it's ID
     pass

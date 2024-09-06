@@ -16,7 +16,7 @@ mods = "Control|Shift"
 
 [hints.enabled.command]
 args = ["open"]
-program = "handlr"
+program = "gio"
 
 
 [hints.enabled.mouse]

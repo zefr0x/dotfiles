@@ -6,7 +6,7 @@ set -x VISUAL nvim
 set -x TERMINAL alacritty
 set -x VIDEO mpv
 set -x IMAGE swayimg
-set -x OPENER "handlr open"
+set -x OPENER "gio open"
 
 
 # ------------ Tools Config ------------

@@ -182,7 +182,6 @@ Flatpak variables:
 - [eza](https://github.com/eza-community/eza)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [dysk](https://github.com/Canop/dysk)
-- [handlr](https://github.com/Anomalocaridid/handlr-regex)
 - [ripdrag](https://github.com/nik012003/ripdrag)
 - [broot](https://github.com/Canop/broot)
 - [hyperfine](https://github.com/sharkdp/hyperfine)
