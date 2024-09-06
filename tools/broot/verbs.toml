@@ -15,5 +15,5 @@ leave_broot = false
 [[verbs]]
 invocation = "trash"
 shortcut = "del"
-execution = "trash-put {file}"
+execution = "gio trash {file}"
 leave_broot = false

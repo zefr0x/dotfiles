@@ -40,7 +40,6 @@ arch_extra = {
     "git-delta",  # Syntax-highlighting pager for git, diff, and grep output
     "python-livereload",
     "wl-clipboard",  # Access clipboard for wayland
-    "trash-cli",
     "onefetch",  # Git Repo Summary
     "tokei",  # Statistics about your code
     "nvtop",  # GPUs Monitoring

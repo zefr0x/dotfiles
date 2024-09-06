@@ -115,7 +115,7 @@ if status is-interactive
 
     # To not shoot my self in the leg
     alias rm="echo -e Use the \`del\` command, unable to delete: "
-    alias del="trash-put"
+    alias del="gio trash"
 
     # Drag to and from Aliases
     alias dragto="ripdrag"
