@@ -36,3 +36,4 @@
     rsp = restore --staged --patch
     l = log --shortstat
     sw = show
+    c = commit

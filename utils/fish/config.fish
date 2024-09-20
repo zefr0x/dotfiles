@@ -77,7 +77,6 @@ if status is-interactive
     abbr -a nv nvim
     abbr -a snv doasedit
     abbr -a py python
-    abbr -a ipy ipython
     abbr -a j just
     abbr -a b br
     abbr -a g git
@@ -104,6 +103,7 @@ if status is-interactive
     alias ls="eza --icons"
     alias ll="eza -l --icons"
     alias la="eza -la --icons"
+    alias lt="eza --icons --tree --git-ignore"
 
     # Tools
     alias topdf="org.libreoffice.LibreOffice --headless --invisible --convert-to pdf"
