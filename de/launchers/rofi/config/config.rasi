@@ -4,7 +4,7 @@ configuration {
     terminal: "alacritty";
     icon-theme: "Papirus-Dark";
     drun-match-fields: "name,generic,exec,categories,keywords";
-    drun-show-actions: false;
+    drun-show-actions: true;
     drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
     drun-url-launcher: "gio open";
     disable-history: false;
