@@ -33,7 +33,7 @@ arch_extra = {
     "grim",  # Screenshot utility
     "slurp",  # Select a region in a Wayland
     "swaync",
-    "ttf-firacode-nerd",
+    "ttf-0xproto-nerd",
     "ttf-ubuntu-nerd",
     "papirus-icon-theme",
     "kvantum",  # Theme Engine for Qt6

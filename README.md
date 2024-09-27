@@ -132,7 +132,7 @@ Create a `~/Pictures` directiory for screenshots.
 ### Fonts
 
 - [Noto Fonts](https://fonts.google.com/noto)
-- [FiraCode Nerd](https://www.nerdfonts.com/)
+- [0xProto Nerd](https://www.nerdfonts.com/)
 - [Nerd Fonts Ubuntu](https://www.nerdfonts.com/)
 - [ttf-dejavu-ib](http://dejavu-fonts.org/wiki/Main_Page)
 - [Cantarell](https://cantarell.gnome.org/)
