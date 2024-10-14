@@ -60,7 +60,6 @@ To generate the package installing commands run the [`install_packages.py`](./in
 ### Desktop Environment
 
 - [rofi](https://github.com/lbonn/rofi)
-  - [rofi-emoji](https://github.com/Mange/rofi-emoji)
   - [foxmarks](https://github.com/zefr0x/foxmarks)
 - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 - [gnome-keyring](https://wiki.gnome.org/Projects/GnomeKeyring)
@@ -170,7 +169,6 @@ Flatpak variables:
 - [git](https://git-scm.com/)
   - [delta](https://github.com/dandavison/delta)
 - [just](https://github.com/casey/just)
-- [python-livereload](https://github.com/lepture/python-livereload)
 - [pastel](https://github.com/sharkdp/pastel)
 
 ### CLI/TUI Utilities

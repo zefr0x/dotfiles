@@ -20,7 +20,6 @@ arch_extra = {
     "mpv-mpris",
     "zathura",  # Document Viewer
     "zathura-pdf-mupdf",
-    "rofi-emoji",
     "polkit-gnome",
     "greetd",
     "greetd-tuigreet",
@@ -38,7 +37,6 @@ arch_extra = {
     "papirus-icon-theme",
     "kvantum",  # Theme Engine for Qt6
     "git-delta",  # Syntax-highlighting pager for git, diff, and grep output
-    "python-livereload",
     "wl-clipboard",  # Access clipboard for wayland
     "onefetch",  # Git Repo Summary
     "tokei",  # Statistics about your code
