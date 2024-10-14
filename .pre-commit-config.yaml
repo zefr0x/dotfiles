@@ -1,7 +1,7 @@
 repos:
   # General
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: check-added-large-files
       - id: check-executables-have-shebangs
@@ -22,7 +22,7 @@ repos:
       - id: stylua
   # Python
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.11.0
+    rev: v1.11.2
     hooks:
       - id: mypy
         args:
@@ -31,7 +31,7 @@ repos:
         additional_dependencies:
           - types-setuptools
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.5.5
+    rev: v0.6.9
     hooks:
       - id: ruff
         args: [--fix]
