@@ -1,6 +1,6 @@
 [user]
-    name = {{git_username}}
-    email = {{git_email}}
+    name = {{git.username}}
+    email = {{git.email}}
 [core]
     pager = delta
     editor = nvim

@@ -74,8 +74,9 @@
     },
     "hyprland/language": {
         "format": "{}",
-        "format-ar": "ٱلْعَرَبِيَّة",
-        "format-en": "الإنْجِلِيزِيَّة"
+        {%- for _,lang in layouts %}
+        "format-{{lang.code}}": "{{lang.name}}"{%- if loop.last != "true" -%},{%- endif -%}
+        {%- endfor %}
     },
     "custom/webcam_indecator": {
         "tooltip": false,

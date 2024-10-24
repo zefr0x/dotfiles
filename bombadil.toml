@@ -31,7 +31,7 @@ kvantum = { source = "de/gui/qt/Kvantum", target = ".config/Kvantum" }
 kdeglobals = { source = "de/gui/qt/kdeglobals", target = ".config/kdeglobals" }
 
 
-[profiles.DE_generic.dots]
+[profiles.de_generic.dots]
 # Apps
 mpv_config = { source = "apps/mpv.conf", target = ".config/mpv/mpv.conf" }
 zathura = { source = "apps/zathura", target = ".config/zathura" }
@@ -43,8 +43,8 @@ rofi = { source = "de/launchers/rofi/config", target = ".config/rofi" }
 pcmanfm = { source = "utils/pcmanfm_qt.conf", target = ".config/pcmanfm-qt/default/settings.conf" }
 
 
-[profiles.DE_hyprland]
-extra_profiles = [ "DE_generic", "gtk", "qt" ]
+[profiles.de_hyprland]
+extra_profiles = [ "de_generic", "gtk", "qt" ]
 posthooks = [ "hyprctl reload", "swaync-client -R", "swaync-client -rs" ]
 
 [profiles.DE_hyprland.dots]
