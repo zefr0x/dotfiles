@@ -1,14 +1,14 @@
-import = [
+general.import = [
 	"~/.config/alacritty/keybind.toml",
 	"~/.config/alacritty/style.toml",
 	"~/.config/alacritty/hints.toml",
 ]
 
 
-shell.program = "/bin/fish"
+terminal.shell.program = "/bin/fish"
 working_directory = "None"
-live_config_reload = false
-ipc_socket = false
+general.live_config_reload = false
+general.ipc_socket = false
 env.TERM = "alacritty"
 
 
