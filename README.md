@@ -289,10 +289,6 @@ rustup component add rust-analyzer
 
 - [lua-language-server](https://github.com/LuaLS/lua-language-server)
 
-#### Regex
-
-- [melody](https://github.com/yoav-lavi/melody)
-
 #### Java
 
 - [OpenJDK](https://openjdk.org/)

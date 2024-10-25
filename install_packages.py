@@ -123,7 +123,6 @@ arch_user_repo = {
     "fish-tide-git",
     "nodejs-emmet-ls",
     "jdtls",
-    "melody",
 }
 flathub = {
     "org.gnome.dspy",  # D-Bus connections explorer
