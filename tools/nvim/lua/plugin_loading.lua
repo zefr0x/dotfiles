@@ -87,7 +87,7 @@ require("lazy").setup({
 	{
 		"saecki/crates.nvim",
 		event = "BufReadPost Cargo.toml",
-		version = "v0.5.1",
+		version = "v0.5.*",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("plugin.crates")
