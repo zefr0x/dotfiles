@@ -239,11 +239,11 @@ require("lazy").setup({
 
 	-- Speed and easy motions.
 	{
-		"phaazon/hop.nvim",
+		"smoka7/hop.nvim",
 		-- PERF: Load based on key bindings.
 		-- keys = {}
 		event = "BufEnter",
-		branch = "v2",
+		version = "v2.*",
 		config = function()
 			require("plugin.hop_motions")
 		end,
