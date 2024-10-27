@@ -185,7 +185,12 @@ require("lazy").setup({
 			-- Setting the commentstring based on the cursor location in a file
 			"JoosepAlviste/nvim-ts-context-commentstring",
 			-- Rainbow parentheses for neovim using tree-sitter
-			"https://git.sr.ht/~p00f/nvim-ts-rainbow",
+			{
+				"hiphish/rainbow-delimiters.nvim",
+				config = function()
+					require("plugin.rainbow_delimiters")
+				end,
+			},
 			-- Highlight arguments' definitions and usages, using Treesitter
 			{
 				-- TODO: Delete when most LSPs do support semantic tokens.
