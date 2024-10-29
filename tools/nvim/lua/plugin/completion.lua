@@ -81,10 +81,10 @@ cmp.setup({
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-			-- elseif luasnip.expand_or_jumpable() then
-			-- 	luasnip.expand_or_jump()
-			-- elseif has_words_before() then
-			-- 	cmp.complete({ reason = cmp.ContextReason, config = cmp.ConfigSchema })
+				-- elseif luasnip.expand_or_jumpable() then
+				-- 	luasnip.expand_or_jump()
+				-- elseif has_words_before() then
+				-- 	cmp.complete({ reason = cmp.ContextReason, config = cmp.ConfigSchema })
 			else
 				fallback()
 			end
@@ -113,6 +113,7 @@ cmp.setup({
 			name = "rg",
 			keyword_length = 3,
 		},
+		{ name = "cmp_yanky" },
 		{ name = "latex_symbols" },
 	},
 })

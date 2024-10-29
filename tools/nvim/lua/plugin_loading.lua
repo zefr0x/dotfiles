@@ -57,6 +57,8 @@ require("lazy").setup({
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 			-- nvim-cmp source for textDocument/documentSymbol via nvim-lsp
 			"hrsh7th/cmp-nvim-lsp-document-symbol",
+			-- cmp-source for clipboard history from yanky.nvim
+			"chrisgrieser/cmp_yanky",
 			-- nvim-cmp source for path
 			"hrsh7th/cmp-path",
 			-- nvim-cmp source for vim's cmdline

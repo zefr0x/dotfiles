@@ -43,6 +43,10 @@
     "branch": "master",
     "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843"
   },
+  "cmp_yanky": {
+    "branch": "main",
+    "commit": "38c3cc53f6d0ae748a8f737a2ee20cea39fd93da"
+  },
   "crates.nvim": {
     "branch": "main",
     "commit": "1c924d5a9ea3496c4e1a02d0d51388ba809f8468"
