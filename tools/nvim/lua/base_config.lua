@@ -61,5 +61,18 @@ o.backup = false
 o.undodir = os.getenv("XDG_CACHE_HOME") .. "/nvim/undodir"
 o.undofile = true
 
+-- System Clipboard Backend
+vim.g.clipboard = {
+	name = "OSC 52",
+	copy = {
+		["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+		["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+	},
+	paste = {
+		["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+		["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+	},
+}
+
 -- Set leader key
 g.mapleader = ","
