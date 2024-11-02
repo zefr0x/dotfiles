@@ -187,7 +187,6 @@ Flatpak variables:
 - [less](https://www.greenwoodsoftware.com/less/)
 - [jless](https://github.com/PaulJuliusMartinez/jless)
 - [skim](https://github.com/lotabout/skim)
-- [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
 - [onefetch](https://github.com/o2sh/onefetch)
 - [nvtop](https://github.com/Syllo/nvtop)
 - [htop](https://htop.dev/)
