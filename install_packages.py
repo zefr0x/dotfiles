@@ -15,7 +15,6 @@ arch_groups = {
 }
 arch_extra = {
     "alacritty",  # Terminal emulator
-    "sqlitebrowser",
     "mpv",  # Media player
     "mpv-mpris",
     "zathura",  # Document Viewer
@@ -133,6 +132,7 @@ flathub = {
     "org.gnome.TextEditor",  # For writing in Arabic smoothly
     "org.gnome.Gtranslator",  # Gettext po file editor
     "io.github.finefindus.Hieroglyphic",  # Find LaTeX symbols
+    "org.sqlitebrowser.sqlitebrowser",
 }
 
 
