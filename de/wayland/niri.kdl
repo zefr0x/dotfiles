@@ -1,0 +1,365 @@
+environment {
+{%- if nvidia_driver == "true" %}
+    // Variables to make it work better with Nvidia proprietary GPU driver
+    GBM_BACKEND "nvidia-drm"
+    __GLX_VENDOR_LIBRARY_NAME "nvidia"
+    LIBVA_DRIVER_NAME "nvidia"
+{% endif -%}
+    // XDG Specifications
+    // TODO: Do we realy need those?
+    XDG_CURRENT_DESKTOP "Niri"
+    XDG_SESSION_TYPE "wayland"
+    XDG_SESSION_DESKTOP "Niri"
+    // Toolkit Backend Variables
+    GDK_BACKEND "wayland,x11"
+    QT_QPA_PLATFORM "wayland;xcb"
+    SDL_VIDEODRIVER "wayland"
+    CLUTTER_BACKEND "wayland"
+    // QT Variables
+    QT_AUTO_SCREEN_SCALE_FACTOR "1"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    // TODO: Use Fusion style with a dark theme in place of Kvantum.
+    QT_STYLE_OVERRIDE "kvantum"
+
+    // For xwayland-satellite
+    DISPLAY ":3"
+}
+
+cursor {
+    xcursor-theme "Adwaita"
+    xcursor-size 24
+}
+
+// TODO: Set output background to `#000000`
+
+input {
+    keyboard {
+        xkb {
+            layout "{% for layout,_ in layouts -%}{{layout}},{%- endfor %}"
+            variant "{% for _,lang in layouts -%}{{lang.variant}},{%- endfor %}"
+            options "caps:escape_shifted_capslock,grp:alt_shift_toggle"
+        }
+
+        track-layout "window"
+    }
+
+    touchpad {
+        natural-scroll
+        accel-speed 0.5
+        accel-profile "adaptive"
+        scroll-method "two-finger"
+        tap
+    }
+
+    mouse {
+        accel-speed 0.5
+        accel-profile "adaptive"
+    }
+
+    disable-power-key-handling
+    focus-follows-mouse max-scroll-amount="30%"
+    workspace-auto-back-and-forth
+}
+
+layout {
+    gaps 7
+    center-focused-column "never"
+    always-center-single-column
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        proportion 0.99
+    }
+    default-column-width { proportion 0.99; }
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    focus-ring {
+        width 2
+        active-color "#8b008b"
+        inactive-color "#202020"
+    }
+
+    border {
+        off
+    }
+
+    // insert-hint {
+    //     // off
+    //     color "#ffc87f80"
+    //     // gradient from="#ffbb6680" to="#ffc88080" angle=45 relative-to="workspace-view"
+    // }
+}
+
+binds {
+    // TODO: Improve all binds.
+
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    // WM Management
+
+    Mod+Shift+E { quit; }
+    Mod+Shift+o { power-off-monitors; }
+
+
+    Mod+Shift+Q { close-window; }
+
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { reset-window-height; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+S { center-column; }
+
+    // Switch Window Focus
+    Mod+Left  { focus-column-left; }
+    Mod+Down  { focus-window-down; }
+    Mod+Up    { focus-window-up; }
+    Mod+Right { focus-column-right; }
+    Mod+H     { focus-column-left; }
+    Mod+J     { focus-window-down; }
+    Mod+K     { focus-window-up; }
+    Mod+L     { focus-column-right; }
+
+    // Switch Column
+    Mod+Home { focus-column-first; }
+    Mod+End  { focus-column-last; }
+
+    Mod+Shift+WheelScrollDown      { focus-column-right; }
+    Mod+Shift+WheelScrollUp        { focus-column-left; }
+
+    // Switch Workspaces
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+
+    Mod+Page_Down      { focus-workspace-down; }
+    Mod+Page_Up        { focus-workspace-up; }
+    Mod+U              { focus-workspace-down; }
+    Mod+I              { focus-workspace-up; }
+
+    Mod+Z { focus-workspace-previous; }
+
+    // Alternative commands that move across workspaces when reaching
+    // the first or last window in a column.
+    // Mod+J     { focus-window-or-workspace-down; }
+    // Mod+K     { focus-window-or-workspace-up; }
+
+    // Switch Monitor
+    Mod+Alt+Shift+Left  { focus-monitor-left; }
+    Mod+Alt+Shift+Down  { focus-monitor-down; }
+    Mod+Alt+Shift+Up    { focus-monitor-up; }
+    Mod+Alt+Shift+Right { focus-monitor-right; }
+    Mod+Alt+Shift+H     { focus-monitor-left; }
+    Mod+Alt+Shift+J     { focus-monitor-down; }
+    Mod+Alt+Shift+K     { focus-monitor-up; }
+    Mod+Alt+Shift+L     { focus-monitor-right; }
+
+
+
+    // Move Window
+    Mod+Shift+Left  { move-column-left; }
+    Mod+Shift+Down  { move-window-down; }
+    Mod+Shift+Up    { move-window-up; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Shift+H     { move-column-left; }
+    Mod+Shift+J     { move-window-down; }
+    Mod+Shift+K     { move-window-up; }
+    Mod+Shift+L     { move-column-right; }
+
+    Mod+Comma  { consume-window-into-column; }
+    Mod+Period { expel-window-from-column; }
+    // There are also commands that consume or expel a single window to the side.
+    // Mod+BracketLeft  { consume-or-expel-window-left; }
+    // Mod+BracketRight { consume-or-expel-window-right; }
+
+    // Alternatively, there are commands to move just a single window:
+    // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
+    // Alternatively, there are commands to move just a single window:
+    // Mod+Ctrl+1 { move-window-to-workspace 1; }
+    // Alternative commands that move across workspaces when reaching
+    // the first or last window in a column.
+    // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
+    // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
+    // Alternatively, there are commands to move just a single window:
+    // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
+    // ...
+
+    // Move Column
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
+
+    Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+    Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+
+    Mod+Ctrl+Home { move-column-to-first; }
+    Mod+Ctrl+End  { move-column-to-last; }
+
+    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    Mod+Ctrl+U         { move-column-to-workspace-down; }
+    Mod+Ctrl+I         { move-column-to-workspace-up; }
+
+    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+    // Move Workspace
+    Mod+Shift+Page_Down { move-workspace-down; }
+    Mod+Shift+Page_Up   { move-workspace-up; }
+    Mod+Shift+U         { move-workspace-down; }
+    Mod+Shift+I         { move-workspace-up; }
+
+    Mod+Alt+H  { move-workspace-to-monitor-left; }
+    Mod+Alt+J  { move-workspace-to-monitor-down; }
+    Mod+Alt+K  { move-workspace-to-monitor-up; }
+    Mod+Alt+L  { move-workspace-to-monitor-right; }
+
+
+    // Scroll through workspaces
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    // Mod+Shift+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    // Mod+Shift+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+
+    // Scroll through columns
+    Mod+WheelScrollRight      { focus-column-right; }
+    Mod+WheelScrollLeft       { focus-column-left; }
+    Mod+Shift+WheelScrollRight { move-column-right; }
+    Mod+Shift+WheelScrollLeft  { move-column-left; }
+
+    // Finer width/height adjustments.
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+    Mod+BracketLeft { set-window-height "-10%"; }
+    Mod+BracketRight { set-window-height "+10%"; }
+
+
+
+    // Niri's Screenshoting
+    Print { screenshot-screen; }
+    Shift+Print { screenshot; }
+    Alt+Print { screenshot-window; }
+
+
+
+    // Other binds
+
+    // Launch Terminal
+    Mod+Tab { spawn "alacritty"; }
+
+    // Open Application Launcher
+    // FIX: Use Modifier-only bind for this after https://github.com/YaLTeR/niri/issues/605.
+    Mod+Space { spawn "dash" "-c" "pkill rofi || rofi -modi drun,filebrowser -show drun"; }
+    // Open windows selector
+    Mod+X { spawn "rofi" "-modi" "window" "-show" "window"; }
+    // Open firefox bookmakrs launcher
+    Mod+B { spawn "rofi" "-modi" "foxmarks:~/scripts/rofi/firefox_bookmarks.py" "-show" "foxmarks"; }
+    // Open session manager
+    Mod+Q { spawn "rofi" "-modi" "managesession:~/scripts/rofi/manage_session.sh" "-show" "managesession"; }
+
+    // Launch qalac in terminal
+    Mod+C { spawn "alacritty" "--option" "font.size=20" "--title=Qalc" "--command" "flatpak" "run" "--command=qalc" "io.github.Qalculate"; }
+
+    // Launch file manager
+    Mod+E { spawn "pcmanfm-qt"; }
+
+    // Translate primery selection
+    Mod+V { spawn "app.drey.Dialect" "--selection"; }
+
+    // Color picker (either just show color or pass it to pastel and open it in alacritty)
+    Mod+P { spawn "dash" "-c" "hyprpicker -n | xargs notify-send"; }
+    Mod+Shift+P { spawn "dash" "-c" "alacritty --hold --option font.size=16 --title=\"Pastel | Color Picker\" --command dash -c \"hyprpicker -n | pastel color\""; }
+
+    // Open notification center
+    Mod+grave { spawn "swaync-client" "-t" "-sw"; }
+
+    // Adjust volume and mute and unmute in PipeWire
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "-l" "1" "@DEFAULT_AUDIO_SINK@" "3%+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "3%-"; }
+    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    // FIX: Apply to every source and not just the default
+    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    // Adjust screen brightness
+    // FIX: Map these to real brightness controllers.
+    XF86MonBrightnessUp { spawn "busctl" "--user" "--" "call" "rs.wl-gammarelay" "/" "rs.wl.gammarelay" "UpdateBrightness" "d" "+0.02"; }
+    XF86MonBrightnessDown { spawn "busctl" "--user" "--" "call" "rs.wl-gammarelay" "/" "rs.wl.gammarelay" "UpdateBrightness" "d" "-0.02"; }
+
+    // Media players controllers
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioStop { spawn "playerctl" "stop"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
+    XF86AudioNext { spawn "playerctl" "next"; }
+
+    // Launch Qalculate!
+    XF86Calculator { spawn "io.github.Qalculate"; }
+
+    // Launch Firefox
+    XF86Explorer { spawn "firefox"; }
+}
+
+animations {
+    slowdown 0.5
+}
+
+window-rule {
+    // draw-border-with-background false
+    geometry-corner-radius 7
+    clip-to-geometry true
+}
+
+{% if block_out_from_screen_capture -%}
+window-rule {
+    {%- for app_id in block_out_from_screen_capture %}
+    match app-id=r#"{{app_id}}"#
+    {%- endfor %}
+
+    block-out-from "screen-capture"
+}
+
+{% endif -%}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshot_%Y_%m_%d_%H_%M_%S.png"
+
+// switch-events {
+//     lid-close { spawn "notify-send" "The laptop lid is closed!"; }
+//     lid-open { spawn "notify-send" "The laptop lid is open!"; }
+//     tablet-mode-on { spawn "bash" "-c" "gsettings set org.gnome.desktop.a11y.applications screen-keyboard-enabled true"; }
+//     tablet-mode-off { spawn "bash" "-c" "gsettings set org.gnome.desktop.a11y.applications screen-keyboard-enabled false"; }
+// }
+
+
+// Auto start things
+
+spawn-at-startup "xwayland-satellite" ":3"
+
+// TODO: Do we need this?
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "QT_STYLE_OVERRIDE"
+spawn-at-startup "wl-gammarelay-rs" "run"
+spawn-at-startup "dash" "-c" "~/scripts/auto_display_settings.py"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"

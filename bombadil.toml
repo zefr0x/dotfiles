@@ -43,11 +43,12 @@ rofi = { source = "de/launchers/rofi/config", target = ".config/rofi" }
 pcmanfm = { source = "utils/pcmanfm_qt.conf", target = ".config/pcmanfm-qt/default/settings.conf" }
 
 
-[profiles.de_hyprland]
+[profiles.de]
 extra_profiles = [ "de_generic", "gtk", "qt" ]
 posthooks = [ "hyprctl reload", "swaync-client -R", "swaync-client -rs" ]
 
-[profiles.DE_hyprland.dots]
+[profiles.de.dots]
+niri = { source = "de/wayland/niri.kdl", target = ".config/niri/config.kdl" }
 hyprland = { source = "de/wayland/hyprland", target = ".config/hypr" }
 waybar = { source = "de/wayland/waybar", target = ".config/waybar" }
 swaync = { source = "de/wayland/swaync", target = ".config/swaync" }

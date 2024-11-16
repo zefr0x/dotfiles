@@ -3,6 +3,9 @@ hardware_cursors = "true" # When mirroring display, we should use software curso
 
 layouts = { "us" = { code = "en", name = "الإنْجِلِيزِيَّة", variant = ""}, "ara" = { code = "ar", name = "ٱلْعَرَبِيَّة", variant = ""} }
 
+# Application IDs regexs to be blocked from screen capture
+block_out_from_screen_capture = [ ]
+
 [git]
 username = "zefr0x"
 email = "zer0-x.7ty50@aleeas.com"

@@ -19,14 +19,28 @@
     ],
     "modules-center": [
         // TODO: Show caps-lock indecator.
+        "niri/language",
         "hyprland/language",
         "clock",
+        "niri/workspaces",
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "hyprland/window"
+        "niri/window",
+        "hyprland/window",
+        "wlr/taskbar"
     ],
     // Modules configuration
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
+    },
+    "niri/window": {
+        "separate-outputs": true
+    },
     "hyprland/workspaces": {
         "all-outputs": true,
         "format": "{name}",
@@ -38,6 +52,14 @@
     "hyprland/window": {
         "format": "{}",
         "separate-outputs": true
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 15,
+        "tooltip-format": "{title}",
+        "active-first": true,
+        "on-click": "activate",
+        "on-click-middle": "close"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -78,10 +100,15 @@
         "format-{{lang.code}}": "{{lang.name}}"{%- if loop.last != "true" -%},{%- endif -%}
         {%- endfor %}
     },
+    "niri/language": {
+        "format": "{}",
+        {%- for _,lang in layouts %}
+        "format-{{lang.code}}": "{{lang.name}}"{%- if loop.last != "true" -%},{%- endif -%}
+        {%- endfor %}
+    },
     "custom/webcam_indecator": {
         "tooltip": false,
         "restart-interval": 3,
-        // TODO: Ignore pipewire and wireplumber listening to camera.
         // TODO: Get info directly from pipewire.
         "exec": "echo ''; for cam in $(ls /dev/video* 2> /dev/null); do if $(lsof $cam > /dev/null); then echo -n ' '; else echo -n ''; fi; done"
     },

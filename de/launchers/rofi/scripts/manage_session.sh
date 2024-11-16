@@ -3,9 +3,7 @@
 
 if [ "$ROFI_RETV" = "0" ]; then
 	echo "Lock\0icon\0037system-lock-screen-symbolic\0037info\0037lock\n"
-	if [ "$XDG_CURRENT_DESKTOP" = "Hyprland" ]; then
-		echo "Logout\0icon\0037system-log-out-symbolic\0037info\0037logout\n"
-	fi
+	echo "Logout\0icon\0037system-log-out-symbolic\0037info\0037logout\n"
 	echo "Shutdown\0icon\0037system-shutdown-symbolic\0037info\0037shutdown\n"
 	echo "Suspend\0icon\0037system-suspend-symbolic\0037info\0037suspend\n"
 	echo "Hibernate\0icon\0037system-hibernate-symbolic\0037info\0037hibernate\n"
@@ -19,7 +17,13 @@ elif [ "$ROFI_RETV" = "1" ]; then
 		err=$(loginctl lock-session 2>&1)
 		;;
 	*logout)
-		err=$(hyprctl dispatch exit 2>&1)
+		if [ "$XDG_CURRENT_DESKTOP" = "Hyprland" ]; then
+			err=$(hyprctl dispatch exit 2>&1)
+		elif [ "$XDG_CURRENT_DESKTOP" = "Niri" ]; then
+			err=$(niri msg action quit 2>&1)
+		else
+			err="The current desktop is not supported to logout"
+		fi
 		;;
 	*shutdown)
 		err=$(systemctl poweroff 2>&1)

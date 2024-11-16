@@ -68,27 +68,33 @@ To generate the package installing commands run the [`install_packages.py`](./in
 - [greetd](https://git.sr.ht/~kennylevinsen/greetd)
   - [tuigreet](https://github.com/apognu/tuigreet)
 
-#### Hyprland (Wayland)
+#### Wayland
 
+- [Niri](https://github.com/YaLTeR/niri)
+  - [xwayland-satellite](https://github.com/Supreeeme/xwayland-satellite)
 - [Hyprland](https://github.com/hyprwm/Hyprland)
-  - [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland)
-  - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk)
-  - [Waybar](https://github.com/Alexays/Waybar)
-    - [lsof](https://github.com/lsof-org/lsof)
-  - [hyprpicker](https://github.com/hyprwm/hyprpicker)
-  - [hypridle](https://github.com/hyprwm/hypridle)
-  - [hyprlock](https://github.com/hyprwm/hyprlock)
-  - [wl-gammarelay-rs](https://github.com/MaxVerevkin/wl-gammarelay-rs)
+
+- [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland)
+- [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk)
+- [Waybar](https://github.com/Alexays/Waybar)
+  - [lsof](https://github.com/lsof-org/lsof)
+- [hyprpicker](https://github.com/hyprwm/hyprpicker)
+- [hypridle](https://github.com/hyprwm/hypridle)
+- [hyprlock](https://github.com/hyprwm/hyprlock)
+- [wl-gammarelay-rs](https://github.com/MaxVerevkin/wl-gammarelay-rs)
 - [Satty](https://github.com/gabm/Satty)
   - [grim](https://sr.ht/~emersion/grim/)
   - [slurp](https://github.com/emersion/slurp)
 - [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
   - [ianny](https://github.com/zefr0x/ianny)
 
-You need to enable `greetd`
+Enable things:
 
-```
+```sh
 sudo systemctl enable greetd.service
+systemctl --user enable hypridle.service
+systemctl --user enable waybar.service
+systemctl --user enable swaync.service
 ```
 
 You need to config `greetd` by editing `/etc/greetd/config.toml` to be
@@ -98,7 +104,7 @@ You need to config `greetd` by editing `/etc/greetd/config.toml` to be
 vt = 1
 
 [default_session]
-command = "tuigreet --remember --remember-user-session --user-menu --time --cmd Hyprland"
+command = "tuigreet --remember --remember-user-session --user-menu --time"
 user = "greeter"
 ```
 
@@ -115,10 +121,10 @@ and add this line to `/etc/pam.d/passwd`
 password	optional	pam_gnome_keyring.so
 ```
 
-Edit the `UseIn` value in `/usr/share/xdg-desktop-portal/portals/gtk.portal` and `/usr/share/xdg-desktop-portal/portals/gnome-keyring.portal` to include `Hyprland`:
+Edit the `UseIn` value in `/usr/share/xdg-desktop-portal/portals/gtk.portal` and `/usr/share/xdg-desktop-portal/portals/gnome-keyring.portal` to include `Niri` and `Hyprland`:
 
 ```
-UseIn=gnome;Hyprland
+UseIn=gnome;Niri;Hyprland
 ```
 
 <!-- TODO: There should be a pacman hook for this. -->

@@ -22,6 +22,8 @@ arch_extra = {
     "polkit-gnome",
     "greetd",
     "greetd-tuigreet",
+    "niri",
+    "xwayland-satellite",
     "hyprland",
     "xdg-desktop-portal-hyprland",
     "xdg-desktop-portal-gtk",
