@@ -32,8 +32,10 @@ require("nvim-treesitter.configs").setup({
 		"kotlin",
 		"hyprlang",
 		"meson",
+		"just",
 		"po",
 		"xml",
+		"kdl",
 	},
 	highlight = {
 		enable = true,

@@ -159,6 +159,7 @@ require("lazy").setup({
 			"cmake",
 			"dockerfile",
 			"latex",
+			"tex",
 			"markdown",
 			"regex",
 			"sql",
@@ -175,8 +176,10 @@ require("lazy").setup({
 			"kotlin",
 			"hyprlang",
 			"meson",
+			"just",
 			"po",
 			"xml",
+			"kdl",
 		},
 		build = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
