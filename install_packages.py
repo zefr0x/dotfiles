@@ -23,7 +23,6 @@ arch_extra = {
     "greetd",
     "greetd-tuigreet",
     "niri",
-    "xwayland-satellite",
     "hyprland",
     "xdg-desktop-portal-hyprland",
     "xdg-desktop-portal-gtk",
@@ -113,6 +112,8 @@ arch_core = {
 }
 arch_user_repo = {
     "foxmarks",
+    "xwayland-satellite",
+    "uwsm",
     "hyprpicker",
     "wl-gammarelay-rs",
     "satty",

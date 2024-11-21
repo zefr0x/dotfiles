@@ -5,11 +5,6 @@ environment {
     __GLX_VENDOR_LIBRARY_NAME "nvidia"
     LIBVA_DRIVER_NAME "nvidia"
 {% endif -%}
-    // XDG Specifications
-    // TODO: Do we realy need those?
-    XDG_CURRENT_DESKTOP "Niri"
-    XDG_SESSION_TYPE "wayland"
-    XDG_SESSION_DESKTOP "Niri"
     // Toolkit Backend Variables
     GDK_BACKEND "wayland,x11"
     QT_QPA_PLATFORM "wayland;xcb"
@@ -268,7 +263,7 @@ binds {
     // Other binds
 
     // Launch Terminal
-    Mod+Tab { spawn "alacritty"; }
+    Mod+Tab { spawn "uwsm" "app" "--" "alacritty"; }
 
     // Open Application Launcher
     // FIX: Use Modifier-only bind for this after https://github.com/YaLTeR/niri/issues/605.
@@ -281,10 +276,10 @@ binds {
     Mod+Q { spawn "rofi" "-modi" "managesession:~/scripts/rofi/manage_session.sh" "-show" "managesession"; }
 
     // Launch qalac in terminal
-    Mod+C { spawn "alacritty" "--option" "font.size=20" "--title=Qalc" "--command" "flatpak" "run" "--command=qalc" "io.github.Qalculate"; }
+    Mod+C { spawn "uwsm" "app" "--" "alacritty" "--option" "font.size=20" "--title=Qalc" "--command" "flatpak" "run" "--command=qalc" "io.github.Qalculate"; }
 
     // Launch file manager
-    Mod+E { spawn "pcmanfm-qt"; }
+    Mod+E { spawn "uwsm" "app" "--" "pcmanfm-qt"; }
 
     // Translate primery selection
     Mod+V { spawn "app.drey.Dialect" "--selection"; }
@@ -358,8 +353,6 @@ screenshot-path "~/Pictures/Screenshot_%Y_%m_%d_%H_%M_%S.png"
 
 spawn-at-startup "xwayland-satellite" ":3"
 
-// TODO: Do we need this?
-spawn-at-startup "dbus-update-activation-environment" "--systemd" "QT_STYLE_OVERRIDE"
-spawn-at-startup "wl-gammarelay-rs" "run"
-spawn-at-startup "dash" "-c" "~/scripts/auto_display_settings.py"
-spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "uwsm" "app" "-s=b" "--" "wl-gammarelay-rs" "run"
+spawn-at-startup "uwsm" "app" "-s=b" "--" "~/scripts/auto_display_settings.py"
+spawn-at-startup "uwsm" "app" "-s=b" "--" "polkit-gnome-authentication-agent-1.desktop"

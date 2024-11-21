@@ -74,6 +74,8 @@ To generate the package installing commands run the [`install_packages.py`](./in
   - [xwayland-satellite](https://github.com/Supreeeme/xwayland-satellite)
 - [Hyprland](https://github.com/hyprwm/Hyprland)
 
+- [uwsm](https://github.com/Vladimir-csp/uwsm)
+
 - [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland)
 - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk)
 - [Waybar](https://github.com/Alexays/Waybar)

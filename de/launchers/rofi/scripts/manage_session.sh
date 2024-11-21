@@ -17,13 +17,7 @@ elif [ "$ROFI_RETV" = "1" ]; then
 		err=$(loginctl lock-session 2>&1)
 		;;
 	*logout)
-		if [ "$XDG_CURRENT_DESKTOP" = "Hyprland" ]; then
-			err=$(hyprctl dispatch exit 2>&1)
-		elif [ "$XDG_CURRENT_DESKTOP" = "Niri" ]; then
-			err=$(niri msg action quit 2>&1)
-		else
-			err="The current desktop is not supported to logout"
-		fi
+		err=$(uwsm stop 2>&1)
 		;;
 	*shutdown)
 		err=$(systemctl poweroff 2>&1)
@@ -52,4 +46,5 @@ fi
 # Show the error if command failed, e.g. no enough swap space for hibrernation
 if [ -n "$err" ] && [ "$XDG_CURRENT_DESKTOP" = "Hyprland" ]; then
 	hyprctl notify 3 10000 "rgb(960000)" " $err" > /dev/null
+	# TODO: Show it also on Niri.
 fi
