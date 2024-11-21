@@ -38,7 +38,7 @@ zathura = { source = "apps/zathura", target = ".config/zathura" }
 # Utils
 alacritty = { source = "utils/alacritty", target = ".config/alacritty" }
 
-rofi = { source = "de/launchers/rofi/config", target = ".config/rofi" }
+fuzzel = { source = "de/wayland/fuzzel/fuzzel.ini", target = ".config/fuzzel/fuzzel.ini" }
 
 pcmanfm = { source = "utils/pcmanfm_qt.conf", target = ".config/pcmanfm-qt/default/settings.conf" }
 

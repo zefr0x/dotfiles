@@ -267,13 +267,11 @@ binds {
 
     // Open Application Launcher
     // FIX: Use Modifier-only bind for this after https://github.com/YaLTeR/niri/issues/605.
-    Mod+Space { spawn "dash" "-c" "pkill rofi || rofi -modi drun,filebrowser -show drun"; }
-    // Open windows selector
-    Mod+X { spawn "rofi" "-modi" "window" "-show" "window"; }
+    Mod+Space { spawn "dash" "-c" "pkill fuzzel || fuzzel"; }
     // Open firefox bookmakrs launcher
-    Mod+B { spawn "rofi" "-modi" "foxmarks:~/scripts/rofi/firefox_bookmarks.py" "-show" "foxmarks"; }
+    Mod+B { spawn "python" "~/scripts/fuzzel/firefox_bookmarks.py"; }
     // Open session manager
-    Mod+Q { spawn "rofi" "-modi" "managesession:~/scripts/rofi/manage_session.sh" "-show" "managesession"; }
+    Mod+Q { spawn "dash" "~/scripts/fuzzel/manage_session.sh"; }
 
     // Launch qalac in terminal
     Mod+C { spawn "uwsm" "app" "--" "alacritty" "--option" "font.size=20" "--title=Qalc" "--command" "flatpak" "run" "--command=qalc" "io.github.Qalculate"; }

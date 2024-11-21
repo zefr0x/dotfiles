@@ -67,7 +67,7 @@ arch_extra = {
     "swayimg",  # Image viewer
     "pcmanfm-qt",  # File Manager
     "gvfs",
-    "rofi-wayland",  # Launcher
+    "fuzzel",  # Launcher
     # "system-config-printer",
     "lsof",  # Check for /dev/video* usage with (fuser)
     "network-manager-applet",

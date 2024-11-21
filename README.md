@@ -59,7 +59,7 @@ To generate the package installing commands run the [`install_packages.py`](./in
 
 ### Desktop Environment
 
-- [rofi](https://github.com/lbonn/rofi)
+- [fuzzel](https://codeberg.org/dnkl/fuzzel)
   - [foxmarks](https://github.com/zefr0x/foxmarks)
 - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 - [gnome-keyring](https://wiki.gnome.org/Projects/GnomeKeyring)
