@@ -107,7 +107,7 @@ if status is-interactive
 
     # Tools
     alias topdf="org.libreoffice.LibreOffice --headless --invisible --convert-to pdf"
-    alias qalc="flatpak run --command=qalc io.github.Qalculate"
+    alias qalc="flatpak run --command=qalc io.github.Qalculate -s 'exp 0'"
     alias now="date +'%A %d/%m/%Y %H:%M:%S.%N (%Z) %nUnix time: %s'"
 
     # Scripts
