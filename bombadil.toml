@@ -45,7 +45,7 @@ pcmanfm = { source = "utils/pcmanfm_qt.conf", target = ".config/pcmanfm-qt/defau
 
 [profiles.de]
 extra_profiles = [ "de_generic", "gtk", "qt" ]
-posthooks = [ "hyprctl reload", "swaync-client -R", "swaync-client -rs" ]
+posthooks = [ "hyprctl reload", "swaync-client -R", "swaync-client -rs", "killall -SIGUSR2 waybar" ]
 
 [profiles.de.dots]
 niri = { source = "de/wayland/niri.kdl", target = ".config/niri/config.kdl" }
