@@ -354,4 +354,4 @@ spawn-at-startup "xwayland-satellite" ":3"
 
 spawn-at-startup "uwsm" "app" "-s=b" "--" "wl-gammarelay-rs" "run"
 spawn-at-startup "uwsm" "app" "-s=b" "--" "~/scripts/auto_display_settings.py"
-spawn-at-startup "uwsm" "app" "-s=b" "--" "polkit-gnome-authentication-agent-1.desktop"
+spawn-at-startup "uwsm" "app" "-s=b" "--" "/usr/lib/hyprpolkitagent"

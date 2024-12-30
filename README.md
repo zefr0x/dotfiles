@@ -64,7 +64,7 @@ To generate the package installing commands run the [`install_packages.py`](./in
 - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 - [gnome-keyring](https://wiki.gnome.org/Projects/GnomeKeyring)
   - [Seahorse](https://wiki.gnome.org/Apps/Seahorse)
-- [PolKit Gnome](https://gitlab.gnome.org/Archive/policykit-gnome)
+- [hyprpolkitagent](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpolkitagent/)
 - [greetd](https://git.sr.ht/~kennylevinsen/greetd)
   - [tuigreet](https://github.com/apognu/tuigreet)
 
@@ -94,9 +94,7 @@ Enable things:
 
 ```sh
 sudo systemctl enable greetd.service
-systemctl --user enable hypridle.service
-systemctl --user enable waybar.service
-systemctl --user enable swaync.service
+systemctl --user enable hypridle.service waybar.service swaync.service
 ```
 
 You need to config `greetd` by editing `/etc/greetd/config.toml` to be

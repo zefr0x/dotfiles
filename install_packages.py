@@ -19,7 +19,6 @@ arch_extra = {
     "mpv-mpris",
     "zathura",  # Document Viewer
     "zathura-pdf-mupdf",
-    "polkit-gnome",
     "greetd",
     "greetd-tuigreet",
     "niri",
@@ -114,6 +113,7 @@ arch_core = {
 }
 arch_user_repo = {
     "foxmarks",
+    "hyprpolkitagent",
     "xwayland-satellite",
     "uwsm",
     "wl-gammarelay-rs",
