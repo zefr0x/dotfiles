@@ -35,6 +35,7 @@ kdeglobals = { source = "de/gui/qt/kdeglobals", target = ".config/kdeglobals" }
 # Apps
 mpv = { source = "apps/mpv", target = ".config/mpv" }
 zathura = { source = "apps/zathura", target = ".config/zathura" }
+swayimg = { source = "apps/swayimgrc", target = ".config/swayimg/config" }
 # Utils
 alacritty = { source = "utils/alacritty", target = ".config/alacritty" }
 
