@@ -38,6 +38,7 @@ zathura = { source = "apps/zathura", target = ".config/zathura" }
 swayimg = { source = "apps/swayimgrc", target = ".config/swayimg/config" }
 # Utils
 alacritty = { source = "utils/alacritty", target = ".config/alacritty" }
+kitty = { source = "utils/kitty", target = ".config/kitty" }
 
 fuzzel = { source = "de/wayland/fuzzel/fuzzel.ini", target = ".config/fuzzel/fuzzel.ini" }
 

@@ -263,7 +263,8 @@ binds {
     // Other binds
 
     // Launch Terminal
-    Mod+Tab { spawn "uwsm" "app" "--" "alacritty"; }
+    Mod+Tab { spawn "uwsm" "app" "--" "kitty"; }
+    Mod+Shift+Tab { spawn "uwsm" "app" "--" "alacritty"; }
 
     // Open Application Launcher
     // FIX: Use Modifier-only bind for this after https://github.com/YaLTeR/niri/issues/605.

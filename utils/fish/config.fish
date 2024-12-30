@@ -3,7 +3,11 @@ set fish_greeting
 # ------------- Variables --------------
 set -x EDITOR nvim
 set -x VISUAL nvim
-set -x TERMINAL alacritty
+if [ $TERM = xterm-kitty ]
+    set -x TERMINAL kitty
+else if [ $TERM = alacritty ]
+    set -x TERMINAL alacritty
+end
 set -x VIDEO mpv
 set -x IMAGE swayimg
 set -x OPENER "gio open"
@@ -100,10 +104,10 @@ if status is-interactive
     alias mitmproxy="mitmproxy --set confdir=$XDG_CONFIG_HOME/mitmproxy"
     alias mitmweb="mitmweb --set confdir=$XDG_CONFIG_HOME/mitmproxy"
 
-    alias ls="eza --icons"
-    alias ll="eza -l --icons"
-    alias la="eza -la --icons"
-    alias lt="eza --icons --tree --git-ignore"
+    alias ls="eza --icons --hyperlink"
+    alias ll="ls -l"
+    alias la="ls -la"
+    alias lt="ls --tree --git-ignore"
 
     # Tools
     alias topdf="org.libreoffice.LibreOffice --headless --invisible --convert-to pdf"
@@ -120,6 +124,13 @@ if status is-interactive
     # Drag to and from Aliases
     alias dragto="ripdrag"
     alias dragon="ripdrag --target --and-exit"
+
+    # Kitty specific aliases
+    if [ $TERM = xterm-kitty ]
+        alias ssh="env TERM=xterm-256color ssh"
+        alias icat="kitty +kitten icat"
+        alias rg="rg --hyperlink-format=kitty"
+    end
 
     # ------------ Shell Things ------------
     # A `cd` Command Alternative
