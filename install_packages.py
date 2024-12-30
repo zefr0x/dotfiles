@@ -27,8 +27,10 @@ arch_extra = {
     "xdg-desktop-portal-hyprland",
     "xdg-desktop-portal-gtk",
     "waybar",
+    "hyprpicker",
     "hypridle",
     "hyprlock",
+    "satty",
     "grim",  # Screenshot utility
     "slurp",  # Select a region in a Wayland
     "swaync",
@@ -114,9 +116,7 @@ arch_user_repo = {
     "foxmarks",
     "xwayland-satellite",
     "uwsm",
-    "hyprpicker",
     "wl-gammarelay-rs",
-    "satty",
     "ianny-git",  # Periodically informes user to take breaks
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
     "ttf-amiri",
