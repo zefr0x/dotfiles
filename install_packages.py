@@ -15,14 +15,18 @@ arch_groups = {
 }
 arch_extra = {
     "alacritty",  # Terminal emulator
+    "kitty",  # Terminal emulator
     "mpv",  # Media player
     "mpv-mpris",
     "zathura",  # Document Viewer
     "zathura-pdf-mupdf",
     "greetd",
     "greetd-tuigreet",
+    "hyprpolkitagent",
     "niri",
+    "xwayland-satellite",
     "hyprland",
+    "uwsm",
     "xdg-desktop-portal-hyprland",
     "xdg-desktop-portal-gtk",
     "waybar",
@@ -113,9 +117,6 @@ arch_core = {
 }
 arch_user_repo = {
     "foxmarks",
-    "hyprpolkitagent",
-    "xwayland-satellite",
-    "uwsm",
     "wl-gammarelay-rs",
     "ianny-git",  # Periodically informes user to take breaks
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
