@@ -1,6 +1,6 @@
 # zefr0x's public dotfiles
 
-> Managed with [Toml Bombadil](https://oknozor.github.io/toml-bombadil/)
+> Managed with [Dotter](https://github.com/SuperCuber/dotter)
 
 Those software and config files represent my Personalized Desktop Environment.
 
@@ -8,25 +8,34 @@ Those software and config files represent my Personalized Desktop Environment.
 
 ## Usage
 
-1. Install `Toml Bombadil`.
+1. Install [`dotter-rs`](https://aur.archlinux.org/packages/dotter-rs).
 2. Clone this repo to `.dotfiles`:
 
 ```
 git clone https://github.com/zefr0x/dotfiles.git .dotfiles
 ```
 
-3. Link bombadil:
+3. Create [`.dotter/local.toml`](.dotfiles/.dotter/local.toml) and edit variables, like:
 
 ```
-bombadil install .dotfiles
+packages = ["default"]
+
+[variables]
+nvidia_driver = ...
+software_cursors = ...
+
+layouts = [ ... ]
+
+block_out_from_screen_capture = [ ... ]
+
+git.username = "..."
+git.email = "..."
 ```
 
-4. Edit [`vars.toml`](./vars.toml)
-
-5. To use the desktop environment do:
+4. Deploy config files (from `.dotfiles`):
 
 ```
-bombadil link -p DE_hyprland
+dotter deploy
 ```
 
 ## Arch linux Installation
@@ -94,7 +103,7 @@ Enable things:
 
 ```sh
 sudo systemctl enable greetd.service
-systemctl --user enable hypridle.service waybar.service swaync.service
+systemctl --user enable hypridle.service waybar.service swaync.service hyprpolkitagent.service
 ```
 
 You need to config `greetd` by editing `/etc/greetd/config.toml` to be

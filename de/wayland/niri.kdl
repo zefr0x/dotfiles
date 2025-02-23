@@ -30,8 +30,8 @@ cursor {
 input {
     keyboard {
         xkb {
-            layout "{% for layout,_ in layouts -%}{{layout}},{%- endfor %}"
-            variant "{% for _,lang in layouts -%}{{lang.variant}},{%- endfor %}"
+            layout "{{#each layouts}}{{this.xcode}},{{/each}}"
+            variant "{{#each layouts}}{{this.variant}},{{/each}}"
             options "caps:escape_shifted_capslock,grp:alt_shift_toggle"
         }
 
@@ -270,9 +270,9 @@ binds {
     // FIX: Use Modifier-only bind for this after https://github.com/YaLTeR/niri/issues/605.
     Mod+Space { spawn "dash" "-c" "pkill fuzzel || fuzzel"; }
     // Open firefox bookmakrs launcher
-    Mod+B { spawn "python" "~/scripts/fuzzel/firefox_bookmarks.py"; }
+    Mod+B { spawn "~/.scripts/fuzzel/firefox_bookmarks.py"; }
     // Open session manager
-    Mod+Q { spawn "dash" "~/scripts/fuzzel/manage_session.sh"; }
+    Mod+Q { spawn "~/.scripts/fuzzel/manage_session.sh"; }
 
     // Launch qalac in terminal
     Mod+C { spawn "uwsm" "app" "--" "alacritty" "--option" "font.size=20" "--title=Qalc" "--command" "flatpak" "run" "--command=qalc" "io.github.Qalculate"; }
@@ -325,16 +325,16 @@ window-rule {
     clip-to-geometry true
 }
 
-{% if block_out_from_screen_capture -%}
+{{#if block_out_from_screen_capture}}
 window-rule {
-    {%- for app_id in block_out_from_screen_capture %}
-    match app-id=r#"{{app_id}}"#
-    {%- endfor %}
+    {{#each block_out_from_screen_capture}}
+    match app-id=r#"{{this}}"#
+    {{/each}}
 
     block-out-from "screen-capture"
 }
 
-{% endif -%}
+{{/if}}
 
 prefer-no-csd
 
@@ -353,5 +353,4 @@ screenshot-path "~/Pictures/Screenshot_%Y_%m_%d_%H_%M_%S.png"
 spawn-at-startup "xwayland-satellite" ":3"
 
 spawn-at-startup "uwsm" "app" "-s=b" "--" "wl-gammarelay-rs" "run"
-spawn-at-startup "uwsm" "app" "-s=b" "--" "~/scripts/auto_display_settings.py"
-spawn-at-startup "uwsm" "app" "-s=b" "--" "/usr/lib/hyprpolkitagent"
+spawn-at-startup "uwsm" "app" "-s=b" "--" "~/.scripts/auto_display_settings.py"

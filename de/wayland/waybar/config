@@ -96,15 +96,15 @@
     },
     "hyprland/language": {
         "format": "{}",
-        {%- for _,lang in layouts %}
-        "format-{{lang.code}}": "{{lang.name}}"{%- if loop.last != "true" -%},{%- endif -%}
-        {%- endfor %}
+        {{#each layouts}}
+        "format-{{this.code}}": "{{this.name}}",
+        {{/each}}
     },
     "niri/language": {
         "format": "{}",
-        {%- for _,lang in layouts %}
-        "format-{{lang.code}}": "{{lang.name}}"{%- if loop.last != "true" -%},{%- endif -%}
-        {%- endfor %}
+        {{#each layouts}}
+        "format-{{this.code}}": "{{this.name}}",
+        {{/each}}
     },
     "custom/webcam_indecator": {
         "tooltip": false,

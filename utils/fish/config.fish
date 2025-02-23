@@ -93,7 +93,7 @@ if status is-interactive
     # -------------- Aliases ---------------
     # Utilities
     alias sudo="doas"
-    alias doasedit="~/scripts/doasedit.sh"
+    alias doasedit="~/.scripts/doasedit.sh"
     alias cp="cp -i"
     alias df="df -h"
     alias free="free -m"
