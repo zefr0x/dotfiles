@@ -78,11 +78,11 @@ layout {
 
     preset-column-widths {
         proportion 0.33333
+        proportion 0.99
         proportion 0.5
         proportion 0.66667
-        proportion 0.99
     }
-    default-column-width { proportion 0.99; }
+    default-column-width { proportion 0.3333; }
     preset-window-heights {
         proportion 0.33333
         proportion 0.5
@@ -104,6 +104,10 @@ layout {
     //     color "#ffc87f80"
     //     // gradient from="#ffbb6680" to="#ffc88080" angle=45 relative-to="workspace-view"
     // }
+}
+
+hotkey-overlay {
+    skip-at-startup
 }
 
 binds {
@@ -350,6 +354,29 @@ window-rule {
 }
 
 {{/if}}
+
+layer-rule {
+    match namespace="^swaync-notification-window$"
+    block-out-from "screen-capture"
+}
+
+window-rule {
+    match app-id="^org.mozilla.firefox$" title="^ڤديو معترِض|Picture-in-Picture$"
+
+    open-floating true
+
+    max-width 384 // 1920/5
+    max-height 216 // 1080/5
+    default-floating-position x=32 y=32 relative-to="bottom-right"
+}
+
+window-rule {
+    match app-id="^app.drey.Dialect$"
+    match title="^Qalc$"
+    match title="^Pastel | Color Picker$"
+
+    open-floating true
+}
 
 prefer-no-csd
 
