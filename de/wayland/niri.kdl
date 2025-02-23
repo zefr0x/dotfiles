@@ -25,7 +25,22 @@ cursor {
     xcursor-size 24
 }
 
-// TODO: Set output background to `#000000`
+{{#each monitors}}
+output "{{this.name}}" {
+    {{#if this.mode}}
+    mode "{{this.mode}}"
+    {{/if}}
+    {{#if this.scale}}
+    scale {{this.scale}}
+    {{/if}}
+    {{#if this.background_color}}
+    background-color "{{this.background_color}}"
+    {{else}}
+    background-color "#000000"
+    {{/if}}
+}
+
+{{/each~}}
 
 input {
     keyboard {

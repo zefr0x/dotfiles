@@ -24,9 +24,11 @@ packages = ["default"]
 nvidia_driver = ...
 software_cursors = ...
 
-layouts = [ ... ]
+monitors = [ { name = "HDMI-A-1", mode = "1920x1080@30Hz", scale = "1", bitdepth = "8", mirror = "HDMI-A-2", background_color = "#000000" }, ... ]
 
-block_out_from_screen_capture = [ ... ]
+layouts = [ { xcode = "us", code = "en", name = "الإنْجِلِيزِيَّة", variant = ""}, ... ]
+
+block_out_from_screen_capture = [ "^org\\.gnome\\.World\\.Secrets$", ... ]
 
 git.username = "..."
 git.email = "..."
