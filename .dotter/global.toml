@@ -1,17 +1,12 @@
 [default]
-depends = ["gui", "fish", "helix", "nvim"]
+depends = ["general", "cargo", "broot", "git", "fish", "helix", "nvim", "gui"]
 
-[default.files]
+[general.files]
 # env profile script
 "profile" = "~/.profile"
-# all script
+# all scripts
 # TODO: split them.
 "scripts" = "~/.scripts"
-
-# Tools
-"tools/broot" = "~/.config/broot"
-"tools/cargo_config.toml" ="~/.local/share/cargo/config.toml"
-"tools/git_config" = "~/.config/git/config"
 
 # Utils
 "utils/bashrc" = "~/.bashrc"
@@ -19,7 +14,19 @@ depends = ["gui", "fish", "helix", "nvim"]
 "utils/yay.json" = "~/.config/yay/config.json"
 "utils/pythonrc" = "~/.config/python/pythonrc"
 
-[default.variables]
+
+[cargo.files]
+"tools/cargo_config.toml" ="~/.local/share/cargo/config.toml"
+
+
+[broot.files]
+"tools/broot" = "~/.config/broot"
+
+
+[git.files]
+"tools/git_config" = "~/.config/git/config"
+
+[git.variables]
 git.username = ""
 git.email = ""
 

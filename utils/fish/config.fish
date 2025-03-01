@@ -1,8 +1,15 @@
 set fish_greeting
 
 # ------------- Variables --------------
+{{#if dotter.packages.helix}}
+set -x EDITOR helix
+set -x VISUAL helix
+{{else}}
+{{#if dotter.packages.nvim}}
 set -x EDITOR nvim
 set -x VISUAL nvim
+{{/if}}
+{{/if}}
 if [ $TERM = xterm-kitty ]
     set -x TERMINAL kitty
 else if [ $TERM = alacritty ]
@@ -75,8 +82,12 @@ if status is-interactive
 
     # ----------- Abbreviations ------------
     abbr -a d doas
+    {{#if dotter.packages.helix}}
     abbr -a hx helix
+    {{/if}}
+    {{#if dotter.packages.nvim}}
     abbr -a nv nvim
+    {{/if}}
     abbr -a snv doasedit
     abbr -a py python
     abbr -a j just

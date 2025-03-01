@@ -3,7 +3,13 @@
     email = {{git.email}}
 [core]
     pager = delta
+{{#if dotter.packages.helix}}
+    editor = helix
+{{else}}
+{{#if dotter.packages.nvim}}
     editor = nvim
+{{/if}}
+{{/if}}
 [color]
     ui = true
 [init]
