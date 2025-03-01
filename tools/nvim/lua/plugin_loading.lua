@@ -86,9 +86,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- TODO: Configure debug adapter protocol client for neovim
-	-- "mfussenegger/nvim-dap",
-
 	-- Pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing
 	{
 		"folke/trouble.nvim",
@@ -109,6 +106,7 @@ require("lazy").setup({
 			"nvim-lua/plenary.nvim",
 			-- telescope-fzf-native.nvim: FZF sorter for telescope written in c
 			{
+				-- TODO: Can this be replaced with skim?
 				"nvim-telescope/telescope-fzf-native.nvim",
 				build = "make",
 			},
@@ -186,14 +184,6 @@ require("lazy").setup({
 					require("plugin.rainbow_delimiters")
 				end,
 			},
-			-- Highlight arguments' definitions and usages, using Treesitter
-			{
-				-- TODO: Delete when most LSPs do support semantic tokens.
-				"m-demare/hlargs.nvim",
-				config = function()
-					require("plugin.hlargs")
-				end,
-			},
 			-- Autopairs for () and {} etc...
 			{
 				"windwp/nvim-autopairs",
@@ -222,6 +212,7 @@ require("lazy").setup({
 			require("plugin.treesitter")
 		end,
 	},
+	-- TODO: Remove this when they are implemented, it should be in LSP space.
 	-- Paint colors text in for #000000 or rgb(0,0,0) or ... with the real colors
 	{
 		"NvChad/nvim-colorizer.lua",

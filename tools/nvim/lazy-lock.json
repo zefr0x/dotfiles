@@ -55,10 +55,6 @@
     "branch": "main",
     "commit": "4c40357994f386e72be92a46f41fc1664c84c87d"
   },
-  "hlargs.nvim": {
-    "branch": "main",
-    "commit": "a5a7fdacc0ac2f7ca9d241e0e059cb85f0e733bc"
-  },
   "hop.nvim": {
     "branch": "master",
     "commit": "08ddca799089ab96a6d1763db0b8adc5320bf050"
