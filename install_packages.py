@@ -90,6 +90,7 @@ arch_extra = {
     "imagemagick",
     "shfmt",
     "rustup",
+    "cargo-edit",
     "cargo-outdated",
     "cargo-bloat",
     "cargo-nextest",

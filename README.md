@@ -249,6 +249,7 @@ br --set-install-state refused
 #### Rust
 
 - [rustup](https://github.com/rust-lang/rustup)
+  - [cargo-edit](https://github.com/killercup/cargo-edit)
   - [cargo-outdated](https://github.com/kbknapp/cargo-outdated)
   - [cargo-bloat](https://github.com/RazrFalcon/cargo-bloat)
   - [cargo-nextest](https://nexte.st/)
