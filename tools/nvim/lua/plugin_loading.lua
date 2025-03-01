@@ -40,7 +40,7 @@ require("lazy").setup({
 	-- An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support
 	{
 		"mfussenegger/nvim-lint",
-		ft = { "c", "cpp", "python", "tex", "lua", "javascript", "typescript", "html", "css" },
+		ft = { "c", "cpp", "python", "tex" },
 		config = function()
 			require("plugin.lint")
 		end,
