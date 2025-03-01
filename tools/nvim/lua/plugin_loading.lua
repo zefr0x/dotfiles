@@ -85,17 +85,6 @@ require("lazy").setup({
 		end,
 	},
 
-	--  Help managing dependencies in Cargo.toml files
-	{
-		"saecki/crates.nvim",
-		event = "BufReadPost Cargo.toml",
-		version = "v0.5.*",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("plugin.crates")
-		end,
-	},
-
 	-- TODO: Configure debug adapter protocol client for neovim
 	-- "mfussenegger/nvim-dap",
 

@@ -47,10 +47,6 @@
     "branch": "main",
     "commit": "fcd2e221f072ef917ed45583de0ee34d43685347"
   },
-  "crates.nvim": {
-    "branch": "main",
-    "commit": "1c924d5a9ea3496c4e1a02d0d51388ba809f8468"
-  },
   "friendly-snippets": {
     "branch": "main",
     "commit": "efff286dd74c22f731cdec26a70b46e5b203c619"
