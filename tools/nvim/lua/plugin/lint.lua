@@ -1,8 +1,9 @@
 -- nvim-lint
 require("lint").linters_by_ft = {
+	-- TODO: This should be done by LSP and pre-commit.
 	cpp = { "clangtidy", "flawfinder" },
+	-- TODO: Remove this after ruff's Red Knot.
 	python = { "mypy" },
-	tex = { "chktex" },
 }
 
 -- Run linters on read and write

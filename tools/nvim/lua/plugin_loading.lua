@@ -37,10 +37,11 @@ require("lazy").setup({
 		end,
 	},
 
+	-- TODO: Remove this when it is not neede.
 	-- An asynchronous linter plugin for Neovim complementary to the built-in Language Server Protocol support
 	{
 		"mfussenegger/nvim-lint",
-		ft = { "c", "cpp", "python", "tex" },
+		ft = { "c", "cpp", "python" },
 		config = function()
 			require("plugin.lint")
 		end,
