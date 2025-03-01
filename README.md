@@ -240,6 +240,7 @@ br --set-install-state refused
 
 ### Text Editors
 
+- [Helix](https://helix-editor.com/)
 - [neovim](https://neovim.io/)
 - [GNOME Text Editor](https://apps.gnome.org/TextEditor/)
 - [Gtranslator](https://wiki.gnome.org/Apps/Gtranslator)

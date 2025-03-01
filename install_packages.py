@@ -55,6 +55,7 @@ arch_extra = {
     "eza",  # `ls` alternative
     "skim",  # fuzzy finder
     "fish",
+    "helix",
     "neovim",
     "ripgrep",
     "dysk",

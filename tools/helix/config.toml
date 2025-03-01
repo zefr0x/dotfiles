@@ -1,0 +1,50 @@
+theme = "ayu_evolve"
+
+[editor]
+shell = ["dash", "-c"]
+line-number = "relative"
+auto-save = true
+true-color = true
+bufferline = "multiple"
+color-modes = true
+popup-border = "all"
+end-of-line-diagnostics = "hint"
+clipboard-provider = "termcode"
+
+[editor.statusline]
+left = ["mode", "spacer", "version-control", "spacer", "diagnostics", "read-only-indicator", "file-modification-indicator"]
+center = ["spinner", "file-name"]
+right = ["workspace-diagnostics", "selections", "file-encoding", "file-line-ending", "file-type", "total-line-numbers", "position-percentage", "position"]
+mode.normal = "NOR"
+mode.insert = "INS"
+mode.select = "SEL"
+
+[editor.lsp]
+display-progress-messages = true
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "all"
+nnbsp = "all"
+newline = "none"
+
+[editor.indent-guides]
+render = true
+character = "┊"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "error"

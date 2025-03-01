@@ -1,5 +1,5 @@
 [default]
-depends = ["gui", "nvim", "fish"]
+depends = ["gui", "fish", "helix", "nvim"]
 
 [default.files]
 # env profile script
@@ -27,6 +27,10 @@ git.email = ""
 [fish.files]
 "utils/fish/config.fish" = "~/.config/fish/config.fish"
 "utils/fish/functions" = "~/.config/fish/functions"
+
+
+[helix.files]
+"tools/helix"= "~/.config/helix"
 
 
 [nvim.files]

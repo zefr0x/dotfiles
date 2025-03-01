@@ -12,7 +12,6 @@ set -x VIDEO mpv
 set -x IMAGE swayimg
 set -x OPENER "gio open"
 
-
 # ------------ Tools Config ------------
 
 # Color `man` Pages
@@ -25,8 +24,6 @@ set -x LESS_TERMCAP_se (set_color normal) # end standout
 
 # `less`
 set -x LESS -R
-
-
 
 if status is-interactive
     # ------------ Fish Config -------------
@@ -78,6 +75,7 @@ if status is-interactive
 
     # ----------- Abbreviations ------------
     abbr -a d doas
+    abbr -a hx helix
     abbr -a nv nvim
     abbr -a snv doasedit
     abbr -a py python
@@ -162,7 +160,6 @@ if status is-interactive
     end
     abbr --add dotdot --regex '^\.\.+$' --function multicd
 end
-
 
 # Sources:
 #    https://github.com/Canop/broot
