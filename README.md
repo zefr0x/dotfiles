@@ -151,7 +151,7 @@ Create a `~/Pictures` directiory for screenshots.
 - [0xProto Nerd](https://www.nerdfonts.com/)
 - [Nerd Fonts Ubuntu](https://www.nerdfonts.com/)
 - [ttf-dejavu-ib](http://dejavu-fonts.org/wiki/Main_Page)
-- [Cantarell](https://cantarell.gnome.org/)
+- [Adwaita Fonts](https://gitlab.gnome.org/GNOME/adwaita-fonts)
 - [Amiri](https://www.amirifont.org/)
 
 ### Themes

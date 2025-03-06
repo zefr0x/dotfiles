@@ -60,7 +60,7 @@ window#waybar {
 }
 
 #window {
-  /* TODO: Use `Cantarell` when Arabic is supported: https://gitlab.gnome.org/GNOME/cantarell-fonts/-/issues/18 */
+  /* TODO: Use `Adwaita Sans` when Arabic is supported (if will): https://gitlab.gnome.org/GNOME/adwaita-fonts/-/issues/11 */
   font-family: Noto Naskh Arabic UI;
 
   padding-left: 15px;

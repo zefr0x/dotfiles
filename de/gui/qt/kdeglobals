@@ -2,11 +2,11 @@
 ColorScheme=BreezeDark
 AccentColor=0,211,184
 
-fixed=Hack,10,-1,5,50,0,0,0,0,0
-font=Cantarell,10,-1,5,50,0,0,0,0,0
-menuFont=Cantarell,10,-1,5,50,0,0,0,0,0
-smallestReadableFont=Cantarell,8,-1,5,50,0,0,0,0,0
-toolBarFont=Cantarell,10,-1,5,50,0,0,0,0,0
+fixed=Adwaita Mono,10,-1,5,50,0,0,0,0,0
+font=Adwaita Sans,10,-1,5,50,0,0,0,0,0
+menuFont=Adwaita Sans,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=Adwaita Sans,8,-1,5,50,0,0,0,0,0
+toolBarFont=Adwaita Sans,10,-1,5,50,0,0,0,0,0
 
 [Icons]
 Theme=breeze-dark
