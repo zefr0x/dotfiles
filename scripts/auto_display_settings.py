@@ -3,6 +3,7 @@
 
 import json
 import subprocess
+import sys
 from datetime import datetime
 from os import environ
 from pathlib import Path
@@ -12,7 +13,7 @@ TEMP_DAY = 4000.0
 TEMP_NIGHT = 2650.0
 
 DAWN_TIME = 21600.0  # 6am (Should be > WINDOW)
-DUSK_TIME = 64800.0  # 6pm (Shoulbe be > WINDOW + DAWN_TIME)
+DUSK_TIME = 64800.0  # 6pm (Should be > WINDOW + DAWN_TIME)
 
 # Time during which the temperature changes gradually until it reaches the desired value
 WINDOW = 900  # 15m
@@ -31,29 +32,34 @@ def set_temperature(temp: int) -> None:
             "Temperature",
             "q",
             str(temp),
-        ]
+        ],
     )
 
 
 def get_temperature() -> int:
     """Send a requst for current temperature value from rs.wl-gammarelay."""
-    process = subprocess.Popen(  # noqa: S603
-        [
-            "/usr/bin/busctl",
-            "--user",
-            "get-property",
-            "rs.wl-gammarelay",
-            "/",
-            "rs.wl.gammarelay",
-            "Temperature",
-            "-j",
-        ],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.DEVNULL,
-    )
-    stdout, _ = process.communicate()
+    while True:
+        process = subprocess.Popen(  # noqa: S603
+            [
+                "/usr/bin/busctl",
+                "--user",
+                "get-property",
+                "rs.wl-gammarelay",
+                "/",
+                "rs.wl.gammarelay",
+                "Temperature",
+                "-j",
+            ],
+            stdout=subprocess.PIPE,
+            stderr=sys.stdout,
+        )
 
-    return json.loads(stdout.decode("utf-8")).get("data")
+        stdout, stderr = process.communicate()
+
+        try:
+            return json.loads(stdout.decode("utf-8")).get("data")
+        except json.decoder.JSONDecodeError:
+            sleep(5)
 
 
 def main() -> int:
@@ -87,7 +93,8 @@ def main() -> int:
         if temp:
             set_temperature(int(temp))
 
-        # NOTE: Calculatig time manually improves performance, but reduces accuracy.
+        # FIX: When device is suspended, the current timer implementation will break.
+        # NOTE: Calculating time manually improves performance, but reduces accuracy.
         current_time += 2
 
         while True:
