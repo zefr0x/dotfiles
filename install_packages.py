@@ -125,7 +125,6 @@ arch_user_repo = {
     "ttf-amiri",
     "ripdrag-git",  # CLI-GUI drag-and-drop source/target
     "fish-tide-git",
-    "nodejs-emmet-ls",
     "jdtls",
 }
 flathub = {
