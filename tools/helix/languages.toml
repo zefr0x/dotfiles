@@ -1,0 +1,149 @@
+# Languages Config
+
+[[language]]
+name = "c"
+language-servers = [ "clangd", "harper-ls" ]
+
+[[language]]
+name = "cpp"
+language-servers = [ "clangd", "harper-ls" ]
+
+
+[[language]]
+name = "python"
+language-servers = [ "pylsp", "ruff", "harper-ls" ]
+
+
+[[language]]
+name = "rust"
+language-servers = [ "rust-analyzer", "harper-ls" ]
+
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+language-servers = [ "gopls", "harper-ls" ]
+
+
+[[language]]
+name = "latex"
+# TODO: Add harper-ls when supported.
+language-servers = [ "texlab" ]
+
+
+[[language]]
+name = "lua"
+language-servers = [ "lua-language-server", "harper-ls" ]
+
+
+[[language]]
+name = "javascript"
+shebangs = [ "deno" ]
+roots = [ "deno.json", "deno.jsonc", "package.json" ]
+file-types = [ "js" ]
+language-servers = [ "deno-lsp", "harper-ls" ]
+auto-format = true
+
+[[language]]
+name = "typescript"
+shebangs = [ "deno" ]
+roots = [ "deno.json", "deno.jsonc", "package.json" ]
+file-types = [ "ts" ]
+language-servers = [ "deno-lsp", "harper-ls" ]
+auto-format = true
+
+[[language]]
+name = "jsx"
+shebangs = [ "deno" ]
+roots = [ "deno.json", "deno.jsonc", "package.json" ]
+file-types = [ "jsx" ]
+language-servers = [ "deno-lsp", "harper-ls" ]
+auto-format = true
+
+[[language]]
+name = "tsx"
+shebangs = [ "deno" ]
+roots = [ "deno.json", "deno.jsonc", "package.json" ]
+file-types = [ "tsx" ]
+language-servers = [ "deno-lsp", "harper-ls" ]
+auto-format = true
+
+
+[[language]]
+name = "java"
+language-servers = [ "jdtls", "harper-ls" ]
+
+
+[[language]]
+name = "html"
+# TODO: Consider using SuperHTML.
+language-servers = [ "vscode-html-language-server", "harper-ls" ]
+
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "harper-ls" ]
+
+[[language]]
+name = "scss"
+language-servers = [ "vscode-css-language-server", "harper-ls" ]
+
+
+[[language]]
+name = "json"
+language-servers = [ "vscode-json-language-server", "harper-ls" ]
+
+
+[[language]]
+name = "yaml"
+language-servers = [ "yaml-language-server", "harper-ls" ]
+
+
+[[language]]
+name = "markdown"
+language-servers = [ "harper-ls" ]
+
+
+
+# Language Servers Config
+
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]
+
+
+[language-server.rust-analyzer.config]
+check = { command = "clippy" }
+
+
+[language-server.lua-language-server.config.Lua]
+runtime.version = "LuaJIT"
+workspace.checkThirdParty = false
+telemetry.enable = false
+
+
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+environment = { NO_COLOR = "1" }
+
+[language-server.deno-lsp.config.deno]
+enable = true
+suggest = { completeFunctionCalls = false, imports = { hosts = { "https://deno.land" = true } } }
+inlayHints.parameterNames.enabled = "all"
+inlayHints.parameterTypes.enabled = true
+inlayHints.variableTypes.enabled = true
+inlayHints.propertyDeclarationTypes.enabled  = true
+inlayHints.functionLikeReturnTypes.enabled = true
+inlayHints.enumMemberValues.enabled = true
+
+
+[language-server.jdtls.config.java]
+autobuild.enabled = false
+inlayHints.parameterNames.enabled = "all"
+
+
+[language-server.yaml-language-server.config.yaml]
+format.enable = true
+validation = true

@@ -15,9 +15,9 @@ clipboard-provider = "termcode"
 left = ["mode", "spacer", "version-control", "spacer", "diagnostics", "read-only-indicator", "file-modification-indicator"]
 center = ["spinner", "file-name"]
 right = ["workspace-diagnostics", "selections", "file-encoding", "file-line-ending", "file-type", "total-line-numbers", "position-percentage", "position"]
-mode.normal = "NOR"
-mode.insert = "INS"
-mode.select = "SEL"
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "S"
 
 [editor.lsp]
 display-progress-messages = true

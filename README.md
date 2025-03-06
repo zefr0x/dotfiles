@@ -315,6 +315,7 @@ rustup component add rust-analyzer
 
 #### Other
 
+- [Harper](https://writewithharper.com/) <sup>`Spelling Check`</sup>
 - [VSCode CSS LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
 - [VSCode HTML LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
 - [VSCode jSON LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server) <sup>`JSON`</sup>
