@@ -26,9 +26,9 @@ local servers = {
 	"clangd",
 	"ruff",
 	"gopls",
-	"texlab",
 	"denols",
 	"yamlls",
+	"harper_ls",
 }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
@@ -36,6 +36,19 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
+-- TexLab
+lspconfig.texlab.setup({
+	on_attach = custom_on_attach,
+	capabilities = capabilities,
+	settings = {
+		texlab = {
+			chktex = {
+				onOpenAndSave = true,
+			},
+		},
+	},
+})
 
 -- eclipse.jdt.ls
 lspconfig.jdtls.setup({
