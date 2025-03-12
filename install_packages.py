@@ -68,6 +68,7 @@ arch_extra = {
     "lua-language-server",
     "vscode-json-languageserver",
     "yaml-language-server",
+    "taplo-cli",
     "flawfinder",
     "mold",
     "deno",

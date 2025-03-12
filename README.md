@@ -320,5 +320,6 @@ rustup component add rust-analyzer
 - [VSCode HTML LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
 - [VSCode jSON LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server) <sup>`JSON`</sup>
 - [YAML Language Server](https://github.com/redhat-developer/yaml-language-server) <sup>`YAML`</sup>
+- [Taplo](https://taplo.tamasfe.dev/) <sup>`TOML`</sup>
 
 </details>

@@ -11,7 +11,8 @@ language-servers = [ "clangd", "harper-ls" ]
 
 [[language]]
 name = "python"
-language-servers = [ "pylsp", "ruff", "harper-ls" ]
+language-servers = [ "ruff", "pylsp", "harper-ls" ]
+auto-format = true
 
 
 [[language]]
@@ -30,6 +31,11 @@ language-servers = [ "gopls", "harper-ls" ]
 name = "latex"
 # TODO: Add harper-ls when supported.
 language-servers = [ "texlab" ]
+
+
+[[language]]
+name = "git-commit"
+language-servers = [ "harper-ls" ]
 
 
 [[language]]
@@ -79,11 +85,16 @@ language-servers = [ "jdtls", "harper-ls" ]
 name = "html"
 # TODO: Consider using SuperHTML.
 language-servers = [ "vscode-html-language-server", "harper-ls" ]
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "html" ] }
+auto-format = true
 
 
 [[language]]
 name = "css"
 language-servers = [ "vscode-css-language-server", "harper-ls" ]
+formatter = { command = "deno", args = ["fmt", "-", "--ext", "css" ] }
+auto-format = true
+
 
 [[language]]
 name = "scss"
@@ -93,6 +104,21 @@ language-servers = [ "vscode-css-language-server", "harper-ls" ]
 [[language]]
 name = "json"
 language-servers = [ "vscode-json-language-server", "harper-ls" ]
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
+auto-format = true
+
+
+[[language]]
+name = "jsonc"
+language-servers = [ "vscode-json-language-server", "harper-ls" ]
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsonc" ] }
+auto-format = true
+
+
+[[language]]
+name = "toml"
+language-servers = ["taplo", "harper-ls"]
+auto-format = true
 
 
 [[language]]
@@ -103,6 +129,8 @@ language-servers = [ "yaml-language-server", "harper-ls" ]
 [[language]]
 name = "markdown"
 language-servers = [ "harper-ls" ]
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md" ] }
+auto-format = true
 
 
 
@@ -115,6 +143,10 @@ args = ["--stdio"]
 
 [language-server.rust-analyzer.config]
 check = { command = "clippy" }
+
+
+[language-server.gopls.config]
+gofumpt = true
 
 
 [language-server.lua-language-server.config.Lua]
@@ -134,7 +166,7 @@ suggest = { completeFunctionCalls = false, imports = { hosts = { "https://deno.l
 inlayHints.parameterNames.enabled = "all"
 inlayHints.parameterTypes.enabled = true
 inlayHints.variableTypes.enabled = true
-inlayHints.propertyDeclarationTypes.enabled  = true
+inlayHints.propertyDeclarationTypes.enabled = true
 inlayHints.functionLikeReturnTypes.enabled = true
 inlayHints.enumMemberValues.enabled = true
 
