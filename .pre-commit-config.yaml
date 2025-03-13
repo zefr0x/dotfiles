@@ -17,12 +17,12 @@ repos:
   # Lua
   # TODO: Add `selene` after https://github.com/Kampfkarren/selene/pull/565
   - repo: https://github.com/JohnnyMorganz/StyLua
-    rev: v0.20.0
+    rev: v2.0.2
     hooks:
       - id: stylua
   # Python
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.11.2
+    rev: v1.15.0
     hooks:
       - id: mypy
         args:
@@ -31,7 +31,7 @@ repos:
         additional_dependencies:
           - types-setuptools
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.9
+    rev: v0.9.10
     hooks:
       - id: ruff
         args: [--fix]
