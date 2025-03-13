@@ -1,7 +1,7 @@
 general.import = [
-	"~/.config/alacritty/keybind.toml",
-	"~/.config/alacritty/style.toml",
-	"~/.config/alacritty/hints.toml",
+  "~/.config/alacritty/keybind.toml",
+  "~/.config/alacritty/style.toml",
+  "~/.config/alacritty/hints.toml",
 ]
 
 

@@ -1,264 +1,266 @@
 {
-    "layer": "top",
-    "position": "top",
-    "height": 24,
-    "modules-left": [
-        "custom/notification",
-        "battery",
-        "tray",
-        "wireplumber",
-        "group/display",
-        "temperature",
-        "memory",
-        "cpu",
-        // TODO: Configure bluetooth?
-        "idle_inhibitor",
-        "privacy",
-        // TODO: Delete after privacy module supports it.
-        "custom/webcam_indecator"
-    ],
-    "modules-center": [
-        // TODO: Show caps-lock indecator.
-        "niri/language",
-        "hyprland/language",
-        "clock",
-        "niri/workspaces",
-        "hyprland/workspaces"
-    ],
-    "modules-right": [
-        "niri/window",
-        "hyprland/window",
-        "wlr/taskbar"
-    ],
-    // Modules configuration
-    "niri/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "active": "",
-            "default": ""
-        }
-    },
-    "niri/window": {
-        "separate-outputs": true
-    },
-    "hyprland/workspaces": {
-        "all-outputs": true,
-        "format": "{name}",
-        "sort-by": "number",
-        "on-scroll-up": "hyprctl dispatch workspace e+1 > /dev/null",
-        "on-scroll-down": "hyprctl dispatch workspace e-1 > /dev/null",
-        "on-click": "activate"
-    },
-    "hyprland/window": {
-        "format": "{}",
-        "separate-outputs": true
-    },
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 15,
-        "tooltip-format": "{title}",
-        "active-first": true,
-        "on-click": "activate",
-        "on-click-middle": "close"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-        "tooltip": false
-    },
-    "clock": {
-        "interval": 1,
-        "format": "«  {:%H:%M:%S — %A %d/%m/%Y}  »",
-        "tooltip-format": "<big>{:%Y %B (%z)}</big>\n<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode": "year",
-            "mode-mon-col": 3,
-            "weeks-pos": "left",
-            "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "days": "<span color='#ecc6d9'><b>{}</b></span>",
-                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-            }
-        },
-        "actions": {
-            "on-click-right": "mode",
-            "on-click-forward": "tz_up",
-            "on-click-backward": "tz_down",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down",
-            "on-click-middle": "shift_reset"
-        }
-    },
-    "hyprland/language": {
-        "format": "{}",
-        {{#each layouts}}
-        "format-{{this.code}}": "{{this.name}}",
-        {{/each}}
-    },
-    "niri/language": {
-        "format": "{}",
-        {{#each layouts}}
-        "format-{{this.code}}": "{{this.name}}",
-        {{/each}}
-    },
-    "custom/webcam_indecator": {
-        "tooltip": false,
-        "restart-interval": 3,
-        // TODO: Get info directly from pipewire.
-        "exec": "echo ''; for cam in $(ls /dev/video* 2> /dev/null); do if $(lsof $cam > /dev/null); then echo -n ' '; else echo -n ''; fi; done"
-    },
-    "privacy": {
-        "icon-size": 15,
-        "icon-spacing": 0,
-        "modules": [
-            { "type": "screenshare" },
-            { "type": "audio-in" },
-            { "type": "audio-out" }
-        ]
-    },
-    "cpu": {
-        "format": "{usage}% "
-    },
-    "memory": {
-        "format": "{percentage}% ",
-        "tooltip-format": "{used:0.1f} / {total:0.1f} GiB RAM — {swapUsed:0.1f} / {swapTotal:0.1f} GiB SWAP"
-    },
-    "temperature": {
-        // FIX: Make it work by default.
-        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input",
-        "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
-        "tooltip": false
-    },
-    "group/display": {
-        "orientation": "horizontal",
-        "drawer": {},
-        "modules": [
-            "backlight",
-            "custom/wl-gammarelay-brightness",
-            "custom/wl-gammarelay-temperature",
-            "custom/wl-gammarelay-gamma",
-            "custom/wl-gammarelay-invert",
-            "custom/wl-gammarelay-auto"
-        ]
-    },
-    "backlight": {
-        "format": "{percent}% {icon}",
-        "format-icons": [
-            "󱩎",
-            "󱩏",
-            "󱩐",
-            "󱩑",
-            "󱩒",
-            "󱩓",
-            "󱩔",
-            "󱩕",
-            "󱩖",
-            "󰛨"
-        ]
-    },
-    "custom/wl-gammarelay-brightness": {
-        "format": "{}% ",
-        "tooltip": false,
-        "exec": "wl-gammarelay-rs watch {bp}",
-        "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.02",
-        "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.02"
-    },
-    "custom/wl-gammarelay-temperature": {
-        "format": "{} 󰏈",
-        "tooltip": false,
-        "exec": "wl-gammarelay-rs watch {t}",
-        "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
-        "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
-    },
-    "custom/wl-gammarelay-gamma": {
-        "format": "{} 󱃮",
-        "tooltip": false,
-        "exec": "wl-gammarelay-rs watch {g}",
-        "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d +0.02",
-        "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d -0.02"
-    },
-    "custom/wl-gammarelay-invert": {
-        "format": "{}",
-        "tooltip": false,
-        "restart-interval": 600,
-        "exec": "if [ \"$(busctl --user get-property rs.wl-gammarelay / rs.wl.gammarelay Inverted)\" = \"b true\" ]; then echo -n '󰌁'; else echo -n '󰹊'; fi",
-        "on-click": "busctl --user call rs.wl-gammarelay / rs.wl.gammarelay ToggleInverted"
-    },
-    "custom/wl-gammarelay-auto": {
-        "format": "{}",
-        "tooltip": false,
-        "restart-interval": 600,
-        "exec": "if [ -f $XDG_RUNTIME_DIR/auto-display-settings-disabled ]; then echo -n '󱧧'; else echo -n '󰁪'; fi",
-        "on-click": "if [ -f $XDG_RUNTIME_DIR/auto-display-settings-disabled ]; then rm $XDG_RUNTIME_DIR/auto-display-settings-disabled; else touch $XDG_RUNTIME_DIR/auto-display-settings-disabled; fi"
-    },
-    "wireplumber": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": [
-            "",
-            "",
-            ""
-        ],
-        "scroll-step": 2.0,
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-click-right": "com.github.wwmm.easyeffects",
-        "on-click-middle": "org.pipewire.Helvum"
-    },
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰂄",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{power} {icon}",
-        "tooltip-format": "{time}",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-    "custom/notification": {
-        "tooltip-format": "{}",
-        "format": "{icon}",
-        "format-icons": {
-          "notification": "<span foreground='#e01b24'><sup></sup></span>",
-          "none": "",
-          "dnd-notification": "<span foreground='gray'></span><span foreground='#e01b24'><sup></sup></span>",
-          "dnd-none": "<span foreground='gray'></span>",
-          "inhibited-notification": "<span foreground='#e01b24'><sup></sup></span>",
-          "inhibited-none": "",
-          "dnd-inhibited-notification": "<span foreground='gray'></span><span foreground='#e01b24'><sup></sup></span>",
-          "dnd-inhibited-none": "<span foreground='gray'></span>"
-        },
-        "return-type": "json",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw > /dev/null",
-        "escape": true
-    },
-    "tray": {
-        "icon-size": 15,
-        "show-passive-items": true,
-        "spacing": 10
-    }
+	"layer": "top",
+	"position": "top",
+	"height": 24,
+	"modules-left": [
+		"custom/notification",
+		"battery",
+		"tray",
+		"wireplumber",
+		"group/display",
+		"temperature",
+		"memory",
+		"cpu",
+		// TODO: Configure bluetooth?
+		"idle_inhibitor",
+		"privacy",
+		// TODO: Delete after privacy module supports it.
+		"custom/webcam_indecator"
+	],
+	"modules-center": [
+		// TODO: Show caps-lock indecator.
+		"niri/language",
+		"hyprland/language",
+		"clock",
+		"niri/workspaces",
+		"hyprland/workspaces"
+	],
+	"modules-right": [
+		"niri/window",
+		"hyprland/window",
+		"wlr/taskbar"
+	],
+	// Modules configuration
+	"niri/workspaces": {
+		// "format": "{index}",
+		"format": "{icon}",
+		"format-icons": {
+			"active": "",
+			"default": ""
+		}
+	},
+	"niri/window": {
+		"separate-outputs": true
+	},
+	"hyprland/workspaces": {
+		"all-outputs": true,
+		"format": "{name}",
+		"sort-by": "number",
+		"on-scroll-up": "hyprctl dispatch workspace e+1 > /dev/null",
+		"on-scroll-down": "hyprctl dispatch workspace e-1 > /dev/null",
+		"on-click": "activate"
+	},
+	"hyprland/window": {
+		"format": "{}",
+		"separate-outputs": true
+	},
+	// FIX: Overflow height.
+	"wlr/taskbar": {
+		"format": "{icon}",
+		"icon-size": 15,
+		"tooltip-format": "{title}",
+		"active-first": true,
+		"on-click": "activate",
+		"on-click-middle": "close"
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		},
+		"tooltip": false
+	},
+	"clock": {
+		"interval": 1,
+		"format": "«  {:%H:%M:%S — %A %d/%m/%Y}  »",
+		"tooltip-format": "<big>{:%Y %B (%z)}</big>\n<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"mode": "year",
+			"mode-mon-col": 3,
+			"weeks-pos": "left",
+			"format": {
+				"months": "<span color='#ffead3'><b>{}</b></span>",
+				"days": "<span color='#ecc6d9'><b>{}</b></span>",
+				"weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+				"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+				"today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+			}
+		},
+		"actions": {
+			"on-click-right": "mode",
+			"on-click-forward": "tz_up",
+			"on-click-backward": "tz_down",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down",
+			"on-click-middle": "shift_reset"
+		}
+	},
+	"hyprland/language": {
+		"format": "{}",
+		{{#each layouts}}
+		"format-{{this.code}}": "{{this.name}}",
+		{{/each}}
+	},
+	"niri/language": {
+		"format": "{}",
+		{{#each layouts}}
+		"format-{{this.code}}": "{{this.name}}",
+		{{/each}}
+	},
+	"custom/webcam_indecator": {
+		"tooltip": false,
+		"restart-interval": 3,
+		// TODO: Get info directly from pipewire.
+		"exec": "echo ''; for cam in $(ls /dev/video* 2> /dev/null); do if $(lsof $cam > /dev/null); then echo -n ' '; else echo -n ''; fi; done"
+	},
+	"privacy": {
+		"icon-size": 15,
+		"icon-spacing": 0,
+		"modules": [
+			{ "type": "screenshare" },
+			{ "type": "audio-in" },
+			{ "type": "audio-out" }
+		]
+	},
+	"cpu": {
+		"format": "{usage}% "
+	},
+	"memory": {
+		"format": "{percentage}% ",
+		"tooltip-format": "{used:0.1f} / {total:0.1f} GiB RAM — {swapUsed:0.1f} / {swapTotal:0.1f} GiB SWAP"
+	},
+	"temperature": {
+		// FIX: Make it work by default.
+		"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input",
+		"critical-threshold": 80,
+		"format": "{temperatureC}°C {icon}",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+	"group/display": {
+		"orientation": "horizontal",
+		"drawer": {},
+		"modules": [
+			"backlight",
+			"custom/wl-gammarelay-brightness",
+			"custom/wl-gammarelay-temperature",
+			"custom/wl-gammarelay-gamma",
+			"custom/wl-gammarelay-invert",
+			"custom/wl-gammarelay-auto"
+		]
+	},
+	"backlight": {
+		"format": "{percent}% {icon}", // 
+		"format-icons": [
+			"󱩎",
+			"󱩏",
+			"󱩐",
+			"󱩑",
+			"󱩒",
+			"󱩓",
+			"󱩔",
+			"󱩕",
+			"󱩖",
+			"󰛨"
+		]
+	},
+	"custom/wl-gammarelay-brightness": {
+		"format": "{}% ",
+		"tooltip": false,
+		"exec": "wl-gammarelay-rs watch {bp}",
+		"on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.02",
+		"on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.02"
+	},
+	"custom/wl-gammarelay-temperature": {
+		"format": "{} 󰏈",
+		"tooltip": false,
+		"exec": "wl-gammarelay-rs watch {t}",
+		"on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
+		"on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
+	},
+	"custom/wl-gammarelay-gamma": {
+		"format": "{} 󱃮",
+		"tooltip": false,
+		"exec": "wl-gammarelay-rs watch {g}",
+		"on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d +0.02",
+		"on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d -0.02"
+	},
+	"custom/wl-gammarelay-invert": {
+		"format": "{}",
+		"tooltip": false,
+		"restart-interval": 600,
+		"exec": "if [ \"$(busctl --user get-property rs.wl-gammarelay / rs.wl.gammarelay Inverted)\" = \"b true\" ]; then echo -n '󰌁'; else echo -n '󰹊'; fi",
+		"on-click": "busctl --user call rs.wl-gammarelay / rs.wl.gammarelay ToggleInverted"
+	},
+	"custom/wl-gammarelay-auto": {
+		"format": "{}",
+		"tooltip": false,
+		"restart-interval": 600,
+		"exec": "if [ -f $XDG_RUNTIME_DIR/auto-display-settings-disabled ]; then echo -n '󱧧'; else echo -n '󰁪'; fi",
+		"on-click": "if [ -f $XDG_RUNTIME_DIR/auto-display-settings-disabled ]; then rm $XDG_RUNTIME_DIR/auto-display-settings-disabled; else touch $XDG_RUNTIME_DIR/auto-display-settings-disabled; fi"
+	},
+	"wireplumber": {
+		"format": "{volume}% {icon}",
+		"format-muted": "",
+		"format-icons": [
+			"",
+			"",
+			""
+		],
+		"scroll-step": 2.0,
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"on-click-right": "com.github.wwmm.easyeffects",
+		"on-click-middle": "org.pipewire.Helvum"
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{capacity}% {icon}",
+		"format-charging": "{capacity}% 󰂄",
+		"format-plugged": "{capacity}% ",
+		"format-alt": "{power} {icon}",
+		"tooltip-format": "{time}",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"custom/notification": {
+		"tooltip-format": "{}",
+		"format": "{icon}",
+		"format-icons": {
+			"notification": "<span foreground='#e01b24'><sup></sup></span>",
+			"none": "",
+			"dnd-notification": "<span foreground='gray'></span><span foreground='#e01b24'><sup></sup></span>",
+			"dnd-none": "<span foreground='gray'></span>",
+			"inhibited-notification": "<span foreground='#e01b24'><sup></sup></span>",
+			"inhibited-none": "",
+			"dnd-inhibited-notification": "<span foreground='gray'></span><span foreground='#e01b24'><sup></sup></span>",
+			"dnd-inhibited-none": "<span foreground='gray'></span>"
+		},
+		"return-type": "json",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw > /dev/null",
+		"escape": true
+	},
+	"tray": {
+		"icon-size": 15,
+		"show-passive-items": true,
+		"spacing": 10
+	}
 }
 
 // vim: set ft=jsonc :

@@ -1,11 +1,11 @@
 .widget-volume {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 .low {
-  border: 2px solid orange;
+	border: 2px solid orange;
 }
 
 .critical {
-  border: 2px solid #e01b24;
+	border: 2px solid #e01b24;
 }

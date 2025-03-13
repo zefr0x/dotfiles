@@ -1,10 +1,10 @@
 {
-  "$schema": "/etc/xdg/swaync/configSchema.json",
-  "image-visibility": "when-available",
-  "widgets": ["inhibitors", "title", "dnd", "notifications", "mpris", "volume"],
-  "widget-config": {
-    "volume": {
-      "show-per-app": true
-    }
-  }
+	"$schema": "/etc/xdg/swaync/configSchema.json",
+	"image-visibility": "when-available",
+	"widgets": ["inhibitors", "title", "dnd", "notifications", "mpris", "volume"],
+	"widget-config": {
+		"volume": {
+			"show-per-app": true
+		}
+	}
 }

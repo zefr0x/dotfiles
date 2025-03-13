@@ -12,9 +12,26 @@ end-of-line-diagnostics = "hint"
 clipboard-provider = "termcode"
 
 [editor.statusline]
-left = ["mode", "spacer", "version-control", "spacer", "diagnostics", "read-only-indicator", "file-modification-indicator"]
+left = [
+  "mode",
+  "spacer",
+  "version-control",
+  "spacer",
+  "diagnostics",
+  "read-only-indicator",
+  "file-modification-indicator",
+]
 center = ["spinner", "file-name"]
-right = ["workspace-diagnostics", "selections", "file-encoding", "file-line-ending", "file-type", "total-line-numbers", "position-percentage", "position"]
+right = [
+  "workspace-diagnostics",
+  "selections",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+  "total-line-numbers",
+  "position-percentage",
+  "position",
+]
 mode.normal = "N"
 mode.insert = "I"
 mode.select = "S"

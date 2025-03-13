@@ -1,10 +1,10 @@
 window#waybar {
-  font-family: Ubuntu Nerd Font;
-  font-weight: 500;
-  font-size: 15px;
+	font-family: Ubuntu Nerd Font;
+	font-weight: 500;
+	font-size: 15px;
 
-  background-color: #000000;
-  color: #ffffff;
+	background-color: #000000;
+	color: #ffffff;
 }
 
 #window,
@@ -27,115 +27,115 @@ window#waybar {
 #battery,
 #custom-notification,
 #tray {
-  margin: 0 7px;
+	margin: 0 7px;
 }
 
 #workspaces button,
 #taskbar button {
-  padding: 0 3px;
-  border-radius: 15px;
+	padding: 0 3px;
+	border-radius: 15px;
 }
 
 #workspaces button {
-  color: #707070;
-  border: none;
+	color: #707070;
+	border: none;
 }
 
 #workspaces .hosting-monitor {
-  color: #a0a0a0;
+	color: #a0a0a0;
 }
 
 #workspaces button:hover,
 #taskbar button:hover {
-  background: rgba(211, 211, 211, 0.2);
+	background: rgba(211, 211, 211, 0.2);
 }
 
 #workspaces button.active {
-  color: white;
+	color: white;
 }
 
 #workspaces button.urgent {
-  border-left: solid 3px rgba(224, 27, 36, 0.6);
-  border-right: solid 3px rgba(224, 27, 36, 0.6);
+	border-left: solid 3px rgba(224, 27, 36, 0.6);
+	border-right: solid 3px rgba(224, 27, 36, 0.6);
 }
 
 #window {
-  /* TODO: Use `Adwaita Sans` when Arabic is supported (if will): https://gitlab.gnome.org/GNOME/adwaita-fonts/-/issues/11 */
-  font-family: Noto Naskh Arabic UI;
+	/* TODO: Use `Adwaita Sans` when Arabic is supported (if will): https://gitlab.gnome.org/GNOME/adwaita-fonts/-/issues/11 */
+	font-family: Noto Naskh Arabic UI;
 
-  padding-left: 15px;
+	padding-left: 15px;
 
-  color: #9acd32;
+	color: #9acd32;
 }
 
 #idle_inhibitor {
-  color: gray;
+	color: gray;
 }
 
 @keyframes blink {
-  to {
-    color: #ffffff;
-  }
+	to {
+		color: #ffffff;
+	}
 }
 
 #idle_inhibitor.activated {
-  color: #e01b24;
-  animation-name: blink;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+	color: #e01b24;
+	animation-name: blink;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 #language {
-  font-family: Amiri;
-  font-size: 13px;
+	font-family: Amiri;
+	font-size: 13px;
 }
 
 #custom-webcam_indecator,
 #privacy-item.screenshare,
 #privacy-item.audio-in {
-  color: #e01b24;
-  animation-name: blink;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+	color: #e01b24;
+	animation-name: blink;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 #wireplumber.muted {
-  color: #e5a50a;
+	color: #e5a50a;
 }
 
 #battery.charging,
 #battery.plugged {
-  color: #2ec27e;
+	color: #2ec27e;
 }
 
 #battery.warning:not(.charging) {
-  color: #e5a50a;
+	color: #e5a50a;
 }
 
 #battery.critical:not(.charging),
 #temperature.critical {
-  color: #e01b24;
-  animation-name: blink;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+	color: #e01b24;
+	animation-name: blink;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 #tray > .passive {
-  -gtk-icon-effect: dim;
+	-gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-  -gtk-icon-effect: highlight;
+	-gtk-icon-effect: highlight;
 
-  /* FIX: Padding doesn't work. */
-  padding: 0 3px;
-  border-radius: 15px;
-  border-left: solid 3px rgba(224, 27, 36, 0.6);
-  border-right: solid 3px rgba(224, 27, 36, 0.6);
+	/* FIX: Padding doesn't work. */
+	padding: 0 3px;
+	border-radius: 15px;
+	border-left: solid 3px rgba(224, 27, 36, 0.6);
+	border-right: solid 3px rgba(224, 27, 36, 0.6);
 }

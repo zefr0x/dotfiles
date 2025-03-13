@@ -44,7 +44,8 @@ dotter deploy
 
 > You need [`yay`](https://github.com/Jguer/yay#installation) to install AUR packages.
 
-To generate the package installing commands run the [`install_packages.py`](./install_packages.py) script.
+To generate the package installing commands run the [`install_packages.py`](./install_packages.py)
+script.
 
 <details>
 <summary>Dependencies And Instructions</summary>
@@ -132,7 +133,8 @@ and add this line to `/etc/pam.d/passwd`
 password	optional	pam_gnome_keyring.so
 ```
 
-Edit the `UseIn` value in `/usr/share/xdg-desktop-portal/portals/gtk.portal` and `/usr/share/xdg-desktop-portal/portals/gnome-keyring.portal` to include `Niri` and `Hyprland`:
+Edit the `UseIn` value in `/usr/share/xdg-desktop-portal/portals/gtk.portal` and
+`/usr/share/xdg-desktop-portal/portals/gnome-keyring.portal` to include `Niri` and `Hyprland`:
 
 ```
 UseIn=gnome;Niri;Hyprland
@@ -140,8 +142,7 @@ UseIn=gnome;Niri;Hyprland
 
 <!-- TODO: There should be a pacman hook for this. -->
 
-> [!Note]
-> You will need to do this everytime you update those two XDG portals.
+> [!Note] You will need to do this everytime you update those two XDG portals.
 
 Create a `~/Pictures` directiory for screenshots.
 
@@ -214,11 +215,9 @@ Configure `doas` by editing `/etc/doas.conf`:
 
 ```
 permit setenv :wheel
-
 ```
 
-> [!Note]
-> The configuration file must end with a newline.
+> [!Note] The configuration file must end with a newline.
 
 Now you can uninstall `sudo`:
 
@@ -293,8 +292,7 @@ rustup component add rust-analyzer
 
 - [Deno](https://deno.land/)
 
-> [!Note]
-> It includes most the tools needed for JS/TS.
+> [!Note] It includes most the tools needed for JS/TS.
 
 #### LaTeX
 
@@ -316,10 +314,15 @@ rustup component add rust-analyzer
 #### Other
 
 - [Harper](https://writewithharper.com/) <sup>`Spelling Check`</sup>
-- [VSCode CSS LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server) <sup>`CSS`</sup>
-- [VSCode HTML LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server) <sup>`HTML`</sup>
-- [VSCode jSON LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server) <sup>`JSON`</sup>
-- [YAML Language Server](https://github.com/redhat-developer/yaml-language-server) <sup>`YAML`</sup>
-- [Taplo](https://taplo.tamasfe.dev/) <sup>`TOML`</sup>
+- [VSCode CSS LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features/server)
+  <sup>`CSS`</sup>
+- [VSCode HTML LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features/server)
+  <sup>`HTML`</sup>
+- [VSCode jSON LanguageServer](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server)
+  <sup>`JSON`</sup>
+- [YAML Language Server](https://github.com/redhat-developer/yaml-language-server)
+  <sup>`YAML`</sup>
+- [Taplo](https://taplo.tamasfe.dev/)
+  <sup>`TOML`</sup>
 
 </details>
