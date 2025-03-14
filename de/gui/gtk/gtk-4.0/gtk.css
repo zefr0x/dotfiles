@@ -1,0 +1,43 @@
+/* TODO: Improve contrast. */
+:root {
+	--window-bg-color: #000000dd;
+	--view-bg-color: transparent;
+	--headerbar-bg-color: #00000033;
+	--headerbar-backdrop-color: #00000077;
+	--sidebar-bg-color: #00000033;
+	--sidebar-backdrop-color: var(--headerbar-backdrop-color);
+	--overview-bg-color: transparent;
+	--thumbnail-bg-color: var(--window-bg-color);
+	--dialog-bg-color: var(--window-bg-color);
+	--popover-bg-color: var(--window-bg-color);
+
+	--banner-color: transparent;
+}
+
+toast {
+	background: var(--window-bg-color);
+}
+
+banner > revealer > widget {
+	background: var(--headerbar-backdrop-color);
+}
+
+/* org.gnome.TextEditor */
+window.org-gnome-TextEditor border {
+	background: transparent;
+}
+
+window.org-gnome-TextEditor gutter {
+	background: var(--headerbar-bg-color);
+}
+
+window.org-gnome-TextEditor textview.editor.view {
+	background: transparent;
+}
+
+/* net.nokyan.Resources */
+columnview.view.resources-columnview {
+	background: transparent;
+}
+
+/* TODO: Support more componants. */

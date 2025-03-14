@@ -46,7 +46,9 @@ git.email = ""
 
 [gtk.files]
 "de/gui/gtk/gtk-3.0/settings.ini" = "~/.config/gtk-3.0/settings.ini"
+"de/gui/gtk/gtk-3.0/gtk.css" = "~/.config/gtk-3.0/gtk.css"
 "de/gui/gtk/gtk-4.0/settings.ini" = "~/.config/gtk-4.0/settings.ini"
+"de/gui/gtk/gtk-4.0/gtk.css" = "~/.config/gtk-4.0/gtk.css"
 
 
 [qt.files]

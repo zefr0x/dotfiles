@@ -1,3 +1,7 @@
+@define-color cc-bg rgba(0, 0, 0, 0.86666667);
+
+/* TODO: Improve colours to match the bar and other desktop componants theme. */
+
 .widget-volume {
 	background-color: transparent;
 }

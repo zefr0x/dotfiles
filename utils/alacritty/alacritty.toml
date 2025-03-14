@@ -20,6 +20,7 @@ class.general = "Alacritty"
 class.instance = "Alacritty"
 decorations_theme_variant = "None"
 resize_increments = false
+opacity = 0.8666666667
 
 
 [scrolling]

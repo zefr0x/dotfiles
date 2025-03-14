@@ -4,52 +4,53 @@ set guioptions "hv"
 
 set page-padding 3
 
+# TODO: Match colours with other desktop components.
 
-set default-bg "#000000"
+set default-bg rgba(0,0,0,0.8666666667)
 set default-fg "#ffffff"
 
-set inputbar-bg "#151515"
+set inputbar-bg rgba(21,21,21,0.2)
 set inputbar-fg "#ffffff"
 
-set notification-bg "#3584e4"
+set notification-bg rgba(53,132,228,0.2)
 set notification-fg "#ffffff"
 
-set notification-error-bg "#e01b24"
-set notification-error-fg "#000000"
+set notification-error-bg rgba(224,27,36,0.2)
+set notification-error-fg "#ffffff"
 
-set notification-warning-bg "#e5a50a"
+set notification-warning-bg rgba(229,165,10,0.2)
 set notification-warning-fg "#000000"
 
-set statusbar-bg "#252525"
+set statusbar-bg rgba(37,37,37,0.1)
 set statusbar-fg "#ffffff"
 set statusbar-h-padding 3
 set statusbar-v-padding 1
 
-set completion-bg "#252525"
+set completion-bg rgba(37,37,37,0.2)
 set completion-fg "#ffffff"
 
-set completion-group-bg "#000000"
+set completion-group-bg rgba(0,0,0,0.2)
 set completion-group-fg "#ffffff"
 
-set completion-highlight-fg "#151515"
-set completion-highlight-bg "#30a000"
+set completion-highlight-fg "#ffffff"
+set completion-highlight-bg rgba(48,160,0,0.2)
 
 set highlight-active-color "rgba(0,188,0,0.5)"
 set highlight-color "rgba(159,251,0,0.5)"
 set highlight-fg "rgba(0,0,0,0.5)"
 
-set index-active-bg "#9FBC00"
+set index-active-bg rgba(159,188,0,0.2)
 set index-active-fg "#232323"
 
-set index-bg "#232323"
+set index-bg rgba(35,35,35,0.2)
 set index-fg "#DDDDDD"
 
-set render-loading-bg "#ffffff"
+set render-loading-bg rgba(255,255,255,0.2)
 set render-loading-fg "#000000"
 
 
 set recolor true
-set recolor-darkcolor "#c0c0c0"
+set recolor-darkcolor rgba(192,192,192,0.6666666667)
 set recolor-keephue true
-set recolor-lightcolor "#000000"
+set recolor-lightcolor rgba(0,0,0,0.6666666667)
 set recolor-reverse-video true

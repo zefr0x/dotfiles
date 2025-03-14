@@ -171,13 +171,20 @@ Prefer dark theme for GTK-4:
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 ```
 
-Flatpak allowed files:
+**Flatpak allowed files:**
 
 - `xdg-config/gtk-4.0:ro`
 - `xdg-config/gtk-3.0:ro`
+- `~/.dotfiles/de/gui/gtk:ro`
 - `xdg-config/kdeglobals:ro`
+- `xdg-config/Kvantum:ro`
+- `~/.dotfiles/de/gui/qt/Kvantum:ro`
 
-Flatpak variables:
+**Flatpak variables:**
+
+- `QT_STYLE_OVERRIDE=Kvantum`
+
+Or for the Breeze theme:
 
 - `XDG_CURRENT_DESKTOP=KDE`
 - `QT_STYLE_OVERRIDE=Breeze`

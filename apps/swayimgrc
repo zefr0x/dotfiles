@@ -1,5 +1,7 @@
 [viewer]
 antialiasing = mks13
+window = #000000dd
 
 [gallery]
 antialiasing = mks13
+window = #000000dd
