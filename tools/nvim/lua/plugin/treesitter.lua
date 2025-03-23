@@ -28,7 +28,6 @@ require("nvim-treesitter.configs").setup({
 		"diff",
 		"comment",
 		"mermaid",
-		"java",
 		"kotlin",
 		"hyprlang",
 		"meson",

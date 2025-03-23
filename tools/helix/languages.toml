@@ -77,11 +77,6 @@ auto-format = true
 
 
 [[language]]
-name = "java"
-language-servers = ["jdtls", "harper-ls"]
-
-
-[[language]]
 name = "html"
 # TODO: Consider using SuperHTML.
 language-servers = ["vscode-html-language-server", "harper-ls"]
@@ -168,11 +163,6 @@ inlayHints.variableTypes.enabled = true
 inlayHints.propertyDeclarationTypes.enabled = true
 inlayHints.functionLikeReturnTypes.enabled = true
 inlayHints.enumMemberValues.enabled = true
-
-
-[language-server.jdtls.config.java]
-autobuild.enabled = false
-inlayHints.parameterNames.enabled = "all"
 
 
 [language-server.yaml-language-server.config.yaml]

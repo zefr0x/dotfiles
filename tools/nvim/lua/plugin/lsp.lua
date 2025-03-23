@@ -50,19 +50,6 @@ lspconfig.texlab.setup({
 	},
 })
 
--- eclipse.jdt.ls
-lspconfig.jdtls.setup({
-	on_attach = custom_on_attach,
-	capabilities = capabilities,
-	settings = {
-		java = {
-			autobuild = {
-				enabled = false,
-			},
-		},
-	},
-})
-
 -- rust analyzer
 lspconfig.rust_analyzer.setup({
 	on_attach = custom_on_attach,

@@ -91,7 +91,6 @@ arch_extra = {
     "htop",  # System Monitoring
     "bandwhich",  # Network Bandwidth Monitoring
     "imagemagick",
-    "shfmt",
     "rustup",
     "cargo-edit",
     "cargo-outdated",
@@ -112,8 +111,6 @@ arch_extra = {
     "go-tools",
     "texlive-langarabic",
     "texlive-langother",
-    "jdk-openjdk",
-    "gradle",
 }
 arch_core = {
     "dash",
@@ -127,7 +124,6 @@ arch_user_repo = {
     "ttf-amiri",
     "ripdrag-git",  # CLI-GUI drag-and-drop source/target
     "fish-tide-git",
-    "jdtls",
 }
 flathub = {
     "org.gnome.dspy",  # D-Bus connections explorer

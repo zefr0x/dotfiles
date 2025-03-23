@@ -312,12 +312,6 @@ rustup component add rust-analyzer
 
 - [lua-language-server](https://github.com/LuaLS/lua-language-server)
 
-#### Java
-
-- [OpenJDK](https://openjdk.org/)
-- [Gradle](https://gradle.org/)
-- [Eclipse JDT Language Server](https://github.com/eclipse/eclipse.jdt.ls)
-
 #### Other
 
 - [Harper](https://writewithharper.com/) <sup>`Spelling Check`</sup>
