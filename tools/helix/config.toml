@@ -4,6 +4,7 @@ theme = "zefr0x"
 shell = ["dash", "-c"]
 line-number = "relative"
 auto-save = true
+auto-format = false
 true-color = true
 bufferline = "multiple"
 color-modes = true
