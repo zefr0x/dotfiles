@@ -81,6 +81,8 @@ layouts = [
 # Application IDs regexs to be blocked from screen capture
 block_out_from_screen_capture = []
 
+enable_blur = false
+
 
 [gui]
 depends = ["de"]

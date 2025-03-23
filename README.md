@@ -17,7 +17,7 @@ git clone https://github.com/zefr0x/dotfiles.git .dotfiles
 
 3. Create [`.dotter/local.toml`](.dotfiles/.dotter/local.toml) and edit variables, like:
 
-```
+```toml
 packages = ["default"]
 
 [variables]
@@ -29,6 +29,8 @@ monitors = [ { name = "HDMI-A-1", mode = "1920x1080@30Hz", scale = "1", bitdepth
 layouts = [ { xcode = "us", code = "en", name = "الإنْجِلِيزِيَّة", variant = ""}, ... ]
 
 block_out_from_screen_capture = [ "^org\\.gnome\\.World\\.Secrets$", ... ]
+
+enable_blur = false
 
 git.username = "..."
 git.email = "..."
