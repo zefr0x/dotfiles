@@ -52,6 +52,6 @@ select = [
   "RUF",
 ]
 
-ignore = ["D203", "D212", "ANN101", "ANN102", "COM812", "ISC001", "TD002", "TD003", "FIX"]
+ignore = ["D203", "D212", "COM812", "ISC001", "TD002", "TD003", "FIX"]
 
 task-tags = ["FIX", "TODO", "HACK", "WARN", "PERF", "NOTE"]
