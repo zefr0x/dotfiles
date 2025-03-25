@@ -1,10 +1,10 @@
 environment {
-{%- if nvidia_driver == "true" %}
+{{#if nvidia_driver}}
     // Variables to make it work better with Nvidia proprietary GPU driver
     GBM_BACKEND "nvidia-drm"
     __GLX_VENDOR_LIBRARY_NAME "nvidia"
     LIBVA_DRIVER_NAME "nvidia"
-{% endif -%}
+{{/if}}
     // Toolkit Backend Variables
     GDK_BACKEND "wayland,x11"
     QT_QPA_PLATFORM "wayland;xcb"
