@@ -22,6 +22,7 @@ arch_extra = {
     "zathura-pdf-mupdf",
     "greetd",
     "greetd-tuigreet",
+    "swaybg",
     "hyprpolkitagent",
     "niri",
     "xwayland-satellite",

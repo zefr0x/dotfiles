@@ -81,6 +81,7 @@ script.
 - [hyprpolkitagent](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpolkitagent/)
 - [greetd](https://git.sr.ht/~kennylevinsen/greetd)
   - [tuigreet](https://github.com/apognu/tuigreet)
+- [swaybg](https://github.com/swaywm/swaybg)
 
 #### Wayland
 

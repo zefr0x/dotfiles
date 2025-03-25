@@ -306,6 +306,11 @@ binds {
     Mod+P { spawn "dash" "-c" "hyprpicker -n | xargs notify-send"; }
     Mod+Shift+P { spawn "dash" "-c" "alacritty --hold --option font.size=16 --title=\"Pastel | Color Picker\" --command dash -c \"hyprpicker -n | pastel color\""; }
 
+    // Set new random wallpaper
+    Mod+W { spawn "~/.scripts/random_wallpaper.sh"; }
+    // Kill wallpaper
+    Mod+Shift+W { spawn "pkill" "swaybg"; }
+
     // Open notification center
     Mod+grave { spawn "swaync-client" "-t" "-sw"; }
 
