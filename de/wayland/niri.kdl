@@ -321,10 +321,8 @@ binds {
     // FIX: Apply to every source and not just the default
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-    // Adjust screen brightness
-    // FIX: Map these to real brightness controllers.
-    XF86MonBrightnessUp { spawn "busctl" "--user" "--" "call" "rs.wl-gammarelay" "/" "rs.wl.gammarelay" "UpdateBrightness" "d" "+0.02"; }
-    XF86MonBrightnessDown { spawn "busctl" "--user" "--" "call" "rs.wl-gammarelay" "/" "rs.wl.gammarelay" "UpdateBrightness" "d" "-0.02"; }
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "+2%"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "2%-"; }
 
     // Media players controllers
     XF86AudioPlay { spawn "playerctl" "play-pause"; }
@@ -399,5 +397,4 @@ screenshot-path "~/Pictures/Screenshot_%Y_%m_%d_%H_%M_%S.png"
 
 spawn-at-startup "xwayland-satellite" ":3"
 
-spawn-at-startup "uwsm" "app" "-s=b" "--" "wl-gammarelay-rs" "run"
-spawn-at-startup "uwsm" "app" "-s=b" "--" "~/.scripts/auto_display_settings.py"
+spawn-at-startup "uwsm" "app" "-s=b" "--" "wlsunset -t {{display_temperature.night}} -T {{display_temperature.day}} -l {{location.latitude}} -L {{location.longitude}}"

@@ -149,11 +149,7 @@
 		"drawer": {},
 		"modules": [
 			"backlight",
-			"custom/wl-gammarelay-brightness",
-			"custom/wl-gammarelay-temperature",
-			"custom/wl-gammarelay-gamma",
-			"custom/wl-gammarelay-invert",
-			"custom/wl-gammarelay-auto"
+			"custom/night-shift"
 		]
 	},
 	"backlight": {
@@ -171,40 +167,11 @@
 			"󰛨"
 		]
 	},
-	"custom/wl-gammarelay-brightness": {
-		"format": "{}% ",
+	// TODO: Get feedback from wlsunset output and change the icon based on current mode.
+	"custom/night-shift": {
+		"format": "󱩌",
 		"tooltip": false,
-		"exec": "wl-gammarelay-rs watch {bp}",
-		"on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.02",
-		"on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.02"
-	},
-	"custom/wl-gammarelay-temperature": {
-		"format": "{} 󰏈",
-		"tooltip": false,
-		"exec": "wl-gammarelay-rs watch {t}",
-		"on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
-		"on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
-	},
-	"custom/wl-gammarelay-gamma": {
-		"format": "{} 󱃮",
-		"tooltip": false,
-		"exec": "wl-gammarelay-rs watch {g}",
-		"on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d +0.02",
-		"on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateGamma d -0.02"
-	},
-	"custom/wl-gammarelay-invert": {
-		"format": "{}",
-		"tooltip": false,
-		"restart-interval": 600,
-		"exec": "if [ \"$(busctl --user get-property rs.wl-gammarelay / rs.wl.gammarelay Inverted)\" = \"b true\" ]; then echo -n '󰌁'; else echo -n '󰹊'; fi",
-		"on-click": "busctl --user call rs.wl-gammarelay / rs.wl.gammarelay ToggleInverted"
-	},
-	"custom/wl-gammarelay-auto": {
-		"format": "{}",
-		"tooltip": false,
-		"restart-interval": 600,
-		"exec": "if [ -f $XDG_RUNTIME_DIR/auto-display-settings-disabled ]; then echo -n '󱧧'; else echo -n '󰁪'; fi",
-		"on-click": "if [ -f $XDG_RUNTIME_DIR/auto-display-settings-disabled ]; then rm $XDG_RUNTIME_DIR/auto-display-settings-disabled; else touch $XDG_RUNTIME_DIR/auto-display-settings-disabled; fi"
+		"on-click": "killall -SIGUSR1 wlsunset"
 	},
 	"wireplumber": {
 		"format": "{volume}% {icon}",

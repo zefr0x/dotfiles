@@ -98,7 +98,11 @@ script.
 - [hyprpicker](https://github.com/hyprwm/hyprpicker)
 - [hypridle](https://github.com/hyprwm/hypridle)
 - [hyprlock](https://github.com/hyprwm/hyprlock)
-- [wl-gammarelay-rs](https://github.com/MaxVerevkin/wl-gammarelay-rs)
+
+<!-- TODO: Delete when/if ianny supports it. -->
+
+- [wlsunset](https://sr.ht/~kennylevinsen/wlsunset/)
+- [brightnessctl](https://github.com/Hummer12007/brightnessctl)
 - [Satty](https://github.com/gabm/Satty)
   - [grim](https://sr.ht/~emersion/grim/)
   - [slurp](https://github.com/emersion/slurp)
@@ -288,8 +292,14 @@ rustup component add rust-analyzer
 
 - [Python](https://www.python.org/)
 - [uv](https://github.com/astral-sh/uv)
+
+<!-- TODO: Delete `python-lsp-server` when `ruff` implements a full LSP. -->
+
 - [Python LSP Server](https://github.com/python-lsp/python-lsp-server)
 - [Ruff](https://github.com/astral-sh/ruff)
+
+<!-- TODO: Delete when ruff ships Red Knot. -->
+
 - [mypy](http://www.mypy-lang.org/)
 
 #### Go

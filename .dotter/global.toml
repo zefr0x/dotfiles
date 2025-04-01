@@ -83,6 +83,10 @@ block_out_from_screen_capture = []
 
 enable_blur = false
 
+# For display night shift.
+display_temperature = { day = 4000, night = 2650 }
+location = { latitude = 0, longitude = 0 }
+
 
 [gui]
 depends = ["de"]

@@ -119,7 +119,8 @@ arch_core = {
 }
 arch_user_repo = {
     "foxmarks",
-    "wl-gammarelay-rs",
+    "wlsunset",
+    "brightnessctl",
     "ianny-git",  # Periodically informes user to take breaks
     "ttf-dejavu-ib",  # Better Arabic Fonts in UI
     "ttf-amiri",
