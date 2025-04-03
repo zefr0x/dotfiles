@@ -24,7 +24,7 @@ packages = ["default"]
 nvidia_driver = ...
 software_cursors = ...
 
-monitors = [ { name = "HDMI-A-1", mode = "1920x1080@30Hz", scale = "1", bitdepth = "8", mirror = "HDMI-A-2", background_color = "#000000" }, ... ]
+monitors = [ { name = "HDMI-A-1", mode = "1920x1080@30Hz", scale = "1", bitdepth = "8", hdr=false, mirror = "HDMI-A-2", background_color = "#000000" }, ... ]
 
 layouts = [ { xcode = "us", code = "en", name = "الإنْجِلِيزِيَّة", variant = ""}, ... ]
 
