@@ -17,7 +17,7 @@ sed -i '$d' $WALLPAPERS_LIST
 PREV=$(pidof swaybg)
 
 # Set the new wallpaper
-swaybg --image $WALLPAPER &
+swaybg --mode fill --image $WALLPAPER &
 sleep 1
 
 # Kill the previous one.
