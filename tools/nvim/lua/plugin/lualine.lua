@@ -52,6 +52,7 @@ require("lualine").setup({
 				separator = "",
 			},
 			{
+				-- TODO: Use the new `lsp_status` component when it supports hiding after finishing.
 				function()
 					return require("lsp-progress").progress()
 				end,

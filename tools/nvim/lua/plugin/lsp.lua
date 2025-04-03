@@ -123,17 +123,24 @@ lspconfig.jsonls.setup({
 	capabilities = capabilities,
 })
 
--- Set icons for diagnostics in the gutter.
-for type, icon in pairs({
-	Error = " ",
-	Warning = " ",
-	Hint = "󰌶 ",
-	Information = " ",
-}) do
-	local hl = "DiagnosticSign" .. type
-	vim.fn.sign_define(hl, {
-		text = icon,
-		texthl = hl,
-		-- numhl = hl,
-	})
-end
+vim.diagnostic.config({
+	virtual_text = true,
+	virtual_lines = {
+		current_line = true,
+	},
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = " ",
+			[vim.diagnostic.severity.WARN] = " ",
+			[vim.diagnostic.severity.HINT] = "󰌶 ",
+			[vim.diagnostic.severity.INFO] = " ",
+		},
+		linehl = {
+			[vim.diagnostic.severity.ERROR] = "DiagnosticSignError",
+			[vim.diagnostic.severity.WARN] = "DiagnosticSignWarning",
+			[vim.diagnostic.severity.HINT] = "DiagnosticSignHint",
+			[vim.diagnostic.severity.INFO] = "DiagnosticSignInformation",
+		},
+		numhl = {},
+	},
+})

@@ -51,10 +51,6 @@
 	},
 	"nvim-web-devicons": { "branch": "master", "commit": "4c3a5848ee0b09ecdea73adcd2a689190aeb728c" },
 	"plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
-	"rainbow-delimiters.nvim": {
-		"branch": "master",
-		"commit": "acb867e2c26104bb700cc660853d75690925cbe0"
-	},
 	"telescope-fzf-native.nvim": {
 		"branch": "main",
 		"commit": "1f08ed60cafc8f6168b72b80be2b2ea149813e55"

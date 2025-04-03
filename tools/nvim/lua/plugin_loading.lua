@@ -46,6 +46,7 @@ require("lazy").setup({
 		end,
 	},
 
+	-- TODO: Consider using builtin completion if it can support features.
 	-- Autocompletion
 	{
 		"hrsh7th/nvim-cmp",
@@ -175,13 +176,6 @@ require("lazy").setup({
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			-- Setting the commentstring based on the cursor location in a file
 			"JoosepAlviste/nvim-ts-context-commentstring",
-			-- Rainbow parentheses for neovim using tree-sitter
-			{
-				"hiphish/rainbow-delimiters.nvim",
-				config = function()
-					require("plugin.rainbow_delimiters")
-				end,
-			},
 			-- Autopairs for () and {} etc...
 			{
 				"windwp/nvim-autopairs",
@@ -240,6 +234,7 @@ require("lazy").setup({
 	-- Surround
 	{
 		"kylechui/nvim-surround",
+		version = "^3.0.0",
 		event = "BufEnter",
 		config = function()
 			require("plugin.surround")
