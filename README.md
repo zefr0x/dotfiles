@@ -209,7 +209,7 @@ Or for the Breeze theme:
 - [bat](https://github.com/sharkdp/bat)
 - [fd](https://github.com/sharkdp/fd)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
-- [eza](https://github.com/eza-community/eza)
+- [lsd](https://github.com/lsd-rs/lsd)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [dysk](https://github.com/Canop/dysk)
 - [ripdrag](https://github.com/nik012003/ripdrag)

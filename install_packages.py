@@ -53,7 +53,7 @@ arch_extra = {
     "bat",
     "fd",  # `find` alternative
     "zoxide",  # `cd` alternative
-    "eza",  # `ls` alternative
+    "lsd",  # `ls` alternative
     "skim",  # fuzzy finder
     "fish",
     "helix",

@@ -113,10 +113,11 @@ if status is-interactive
     alias mitmproxy="mitmproxy --set confdir=$XDG_CONFIG_HOME/mitmproxy"
     alias mitmweb="mitmweb --set confdir=$XDG_CONFIG_HOME/mitmproxy"
 
-    alias ls="eza --icons --hyperlink"
+    alias ls="lsd --hyperlink always"
     alias ll="ls -l"
     alias la="ls -la"
-    alias lt="ls --tree --git-ignore"
+    # TODO: Use builtint ignore if https://github.com/lsd-rs/lsd/issues/218 get resolved.
+    alias lt="ls --tree"
 
     # Tools
     alias topdf="org.libreoffice.LibreOffice --headless --invisible --convert-to pdf"
