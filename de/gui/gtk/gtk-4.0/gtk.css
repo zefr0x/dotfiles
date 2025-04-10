@@ -1,11 +1,14 @@
 /* TODO: Improve contrast. */
 :root {
+	--accent-bg-color: var(--accent-teal);
 	--window-bg-color: #000000dd;
 	--view-bg-color: transparent;
 	--headerbar-bg-color: #00000033;
 	--headerbar-backdrop-color: #00000077;
 	--sidebar-bg-color: #00000033;
 	--sidebar-backdrop-color: var(--headerbar-backdrop-color);
+	--secondary-sidebar-bg-color: #00000033;
+	--secondary-sidebar-backdrop-color: var(--headerbar-backdrop-color);
 	--overview-bg-color: transparent;
 	--thumbnail-bg-color: var(--window-bg-color);
 	--dialog-bg-color: var(--window-bg-color);

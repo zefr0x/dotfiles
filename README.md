@@ -171,11 +171,18 @@ Create a `~/Pictures` directiory for screenshots.
 #### UI
 
 - [kvantum](https://github.com/tsujan/Kvantum)
+- [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
 
 Prefer dark theme for GTK-4:
 
 ```shell
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+```
+
+Set gtk3 theme:
+
+```shell
+gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark
 ```
 
 **Flatpak allowed files:**

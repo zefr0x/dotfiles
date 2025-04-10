@@ -42,6 +42,7 @@ arch_extra = {
     "ttf-ubuntu-nerd",
     "papirus-icon-theme",
     "kvantum",  # Theme Engine for Qt6
+    "adw-gtk-theme",
     "git-delta",  # Syntax-highlighting pager for git, diff, and grep output
     "onefetch",  # Git Repo Summary
     "tokei",  # Statistics about your code
