@@ -4,6 +4,8 @@
 
 Those software and config files represent my Personalized Desktop Environment.
 
+<!-- TODO: Update screenshot. -->
+
 ![ScreenShot](https://github.com/zefr0x/dotfiles/assets/65136727/7f795f3e-fb3c-451f-8966-a6a60fe1ad8a)
 
 ## Usage
@@ -32,6 +34,9 @@ block_out_from_screen_capture = [ "^org\\.gnome\\.World\\.Secrets$", ... ]
 
 enable_blur = false
 
+display_temperature = { day = 4000, night = 2650 }
+location = { latitude = 0, longitude = 0 }
+
 git.username = "..."
 git.email = "..."
 ```
@@ -42,7 +47,7 @@ git.email = "..."
 dotter deploy
 ```
 
-## Arch linux Installation
+## Arch Linux Installation
 
 > You need [`yay`](https://github.com/Jguer/yay#installation) to install AUR packages.
 
@@ -211,6 +216,8 @@ Or for the Breeze theme:
 - [pastel](https://github.com/sharkdp/pastel)
 
 ### CLI/TUI Utilities
+
+<!-- TODO: Replace with `run0` after issues are fixed. -->
 
 - [Open Doas](https://github.com/Duncaen/OpenDoas)
 - [bat](https://github.com/sharkdp/bat)
