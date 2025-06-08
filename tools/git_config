@@ -2,7 +2,7 @@
     name = {{git.username}}
     email = {{git.email}}
 [core]
-    pager = delta
+    pager = delta --tabs 4
 {{#if dotter.packages.helix}}
     editor = helix
 {{else}}
@@ -21,7 +21,7 @@
     showStash = true
     short = true
 [interactive]
-    diffFilter = delta --color-only
+    diffFilter = delta --tabs 4 --color-only
 [delta]
     navigate = true
     light = false
