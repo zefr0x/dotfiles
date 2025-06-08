@@ -1,0 +1,3 @@
+# Theme
+export HYPRCURSOR_THEME=Adwaita
+export HYPRCURSOR_SIZE=24

@@ -1,3 +1,4 @@
+// FIX: Use variables from uwsm.
 environment {
 {{#if nvidia_driver}}
     // Variables to make it work better with Nvidia proprietary GPU driver

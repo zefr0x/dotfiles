@@ -60,6 +60,7 @@ depends = ["gtk", "qt"]
 [de.files]
 "de/wayland/niri.kdl" = "~/.config/niri/config.kdl"
 "de/wayland/hyprland" = "~/.config/hypr"
+"de/wayland/uwsm" = "~/.config/uwsm"
 "de/wayland/waybar" = "~/.config/waybar"
 "de/wayland/swaync" = "~/.config/swaync"
 

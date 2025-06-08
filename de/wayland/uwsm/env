@@ -1,0 +1,26 @@
+{{#if nvidia_driver}}
+# Variables to make it work better with Nvidia proprietary GPU driver
+export GBM_BACKEND=nvidia-drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+env = LIBVA_DRIVER_NAME=nvidia
+export NVD_BACKEND=direct
+{{/if}}
+
+# Enable HDR in vulkan applications
+export ENABLE_HDR_WSI=1
+
+# Toolkit Backend Variables
+export GDK_BACKEND=wayland,x11
+export QT_QPA_PLATFORM=wayland;xcb
+export SDL_VIDEODRIVER=wayland
+export CLUTTER_BACKEND=wayland
+
+# QT Variables
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+# TODO: Use Fusion style with a dark theme in place of Kvantum.
+export QT_STYLE_OVERRIDE=kvantum
+
+# Theme
+export XCURSOR_THEME=Adwaita
+export XCURSOR_SIZE=24
