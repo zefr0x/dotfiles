@@ -46,7 +46,7 @@ function vf
 
         # If a temp venv was used, delete it.
         if string match -q "/tmp/vf.*" $virtual_env
-            rm -rf $virtual_env
+            command rm -rf $virtual_env
         end
 
         set --erase virtual_env
