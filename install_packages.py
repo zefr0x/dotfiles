@@ -89,6 +89,7 @@ arch_extra = {
     "libadwaita",
     "git",
     "pastel",
+    "presenterm",
     "htop",  # System Monitoring
     "bandwhich",  # Network Bandwidth Monitoring
     "imagemagick",

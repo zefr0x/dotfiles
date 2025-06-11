@@ -214,6 +214,7 @@ Or for the Breeze theme:
   - [delta](https://github.com/dandavison/delta)
 - [just](https://github.com/casey/just)
 - [pastel](https://github.com/sharkdp/pastel)
+- [presenterm](https://github.com/mfontanini/presenterm)
 
 ### CLI/TUI Utilities
 
