@@ -51,7 +51,6 @@ arch_extra = {
     "hyperfine",  # command-line benchmarking tool
     "less",
     "jless",
-    "bat",
     "fd",  # `find` alternative
     "zoxide",  # `cd` alternative
     "lsd",  # `ls` alternative

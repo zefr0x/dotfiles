@@ -220,7 +220,6 @@ Or for the Breeze theme:
 <!-- TODO: Replace with `run0` after issues are fixed. -->
 
 - [Open Doas](https://github.com/Duncaen/OpenDoas)
-- [bat](https://github.com/sharkdp/bat)
 - [fd](https://github.com/sharkdp/fd)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [lsd](https://github.com/lsd-rs/lsd)
