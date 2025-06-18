@@ -1,6 +1,7 @@
 inherits = 'ayu_evolve'
 
-"ui.statusline" = { fg = "foreground", bg = "background" }
+"ui.statusline" = { fg = "foreground" }
+"ui.background" = { fg = "foreground" }
 
 [palette]
 background = '#000000'
