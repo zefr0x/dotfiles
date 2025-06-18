@@ -2,6 +2,9 @@ local hl = vim.api.nvim_set_hl
 
 ------------ Theme modifications -------------
 
+-- Set transparent background
+hl(0, "Normal", {})
+
 -- Show another background in floating windows
 hl(0, "NormalFloat", { bg = "#101010" })
 
