@@ -101,7 +101,6 @@ arch_extra = {
     "cargo-show-asm",
     "cargo-depgraph",
     "cargo-supply-chain",
-    "cargo-deny",
     "cargo-sort",
     "clang",
     "uv",

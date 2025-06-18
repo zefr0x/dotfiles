@@ -284,7 +284,6 @@ br --set-install-state refused
   - [cargo-show-asm](https://github.com/pacak/cargo-show-asm)
   - [cargo-depgraph](https://github.com/jplatte/cargo-depgraph)
   - [cargo-supply-chain](https://github.com/rust-secure-code/cargo-supply-chain)
-  - [cargo-deny](https://github.com/EmbarkStudios/cargo-deny)
   - [cargo-sort](https://github.com/DevinR528/cargo-sort)
 - [mold](https://github.com/rui314/mold)
 
