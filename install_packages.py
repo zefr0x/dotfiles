@@ -138,6 +138,7 @@ flathub = {
     "org.gnome.Gtranslator",  # Gettext po file editor
     "io.github.finefindus.Hieroglyphic",  # Find LaTeX symbols
     "org.sqlitebrowser.sqlitebrowser",
+    "org.gnome.Characters",
 }
 
 

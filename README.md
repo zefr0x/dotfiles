@@ -75,6 +75,7 @@ script.
 - [System Config Printer](https://github.com/OpenPrinting/system-config-printer)
 - [Dialect](https://apps.gnome.org/app/app.drey.Dialect/)
 - [Hieroglyphic](https://github.com/FineFindus/Hieroglyphic)
+- [Characters](https://apps.gnome.org/Characters/)
 
 ### Desktop Environment
 
