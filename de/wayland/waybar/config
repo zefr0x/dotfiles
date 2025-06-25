@@ -16,7 +16,8 @@
 		"idle_inhibitor",
 		"privacy",
 		// TODO: Delete after privacy module supports it.
-		"custom/webcam_indecator"
+		"custom/webcam_indecator",
+		"systemd-failed-units"
 	],
 	"modules-center": [
 		// TODO: Show caps-lock indecator.
@@ -235,6 +236,10 @@
 		"icon-size": 15,
 		"show-passive-items": true,
 		"spacing": 10
+	},
+	"systemd-failed-units": {
+		"hide-on-ok": true,
+		"format": "✗ {nr_failed}"
 	}
 }
 
