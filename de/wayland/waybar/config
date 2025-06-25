@@ -6,7 +6,8 @@
 		"custom/notification",
 		"battery",
 		"tray",
-		"wireplumber",
+		"wireplumber#sink",
+		"wireplumber#source",
 		"group/display",
 		"temperature",
 		"memory",
@@ -173,7 +174,7 @@
 		"tooltip": false,
 		"on-click": "killall -SIGUSR1 wlsunset"
 	},
-	"wireplumber": {
+	"wireplumber#sink": {
 		"format": "{volume}% {icon}",
 		"format-muted": "",
 		"format-icons": [
@@ -185,6 +186,13 @@
 		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"on-click-right": "com.github.wwmm.easyeffects",
 		"on-click-middle": "org.pipewire.Helvum"
+	},
+	"wireplumber#source": {
+		"node-type": "Audio/Source",
+		"format": "{volume}% ",
+		"format-muted": "",
+		"scroll-step": 2.0,
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
 	},
 	"battery": {
 		"states": {
