@@ -21,13 +21,6 @@ language-servers = ["rust-analyzer", "harper-ls"]
 
 
 [[language]]
-name = "go"
-auto-format = true
-formatter = { command = "goimports" }
-language-servers = ["gopls", "harper-ls"]
-
-
-[[language]]
 name = "latex"
 # TODO: Add harper-ls when supported.
 language-servers = ["texlab"]
@@ -137,10 +130,6 @@ args = ["--stdio"]
 
 [language-server.rust-analyzer.config]
 check = { command = "clippy" }
-
-
-[language-server.gopls.config]
-gofumpt = true
 
 
 [language-server.lua-language-server.config.Lua]

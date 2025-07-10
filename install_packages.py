@@ -107,9 +107,6 @@ arch_extra = {
     "python-lsp-server",
     "ruff",
     "mypy",
-    "go",
-    "gopls",
-    "go-tools",
     "texlive-langarabic",
     "texlive-langother",
 }
