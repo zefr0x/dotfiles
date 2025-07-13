@@ -1,4 +1,7 @@
-@define-color cc-bg rgba(0, 0, 0, 0.86666667);
+/* FIX: This background should also be applied to the notifications. */
+:root {
+	--cc-bg: rgba(0, 0, 0, 0.86666667);
+}
 
 /* TODO: Improve colours to match the bar and other desktop componants theme. */
 
