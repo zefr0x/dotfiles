@@ -399,4 +399,4 @@ screenshot-path "~/Pictures/Screenshot_%Y_%m_%d_%H_%M_%S.png"
 
 spawn-at-startup "xwayland-satellite" ":3"
 
-spawn-at-startup "uwsm" "app" "-s=b" "--" "wlsunset -t {{display_temperature.night}} -T {{display_temperature.day}} -l {{location.latitude}} -L {{location.longitude}}"
+spawn-at-startup "uwsm" "app" "-s=b" "--" "wlsunset" "-t" "{{display_temperature.night}}" "-T" "{{display_temperature.day}}" "-l" "{{location.latitude}}" "-L" "{{location.longitude}}"
