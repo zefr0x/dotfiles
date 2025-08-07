@@ -79,6 +79,7 @@ arch_extra = {
     "fuzzel",  # Launcher
     # "system-config-printer",
     "lsof",  # Check for /dev/video* usage with (fuser)
+    "power-profiles-daemon",
     "network-manager-applet",
     "gnome-keyring",
     "noto-fonts",

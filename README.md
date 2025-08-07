@@ -101,6 +101,7 @@ script.
 - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk)
 - [Waybar](https://github.com/Alexays/Waybar)
   - [lsof](https://github.com/lsof-org/lsof)
+  - [power-profiles-daemon](https://gitlab.freedesktop.org/upower/power-profiles-daemon)
 - [hyprpicker](https://github.com/hyprwm/hyprpicker)
 - [hypridle](https://github.com/hyprwm/hypridle)
 - [hyprlock](https://github.com/hyprwm/hyprlock)

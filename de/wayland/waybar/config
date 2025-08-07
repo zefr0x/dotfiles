@@ -5,6 +5,7 @@
 	"modules-left": [
 		"custom/notification",
 		"battery",
+		"power-profiles-daemon",
 		"tray",
 		"wireplumber#sink",
 		"wireplumber#source",
@@ -240,6 +241,17 @@
 	"systemd-failed-units": {
 		"hide-on-ok": true,
 		"format": "✗ {nr_failed}"
+	},
+	"power-profiles-daemon": {
+		"format": "{icon}",
+		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+		"tooltip": true,
+		"format-icons": {
+			"default": "NONE",
+			"performance": "",
+			"balanced": "",
+			"power-saver": ""
+		}
 	}
 }
 

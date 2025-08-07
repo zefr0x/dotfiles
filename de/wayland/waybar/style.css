@@ -23,6 +23,7 @@ window#waybar {
 #wireplumber,
 #battery,
 #custom-notification,
+#power-profiles-daemon,
 #tray {
 	margin: 0 7px;
 }
@@ -125,6 +126,16 @@ window#waybar {
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
+}
+
+#power-profiles-daemon.performance {}
+
+#power-profiles-daemon.balanced {
+	color: #00bfff;
+}
+
+#power-profiles-daemon.power-saver {
+	color: #2ec27e;
 }
 
 #tray > .passive {
