@@ -63,6 +63,8 @@ arch_extra = {
     "broot",
     "opendoas",
     "texlab",
+    "typst",
+    "tinymist",
     "harper",
     "vscode-css-languageserver",
     "vscode-html-languageserver",

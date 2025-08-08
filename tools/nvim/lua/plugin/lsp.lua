@@ -25,6 +25,7 @@ vim.g.markdown_fenced_languages = {
 local servers = {
 	"clangd",
 	"ruff",
+	"tinymist",
 	"denols",
 	"yamlls",
 	"harper_ls",

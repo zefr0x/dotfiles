@@ -330,6 +330,11 @@ rustup component add rust-analyzer
 - [texlive-langother](https://archlinux.org/packages/extra/any/texlive-langother/)
 - [TexLab](https://github.com/latex-lsp/texlab)
 
+#### Typst
+
+- [typst](https://github.com/typst/typst)
+- [tinymist](https://github.com/Myriad-Dreamin/tinymist)
+
 #### Lua
 
 - [lua-language-server](https://github.com/LuaLS/lua-language-server)

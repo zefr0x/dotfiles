@@ -27,6 +27,11 @@ language-servers = ["texlab"]
 
 
 [[language]]
+name = "typst"
+language-servers = ["tinymist", "harper-ls"]
+
+
+[[language]]
 name = "git-commit"
 language-servers = ["harper-ls"]
 

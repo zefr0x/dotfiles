@@ -16,6 +16,7 @@ require("nvim-treesitter.configs").setup({
 		"cmake",
 		"dockerfile",
 		"latex",
+		"typst",
 		"markdown",
 		"regex",
 		"sql",
